@@ -1,0 +1,50 @@
+.explore {
+  margin: 0px auto;
+  // height: calc(100vh - 55px);
+  height: 100vh;
+  width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  position: relative;
+  div {
+    height: 85vh;
+    width: 100%;
+    position: relative;
+    video {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+    }
+
+    h3 {
+      position: absolute;
+      text-align: center;
+      bottom: 40%;
+      right: 17rem;
+      text-transform: uppercase;
+      font-size: 7rem;
+      cursor: pointer;
+      color: white;
+      font-weight: 400;
+      font-family: "Courier New", Courier, monospace;
+    }
+    h3:hover {
+      color: gold;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .explore {
+    width: 100%;
+    div {
+      .h3 {
+        position: absolute;
+        top: 0;
+        // right: 100rem;
+      }
+    }
+  }
+}

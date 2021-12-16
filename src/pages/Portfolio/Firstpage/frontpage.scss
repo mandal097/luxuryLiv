@@ -1,0 +1,43 @@
+.FrontPagewrapper {
+  // scroll-snap-type: start;
+  margin-bottom: 30px;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  .back{
+    position: absolute;
+    top: 4rem;
+    left: 14rem;
+    z-index: 111;
+    cursor: pointer;
+    a {
+      color: goldenrod;
+      font-size: 4rem;
+      text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .FrontPagewrapper {
+    .back{
+      top: 5rem;
+      left: 7rem;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .FrontPagewrapper {
+    .back{
+      left: 5rem;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .FrontPagewrapper {
+    .back{
+      left: 2rem;
+    }
+  }
+}

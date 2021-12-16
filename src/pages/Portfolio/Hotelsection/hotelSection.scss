@@ -1,0 +1,152 @@
+.port-container {
+  // position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 150px;
+}
+
+.port-container .port-card {
+  // position: relative;
+  max-width: 30rem;
+  min-width: 30rem;
+  height: 215px;
+  background: white;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  transition: 1s ease-in-out;
+  border-radius: 10px;
+}
+
+.port-container .port-card:hover {
+  height: 435px;
+  transition: 1s ease-in-out;
+}
+
+.port-container .port-card .port-imgBx {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  top: -60px;
+  left: 5px;
+  z-index: 1;
+}
+
+.port-container .port-card .port-imgBx img {
+width: 98%;
+  height: inherit;
+  border-radius: 20px;
+}
+
+.port-container .port-card .port-content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 0;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.port-container .port-card .port-content h2 {
+  font-size: 30px;
+  font-family: "Poppins";
+  width: 100%;
+  float: left;
+}
+
+.port-container .port-card .port-content p {
+  font-size: 18px;
+  font-family: "Poppins";
+}
+
+.port-container .port-card:hover .port-content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
+  transition: all 700ms;
+}
+.upper {
+  display: flex;
+  flex-direction: row;
+  height: 25px;
+  padding: 5px; /* this */
+}
+
+.upper > div {
+  flex: 1 1 auto;
+  text-align: center;
+  margin: 7px;  /* and that, will result in a 10px gap */
+}
+
+.port-container .port-card .port-content .fourth {
+  padding: 0 7.5px;
+}
+
+.port-container .port-card .port-content .fifth {
+  padding: 0 15px;
+}
+
+.port-container .port-card .port-content .fifteenth {
+  padding: 0 30px;
+}
+
+.port-container .port-card .port-content a:hover {
+  cursor: pointer;
+}
+
+/* @media (max-width: 500px) {
+  .upper {
+      height: 95px;
+  }
+
+  .port-container {
+      display: block;
+      padding-top: 0px;
+  }
+
+  .port-container .port-card {
+      margin: 400px auto;
+      max-width: 100%;
+      height: 100%;
+      border-radius: 40px;
+  }
+
+  .port-container .port-card .port-imgBx {
+      position: relative;
+      width: 860px;
+      height: 860px;
+  }
+
+  .port-container .port-card:hover {
+      height: 1400px;
+  }
+
+  .port-container .port-card .port-content h2 {
+      font-size: 70px;
+      font-family: "Poppins";
+  }
+  
+  .port-container .port-card .port-content p {
+      font-size: 48px;
+      font-family: "Poppins";
+  }
+} */
+.dropdown{
+  width: 100%;
+  height: 153%;
+  border-radius: 9px;
+}
+
+select {
+  font-size: 1.5rem;
+}
+select option{
+  font-size: 1.5rem;
+}

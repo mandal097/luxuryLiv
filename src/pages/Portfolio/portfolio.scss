@@ -1,0 +1,9 @@
+.portfolio {
+  // margin: 0px auto;
+  // overflow-x: hidden;
+  position: relative;
+  &::-webkit-scrollbar{
+    appearance: none;
+  }
+}
+
