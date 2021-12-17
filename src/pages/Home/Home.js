@@ -36,10 +36,10 @@ scroll-snap-points-y: repeat(100vh);
 height: 100vh;
 overflow-y: scroll;
 overflow-x: hidden;
-/* width */
-&::-webkit-scrollbar {
+/* width
+/* &::-webkit-scrollbar {
   width: 7px;
-}
+} */ */
 
 /* Track */
 &::-webkit-scrollbar-track {

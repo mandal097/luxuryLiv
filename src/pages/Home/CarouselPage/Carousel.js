@@ -81,7 +81,7 @@ align-items: center;
 justify-content: space-between;
 `
 const TopLeft = styled.h1`
-font-family: 'Tourney', cursive;
+/* font-family: 'Tourney', cursive; */
 width: 20%;
 font-size: 5rem;
 cursor: pointer;

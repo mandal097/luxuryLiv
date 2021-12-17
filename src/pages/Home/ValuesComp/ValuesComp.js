@@ -15,7 +15,7 @@ const ValuesComp = () => {
     }
 
     const handleRight = () => {
-        count < length-1 ? setCount(count + 1) : setCount(0)
+        count < length - 1 ? setCount(count + 1) : setCount(0)
     }
     return (
         <Container>
@@ -23,9 +23,11 @@ const ValuesComp = () => {
                 <Section>
                     <Article>
                         <SectionLeft>
-                            <img src={items.img} alt="" />
-                            <SemiCircleUp></SemiCircleUp>
-                            <SemiCircleDown></SemiCircleDown>
+                            <ImgContainer>
+                                <img src={items.img} alt="" />
+                                <SemiCircleUp></SemiCircleUp>
+                                <SemiCircleDown></SemiCircleDown>
+                            </ImgContainer>
                         </SectionLeft>
                         <SectionRightt>
                             <H>{items.title}</H>
@@ -98,7 +100,8 @@ font-family: 'Raleway', sans-serif;
 `
 const Article = styled.div`
 display: flex;
-align-items: center;
+flex-direction:;
+align-items: column;
 justify-content:space-evenly;
 height: 90%;
 margin:0 auto;
@@ -106,7 +109,7 @@ width:100%;
 margin-left:-7rem;
 @media (max-width: 600px) {
     flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-left:0rem;
 }
 
@@ -119,31 +122,35 @@ align-items: center;
 justify-content:center;
 width: 60%;
 height:90%;
-position:relative;
-img{
-    width: 80%;
-    height: 25vh;
-    object-fit: contain;
-}
 @media (max-width: 600px) {
   justify-content: center;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  img{
-      width: 90%;
-      height:40%;
-      margin-top: 2rem;
-  }
 }
 @media(max-width:600px){
-    margin-bottom:5rem;
+    /* margin-bottom:5rem; */
     height:50%;
+} 
+`
+
+const ImgContainer = styled.div`
+width: 100%;
+height: 25vh;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 `
+
 const SemiCircleUp = styled.div`
 position: absolute;
-top: 0rem;
-left:24%;
+top:-10.9rem;
+left:26%;
 height: 10.5rem;
 width: 22rem;
 border-radius: 250px 250px 0 0;
@@ -151,6 +158,7 @@ border:2px  solid white;
 border-bottom:0px ;
 @media (max-width: 600px) {
     left:35%;
+    top:-9rem;
     height: 8rem;
     width: 15rem;
 }
@@ -158,8 +166,8 @@ border-bottom:0px ;
 
 const SemiCircleDown = styled.div`
 position: absolute;
-bottom:0rem;
-left:24%;
+bottom:-10.9rem;
+left:26%;
 height: 10.5rem;
 width: 22rem;
 border-radius:0 0  250px 250px ;
@@ -167,6 +175,7 @@ border:2px  solid white;
 border-top:0px ;
 @media (max-width: 600px) {
     left:35%;
+    bottom:-9rem;
     height: 8rem;
     width: 15rem;
 }
@@ -174,16 +183,19 @@ border-top:0px ;
 
 
 const SectionRightt = styled.div`
-width: 30%;
+width: 40%;
 height:90%;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content:center;
 @media (max-width: 600px) {
-  width: 90%;
+  width: 100%;
   height:60%;
   margin: 0 auto;
+}
+@media (max-width: 400px) {
+  margin-top:8rem;
 }
 `
 
@@ -197,14 +209,20 @@ font-family: 'Raleway', sans-serif;
 @media (max-width: 600px) {
   font-size: 4rem;
 }
+@media (max-width: 600px) {
+  font-size: 3.4rem;
+}
 `
 const P = styled.p`
 text-align: justify;
 line-height: 1.5;
 letter-spacing: .4px;
 font-size: 1.8rem;
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   font-size: 2rem;
+} */
+@media (max-width: 600px) {
+  font-size: 1.6rem;
 }
 `
 const Icons = styled.div`
@@ -216,8 +234,13 @@ align-items:center;
 justify-content:space-between;
 @media(max-width:600px){
     position:absolute;
-    bottom:0;
-}
+    bottom:3rem;
+    width:20%;
+} 
+@media(max-width:400px){
+    position:absolute;
+    bottom:10rem;
+} 
 `
 const IconLeft = styled.div`
 font-size:3rem;
@@ -229,3 +252,4 @@ cursor:pointer onClick={handleLeft} ;
 `
 
 export default ValuesComp
+

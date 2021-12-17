@@ -5,8 +5,12 @@ const Navbar = () => {
     return (
         <Container>
             <Nav><NavLink to='/' className='navlink'>home</NavLink> </Nav>
-            <Nav><NavLink to='/portfolio' className='navlink'>portfolio</NavLink> </Nav>
-            <Nav><NavLink to='/agents' className='navlink'>agents</NavLink> </Nav>
+            <Nav><NavLink to='/portfolio' className='navlink'>View our Hotels’ Portfolio</NavLink> </Nav>
+            <Nav><NavLink to='/agents' className='navlink'>Sign up / Login for Agent Partners</NavLink> </Nav>
+            <Nav><NavLink to='#' className='navlink'>Collaborative Info for Hotel Partners</NavLink> </Nav>
+            <Nav><NavLink to='#' className='navlink'>Say Nice – Not So Nice Things About Us!</NavLink> </Nav>
+            <Nav><NavLink to='#' className='navlink'>Contact Us</NavLink> </Nav>
+            <Nav><NavLink to='#' className='navlink'>About Us</NavLink> </Nav>
         </Container>
     )
 }
@@ -33,7 +37,7 @@ z-index:10;
 display:flex;
 flex-direction:column;
 align-items:flex-start;
-justify-content:center;
+justify-content:space-evenly;
 .navlink{
     text-decoration:none;
     color:white;
@@ -47,26 +51,23 @@ justify-content:center;
 `
 
 const Nav = styled.span`
-font-size:14rem;
+font-size:4.6rem;
 color:white;
 font-weight:bolder;
 text-transform:uppercase;
 line-height:1;
 transition:all 200ms;
 &:hover{
-    transform:perspective(100px)  rotateX(-5deg);
+    transform:perspective(90px)  rotateX(-5deg);
 }
 @media (max-width:700px){
-    font-size:12rem;
+    font-size:3.2rem;
 }
 @media (max-width:600px){
-    font-size:10rem;
-}
-@media (max-width:500px){
-    font-size:8rem;
+    font-size:2.7rem;
 }
 @media (max-width:400px){
-    font-size:6rem;
+    font-size:2.3rem;
 }
 `
 

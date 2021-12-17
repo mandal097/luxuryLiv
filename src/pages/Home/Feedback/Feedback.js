@@ -40,12 +40,12 @@ const Feedback = () => {
                         <Submit type="submit" value="SUBMIT" />
                     </Form>
                 </WrapperTop>
-                <WrapperBottom>
+                {/* <WrapperBottom>
                     <WrapperbottomTxt>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia velit rem ex aspernatur alias? Tempora modi cupiditate dicta animi quas quidem sunt odio dolorem vel facere. Iusto at enim repellendus!
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia velit rem ex aspernatur alias? Tempora modi cupiditate dicta animi quas quidem sunt odio dolorem vel facere. Iusto at enim repellendus!
                     </WrapperbottomTxt>
-                </WrapperBottom>
+                </WrapperBottom> */}
             </Wrapper>
         </Container>
     )
@@ -54,7 +54,7 @@ const Feedback = () => {
 const Container = styled.div`
 height:100vh;
 width:100%;
-background-color:white;
+background-color:black;
 color:black;
 scroll-snap-align: start;
 display:flex;
@@ -63,7 +63,10 @@ justify-content:center;
 `
 const Wrapper = styled.div`
 width:1200px;
-height:93%;
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
 `
 
 const WrapperTop = styled.div`
@@ -148,17 +151,17 @@ color:white;
 font-size:3rem;
 `
 
-const WrapperBottom = styled.div`
-width:100%;
-height:15%;
-`
-const WrapperbottomTxt = styled.p`
-color:black;
-font-size:1.8rem;
-font-weight:bold;
-@media(max-width:745px){
-    /* font-size:1.8rem; */
-} 
-`
+// const WrapperBottom = styled.div`
+// width:100%;
+// height:15%;
+// `
+// const WrapperbottomTxt = styled.p`
+// color:black;
+// font-size:1.8rem;
+// font-weight:bold;
+// @media(max-width:745px){
+//     /* font-size:1.8rem; */
+// } 
+// `
 
 export default Feedback

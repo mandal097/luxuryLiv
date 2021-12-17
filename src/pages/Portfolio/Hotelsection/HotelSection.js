@@ -112,6 +112,7 @@ function Port() {
 
                 <div className="port-card" data-aos="fade-left">
                     <div className="port-imgBx">
+                        {/* <img src="https://iconape.com/wp-content/png_logo_vector/le-cheval-blanc.png" alt="img" /> */}
                         <img src="images/cheval.png" alt="img" />
                     </div>
                     <div className="port-content">
@@ -581,7 +582,7 @@ function Port() {
 
                 <div className="port-card" data-aos="fade-up">
                     <div className="port-imgBx">
-                        <img src="https://images.unsplash.com/photo-1533740877702-3aeaf8c84376?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGJ1c2luZXNzJTIwaG90ZWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="img" />
+                        <img src="/images/shantiMaurice.png" alt="img" />
                     </div>
                     <div className="port-content">
                         <h2>Shanti Maurice - A Nira Resort</h2>
@@ -603,7 +604,7 @@ function Port() {
 
                 <div className="port-card" data-aos="fade-left">
                     <div className="port-imgBx">
-                        <img src="https://images.unsplash.com/photo-1533740877702-3aeaf8c84376?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGJ1c2luZXNzJTIwaG90ZWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="img" />
+                        <img src="/images/pallazoVersace.jpg" alt="img" />
                     </div>
                     <div className="port-content">
                         <h2>Palazzo Versace Luxury Hotels</h2>

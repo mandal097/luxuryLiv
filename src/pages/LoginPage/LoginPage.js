@@ -2,20 +2,23 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import ReactPlayer from "react-player"
 import Player from '../../components/Player/Player'
-import { NavLink, useNavigate } from 'react-router-dom'
+import Ham from '../../components/Hamburger/Ham'
+import { NavLink } from 'react-router-dom'
 import { images } from './carouselImg'
 import {
     LeftOutlined,
     RightOutlined
 } from '@ant-design/icons'
 import Login from '../../components/LoginPopUp/Login'
+import Navbar from '../../components/Navbar/Navbar'
 
 const LoginPage = () => {
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
     const [show, setShow] = useState(false)
     const [playing, setPlaying] = useState(true)
     const [count, setCount] = useState(0)
     const [login, SetLogin] = useState(false)
+    const [IsOpen, setIsOpen] = useState(false)
     // url for you tube video
     const url = 'https://youtu.be/cr2Rrl3vz9I'
 
@@ -52,11 +55,11 @@ const LoginPage = () => {
         }
     }
 
-    const goBack = () => {
-        navigate('..')
-    }
+    // const goBack = () => {
+    //     navigate('..')
+    // }
 
-  
+
     const showLogin = () => {
         switch (login) {
             case false:
@@ -73,13 +76,28 @@ const LoginPage = () => {
         }
     }
 
+    const showNavbar = () => {
+        switch (IsOpen) {
+            case false:
+                setIsOpen(true);
+                break;
+            case true:
+                setIsOpen(false);
+                break;
+            default:
+                setIsOpen(false)
+        }
+    }
 
     return (
         <Container  >
+            {
+                IsOpen && <Navbar />
+            }
             <Wrapper>
                 <Header>
-                    <Span onClick={goBack}> <a href="#carousel">LLIV.</a></Span>
-                    <Span onClick={goBack}>HOME</Span>
+                    {/* <Span onClick={goBack}> <a href="#carousel">LLIV.</a></Span> */}
+                    <Span onClick={showNavbar}><Ham /></Span>
                 </Header>
                 <Agent>
                     <AgentTopHeader>
@@ -96,11 +114,11 @@ const LoginPage = () => {
                             <LeftTop>
                                 <LeftTopSpan  > <NavLink className='nav' to='/portfolio'> VIEW OUR PORTFOLIO </NavLink></LeftTopSpan>
                                 <LeftTopSpan onClick={showPlayer}>WHY WORK WITH US?</LeftTopSpan>
-                                <LeftTopSpan>TESTIMONIES</LeftTopSpan>
+                                <LeftTopSpan>  <NavLink to='testimonies' className='nav'> TESTIMONIES</NavLink></LeftTopSpan>
                             </LeftTop>
                             <LeftBotom>
                                 <ReactPlayer
-                                    className={show ?'player' :undefined}
+                                    className={show ? 'player' : undefined}
                                     url={url}
                                     playing={playing}
                                     controls={true}
@@ -130,7 +148,7 @@ const LoginPage = () => {
                 show && <Player showPlayer={showPlayer} url={url} />
             }
             {
-                login && <Login  showLogin={showLogin}/>
+                login && <Login showLogin={showLogin} />
             }
         </Container>
     )
@@ -142,21 +160,22 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     scroll-snap-align:center;
     position:relative;
     .nav{
     color:white;
     text-decoration:none;
+    /* font-family: 'Raleway', sans-serif; */
 }
    @media(max-width:725px){
     width: auto;
     height: auto;
 }
-   `
+`
 const Wrapper = styled.div`
 height:100%;
-width:100vw;
+width:100%;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -170,12 +189,14 @@ overflow-x:hidden;
 
 const Header = styled.div`
 display:flex;
-width:1100px;
-margin:1rem auto;
+top:3rem;
+right:14rem;
+position:absolute;
+margin-right:auto;
 align-items:center;
-justify-content:space-between;
+justify-content:flex-end;
 height:6rem;
-/* width:100%; */
+z-index:11;
 `
 const Span = styled.div`
 font-size: 20px;
@@ -191,7 +212,8 @@ color: goldenrod;
 const Agent = styled.div`
 width:1100px;
 height:auto;
-margin:0rem auto;
+margin:2rem auto;
+margin-top:10rem;
 border:0.5px solid white;
 
 @media(max-width:1020px){

@@ -34,7 +34,8 @@ const FrontPage = ({ title, para }) => {
 const Main = styled.div`
 width: 100%;
 margin: 0px auto;
-height: calc(100vh  - 55px);
+/* height: calc(100vh  - 55px); */
+height:100vh;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -43,16 +44,20 @@ scroll-snap-align: start;
 position:relative;
 @media (max-width:600px){
     width: 100%;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
 }
 `
 const H = styled.h1`
-font-size: 150px;
+font-size: 15rem;
 font-weight: 400;
 font-family: 'Shoreline';
 src: local('Shoreline'), url(Library/Fonts/LuxuryLiving_Logo.otf) format('opentype');
+@media (max-width:1000px){
+   font-size: 10rem;
+   text-align:center;
+}
 @media (max-width:600px){
-   font-size: 100px;
+   font-size: 9rem;
    text-align:center;
 }
 `
@@ -65,8 +70,9 @@ line-height: 1.5;
 width: 60%;
 margin: 0px auto;
 @media (max-width:600px){
-   font-size: 20px;
+   font-size: 1.9rem;
    width: 80%;
+   line-height:1.4;
 }
 `
 
