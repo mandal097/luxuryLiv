@@ -67,6 +67,7 @@ position: relative;
 
 const Container = styled.div`
 width: 1000px;
+height:100%;
 color: white;
 margin: 0 auto;
 height:90vh;
@@ -81,15 +82,17 @@ align-items: center;
 justify-content: space-between;
 `
 const TopLeft = styled.h1`
-/* font-family: 'Tourney', cursive; */
 width: 20%;
-font-size: 5rem;
+font-size: 4.5rem;
 cursor: pointer;
 @media (max-width: 700px) {
- font-size:4rem ;
+ font-size:3.8rem ;
 }
 @media (max-width: 504px) {
  font-size:3rem ;
+}
+@media (max-width: 400px) {
+ font-size:2.5rem ;
 }
 `
 const Bottom = styled.div`
@@ -97,10 +100,14 @@ height: 60%;
 border: 0.5px solid white;
 display: flex;
 .cover{
+    height:100%;
+    width:100%;
     object-fit: cover;
 }
 @media (max-width: 700px) {
-    height:auto;
+    height:60%;
+    border:none;
+}
 }
 `
 

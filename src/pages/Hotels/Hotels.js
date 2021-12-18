@@ -38,7 +38,6 @@ const Hotels = () => {
             <Wrapper>
                 <FirstSection>
                     <Header>
-                        {/* <Span onClick={goBack}> <a href="#carousel">LLIV.</a></Span> */}
                         <Span onClick={showNavbar} > <Ham /> </Span>
                     </Header>
                     <Content>
@@ -61,10 +60,10 @@ const Hotels = () => {
                     </Fade>
                     <Fade right duration={3000}>
                         <SWrapper>
-                            <Right style={{ textAlign: 'right' }}>
+                            <Right >
                                 <Name>GAURAV</Name>
                                 <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
-                                <Button style={{ marginLeft: 'auto' }}>Know More</Button>
+                                <Button>Know More</Button>
                             </Right>
                             <Left>
                                 <Img src="https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
@@ -85,10 +84,10 @@ const Hotels = () => {
                     </Fade>
                     <Fade right duration={3000}>
                         <SWrapper>
-                            <Right style={{ textAlign: 'right' }}>
+                            <Right >
                                 <Name>GAURAV</Name>
                                 <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
-                                <Button style={{ marginLeft: 'auto' }}>Know More</Button>
+                                <Button>Know More</Button>
                             </Right>
                             <Left>
                                 <Img src="https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
@@ -109,10 +108,10 @@ const Hotels = () => {
                     </Fade>
                     <Fade right duration={3000}>
                         <SWrapper>
-                            <Right style={{ textAlign: 'right' }}>
+                            <Right >
                                 <Name>GAURAV</Name>
                                 <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
-                                <Button style={{ marginLeft: 'auto' }}>Know More</Button>
+                                <Button>Know More</Button>
                             </Right>
                             <Left>
                                 <Img src="https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
@@ -126,25 +125,22 @@ const Hotels = () => {
 }
 
 const Container = styled.div`
-/* position: absolute; */
-/* top: 0; */
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 width: 100%;
-/* overflow-y:scroll; */
 overflow-x:hidden;
 font-family: 'Raleway', sans-serif;
+position:relative;
 
 `
 const Wrapper = styled.div`
-width:1000px;
+width:1100px;
 height:auto;
 margin:0 auto;
-@media(max-width:1000px){
-    width:95%;   
-    /* height:auto; */
+@media(max-width:1100px){
+    width:100%;   
 }
 `
 const FirstSection = styled.div`
@@ -153,17 +149,24 @@ height: 100vh;
 display:flex;
 flex-direction:column;
 justify-content:space-around;
-/* background-color:red; */
-/* margin-bottom:90vh; */
 `
 
 const Header = styled.div`
 display:flex;
 align-items:center;
 justify-content:flex-end;
-height:50px;
-width:100%;
-z-index:111;
+/* height:50px;
+width:20%; */
+z-index:10;
+position:absolute;
+top:3rem;
+right:14rem;
+@media(max-width:700px){
+    right:8rem;
+}
+@media(max-width:400px){
+    right:4rem;
+}
 `
 const Span = styled.div`
 font-size: 20px;
@@ -212,24 +215,27 @@ padding:2rem;
 margin-bottom:2rem;
 @media(max-width:650px){
     flex-direction:column; 
-    heigth:auto;  
+    heigth:auto;
+    align-items:flex-start;  
 }
 `
 
 const Left = styled.div`
-height:60%;
+height:80%;
 width:50%;
 display:flex;
 justify-content:space-around;
+margin:2rem;
 @media(max-width:650px){
     width:100%;
     height:auto;
+    order:1;
 }
 `
 
 const Img = styled.img`
 height:100%;
-width:80%;
+width:100%;
 object-fit:cover;
 display:flex;
 justify-content:space-around;
@@ -242,19 +248,36 @@ height:50%;
 width:50%;
 display:flex;
 flex-direction:column;
-justify-content:center;
+margin:2rem;
+/* align-items:flex-end; */
+/* justify-content:center; */
 @media(max-width:650px){
-    width:80%;
+    width:100%;
     height:auto;
+    order:2;
 }
 `
 
 const Name = styled.span`
 font-size:4rem;
+@media(max-width:650px){
+    text-align:left;
+    margin:0.5rem 0;
+}
+@media(max-width:835px){
+   font-size:3rem;
+}
 `
 const About = styled.span`
 font-size:1.8rem;
 margin-bottom:0.3rem;
+@media(max-width:935px){
+   font-size:1.6rem;
+}
+@media(max-width:650px){
+    text-align:left;
+    margin:1rem 0;
+}
 `
 
 const Button = styled.button`
@@ -265,5 +288,8 @@ font-size: 1.5rem;
 border:none;
 background-color:green;
 padding: 1rem;
+@media(max-width:650px){
+    margin-right:auto;
+}
 `
 export default Hotels

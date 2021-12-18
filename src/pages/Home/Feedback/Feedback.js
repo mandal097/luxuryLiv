@@ -101,6 +101,9 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 margin:1rem auto; 
+@media(max-width:400px){
+    flex-direction:column;
+}
 `
 const Input = styled.input`
 width:25%;
@@ -119,6 +122,16 @@ font-size:2.5rem;
 }
 &:focus::placeholder {
   color: transparent;
+}
+@media(max-width:650px){
+&::placeholder {
+       color: white;
+       font-size:1.5rem;
+    }
+}
+@media(max-width:400px){
+    width:100%;
+    margin:0.5rem 0;
 }
 `
 const TextArea = styled.textarea`

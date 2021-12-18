@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import Navbar from '../../components/Navbar/Navbar'
 import Ham from '../../components/Hamburger/Ham'
+// import Register from '../../pages/Regitration/Register'
 
 const Testimonies = () => {
 
@@ -27,10 +28,10 @@ const Testimonies = () => {
             }
             <Wrapper>
             <Header>
-                    {/* <Span onClick={goBack}> <a href="#carousel">LLIV.</a></Span> */}
                     <Span onClick={showNavbar}><Ham/></Span>
                 </Header>
                 <h2>THIS IS THE TESTIMONIES PAGE </h2>
+                {/* <Register/> */}
             </Wrapper>
         </Container>
     )
@@ -41,17 +42,17 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-height: 100vh;
+height: 100vh; //this should be removed
 width: 100%;
 scroll-snap-align:center;
 background-color:black;
 color:white;
 position:relative;
-overflow-y:scroll;
+/* overflow-y:scroll; */ //this should be removed
 overflow-x:hidden;
 `
 const Wrapper = styled.div`
-height:100%;
+height:auto; //this should be removed
 width:100%;
 display: flex;
 flex-direction: column;
@@ -74,6 +75,12 @@ justify-content:flex-end;
 height:6rem;
 z-index:11;
 /* width:100%; */
+@media(max-width:700px){
+    right:8rem;
+}
+@media(max-width:400px){
+    right:4rem;
+}
 `
 const Span = styled.div`
 font-size: 20px;

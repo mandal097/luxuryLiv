@@ -150,7 +150,7 @@ img{
 const SemiCircleUp = styled.div`
 position: absolute;
 top:-10.9rem;
-left:26%;
+left:27%;
 height: 10.5rem;
 width: 22rem;
 border-radius: 250px 250px 0 0;
@@ -167,7 +167,7 @@ border-bottom:0px ;
 const SemiCircleDown = styled.div`
 position: absolute;
 bottom:-10.9rem;
-left:26%;
+left:27%;
 height: 10.5rem;
 width: 22rem;
 border-radius:0 0  250px 250px ;

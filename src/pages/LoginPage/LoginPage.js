@@ -96,7 +96,6 @@ const LoginPage = () => {
             }
             <Wrapper>
                 <Header>
-                    {/* <Span onClick={goBack}> <a href="#carousel">LLIV.</a></Span> */}
                     <Span onClick={showNavbar}><Ham /></Span>
                 </Header>
                 <Agent>
@@ -197,6 +196,12 @@ align-items:center;
 justify-content:flex-end;
 height:6rem;
 z-index:11;
+@media(max-width:700px){
+    right:8rem;
+}
+@media(max-width:400px){
+    right:4rem;
+}
 `
 const Span = styled.div`
 font-size: 20px;
