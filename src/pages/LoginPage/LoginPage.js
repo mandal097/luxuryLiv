@@ -165,7 +165,6 @@ const Container = styled.div`
     .nav{
     color:white;
     text-decoration:none;
-    /* font-family: 'Raleway', sans-serif; */
 }
    @media(max-width:725px){
     width: auto;
@@ -179,7 +178,6 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-/* background-color:red; */
 margin:0rem auto;
 overflow-y:scroll;
 overflow-x:hidden;

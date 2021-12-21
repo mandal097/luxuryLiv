@@ -1,27 +1,60 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import Navbar from '../../../components/Navbar/Navbar'
+import Ham from '../../../components/Hamburger/Ham'
 const Feedback = () => {
     const [name, setName] = useState('')
     const [companyName, setCompanyName] = useState('')
+    const [email, setEmail] = useState('')
+    const [phone, setPhone] = useState('')
     const [feedback, setFeedback] = useState('')
+
+    const [IsOpen, setIsOpen] = useState(false)
 
     const submit = (e) => {
         e.preventDefault()
         console.log(name);
         console.log(companyName);
+        console.log(email);
+        console.log(phone);
         console.log(feedback);
     }
 
+    const showNavbar = () => {
+        switch (IsOpen) {
+            case false:
+                setIsOpen(true);
+                break;
+            case true:
+                setIsOpen(false);
+                break;
+            default:
+                setIsOpen(false)
+        }
+    }
     return (
         <Container>
+            {
+                IsOpen && <Navbar />
+            }
             <Wrapper>
-                <WrapperTop>
-                    <TopHead>tell us how you feel... <br /> how you really really feel!</TopHead>
-                    <Form onSubmit={submit} >
-                        <InputDiv>
+                <Header>
+                    <Span onClick={showNavbar}><Ham /></Span>
+                </Header>
+                <Form onSubmit={submit}>
+                    <FormTopText>
+                        <TextDivLeft>
+                            <LeftHeading>Luxury Living</LeftHeading>
+                        </TextDivLeft>
+                        <TextDivRight>
+                            <RightHeading>TELL HER HOW YOU FEEL <br /> HOW YOU REALLY REALLY FEEL</RightHeading>
+                        </TextDivRight>
+                    </FormTopText>
+                    <FormTop>
+                        <FormLeft>
                             <Input
                                 type='text'
-                                placeholder='Your Name'
+                                placeholder='First & last Name'
                                 onChange={(e) => setName(e.target.value)}
                             />
                             <Input
@@ -29,23 +62,30 @@ const Feedback = () => {
                                 placeholder='Company Name'
                                 onChange={(e) => setCompanyName(e.target.value)}
                             />
-                        </InputDiv>
-                        <TextArea
-                            cols={1}
-                            rows={3}
-                            onChange={(e) => setFeedback(e.target.value)}
-                            placeholder="how was your experience of working with us?
-                        did we just become best friends?">
-                        </TextArea>
-                        <Submit type="submit" value="SUBMIT" />
-                    </Form>
-                </WrapperTop>
-                {/* <WrapperBottom>
-                    <WrapperbottomTxt>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia velit rem ex aspernatur alias? Tempora modi cupiditate dicta animi quas quidem sunt odio dolorem vel facere. Iusto at enim repellendus!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia velit rem ex aspernatur alias? Tempora modi cupiditate dicta animi quas quidem sunt odio dolorem vel facere. Iusto at enim repellendus!
-                    </WrapperbottomTxt>
-                </WrapperBottom> */}
+                            <Input
+                                type='email'
+                                placeholder='e-mail'
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                            <Input
+                                type='number'
+                                placeholder='Phone'
+                                onChange={(e) => setPhone(e.target.value)}
+                            />
+                        </FormLeft>
+                        <FormRight>
+
+                            <TextArea
+                                cols={1}
+                                rows={3}
+                                onChange={(e) => setFeedback(e.target.value)}
+                                placeholder="how was your experience of working with us?
+                did we just become best friends?">
+                            </TextArea>
+                        </FormRight>
+                    </FormTop>
+                    <Submit type='submit'>SUBMIT</Submit>
+                </Form>
             </Wrapper>
         </Container>
     )
@@ -58,84 +98,147 @@ background-color:black;
 color:black;
 scroll-snap-align: start;
 display:flex;
-align-items:center;
+/* align-items:flex-end; */
 justify-content:center;
+color:white;
 `
 const Wrapper = styled.div`
 width:1200px;
-height:100%;
+height:80vh;
 display:flex;
 align-items:center;
 justify-content:center;
+margin-top:9rem;
 `
 
-const WrapperTop = styled.div`
-width:100%;
-height:85%;
+const Header = styled.div`
+display:flex;
+top:3rem;
+right:14rem;
+position:absolute;
+margin-right:auto;
+align-items:center;
+justify-content:flex-end;
+height:6rem;
+z-index:11;
+@media(max-width:700px){
+    right:8rem;
+}
+@media(max-width:400px){
+    right:4rem;
+}
+`
+const Span = styled.div`
+font-size: 20px;
+font-weight: bold;
+color: goldenrod;
+cursor:pointer;
+a{
+text-decoration: none;  
+color: goldenrod; 
+}
+`
+
+const Form = styled.form`
+width:90%;
+height:95%;
 background-color:black;
 color:white;
 padding:1rem;
 `
-const TopHead = styled.h1`
-text-align:center;
-font-size:3.5rem;
-text-transform:uppercase;
-
+const FormTop = styled.div`
+width:100%;
+height:60%;
+display:flex;
+justify-content:space-between;
 `
-const Form = styled.form`
-width:95%;
+const FormTopText = styled.h1`
+width:100%;
+height:25%;
+display:flex;
+justify-content:space-between;
+`
+const TextDivLeft = styled.div`
+width:30%;
+display:flex;
+align-items:center;
+justify-content:center;
+`
+const TextDivRight = styled.div`
+width:70%;
+display:flex;
+align-items:center;
+justify-content:center;
+`
+
+const LeftHeading = styled.span`
+font-size:1.6rem;
+text-align:center;
+`
+const RightHeading = styled.span`
+font-size:3rem;
+text-align:center;
+`
+const FormLeft = styled.h1`
+width:30%;
+height:100%;
 display:flex;
 flex-direction:column;
 align-items:center;
-justify-content:space-around;
-margin:0 auto;
-border:0.1rem solid white;
-height:74%;
-position:relative;
-`
-
-
-const InputDiv = styled.div`
-width:95%;
-display:flex;
 justify-content:space-between;
-align-items:center;
-margin:1rem auto; 
-@media(max-width:400px){
-    flex-direction:column;
-}
+/* margin:1rem; */
 `
 const Input = styled.input`
-width:25%;
+border:0.5px solid white;
+width:100%;
+font-size:3rem;
 height:5rem;
 border:1px solid white;
-background-color:black;
-color:white;
-font-size:2.5rem;
-&::placeholder {
-       color: white;
-       font-size:2.2rem;
+ background-color:black;
+ color:white;
+ font-size:2.5rem;
+ &::placeholder {
+    color: white;
+    font-size:2.2rem;
+    padding:0 1rem;
     }
-    &[type="text"]{
-        text-align:center;
-        font-weight:100;
-}
-&:focus::placeholder {
-  color: transparent;
-}
-@media(max-width:650px){
-&::placeholder {
-       color: white;
-       font-size:1.5rem;
-    }
-}
-@media(max-width:400px){
-    width:100%;
-    margin:0.5rem 0;
-}
+     &[type="text"]{
+         font-weight:100;
+ }
+     &[type="email"]{
+         font-weight:100;
+ }
+     &[type="number"]{
+         font-weight:100;
+ }
+ &:focus::placeholder {
+   color: transparent;
+ }
+ @media(max-width:650px){
+ &::placeholder {
+        color: white;
+    font-size:1.5rem;
+     }
+ }
+ @media(max-width:400px){
+     width:100%;
+     margin:0.5rem 0;
+ } 
 `
+
+
+const FormRight = styled.h1`
+width:68%;
+height:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:space-between;
+`
+
 const TextArea = styled.textarea`
-width:95%;
+width:100%;
+height:100%;
 margin:0rem auto; 
 border:1px solid white;
 background-color:black;
@@ -145,36 +248,28 @@ resize:none;
 outline:none;
 text-align:center;
 padding:4rem 0;
+display:flex;
+align-items:center;
+justify-content:center;
 &:focus::placeholder {
-  color: transparent;
+    color: transparent;
 }
 &::placeholder {
-       color: white;
-       font-size:2.5rem;
-       text-align:center;
-       font-weight:100;
+    color: white;
+    font-size:2.5rem;
+    text-align:center;
+    font-weight:100;
     }
-`
-const Submit = styled.input`
-width:18rem;
-height:5rem;
-border:1px solid white;
-background-color:black;
-color:white;
-font-size:3rem;
-`
+    `
 
-// const WrapperBottom = styled.div`
-// width:100%;
-// height:15%;
-// `
-// const WrapperbottomTxt = styled.p`
-// color:black;
-// font-size:1.8rem;
-// font-weight:bold;
-// @media(max-width:745px){
-//     /* font-size:1.8rem; */
-// } 
-// `
-
+const Submit = styled.button`
+    width:100%;
+    height:5rem;
+    border:1px solid white;
+    background:transparent;
+    color:white;
+    font-size:2rem;
+    font-weight:400;
+    margin-top:2rem;
+    `
 export default Feedback

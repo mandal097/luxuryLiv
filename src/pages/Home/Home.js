@@ -5,7 +5,8 @@ import Social from '../../components/Social/Social';
 import Explore from './Explore/Explore';
 import FrontPage from '../../components/FrontPage/FrontPage';
 import Carousel from './CarouselPage/Carousel';
-import Feedback from './Feedback/Feedback';
+// import Feedback from './Feedback/Feedback';
+import Contactus from '../ContactUs/Contactus';
 
 const Home = () => {
   return (
@@ -16,7 +17,7 @@ const Home = () => {
           <ValuesComp />
           <Explore />
           <Carousel />
-          <Feedback />
+          <Contactus/>
         </Section>
         <Social />
       </Container>
