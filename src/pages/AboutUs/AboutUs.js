@@ -28,31 +28,34 @@ const AboutUs = () => {
                 <Content>
                     <ContentLeft>
                         <ContentLeftImg src='https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60' />
-                        <ContentLeftArc></ContentLeftArc>
+                        {/* <ContentLeftArc></ContentLeftArc> */}
+                        <Line></Line>
                     </ContentLeft>
                     <ContentRight>
-                        <ContentRightText>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis architecto a, ea, ratione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officatione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officiis ut laboriosam temporibus nisi tempora est ullam non, aut labore ea aliquid odio esse facere molestiae earum.</ContentRightText>
-                    <ContentRighttArc></ContentRighttArc>
+                        <ContentRightText>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis architecto a, ea, ratione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officatione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officiis ut laboriosam temporibus nisi tempora est ullam non, aut labore ea aliquid odio esse facere molestiae.</ContentRightText>
+                    {/* <ContentRighttArc></ContentRighttArc> */}
                     </ContentRight>
                 </Content>
                 <Content>
                     <ContentLeft>
                         <ContentLeftImg src='https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60' />
-                        <ContentLeftArc></ContentLeftArc>
+                        {/* <ContentLeftArc></ContentLeftArc> */}
+                        <Line></Line>
                     </ContentLeft>
                     <ContentRight>
-                        <ContentRightText>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis architecto a, ea, ratione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officatione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officiis ut laboriosam temporibus nisi tempora est ullam non, aut labore ea aliquid odio esse facere molestiae earum.</ContentRightText>
-                    <ContentRighttArc></ContentRighttArc>
+                        <ContentRightText>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis architecto a, ea, ratione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officatione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officiis ut laboriosam temporibus nisi tempora est ullam non, aut labore ea aliquid odio esse facere molestiae.</ContentRightText>
+                    {/* <ContentRighttArc></ContentRighttArc> */}
                     </ContentRight>
                 </Content>
                 <Content>
                     <ContentLeft>
                         <ContentLeftImg src='https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60' />
-                        <ContentLeftArc></ContentLeftArc>
+                        {/* <ContentLeftArc></ContentLeftArc> */}
+                        <Line></Line>
                     </ContentLeft>
                     <ContentRight>
-                        <ContentRightText>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis architecto a, ea, ratione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officatione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officiis ut laboriosam temporibus nisi tempora est ullam non, aut labore ea aliquid odio esse facere molestiae earum.</ContentRightText>
-                    <ContentRighttArc></ContentRighttArc>
+                        <ContentRightText>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis architecto a, ea, ratione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officatione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officiis ut laboriosam temporibus nisi tempora est ullam non, aut labore ea aliquid odio esse facere molestiae.</ContentRightText>
+                    {/* <ContentRighttArc></ContentRighttArc> */}
                     </ContentRight>
                 </Content>
             </Wrapper>
@@ -90,12 +93,12 @@ font-weight: bold;
 color: goldenrod;
 cursor:pointer;
 a{
-text-decoration: none;  
-color: goldenrod; 
+    text-decoration: none;  
+    color: goldenrod; 
 }
 `
 const Wrapper = styled.div`
-width:1100px;
+width:1050px;
 margin:0 auto;
 margin-top:12rem;
 @media(max-width:1100px){
@@ -108,63 +111,109 @@ height:25vh;
 display:flex;
 align-items:center;
 justify-content:space-between;
-margin-top:3rem;
+margin-top:4rem;
+@media(max-width:650px){
+    flex-direction:column;
+    height:auto;
+}
 `
 const ContentLeft = styled.div`
-width:30%;
-height:100%;
+width:27%;
+height:110%;
 display:flex;
 align-items:center;
 justify-content:center;
-border-right:2px solid grey;
-position:relative;
 z-index:2;
+border:3px solid white;
+border-top-left-radius:10rem;
+border-bottom-left-radius:10rem;
+border-bottom:none;
+border-top:none;
+border-right:none;
+position:relative;
+@media(max-width:650px){
+    border:none;
+    margin-bottom:1rem;
+}
 `
-const ContentLeftArc = styled.img`
-position: absolute;
-top:-1rem;
-left:-1.9rem;
-height:18rem;
-width:18rem;
-border:2px solid white;
-border-radius:50%;
-border-right-color:transparent;
-border-top-color:transparent;
-transform:rotate(43deg);
-z-index: -1;
+
+const Line = styled.div`
+position:absolute;
+top:4rem;
+right:0;
+width:2px;
+height:11rem;
+background-color:white;
+@media(max-width:650px){
+    display:none;
+}
 `
+
+// const ContentLeftArc = styled.img`
+// position: absolute;
+// top:-1rem;
+// left:-1.9rem;
+// height:18rem;
+// width:18rem;
+// border:2px solid white;
+// border-radius:50%;
+// border-right-color:transparent;
+// border-top-color:transparent;
+// transform:rotate(43deg);
+// z-index: -1;
+// `
 
 
 const ContentLeftImg = styled.img`
-width:17rem;
-height:17rem;
+width:16rem;
+height:16rem;
 border-radius:50%;
 object-fit:cover;
 `
 const ContentRight = styled.div`
-width:68%;
-height:100%;
+width:71%;
+height:110%;
+padding:5px;
 position:relative;
-/* background-color:red; */
+border:3px solid white;
+border-top-right-radius:10rem;
+border-bottom-right-radius:10rem;
+border-bottom:none;
+border-top:none;
+border-left:none;
 z-index:1;
+display:flex;
+align-items:center;
+justify-content:center;
+@media(max-width:650px){
+    border:none;
+    width:95%;
+}
 `
-const ContentRighttArc = styled.img`
-position: absolute;
-top:-1rem;
-right:-1.9rem;
-height:18rem;
-width:18rem;
-border:2px solid white;
-border-radius:50%;
-border-left-color:black;
-border-bottom-color:black;
-transform:rotate(43deg);
-z-index: -1;
-`
+// const ContentRighttArc = styled.img`
+// position: absolute;
+// top:-1rem;
+// right:-1.9rem;
+// height:18rem;
+// width:18rem;
+// /* border:2px solid white; */
+// border-radius:50%;
+// border-left-color:black;
+// border-bottom-color:black;
+// transform:rotate(43deg);
+// z-index: -1;
+// `
 
 const ContentRightText = styled.div`
-font-size:2rem;
-width:99%;
+font-size:1.8rem;
+width:93%;
+text-align:justify;
+@media(max-width:950px){
+    font-size:1.6rem;
+}
+@media(max-width:650px){
+    font-size:1.4rem;
+}
 `
 
 export default AboutUs

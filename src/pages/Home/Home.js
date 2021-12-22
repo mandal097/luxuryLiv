@@ -33,14 +33,13 @@ const Section = styled.div`
 scroll-behavior: smooth;
 scroll-snap-type: y mandatory;
 scroll-snap-points-y: repeat(100vh);
-/* height: calc(100vh - 55px); */
 height: 100vh;
 overflow-y: scroll;
 overflow-x: hidden;
 /* width
 /* &::-webkit-scrollbar {
   width: 7px;
-} */ */
+} */ 
 
 /* Track */
 &::-webkit-scrollbar-track {
