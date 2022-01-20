@@ -6,7 +6,7 @@ import Hotels from './pages/Hotels/Hotels'
 import LoginPage from './pages/LoginPage/LoginPage'
 import Register from './pages/Regitration/Register'
 import Testimonies from './pages/Testimonies/Testimonies'
-import Feedback from './pages/Home/Feedback/Feedback'
+import Feedback from './pages/Feedback/Feedback'
 import Contact from './components/Contact/Contact'
 import AboutUs from './pages/AboutUs/AboutUs'
 

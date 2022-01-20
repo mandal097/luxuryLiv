@@ -9,6 +9,7 @@ import Carousel from './CarouselPage/Carousel';
 import Contactus from '../ContactUs/Contactus';
 
 const Home = () => {
+  
   return (
     <>
       <Container>
