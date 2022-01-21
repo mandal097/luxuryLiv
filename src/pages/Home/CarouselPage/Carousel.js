@@ -241,8 +241,7 @@ align-items:center;
 const FeedbackText = styled.p`
 font-size:1.8rem;
 color:white;
-text-align:center;
-
+text-align:justify;
 `
 
 const NameDiv = styled.div`

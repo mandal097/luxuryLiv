@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import Navbar from '../../components/Navbar/Navbar'
 import Ham from '../../components/Hamburger/Ham'
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
 const Feedback = () => {
@@ -40,8 +40,7 @@ const Feedback = () => {
         formData.append("phone", phone)
         formData.append("feedbackMessage", feedbackMessage)
         formData.append("feedbackImage", fileName)
-        if (validForm) {
-            validForm()
+        if (validForm()) {
             let url = 'http://localhost:8000/api/feedback'
             let options = {
                 method: 'POST',
@@ -230,7 +229,7 @@ const Feedback = () => {
                 error &&
                 <SuccessMessage>
                     <SuccessWrapper>
-                        <SuccessContent>PLEASE FILL THE REQUIRED FIELDS</SuccessContent>
+                        <SuccessContent>SOMETHING WENT WRONG</SuccessContent>
                         {/* <Navigation> */}
                         <Success onClick={() => setError(false)}>OKAY!</Success>
                         {/* </Navigation> */}
