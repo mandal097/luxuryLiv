@@ -1,0 +1,160 @@
+.enquiry_form {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  .enquiry_form_wrapper {
+    width: 1200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    .header {
+      width: 75%;
+      height: 1%;
+      margin: 0rem auto;
+      // margin-top: 1rem;
+      h2 {
+        text-align: center;
+        padding-bottom:1rem ;
+        font-size: 2.2rem;
+        border-bottom: 1px solid white;
+        text-transform: uppercase;
+      }
+    }
+    .form {
+      width: 70%;
+      height: 80%;
+      margin-top: 2rem;
+      // height: auto;
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      justify-content: space-between;
+      .textarea {
+        width: 100%;
+        height: 10rem;
+        display: flex;
+        justify-content: space-between;
+        label {
+          font-size: 2rem;
+        }
+        textarea {
+          width: 78%;
+          height: 10rem;
+          background-color: transparent;
+          border: 1px solid white;
+          resize: none;
+          color: white;
+          font-size: 2rem;
+          padding: 1rem;
+        }
+      }
+      .button {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        input {
+          height: 100%;
+          color: black;
+          align-self: center;
+          font-size: 3rem;
+          text-transform: uppercase;
+          padding: 1rem 3rem;
+          background-color: transparent;
+          border: 1px solid white;
+          color: white;
+        }
+      }
+      .inputDiv {
+        width: 100%;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        label {
+          font-size: 2rem;
+        }
+        input {
+          width: 80%;
+          height: 100%;
+          background-color: transparent;
+          border: 1px solid white;
+          color: white;
+          font-size: 2rem;
+          padding: 1rem;
+          &:focus::placeholder {
+            color: transparent;
+          }
+        }
+      }
+      .input_div {
+        width: 100%;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .inputdivs {
+          width: 47%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          label {
+            font-size: 2rem;
+          }
+          input {
+            width: 50%;
+            height: 100%;
+            background-color: transparent;
+            border: 1px solid white;
+            font-size: 2rem;
+            color: white;
+            padding: 1rem;
+          }
+          input[type="date"]::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            border-radius: 4px;
+            margin-right: 2px;
+            opacity: 0.6;
+            filter: invert(0.8);
+          }
+        }
+      }
+    }
+  }
+  .contactDiv{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding-bottom: 30rem;
+      height: 14rem;
+      width: 50rem;
+      border: 1px solid white;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: black;
+      font-size: 2rem;
+      font-weight: bold;
+      transform: rotate(-45deg);
+      transform-origin: 105% -19%;
+      h2:nth-child(1){
+          color: red;
+          font-weight: bolder;
+        }
+        h2:nth-child(2){
+          font-weight: bolder;
+          color: black;
+      }
+  }
+}

@@ -10,15 +10,18 @@ import Feedback from './pages/Feedback/Feedback'
 import Contact from './components/Contact/Contact'
 import AboutUs from './pages/AboutUs/AboutUs'
 // import HotelsDescModal from './components/HotelDescription/HotelsDescModal'
+import Enquiry from './pages/Enquiry/Enquiry'
 
 const App = () => {
   return (
     <div className='app'>
       <Router>
         <Routes>
-          <Route path='/*' >
+          <Route path='/' >
             <Route index element={<Home />} />
-            <Route path='portfolio' element={<Portfolio />} />
+            <Route path='/portfolio' element={<Portfolio />}>
+            </Route>
+            <Route path='enquiry' element={<Enquiry />} />
             <Route path='hotels' element={<Hotels />} />
             <Route path='feedback' element={<Feedback />} />
             <Route path='registration' element={<Register />} />

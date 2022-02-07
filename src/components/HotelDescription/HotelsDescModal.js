@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { data } from '../../hotelDescModaldata/index.js'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import { NavLink } from 'react-router-dom';
 // import download from 'images-downloader'
 const HotelsDescModal = ({ ShowModal, places }) => {
 
@@ -82,7 +83,7 @@ const HotelsDescModal = ({ ShowModal, places }) => {
                         </CarouselProvider>
                     </RightHeaderThirdDiv>
                     <RightFooter>
-                        <RightFooterSpan>Enquire</RightFooterSpan>
+                        <RightFooterSpan> <NavLink to='/enquiry'>Enquire</NavLink> </RightFooterSpan>
                         <RightFooterSpan>Share</RightFooterSpan>
                         <RightFooterSpan  >
                             <a
@@ -270,17 +271,24 @@ color:white;
     font-size:3rem;
     background:transparent;
     border:none;
+    left:4rem;
 }
 .rightBtn{
     position:absolute;
     color:white;
-    right:0;
+    right:4rem;
     font-size:3rem;
     border:none;
     background:transparent;
 
 }
 @media (max-width:700px){
+    .leftBtn{
+        left:0rem;
+    }
+    .rightBtn{
+        right:0rem;
+    }
     .carousel_controls{
         top:30%;
         width:45vw;
