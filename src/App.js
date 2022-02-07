@@ -21,7 +21,7 @@ const App = () => {
             <Route index element={<Home />} />
             <Route path='/portfolio' element={<Portfolio />}>
             </Route>
-            <Route path='enquiry' element={<Enquiry />} />
+            <Route path='enquiry/:hotelName' element={<Enquiry />} />
             <Route path='hotels' element={<Hotels />} />
             <Route path='feedback' element={<Feedback />} />
             <Route path='registration' element={<Register />} />

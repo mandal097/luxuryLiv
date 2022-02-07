@@ -4,41 +4,25 @@ import styled from 'styled-components'
 import { data } from '../../hotelDescModaldata/index.js'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 // import download from 'images-downloader'
 const HotelsDescModal = ({ ShowModal, places }) => {
 
     const [hotel, setHotel] = useState([])
-
-    // const [image1, setImage1] = useState()
-    // const [image2, setImage2] = useState()
-    // const [image3, setImage3] = useState()
+    const navigate = useNavigate()
     useEffect(() => {
         const org_hotel = data.filter(i => i.hotelname === places)
         // console.log(org_hotel[0]);
         setHotel(org_hotel[0])
         // console.log(hotel);
+        localStorage.removeItem("hotelName")
     }, [places, hotel])
 
+    const gotoEnquiry = () => {
+        navigate(`/enquiry/${places}`)
+        localStorage.setItem('hotelName' , places)
+    }
 
-    // const dow=() => {
-    //     const img1 = document.getElementById('img1').src
-    //     const img2 = document.getElementById('img2').src
-    //     const img3 = document.getElementById('img3').src
-    //     // setImage1(img1)
-    //     // setImage2(img2)
-    //     // setImage3(img3)
-    //     const images = [img1, img2, img3]
-    //     console.log(images);
-    //     // console.log(img1);
-    //     const dest = 'path/to/dest'
-    //     download(images ,dest)
-    //         .then(result => {
-    //             console.log('Images downloaded', result);
-    //         })
-    //         .catch(error => console.log("downloaded error", error))
-
-    // }
     return (
         <Container>
             <Wrapper>
@@ -83,7 +67,8 @@ const HotelsDescModal = ({ ShowModal, places }) => {
                         </CarouselProvider>
                     </RightHeaderThirdDiv>
                     <RightFooter>
-                        <RightFooterSpan> <NavLink to='/enquiry'>Enquire</NavLink> </RightFooterSpan>
+                        <RightFooterSpan onClick={gotoEnquiry}>Enquire
+                        </RightFooterSpan>
                         <RightFooterSpan>Share</RightFooterSpan>
                         <RightFooterSpan  >
                             <a

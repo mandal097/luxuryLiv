@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 import './enquiry.scss'
 
 const Enquiry = () => {
+    const [hotelName , setHotelName] = useState('')
+    useEffect(()=>{
+       const hotel_name=  localStorage.getItem('hotelName')
+    //    console.log(hotel_name);
+       setHotelName(hotel_name)
+    },[])
     return (
         <div className='enquiry_form'>
             <div className="enquiry_form_wrapper">
@@ -11,7 +18,7 @@ const Enquiry = () => {
                 <form className="form">
                     <div className="inputDiv">
                         <label htmlFor="">Hotel Name :</label>
-                        <input type="text" name="" id="" />
+                        <input type="text" name="" id=""  value={hotelName}/>
                     </div>
                     <div className="input_div">
                         <div className="inputdivs">

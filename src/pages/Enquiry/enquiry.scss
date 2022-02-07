@@ -21,8 +21,8 @@
       // margin-top: 1rem;
       h2 {
         text-align: center;
-        padding-bottom:1rem ;
-        font-size: 2.2rem;
+        padding-bottom: 1rem;
+        font-size: 2rem;
         border-bottom: 1px solid white;
         text-transform: uppercase;
       }
@@ -131,30 +131,66 @@
       }
     }
   }
-  .contactDiv{
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      padding-bottom: 30rem;
-      height: 14rem;
-      width: 50rem;
-      border: 1px solid white;
-      background-color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  .contactDiv {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 30rem;
+    height: 14rem;
+    width: 50rem;
+    border: 1px solid white;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    transform: rotate(-45deg);
+    transform-origin: 105% -19%;
+    h2:nth-child(1) {
+      color: red;
+      font-weight: bolder;
+    }
+    h2:nth-child(2) {
+      font-weight: bolder;
       color: black;
-      font-size: 2rem;
-      font-weight: bold;
-      transform: rotate(-45deg);
-      transform-origin: 105% -19%;
-      h2:nth-child(1){
-          color: red;
-          font-weight: bolder;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .enquiry_form {
+    .enquiry_form_wrapper {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 850px) {
+  .enquiry_form {
+    .enquiry_form_wrapper {
+      width: 100%;
+      .header {
+        h2 {
+            font-size: 1.4rem;
         }
-        h2:nth-child(2){
-          font-weight: bolder;
-          color: black;
       }
+      .form {
+        .inputDiv {
+          input {
+              width: 70%;
+          }
+        }
+        .input_div {
+            flex-direction: column;
+            width: 100%;
+            justify-content: space-around;
+          .inputdivs {
+              width: 100%;
+              margin-top: 0.3rem;
+          }
+        }
+      }
+    }
   }
 }
