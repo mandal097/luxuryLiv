@@ -42,7 +42,7 @@ const CancelDIv = styled.div`
 position:absolute;
 font-size:5rem;
 color:white;
-top:7rem;
-right:20rem;
+top:4rem;
+right:15rem;
 `
 export default Player

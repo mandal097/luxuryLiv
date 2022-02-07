@@ -366,7 +366,7 @@ const Input = styled.input`
 border:0.5px solid white;
 width:100%;
 font-size:3rem;
-height:5rem;
+height:4.3rem;
 border:1px solid white;
  background-color:black;
  color:white;

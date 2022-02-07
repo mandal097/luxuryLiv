@@ -51,7 +51,7 @@ justify-content:space-evenly;
 `
 
 const Nav = styled.span`
-font-size:4.6rem;
+font-size:4.3rem;
 color:white;
 font-weight:bolder;
 text-transform:uppercase;

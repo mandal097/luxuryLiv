@@ -9,6 +9,7 @@ import Testimonies from './pages/Testimonies/Testimonies'
 import Feedback from './pages/Feedback/Feedback'
 import Contact from './components/Contact/Contact'
 import AboutUs from './pages/AboutUs/AboutUs'
+// import HotelsDescModal from './components/HotelDescription/HotelsDescModal'
 
 const App = () => {
   return (
