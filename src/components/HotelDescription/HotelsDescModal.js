@@ -11,20 +11,49 @@ const HotelsDescModal = ({ ShowModal, places }) => {
 
     const [hotel, setHotel] = useState([])
     const [showForm, setShowForm] = useState(false)
+    const [oImage, setOImage] = useState('')
     useEffect(() => {
         const org_hotel = data.filter(i => i.hotelname === places)
         // console.log(org_hotel[0]);
         setHotel(org_hotel[0])
 
     }, [places, hotel])
-    
+
     const gotoEnquiry = () => {
         setShowForm(true)
     }
-    const download = () => {
+
+    const leftImageHandler = () => {
         const img1 = document.getElementById('img1').src
         const img2 = document.getElementById('img2').src
         const img3 = document.getElementById('img3').src
+        switch (oImage) {
+            case img3:
+                setOImage(img2)
+                break;
+            case img2:
+                setOImage(img1)
+                break;
+            default:
+                setOImage(img1)
+        }
+    }
+    const rightImageHandler = () => {
+        const img1 = document.getElementById('img1').src
+        const img2 = document.getElementById('img2').src
+        const img3 = document.getElementById('img3').src
+        switch (oImage) {
+            case img1:
+                setOImage(img2)
+                break;
+            case img2:
+                setOImage(img3)
+                break;
+            default:
+                setOImage(img3)
+        }
+    }
+    const download = () => {
 
         var doc = new jsPDF("p", "mm", "a4");
 
@@ -37,16 +66,13 @@ const HotelsDescModal = ({ ShowModal, places }) => {
         doc.text(20, 20, hotel.about)
         doc.text(20, 30, hotel.carouseltxt1)
         doc.text(20, 40, hotel.carouseltxt2)
-        doc.addImage(img1, 'JPEG', 20, 50,  170, 110);
-        doc.addImage(img2, 'JPEG', 20, 185,  170, 110);
-        doc.addPage()
-        doc.addImage(img3, 'JPEG', 20, 10,  170, 120);
-
-
-        // onclick 
+        doc.addImage(oImage, 'JPEG', 20, 50, 170, 110);
+        // doc.addImage(img2, 'JPEG', 20, 185,  170, 110);
+        // doc.addPage()
+        // doc.addImage(img3, 'JPEG', 20, 10,  170, 120);
 
         doc.save("luxury_living.pdf")
-       
+
     }
 
     return (
@@ -58,14 +84,15 @@ const HotelsDescModal = ({ ShowModal, places }) => {
                         naturalSlideWidth={500}
                         naturalSlideHeight={325}
                         totalSlides={3}
+                        dragEnabled={false}
                     >
                         <Slider className='slider_div'>
                             <Slide className='img' index={0}> <ImgLeft src={hotel.img1} id='img1' /></Slide>
                             <Slide className='img' index={1}> <ImgLeft src={hotel.img2} id='img2' /></Slide>
                             <Slide className='img' index={2}> <ImgLeft src={hotel.img3} id='img3' /></Slide>
                         </Slider>
-                        <ButtonBack className='leftImgBtn'><LeftOutlined /></ButtonBack>
-                        <ButtonNext className='rightImgBtn'><RightOutlined /></ButtonNext>
+                        <ButtonBack className='leftImgBtn' onClick={leftImageHandler}><LeftOutlined /></ButtonBack>
+                        <ButtonNext className='rightImgBtn' onClick={rightImageHandler}><RightOutlined /></ButtonNext>
                     </CarouselProvider>
                 </Left>
                 <Right>
@@ -82,6 +109,7 @@ const HotelsDescModal = ({ ShowModal, places }) => {
                             naturalSlideWidth={500}
                             naturalSlideHeight={325}
                             totalSlides={2}
+                            dragEnabled={false}
                         >
                             <Slider className='slider_div'>
                                 <Slide className='slider_content' index={0}> <Carouselxt>{hotel.carouseltxt1}</Carouselxt></Slide>
@@ -270,8 +298,10 @@ color:black;
     display:flex;
     flex-direction:column;
     justify-content:center;
-    width:100%;
-    height:100%;
+    width:90%;
+    height:90%;
+    outline:none;
+    border:none;
     .slider_div{
         width:100%;
         .slider_content{

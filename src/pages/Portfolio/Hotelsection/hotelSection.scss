@@ -1,5 +1,4 @@
 .port-container {
-  // position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -9,7 +8,6 @@
 }
 
 .port-container .port-card {
-  // position: relative;
   max-width: 30rem;
   min-width: 30rem;
   height: 215px;
@@ -31,17 +29,13 @@
   position: relative;
   width: 100%;
   height: 260px;
-  // top: -60px;
   left: 5px;
   z-index: 1;
   display: flex;
-  // align-items: center;
-  // justify-content: center;
 }
 
 .port-container .port-card .port-imgBx img {
 width: 100%;
-  // height: inherit;
   height: 70%;
   border-radius: 20px;
   object-fit: contain;
@@ -67,14 +61,13 @@ width: 100%;
 }
 
 .port-container .port-card .port-content p {
-  font-size: 18px;
    font-family: 'Raleway', sans-serif;
 }
 
 .port-container .port-card:hover .port-content {
   visibility: visible;
   opacity: 1;
-  margin-top: -40px;
+  margin-top: -10px;
   transition-delay: 0.3s;
   transition: all 700ms;
 }
@@ -107,51 +100,14 @@ width: 100%;
   cursor: pointer;
 }
 
-/* @media (max-width: 500px) {
-  .upper {
-      height: 95px;
-  }
-
-  .port-container {
-      display: block;
-      padding-top: 0px;
-  }
-
-  .port-container .port-card {
-      margin: 400px auto;
-      max-width: 100%;
-      height: 100%;
-      border-radius: 40px;
-  }
-
-  .port-container .port-card .port-imgBx {
-      position: relative;
-      width: 860px;
-      height: 860px;
-  }
-
-  .port-container .port-card:hover {
-      height: 1400px;
-  }
-
-  .port-container .port-card .port-content h2 {
-      font-size: 70px;
-       font-family: 'Raleway', sans-serif;
-  }
-  
-  .port-container .port-card .port-content p {
-      font-size: 48px;
-       font-family: 'Raleway', sans-serif;
-  }
-} */
 .dropdown{
   width: 100%;
-  height: 153%;
+  height: 173%;
   border-radius: 9px;
 }
 
 select {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 select option{
   font-size: 1.5rem;
