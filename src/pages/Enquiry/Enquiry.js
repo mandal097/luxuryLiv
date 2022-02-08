@@ -1,21 +1,35 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import './enquiry.scss'
+import {
+    CloseOutlined
+} from '@ant-design/icons'
 
-const Enquiry = () => {
+import styled from 'styled-components';
+
+const Enquiry = ({setShowForm , hotel}) => {
     const [hotelName , setHotelName] = useState('')
     useEffect(()=>{
-       const hotel_name=  localStorage.getItem('hotelName')
-    //    console.log(hotel_name);
-       setHotelName(hotel_name)
-    },[])
+       setHotelName(hotel)
+    },[hotel])
+
+
+    const cancel = () =>{
+        setShowForm(false)
+    }
+
+    const submit = (e) =>{
+        e.preventDefault()
+    }
+
     return (
         <div className='enquiry_form'>
+              <Cancel onClick={cancel}><CloseOutlined /></Cancel>
             <div className="enquiry_form_wrapper">
                 <div className="header">
                     <h2>Input details of your request here ...and we'll get right back to you!</h2>
                 </div>
-                <form className="form">
+                <form className="form" onSubmit={submit}>
                     <div className="inputDiv">
                         <label htmlFor="">Hotel Name :</label>
                         <input type="text" name="" id=""  value={hotelName}/>
@@ -63,4 +77,12 @@ const Enquiry = () => {
     )
 };
 
+const Cancel = styled.div`
+position:absolute;
+top:-0.7rem;
+right:2rem;
+font-size:4rem;
+color:white;
+cursor:pointer;
+`
 export default Enquiry;

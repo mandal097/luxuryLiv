@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+// import HomeBtn from '../../components/HomeBtn/HomeBtn'
 const Contactus = () => {
     return (
         <Container>
+            {/* <HomeBtn/> */}
             <Wrapper>
                 <Left>
                     <H3>COME...VISIT US SOMETIMES! </H3>

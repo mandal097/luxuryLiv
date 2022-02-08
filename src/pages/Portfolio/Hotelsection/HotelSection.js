@@ -33,6 +33,8 @@ function Port() {
         setIsOpen1(true)
         setPlaces(e.target.value)
         setHotel(Ohotel)
+
+        localStorage.setItem('hotelName' ,places )
         // navigate(`${places}}`)
         // console.log(e.target.value);
         // console.log(places);
@@ -53,7 +55,6 @@ function Port() {
                     <div className="port-content">
                         <h2>AMAN Resorts</h2>
                         <div class="upper">
-                            {/* <select onChange={demo} className="dropdown"> */}
                             <select onChange={demo} className="dropdown">
                                 <option disabled selected >select your destination</option>
                                 <option >Amanbagh, Rajasthan, India</option>
@@ -162,6 +163,7 @@ function Port() {
 
                                     <option disabled selected >select your destination</option>
                                     <option>St. Moritz, Switzerland</option>
+                                    <option>St. Moritz, Switzerland</option>
                                 </select>
                             </div>
                         </div>
@@ -262,6 +264,7 @@ function Port() {
 
                             <select onChange={demo} className="dropdown">
                                 <option disabled selected >select your destination</option>
+                                <option>Maldives</option>
                                 <option>Maldives</option>
                             </select>
                         </div>
@@ -415,6 +418,7 @@ function Port() {
 
                             <select onChange={demo} className="dropdown">
                                 <option disabled selected >select your destination</option>
+                                <option>Palazzo Versace, Dubai</option>
                                 <option>Palazzo Versace, Dubai</option>
                             </select>
                         </div>

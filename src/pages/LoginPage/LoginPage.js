@@ -11,6 +11,7 @@ import {
 } from '@ant-design/icons'
 import Login from '../../components/LoginPopUp/Login'
 import Navbar from '../../components/Navbar/Navbar'
+import HomeBtn from '../../components/HomeBtn/HomeBtn'
 
 const LoginPage = () => {
     // const navigate = useNavigate()
@@ -91,6 +92,7 @@ const LoginPage = () => {
 
     return (
         <Container  >
+            <HomeBtn/>
             {
                 IsOpen && <Navbar />
             }

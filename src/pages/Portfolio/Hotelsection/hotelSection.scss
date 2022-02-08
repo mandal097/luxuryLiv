@@ -23,8 +23,8 @@
 }
 
 .port-container .port-card:hover {
-  height: 435px;
-  transition: all 1s ease-in-out;
+  height: 425px;
+  transition: all 1s ease-in-out ;
 }
 
 .port-container .port-card .port-imgBx {
@@ -59,10 +59,11 @@ width: 100%;
 }
 
 .port-container .port-card .port-content h2 {
-  font-size: 30px;
+  font-size: 1px;
    font-family: 'Raleway', sans-serif;
   width: 100%;
   float: left;
+  visibility: hidden;
 }
 
 .port-container .port-card .port-content p {

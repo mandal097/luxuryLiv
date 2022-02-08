@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Social from '../Social/Social'
 import Navbar from '../Navbar/Navbar'
 import Ham from '../Hamburger/Ham'
+import HomeBtn from '../HomeBtn/HomeBtn'
 const Contact = () => {
     const [IsOpen, setIsOpen] = useState(false)
     const showNavbar = () => {
@@ -19,6 +20,7 @@ const Contact = () => {
     }
     return (
         <Container>
+            <HomeBtn/>
             {
                 IsOpen && <Navbar />
             }

@@ -4,23 +4,49 @@ import styled from 'styled-components'
 import { data } from '../../hotelDescModaldata/index.js'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import { useNavigate } from 'react-router-dom';
-// import download from 'images-downloader'
+import Enquiry from '../../pages/Enquiry/Enquiry'
+import jsPDF from 'jspdf'
+
 const HotelsDescModal = ({ ShowModal, places }) => {
 
     const [hotel, setHotel] = useState([])
-    const navigate = useNavigate()
+    const [showForm, setShowForm] = useState(false)
     useEffect(() => {
         const org_hotel = data.filter(i => i.hotelname === places)
         // console.log(org_hotel[0]);
         setHotel(org_hotel[0])
-        // console.log(hotel);
-        localStorage.removeItem("hotelName")
-    }, [places, hotel])
 
+    }, [places, hotel])
+    
     const gotoEnquiry = () => {
-        navigate(`/enquiry/${places}`)
-        localStorage.setItem('hotelName' , places)
+        setShowForm(true)
+    }
+    const download = () => {
+        const img1 = document.getElementById('img1').src
+        const img2 = document.getElementById('img2').src
+        const img3 = document.getElementById('img3').src
+
+        var doc = new jsPDF("p", "mm", "a4");
+
+
+        // doc.addImage('images/aman.png', 'JPEG', 20, 50,  170, 130, 480, 160);
+        doc.setFontSize(19);
+        doc.text(20, 10, places)
+        doc.setFontSize(12);
+        doc.addFont('helvetica', 'normal')
+        doc.text(20, 20, hotel.about)
+        doc.text(20, 30, hotel.carouseltxt1)
+        doc.text(20, 40, hotel.carouseltxt2)
+        doc.addImage(img1, 'JPEG', 20, 50,  170, 110);
+        doc.addImage(img2, 'JPEG', 20, 185,  170, 110);
+        doc.addPage()
+        doc.addImage(img3, 'JPEG', 20, 10,  170, 120);
+
+
+        // onclick 
+
+        doc.save("luxury_living.pdf")
+       
     }
 
     return (
@@ -34,7 +60,7 @@ const HotelsDescModal = ({ ShowModal, places }) => {
                         totalSlides={3}
                     >
                         <Slider className='slider_div'>
-                            <Slide className='img' index={0}> <ImgLeft src={hotel.img1} id='el' /></Slide>
+                            <Slide className='img' index={0}> <ImgLeft src={hotel.img1} id='img1' /></Slide>
                             <Slide className='img' index={1}> <ImgLeft src={hotel.img2} id='img2' /></Slide>
                             <Slide className='img' index={2}> <ImgLeft src={hotel.img3} id='img3' /></Slide>
                         </Slider>
@@ -47,7 +73,7 @@ const HotelsDescModal = ({ ShowModal, places }) => {
                         <RightHeaderH>{places}</RightHeaderH>
                     </RightHeader>
                     <RightHeaderSecondDiv>
-                        <CountryName>{hotel.about}</CountryName>
+                        <CountryName><p>{hotel.about}</p></CountryName>
                         {/* <CountryName>New Delhi, India</CountryName> */}
                     </RightHeaderSecondDiv>
                     <RightHeaderThirdDiv>
@@ -70,18 +96,21 @@ const HotelsDescModal = ({ ShowModal, places }) => {
                         <RightFooterSpan onClick={gotoEnquiry}>Enquire
                         </RightFooterSpan>
                         <RightFooterSpan>Share</RightFooterSpan>
-                        <RightFooterSpan  >
-                            <a
+                        <RightFooterSpan onClick={download} >
+                            {/* <a
                                 href={hotel.img1} alt='s' target='_blank' rel='noreferrer'
                                 download={e => e.target.files[0]}
                             >
-                                Download
-                            </a>
+                            </a> */}
+                            Download
                         </RightFooterSpan>
                     </RightFooter>
                 </Right>
                 <Cancel onClick={ShowModal}><CloseOutlined /></Cancel>
             </Wrapper>
+            {
+                showForm && <Enquiry setShowForm={setShowForm} hotel={places} />
+            }
         </Container>
     )
 }
@@ -107,8 +136,9 @@ const Wrapper = styled.div`
 width:90vw;
 height:80vh;
 position:relative;
-background-color:black;
-border:1px solid white;
+background-color:white;
+/* border:1px solid white; */
+color:black;
 
 display:flex;
 @media (max-width:700px){
@@ -130,7 +160,7 @@ overflow:hidden;
         position:absolute;
         top:45%;
         font-size:5rem;
-        color:white;
+        color:black;
         z-index:33;
         left:100;
         background:transparent;
@@ -139,7 +169,7 @@ overflow:hidden;
     .rightImgBtn{
         position:absolute;
         font-size:5rem;
-        color:white;
+        color:black;
         top:45%;
         right:0;
         z-index:33;
@@ -192,6 +222,7 @@ justify-content:center;
 padding: 0 1rem;
 @media (max-width:700px){
    width:100%;
+   height:50vh;
 }
 `
 const RightHeader = styled.div`
@@ -200,12 +231,12 @@ height:12%;
 display:flex;
 align-items:center;
 justify-content:flex-start;
-border-bottom:1px solid white;
+border-bottom:2px solid black;
 `
 const RightHeaderH = styled.h3`
-font-size:3rem;
+font-size:2.6rem;
 font-weight:400;
-color:white;
+color:black;
 `
 const RightHeaderSecondDiv = styled.div`
 width:100%;
@@ -214,15 +245,16 @@ display:flex;
 justify-content:center;
 align-items:center;
 padding:3rem;
-border-bottom:1px solid white;
+border-bottom:2px solid black;
 `
 const CountryName = styled.span`
-font-size:2.7rem;
-color:white;
-font-weight:100;
+font-size:2.9rem;
+color:black;
+font-weight:600;
 text-align:center;
 /* border:1px solid white; */
 line-height:4rem;
+
 `
 
 const RightHeaderThirdDiv = styled.div`
@@ -233,7 +265,7 @@ align-items:center;
 justify-content:center;
 overflow:hidden;
 position:relative;
-color:white;
+color:black;
 .slider{
     display:flex;
     flex-direction:column;
@@ -252,7 +284,7 @@ color:white;
 }
 .leftBtn{
     position:absolute;
-    color:white;
+    color:black;
     font-size:3rem;
     background:transparent;
     border:none;
@@ -260,7 +292,7 @@ color:white;
 }
 .rightBtn{
     position:absolute;
-    color:white;
+    color:black;
     right:4rem;
     font-size:3rem;
     border:none;
@@ -282,10 +314,14 @@ color:white;
 `
 const Carouselxt = styled.h3`
 font-size:2.6rem;
-color:white;
+color:black;
 padding:5rem;
 text-align:center;
-/* margin-top:4rem; */
+@media(max-width:700px){
+    margin-top:-1rem;
+    font-size:2rem;
+
+}
 `
 
 const RightFooter = styled.div`
@@ -294,15 +330,15 @@ height:10%;
 display:flex;
 align-items:center;
 justify-content:space-evenly;
-border-top:1px solid white;
+border-top:2px solid black;
 `
 const RightFooterSpan = styled.span`
 font-size:1.7rem;
-color:white;
-font-weight:400;
+color:black;
+font-weight:600;
 cursor:pointer;
 a{
-    color:white;
+    color:black;
     text-decoration:none;
     &:hover{
     color:blue;
@@ -318,7 +354,7 @@ position:absolute;
 top:-0.7rem;
 right:2rem;
 font-size:4rem;
-color:white;
+color:black;
 cursor:pointer;
 `
 export default HotelsDescModal

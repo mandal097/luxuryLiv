@@ -2,6 +2,7 @@ import React from 'react'
 import './portfolio.scss'
 import HotelSection from './Hotelsection/HotelSection'
 import Firstpage from './Firstpage/Firstpage'
+import HomeBtn from '../../components/HomeBtn/HomeBtn'
 // import { useLocation } from 'react-router';
 // import HotelsDescModal from "../../components/HotelDescription/HotelsDescModal";
 
@@ -16,6 +17,7 @@ const Portfolio = () => {
     // }, [page])
     return (
         <div className="portfolio">
+            <HomeBtn/>
             <Firstpage />
             <HotelSection />
         </div>

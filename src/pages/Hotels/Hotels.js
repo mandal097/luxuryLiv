@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import 'aos/dist/aos.css'
 import Aos from 'aos'
-import { Fade } from 'react-reveal'
 import Ham from '../../components/Hamburger/Ham'
 import Navbar from '../../components/Navbar/Navbar'
 
@@ -12,7 +11,7 @@ const Hotels = () => {
     const [IsOpen, setIsOpen] = useState(false)
 
     useEffect(() => {
-        Aos.init({ duration: 700 })
+        Aos.init({ duration: 1500 })
     })
     // const goBack = () => {
     //     navigate('..')
@@ -46,8 +45,7 @@ const Hotels = () => {
                     </Content>
                 </FirstSection>
                 <SecondPage>
-                    <Fade left duration={3000} >
-                        <SWrapper >
+                        <SWrapper   data-aos="fade-right">
                             <Left>
                                 <Img src="https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
                             </Left>
@@ -57,9 +55,7 @@ const Hotels = () => {
                                 <Button>Know More</Button>
                             </Right>
                         </SWrapper>
-                    </Fade>
-                    <Fade right duration={3000}>
-                        <SWrapper>
+                        <SWrapper  data-aos="fade-left">
                             <Right >
                                 <Name>GAURAV</Name>
                                 <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
@@ -69,9 +65,27 @@ const Hotels = () => {
                                 <Img src="https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
                             </Left>
                         </SWrapper>
-                    </Fade>
-                    <Fade left duration={3000} >
-                        <SWrapper >
+                        <SWrapper data-aos="fade-right">
+                            <Left>
+                                <Img src="https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                            </Left>
+                            <Right>
+                                <Name>AMAN</Name>
+                                <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
+                                <Button>Know More</Button>
+                            </Right>
+                            </SWrapper>
+                        <SWrapper data-aos="fade-left">
+                            <Right >
+                                <Name>GAURAV</Name>
+                                <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
+                                <Button>Know More</Button>
+                            </Right>
+                            <Left>
+                                <Img src="https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                            </Left>
+                        </SWrapper>
+                        <SWrapper data-aos="fade-right" >
                             <Left>
                                 <Img src="https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
                             </Left>
@@ -81,9 +95,7 @@ const Hotels = () => {
                                 <Button>Know More</Button>
                             </Right>
                         </SWrapper>
-                    </Fade>
-                    <Fade right duration={3000}>
-                        <SWrapper>
+                        <SWrapper data-aos="fade-left">
                             <Right >
                                 <Name>GAURAV</Name>
                                 <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
@@ -93,31 +105,6 @@ const Hotels = () => {
                                 <Img src="https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
                             </Left>
                         </SWrapper>
-                    </Fade>
-                    <Fade left duration={3000} >
-                        <SWrapper >
-                            <Left>
-                                <Img src="https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
-                            </Left>
-                            <Right>
-                                <Name>AMAN</Name>
-                                <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
-                                <Button>Know More</Button>
-                            </Right>
-                        </SWrapper>
-                    </Fade>
-                    <Fade right duration={3000}>
-                        <SWrapper>
-                            <Right >
-                                <Name>GAURAV</Name>
-                                <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
-                                <Button>Know More</Button>
-                            </Right>
-                            <Left>
-                                <Img src="https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
-                            </Left>
-                        </SWrapper>
-                    </Fade>
                 </SecondPage>
             </Wrapper>
         </Container>

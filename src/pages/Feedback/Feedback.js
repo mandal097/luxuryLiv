@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
+import HomeBtn from '../../components/HomeBtn/HomeBtn';
 const Feedback = () => {
     const [success, setSuccess] = useState(false)
     const [error, setError] = useState(false)
@@ -133,6 +134,7 @@ const Feedback = () => {
     }
     return (
         <Container>
+            <HomeBtn/>
             {
                 IsOpen && <Navbar />
             }
@@ -249,6 +251,7 @@ scroll-snap-align: start;
 display:flex;
 justify-content:center;
 color:white;
+position:relative;
 .nav{
     font-size:1.5rem;
     text-decoration:none;
