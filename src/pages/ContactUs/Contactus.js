@@ -1,10 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-// import HomeBtn from '../../components/HomeBtn/HomeBtn'
 const Contactus = () => {
     return (
         <Container>
-            {/* <HomeBtn/> */}
             <Wrapper>
                 <Left>
                     <H3>COME...VISIT US SOMETIMES! </H3>
@@ -39,10 +37,6 @@ const Container = styled.div`
         color:white;
         text-decoration:none;
     }
-    /* @media(max-width:725px){
-    width: auto;
-    height: auto;
-} */
 `
 
 const Wrapper = styled.div`

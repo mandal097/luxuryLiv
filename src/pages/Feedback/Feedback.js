@@ -391,20 +391,6 @@ border:1px solid white;
   font-size:2rem;
 }
  }
-     /* &[type="file"]::before {
-  content: 'Select your Image';
-  background: linear-gradient(top, #f9f9f9, #e3e3e3);
-  border: 1px solid #999;
-  border-radius: 3px;
-  padding: 5px 8px;
-  height:100%;
-  outline: none;
-  white-space: nowrap;
-  -webkit-user-select: none;
-  cursor: pointer;
-  font-weight: 100;
-  font-size: 0.3rem;
-} */
 &[type='file']{
     font-weight:100;
 }

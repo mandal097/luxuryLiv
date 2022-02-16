@@ -4,19 +4,25 @@ import styled from 'styled-components'
 import { data } from '../../hotelDescModaldata/index.js'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import Enquiry from '../../pages/Enquiry/Enquiry'
+import Enquiry from '../Enquiry/Enquiry'
 import jsPDF from 'jspdf'
 
 const HotelsDescModal = ({ ShowModal, places }) => {
 
     const [hotel, setHotel] = useState([])
-    const [showForm, setShowForm] = useState(false)
-    const [oImage, setOImage] = useState('')
+    const [showForm, setShowForm] = useState()
+    // const [img1, setImg1] = useState()
+    // const [img2, setImg2] = useState()
+    // const [img3, setImg3] = useState()
+
+    const [oImage, setOImage] = useState()
+
     useEffect(() => {
         const org_hotel = data.filter(i => i.hotelname === places)
-        // console.log(org_hotel[0]);
         setHotel(org_hotel[0])
-
+        // setImg1(hotel.img1)
+        // setImg2(hotel.img2)
+        // setImg3(hotel.img3)
     }, [places, hotel])
 
     const gotoEnquiry = () => {
@@ -54,7 +60,7 @@ const HotelsDescModal = ({ ShowModal, places }) => {
         }
     }
     const download = () => {
-
+        const img1 = document.getElementById('img1').src
         var doc = new jsPDF("p", "mm", "a4");
 
 
@@ -66,18 +72,19 @@ const HotelsDescModal = ({ ShowModal, places }) => {
         doc.text(20, 20, hotel.about)
         doc.text(20, 30, hotel.carouseltxt1)
         doc.text(20, 40, hotel.carouseltxt2)
-        doc.addImage(oImage, 'JPEG', 20, 50, 170, 110);
-        // doc.addImage(img2, 'JPEG', 20, 185,  170, 110);
-        // doc.addPage()
-        // doc.addImage(img3, 'JPEG', 20, 10,  170, 120);
+        // {
+            oImage
+            ? doc.addImage(oImage, 'JPEG', 20, 50, 170, 110) 
+            : doc.addImage(img1, 'JPEG', 20, 50, 170, 110) 
+        // }
 
         doc.save("luxury_living.pdf")
 
     }
 
     return (
-        <Container>
-            <Wrapper>
+        <Container >
+            <Wrapper >
                 <Left>
                     <CarouselProvider
                         className='slider'
@@ -101,7 +108,6 @@ const HotelsDescModal = ({ ShowModal, places }) => {
                     </RightHeader>
                     <RightHeaderSecondDiv>
                         <CountryName><p>{hotel.about}</p></CountryName>
-                        {/* <CountryName>New Delhi, India</CountryName> */}
                     </RightHeaderSecondDiv>
                     <RightHeaderThirdDiv>
                         <CarouselProvider
@@ -124,14 +130,7 @@ const HotelsDescModal = ({ ShowModal, places }) => {
                         <RightFooterSpan onClick={gotoEnquiry}>Enquire
                         </RightFooterSpan>
                         <RightFooterSpan>Share</RightFooterSpan>
-                        <RightFooterSpan onClick={download} >
-                            {/* <a
-                                href={hotel.img1} alt='s' target='_blank' rel='noreferrer'
-                                download={e => e.target.files[0]}
-                            >
-                            </a> */}
-                            Download
-                        </RightFooterSpan>
+                        <RightFooterSpan onClick={download} >download</RightFooterSpan>
                     </RightFooter>
                 </Right>
                 <Cancel onClick={ShowModal}><CloseOutlined /></Cancel>
@@ -157,7 +156,7 @@ align-items:center;
 justify-content:center;
 z-index:10;
 @media (max-width:700px){
-   height:auto;
+    height:auto;
 }
 `
 const Wrapper = styled.div`
@@ -165,7 +164,6 @@ width:90vw;
 height:80vh;
 position:relative;
 background-color:white;
-/* border:1px solid white; */
 color:black;
 
 display:flex;
@@ -263,6 +261,8 @@ border-bottom:2px solid black;
 `
 const RightHeaderH = styled.h3`
 font-size:2.6rem;
+font-family: 'Baloo', sans-serif;
+font-family: cursive;
 font-weight:400;
 color:black;
 `
@@ -280,7 +280,6 @@ font-size:2.9rem;
 color:black;
 font-weight:600;
 text-align:center;
-/* border:1px solid white; */
 line-height:4rem;
 
 `
@@ -318,12 +317,12 @@ color:black;
     font-size:3rem;
     background:transparent;
     border:none;
-    left:4rem;
+    left:1rem;
 }
 .rightBtn{
     position:absolute;
     color:black;
-    right:4rem;
+    right:1rem;
     font-size:3rem;
     border:none;
     background:transparent;

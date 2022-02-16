@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import Navbar from '../../components/Navbar/Navbar'
 import Ham from '../../components/Hamburger/Ham'
-// import Register from '../../pages/Regitration/Register'
 
 const Testimonies = () => {
 
@@ -31,7 +30,6 @@ const Testimonies = () => {
                     <Span onClick={showNavbar}><Ham/></Span>
                 </Header>
                 <h2>THIS IS THE TESTIMONIES PAGE </h2>
-                {/* <Register/> */}
             </Wrapper>
         </Container>
     )

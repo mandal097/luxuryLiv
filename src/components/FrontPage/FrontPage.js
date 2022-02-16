@@ -34,7 +34,6 @@ const FrontPage = ({ title, para }) => {
 const Main = styled.div`
 width: 100%;
 margin: 0px auto;
-/* height: calc(100vh  - 55px); */
 height:100vh;
 display: flex;
 flex-direction: column;
@@ -44,7 +43,6 @@ scroll-snap-align: start;
 position:relative;
 @media (max-width:600px){
     width: 100%;
-    /* justify-content: space-evenly; */
 }
 `
 const H = styled.h1`

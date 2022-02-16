@@ -369,12 +369,4 @@ font-size:3rem;
 cursor:pointer;
 `
 
-// const Button = styled.button`
-// background-color: black;
-// color: white;
-// margin:1rem auto;
-// font-size: 2rem;
-// padding: 1rem;
-// `
-
 export default LoginPage

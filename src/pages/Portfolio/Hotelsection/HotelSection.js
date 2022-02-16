@@ -3,14 +3,13 @@ import './hotelSection.scss';
 import Aos from "aos";
 import "aos/dist/aos.css";
 import HotelsDescModal from "../../../components/HotelDescription/HotelsDescModal";
-// import { useNavigate } from "react-router-dom";
 import { data } from '../../../hotelDescModaldata/index'
 
 function Port() {
     const [isOpen1, setIsOpen1] = useState(false);
     const [places, setPlaces] = useState('')
     const [hotel, setHotel] = useState('')
-    // const navigate = useNavigate()
+
     useEffect(() => {
         Aos.init({ duration: 2000 });
     }, []);
@@ -31,10 +30,10 @@ function Port() {
     // console.log(Ohotel);
     const demo = (e) => {
         setIsOpen1(true)
-        setPlaces(e.target.value)
+        places ? setPlaces(places) : setPlaces(e.target.value)
         setHotel(Ohotel)
 
-        localStorage.setItem('hotelName' ,places )
+        localStorage.setItem('hotelName', places)
         // navigate(`${places}}`)
         // console.log(e.target.value);
         // console.log(places);

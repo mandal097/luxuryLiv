@@ -1,21 +1,17 @@
 import React, { useEffect, useState } from 'react'
-// import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import 'aos/dist/aos.css'
 import Aos from 'aos'
 import Ham from '../../components/Hamburger/Ham'
 import Navbar from '../../components/Navbar/Navbar'
+import HomeBtn from '../../components/HomeBtn/HomeBtn'
 
 const Hotels = () => {
-    // const navigate = useNavigate()
     const [IsOpen, setIsOpen] = useState(false)
 
     useEffect(() => {
         Aos.init({ duration: 1500 })
     })
-    // const goBack = () => {
-    //     navigate('..')
-    // }
     const showNavbar = () => {
         switch (IsOpen) {
             case false:
@@ -31,6 +27,7 @@ const Hotels = () => {
 
     return (
         <Container>
+            <HomeBtn/>
             {
                 IsOpen && <Navbar />
             }
@@ -142,8 +139,7 @@ const Header = styled.div`
 display:flex;
 align-items:center;
 justify-content:flex-end;
-/* height:50px;
-width:20%; */
+
 z-index:10;
 position:absolute;
 top:3rem;
@@ -236,8 +232,6 @@ width:50%;
 display:flex;
 flex-direction:column;
 margin:2rem;
-/* align-items:flex-end; */
-/* justify-content:center; */
 @media(max-width:650px){
     width:100%;
     height:auto;
