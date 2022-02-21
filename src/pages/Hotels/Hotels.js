@@ -59,12 +59,12 @@ const Hotels = () => {
                                 <Button>Know More</Button>
                             </Right>
                             <Left>
-                                <Img src="https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                                <Img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aG90ZWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
                             </Left>
                         </SWrapper>
                         <SWrapper data-aos="fade-right">
                             <Left>
-                                <Img src="https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                                <Img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
                             </Left>
                             <Right>
                                 <Name>AMAN</Name>
@@ -79,12 +79,12 @@ const Hotels = () => {
                                 <Button>Know More</Button>
                             </Right>
                             <Left>
-                                <Img src="https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                                <Img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGhvdGVsc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
                             </Left>
                         </SWrapper>
                         <SWrapper data-aos="fade-right" >
                             <Left>
-                                <Img src="https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                                <Img src="https://images.unsplash.com/photo-1516531558361-f6c4c956ad85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aG90ZWxzJTIwbmlnaHRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
                             </Left>
                             <Right>
                                 <Name>AMAN</Name>
@@ -99,7 +99,7 @@ const Hotels = () => {
                                 <Button>Know More</Button>
                             </Right>
                             <Left>
-                                <Img src="https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                                <Img src="https://images.unsplash.com/photo-1580747182325-66c1cbcdb289?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWxzJTIwbmlnaHRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
                             </Left>
                         </SWrapper>
                 </SecondPage>
@@ -217,7 +217,7 @@ margin:2rem;
 `
 
 const Img = styled.img`
-height:100%;
+height:40vh;
 width:100%;
 object-fit:cover;
 display:flex;

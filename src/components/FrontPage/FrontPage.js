@@ -46,10 +46,10 @@ position:relative;
 }
 `
 const H = styled.h1`
-font-size: 15rem;
-font-weight: 400;
+font-size: 10rem;
+font-weight: 100;
 font-family: 'Shoreline';
-src: local('Shoreline'), url(Library/Fonts/LuxuryLiving_Logo.otf) format('opentype');
+margin-bottom:10rem;
 @media (max-width:1000px){
    font-size: 10rem;
    text-align:center;

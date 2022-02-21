@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import {
     LeftOutlined,
-    RightOutlined
+    RightOutlined,
+    ArrowLeftOutlined,
+    ArrowRightOutlined
 } from '@ant-design/icons'
 import { fetchApi } from '../../../axios'
 const Carousel = () => {
@@ -49,36 +51,36 @@ const Carousel = () => {
         <MainContainer id='carousel'>
             <Container >
                 <Top>
-                    <TopLeft onClick={goToAgentsPage}>AGENTS TO THE LEFT</TopLeft>
-                    <TopLeft onClick={goToHotelsPage}>HOTELS TO THE RIGHT</TopLeft>
+                    <TopLeft onClick={goToAgentsPage}> <ArrowLeftOutlined /><h1>AGENTS TO THE LEFT</h1></TopLeft>
+                    <TopRight onClick={goToHotelsPage}> <ArrowRightOutlined /><h1>HOTELS TO THE RIGHT</h1></TopRight>
                 </Top>
                 <Bottomout>
 
 
-                {
-                    feedbackApi.map(i => (
-                        <Bottom key={i.phone}>
-                            <LeftImg>
-                                <Img src={OrgFeedback.feedbackImage ? `/uploads/${OrgFeedback.feedbackImage}` : "https://cdn.pixabay.com/photo/2018/04/18/18/56/user-3331256__340.png"} />
-                            </LeftImg>
-                            <RightBottom>
-                                <RightBottomWrapper>
-                                    <Feedback>
-                                        <FeedbackText>{OrgFeedback.feedbackMessage}</FeedbackText>
-                                    </Feedback>
-                                    <NameDiv >
-                                        <AgentsName>{OrgFeedback.name}</AgentsName>
-                                        <CompanyName>{OrgFeedback.companyName}</CompanyName>
-                                    </NameDiv>
-                                </RightBottomWrapper>
-                            </RightBottom>
-                            <Controls>
-                                <ControlsLeft onClick={handleLeft}><LeftOutlined /></ControlsLeft>
-                                <ControlsRight onClick={handleRight} ><RightOutlined /></ControlsRight>
-                            </Controls>
-                        </Bottom>
-                    ))
-                }
+                    {
+                        feedbackApi.map(i => (
+                            <Bottom key={i.phone}>
+                                <LeftImg>
+                                    <Img src={OrgFeedback.feedbackImage ? `/uploads/${OrgFeedback.feedbackImage}` : "https://cdn.pixabay.com/photo/2018/04/18/18/56/user-3331256__340.png"} />
+                                </LeftImg>
+                                <RightBottom>
+                                    <RightBottomWrapper>
+                                        <Feedback>
+                                            <FeedbackText>{OrgFeedback.feedbackMessage}</FeedbackText>
+                                        </Feedback>
+                                        <NameDiv >
+                                            <AgentsName>{OrgFeedback.name}</AgentsName>
+                                            <CompanyName>{OrgFeedback.companyName}</CompanyName>
+                                        </NameDiv>
+                                    </RightBottomWrapper>
+                                </RightBottom>
+                                <Controls>
+                                    <ControlsLeft onClick={handleLeft}><LeftOutlined /></ControlsLeft>
+                                    <ControlsRight onClick={handleRight} ><RightOutlined /></ControlsRight>
+                                </Controls>
+                            </Bottom>
+                        ))
+                    }
                 </Bottomout>
             </Container>
         </MainContainer>
@@ -122,8 +124,32 @@ justify-content: space-between;
 `
 const TopLeft = styled.h1`
 width: 20%;
-font-size: 4rem;
+height:90%;
+font-size: 6rem;
+display: flex;
+flex-direction:column;
+align-items: flex-start;
+justify-content: space-evenly;
 cursor: pointer;
+@media (max-width: 700px) {
+ font-size:3.4rem ;
+}
+@media (max-width: 504px) {
+ font-size:2.8rem ;
+}
+@media (max-width: 400px) {
+ font-size:2rem ;
+}
+`
+const TopRight = styled.h1`
+width: 20%;
+height:90%;
+font-size: 6rem;
+display: flex;
+flex-direction:column;
+align-items: flex-end;
+justify-content: space-evenly;
+cursor:pointer;
 @media (max-width: 700px) {
  font-size:3.4rem ;
 }
@@ -136,7 +162,7 @@ cursor: pointer;
 `
 const Bottomout = styled.div`
 height: 60%;
-width:70vw;
+width:100%;
 overflow:hidden;
 margin:0 auto;
 border: 0.5px solid white;
@@ -163,7 +189,7 @@ position:relative;
 `
 const Bottom = styled.div`
 height: 100%;
-min-width:70vw;
+min-width:100%;
 /* max-width:1000px; */
 border: 0.5px solid white;
 display: flex;
