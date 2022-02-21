@@ -39,8 +39,8 @@ const ValuesComp = () => {
                         <IconRight onClick={handleRight} ><RightOutlined /></IconRight>
                     </Icons>
                 </Section>
-            </Wrapper>
             <SideTexts>Our values</SideTexts>
+            </Wrapper>
         </Container>
     )
 }
@@ -63,6 +63,7 @@ align-items: center;
 justify-content: center;
 width: 900px;
 margin: 0px auto;
+/* position:relative; */
 `
 const Section = styled.section`
 padding: 25px;
@@ -81,7 +82,7 @@ flex-direction: column;
 const SideTexts = styled.h1`
 text-transform: uppercase;
 font-size: 8rem;
-right:  -150px;
+right:  -7.5rem;
 font-weight: bold;
 transform: rotate(90deg);
 position: absolute;

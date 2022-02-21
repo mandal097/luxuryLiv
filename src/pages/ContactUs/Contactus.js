@@ -6,7 +6,7 @@ const Contactus = () => {
             <Wrapper>
                 <Left>
                     <H3>COME...VISIT US SOMETIMES! </H3>
-                    <Img src='https://p.kindpng.com/picc/s/10-103355_google-maps-hd-png-download.png' />
+                    <Img src='https://w7.pngwing.com/pngs/731/11/png-transparent-gps-location-symbol-google-map-maker-google-maps-gps-pin-angle-heart-pin-thumbnail.png' />
                     <Span>LX MARKETING PVT. LTD.</Span>
                     <P>K No. - 846/2, first floor, <br /> Opposite Metro pillar No. -115 <br />Ghitorni, Nw Delhi , India</P>
                 </Left>
