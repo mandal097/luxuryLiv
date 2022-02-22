@@ -259,11 +259,12 @@ font-size:4rem;
 const About = styled.span`
 font-size:1.8rem;
 margin-bottom:0.3rem;
+text-align:justify;
 @media(max-width:935px){
    font-size:1.6rem;
 }
 @media(max-width:650px){
-    text-align:left;
+    /* text-align:justify; */
     margin:1rem 0;
 }
 `
