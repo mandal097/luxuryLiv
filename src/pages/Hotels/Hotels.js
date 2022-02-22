@@ -27,7 +27,7 @@ const Hotels = () => {
 
     return (
         <Container>
-            <HomeBtn/>
+            <HomeBtn />
             {
                 IsOpen && <Navbar />
             }
@@ -42,66 +42,66 @@ const Hotels = () => {
                     </Content>
                 </FirstSection>
                 <SecondPage>
-                        <SWrapper   data-aos="fade-right">
-                            <Left>
-                                <Img src="https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
-                            </Left>
-                            <Right>
-                                <Name>AMAN</Name>
-                                <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
-                                <Button>Know More</Button>
-                            </Right>
-                        </SWrapper>
-                        <SWrapper  data-aos="fade-left">
-                            <Right >
-                                <Name>GAURAV</Name>
-                                <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
-                                <Button>Know More</Button>
-                            </Right>
-                            <Left>
-                                <Img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aG90ZWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
-                            </Left>
-                        </SWrapper>
-                        <SWrapper data-aos="fade-right">
-                            <Left>
-                                <Img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
-                            </Left>
-                            <Right>
-                                <Name>AMAN</Name>
-                                <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
-                                <Button>Know More</Button>
-                            </Right>
-                            </SWrapper>
-                        <SWrapper data-aos="fade-left">
-                            <Right >
-                                <Name>GAURAV</Name>
-                                <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
-                                <Button>Know More</Button>
-                            </Right>
-                            <Left>
-                                <Img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGhvdGVsc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
-                            </Left>
-                        </SWrapper>
-                        <SWrapper data-aos="fade-right" >
-                            <Left>
-                                <Img src="https://images.unsplash.com/photo-1516531558361-f6c4c956ad85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aG90ZWxzJTIwbmlnaHRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
-                            </Left>
-                            <Right>
-                                <Name>AMAN</Name>
-                                <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
-                                <Button>Know More</Button>
-                            </Right>
-                        </SWrapper>
-                        <SWrapper data-aos="fade-left">
-                            <Right >
-                                <Name>GAURAV</Name>
-                                <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
-                                <Button>Know More</Button>
-                            </Right>
-                            <Left>
-                                <Img src="https://images.unsplash.com/photo-1580747182325-66c1cbcdb289?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWxzJTIwbmlnaHRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
-                            </Left>
-                        </SWrapper>
+                    <SWrapper data-aos="fade-right">
+                        <Left>
+                            <Img src="https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                        </Left>
+                        <Right>
+                            <Name>AMAN</Name>
+                            <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
+                            <Button>Know More</Button>
+                        </Right>
+                    </SWrapper>
+                    <SWrapper data-aos="fade-left">
+                        <Right >
+                            <Name>GAURAV</Name>
+                            <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
+                            <Button>Know More</Button>
+                        </Right>
+                        <Left>
+                            <Img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aG90ZWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                        </Left>
+                    </SWrapper>
+                    <SWrapper data-aos="fade-right">
+                        <Left>
+                            <Img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                        </Left>
+                        <Right>
+                            <Name>AMAN</Name>
+                            <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
+                            <Button>Know More</Button>
+                        </Right>
+                    </SWrapper>
+                    <SWrapper data-aos="fade-left">
+                        <Right >
+                            <Name>GAURAV</Name>
+                            <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
+                            <Button>Know More</Button>
+                        </Right>
+                        <Left>
+                            <Img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGhvdGVsc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+                        </Left>
+                    </SWrapper>
+                    <SWrapper data-aos="fade-right" >
+                        <Left>
+                            <Img src="https://images.unsplash.com/photo-1516531558361-f6c4c956ad85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aG90ZWxzJTIwbmlnaHRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                        </Left>
+                        <Right>
+                            <Name>AMAN</Name>
+                            <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
+                            <Button>Know More</Button>
+                        </Right>
+                    </SWrapper>
+                    <SWrapper data-aos="fade-left">
+                        <Right >
+                            <Name>GAURAV</Name>
+                            <About>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae molestiae dicta voluptatum recusandae est aliquid quaerat nemo totam error. Aspernatur fugiat numquam assumenda qui aut reiciendis, ut odio quasi.</About>
+                            <Button>Know More</Button>
+                        </Right>
+                        <Left>
+                            <Img src="https://images.unsplash.com/photo-1580747182325-66c1cbcdb289?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWxzJTIwbmlnaHRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                        </Left>
+                    </SWrapper>
                 </SecondPage>
             </Wrapper>
         </Container>
@@ -170,12 +170,20 @@ flex-direction:column;
 justify-content:space-around;
 `
 const H = styled.h3`
-font-size:5rem;
+font-size:7rem;
 text-align:center;
+font-family:'Shoreline';
+text-transform:uppercase;
+@media(max-width:300px){
+    font-size:5rem;
+}
 `
 const P = styled.p`
 font-size:2.5rem;
 text-align:center;
+@media(max-width:350px){
+    font-size:2rem;
+}
 `
 
 
@@ -191,15 +199,14 @@ justify-content:center;
 const SWrapper = styled.div`
 /* height:70vh; */
 width:100%;
+margin:0 auto;
 display:flex;
 justify-content:center;
 align-items:center;
-padding:2rem;
-margin-bottom:2rem;
+margin-bottom:5rem;
 @media(max-width:650px){
     flex-direction:column; 
-    heigth:auto;
-    align-items:flex-start;  
+    heigth:auto;  
 }
 `
 

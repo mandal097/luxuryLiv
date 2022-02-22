@@ -271,6 +271,10 @@ display:flex;
 align-items:center;
 justify-content:center;
 margin-top:6rem;
+@media(max-width:700px){    
+   height:auto;
+   margin-top:10rem;
+}
 @media(max-width:550px){    
    height:auto;
 }
@@ -320,6 +324,7 @@ height:60%;
 display:flex;
 justify-content:space-between;
 @media(max-width:550px){    
+    height:auto;
     flex-direction:column;
 }
 `
@@ -404,12 +409,13 @@ border:1px solid white;
    color: transparent;
  }
  @media(max-width:650px){
- &::placeholder {
-        color: white;
-    font-size:1.5rem;
-     }
- }
- @media(max-width:550px){    
+     &::placeholder {
+         color: white;
+         font-size:1.5rem;
+        }
+    }
+    @media(max-width:550px){    
+     margin-top:1rem;
    margin:0.4rem 0;
 }
  @media(max-width:400px){
@@ -423,6 +429,10 @@ font-size:1.3rem;
 color:red;
 text-align:left;
 margin:-2rem 0;
+@media(max-width:550px){
+    margin:0.5rem 0;
+    left:0;
+}
 `
 
 const FormRight = styled.h1`

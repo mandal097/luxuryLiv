@@ -92,11 +92,11 @@ const LoginPage = () => {
 
     return (
         <Container  >
-            <HomeBtn/>
             {
                 IsOpen && <Navbar />
             }
             <Wrapper>
+                <HomeBtn />
                 <Header>
                     <Span onClick={showNavbar}><Ham /></Span>
                 </Header>
@@ -163,7 +163,6 @@ const Container = styled.div`
     height: 100vh;
     width: 100%;
     scroll-snap-align:center;
-    position:relative;
     .nav{
     color:white;
     text-decoration:none;
@@ -183,7 +182,7 @@ justify-content: center;
 margin:0rem auto;
 overflow-y:scroll;
 overflow-x:hidden;
-
+position:relative;
 `
 
 const Header = styled.div`
@@ -285,6 +284,7 @@ border-right:0.5px solid white;
     width:100%;
     height:100%;
     border:none;
+    border-right:none;
 }
 `
 const LeftTop = styled.div`
@@ -314,7 +314,7 @@ height:50%;
 border:0.5px solid white;
 position:relative;
 @media(max-width:725px){
-    height:70%;
+    height:50vh;
 }
 `
 const Right = styled.div`
@@ -325,6 +325,7 @@ border-right:0.5px solid white;
     width:100%;
     height:100%;
     border:none;
+    margin-top:5rem;
 }
 `
 const RightTop = styled.div`

@@ -36,6 +36,19 @@
   }
 }
 
+@media (max-width: 1000px) {
+  .explore {
+    width: 100%;
+    div {
+      .h3 {
+        position: absolute;
+        top: 0;
+        // right: 100rem;
+      }
+    }
+  }
+}
+
 @media (max-width: 600px) {
   .explore {
     width: 100%;

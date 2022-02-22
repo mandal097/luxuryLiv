@@ -49,9 +49,14 @@ const H = styled.h1`
 font-size: 10rem;
 font-weight: 100;
 font-family: 'Shoreline';
-margin-bottom:10rem;
+margin-bottom:8rem;
 @media (max-width:1000px){
-   font-size: 10rem;
+    font-size: 9rem;
+    text-align:center;
+}
+@media (max-width:900px){
+    margin-bottom:6rem;
+   font-size: 7rem;
    text-align:center;
 }
 @media (max-width:600px){
@@ -61,12 +66,17 @@ margin-bottom:10rem;
 `
 const P = styled.p`
 text-align: center;
-font-size: 25px;
+font-size: 2.5rem;
 letter-spacing: 1px;
 word-spacing: 5px;
 line-height: 1.5;
 width: 60%;
 margin: 0px auto;
+@media (max-width:900px){
+   font-size: 2rem;
+   width: 80%;
+   line-height:1.4;
+}
 @media (max-width:600px){
    font-size: 1.9rem;
    width: 80%;

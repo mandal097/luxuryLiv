@@ -6,13 +6,13 @@ const Contactus = () => {
             <Wrapper>
                 <Left>
                     <H3>COME...VISIT US SOMETIMES! </H3>
-                    <Img src='https://w7.pngwing.com/pngs/731/11/png-transparent-gps-location-symbol-google-map-maker-google-maps-gps-pin-angle-heart-pin-thumbnail.png' />
+                    <Img src='./images/gmap.png' />
                     <Span>LX MARKETING PVT. LTD.</Span>
-                    <P>K No. - 846/2, first floor, <br /> Opposite Metro pillar No. -115 <br />Ghitorni, Nw Delhi , India</P>
+                    <P>K No. - 846/2, first floor, <br /> Opposite Metro pillar No. -115 <br />Ghitorni, New Delhi , India</P>
                 </Left>
                 <Right>
                     <H3>IN A HURRY TO CONTACT?</H3>
-                    <Img src='https://p.kindpng.com/picc/s/64-641629_telephone-svg-clip-arts-telephone-clipart-hd-png.png' />
+                    <Img src='./images/cphone.png' />
                     <Span>+91 971983158</Span>
                     <Span>+91 9899699991</Span>
                     <Email>gaurav.v@luxuryliving.in <br /> shilesh.v@luxuryliving.in</Email>
@@ -51,7 +51,8 @@ position:relative;
 }
 @media(max-width:540px){
     flex-direction:column;
-    /* height:auto; */
+    justify-content: space-around;
+    height:90vh;
 }
 `
 const Left = styled.div`
@@ -77,8 +78,9 @@ line-height:2;
 `
 
 const Img = styled.img`
-width:12rem;
-height:12rem;
+width:15rem;
+height:15rem;
+object-fit:cover;
 `
 
 const Span = styled.span`

@@ -110,16 +110,18 @@ scroll-snap-align: start;
 /* height: calc(100vh - 55px); */
 transition: all 1s;
 @media(max-width:1000px){    
-   width:100%;
+   width:97%;
 }
 `
 const Top = styled.div`
 height: 40%;
+width:100%;
 display: flex;
 align-items: center;
 justify-content: space-between;
 @media(max-width:700px){    
     height:auto;
+    margin-top:2rem;
 }
 `
 const TopLeft = styled.h1`
@@ -268,6 +270,9 @@ const FeedbackText = styled.p`
 font-size:1.8rem;
 color:white;
 text-align:justify;
+@media(max-width:450px){
+    font-size:1.5rem;
+}
 `
 
 const NameDiv = styled.div`
@@ -302,6 +307,9 @@ position:absolute;
 display:flex;
 justify-content:space-between;
 align-items:center;
+@media(max-width:700px){
+    top:20%;
+}
 `
 const ControlsLeft = styled.div`
 font-size:4rem;
