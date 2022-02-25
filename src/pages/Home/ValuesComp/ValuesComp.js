@@ -39,8 +39,10 @@ const ValuesComp = () => {
                         <IconRight onClick={handleRight} ><RightOutlined /></IconRight>
                     </Icons>
                 </Section>
-            <SideTexts>Our values</SideTexts>
             </Wrapper>
+            <SideTexts>
+                <h3>  Our values </h3>
+            </SideTexts>
         </Container>
     )
 }
@@ -48,11 +50,12 @@ const ValuesComp = () => {
 const Container = styled.div`
 width: 100%;
 display: flex;
+/* flex-direction:column; */
 align-items: center;
 justify-content: center;
 position: relative;
 scroll-snap-align: start;
-height: 100vh ;
+height: 100vh;
 `
 const Wrapper = styled.div`
 color: white;
@@ -61,56 +64,68 @@ display: flex;
 flex-deirection:column;
 align-items: center;
 justify-content: center;
-width: 900px;
+width: 1100px;
 margin: 0px auto;
-/* position:relative; */
+position:relative;
+
+@media(amx-width:600px;{
+    height:100vh;
+})
 `
 const Section = styled.section`
 padding: 25px;
 height: 80vh;
 display: flex;
+flex-direction:column;
 align-items: center;
 justify-content: center;
 width: 100%;
-flex-wrap: wrap;
- @media (max-width: 600px) {
-     height:90vh;
-flex-direction: column;
- justify-content: center;
+
+@media (max-width: 600px) {
+    height:85vh;
+    flex-direction: column;
+    justify-content: center;
 }
 `
-const SideTexts = styled.h1`
+const SideTexts = styled.div`
 text-transform: uppercase;
 font-size: 8rem;
-right:  -7.5rem;
-font-weight: bold;
+right: -14rem;
 transform: rotate(90deg);
 position: absolute;
 font-family: 'Raleway', sans-serif;
-@media (max-width:600px){
-    display: none;
+
+h3{
+    font-weight: bolder;
+    font-size:8rem;
 }
-@media (max-width:1072px){
-    font-size:6rem ;
-    right: -12rem;
+@media (max-width:600px){
+   transform:rotate(0deg);
+   bottom:0;
+   left:0;
+   width: 100%;
+   text-align:center;
+   h3{
+       font-size:5rem;
+    }
 }
 @media (max-width:938px){
-    font-size:4rem ;
-    right: -10rem;
+    font-size:3rem ;
+    right:-16rem;
 }
 `
 const Article = styled.div`
 display: flex;
-flex-direction:;
-align-items: column;
+align-items: center;
 justify-content:space-evenly;
 height: 90%;
 margin:0 auto;
-width:100%;
-margin-left:-7rem;
+width:80%;
 @media (max-width: 600px) {
+    width: 100%;
+    height:100%;
     flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   margin-left:0rem;
 }
 
@@ -121,12 +136,15 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content:center;
-width: 60%;
+width: 40%;
 height:90%;
+
+position:relative;
 @media (max-width: 600px) {
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    height:100%;
 }
 @media(max-width:600px){
     /* margin-bottom:5rem; */
@@ -151,34 +169,50 @@ img{
 const SemiCircleUp = styled.div`
 position: absolute;
 top:-10.9rem;
-left:27%;
+left:17%;
 height: 10.5rem;
 width: 22rem;
 border-radius: 250px 250px 0 0;
 border:2px  solid white;
 border-bottom:0px ;
+@media (max-width: 800px) {
+    left:23%;
+    height:8rem;
+    width:15rem;
+}
 @media (max-width: 600px) {
-    left:35%;
+    left:40%;
     top:-9rem;
     height: 8rem;
     width: 15rem;
+}
+@media (max-width: 450px) {
+    left:35%;
 }
 `
 
 const SemiCircleDown = styled.div`
 position: absolute;
 bottom:-10.9rem;
-left:27%;
+left:17%;
 height: 10.5rem;
 width: 22rem;
 border-radius:0 0  250px 250px ;
 border:2px  solid white;
 border-top:0px ;
+@media (max-width: 800px) {
+    left:23%;
+    height:8rem;
+    width:15rem;
+}
 @media (max-width: 600px) {
-    left:35%;
+    left:40%;
     bottom:-9rem;
     height: 8rem;
     width: 15rem;
+}
+@media (max-width: 450px) {
+    left:35%;
 }
 `
 
@@ -189,6 +223,7 @@ height:90%;
 display: flex;
 flex-direction: column;
 align-items: center;
+
 justify-content:center;
 @media (max-width: 600px) {
   width: 100%;
@@ -232,15 +267,16 @@ margin:0 auto;
 height:5rem;
 display:flex;
 align-items:center;
+bottom:5rem;
 justify-content:space-between;
 @media(max-width:600px){
     position:absolute;
-    bottom:3rem;
+    bottom:8rem;
     width:20%;
 } 
 @media(max-width:400px){
     position:absolute;
-    bottom:10rem;
+    bottom:6rem;
 } 
 `
 const IconLeft = styled.div`

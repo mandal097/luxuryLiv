@@ -8,28 +8,13 @@
   scroll-snap-align: start;
   position: relative;
   .explore_wrapper {
-    height: 65vh;
-    width: 50%;
-    position: relative;
+    height: 68vh;
+    width: 70%;
     video {
       width: 100%;
       height: 100%;
       background-size: cover;
-      object-fit: cover;
-    }
-
-    .h3 {
-      position: absolute;
-      text-align: center;
-      bottom: 40%;
-      text-transform: uppercase;
-      cursor: pointer;
-      color: white;
-      font-weight: 400;
-      width: 100%;
-      h3 {
-        font-size: 3.5rem;
-      }
+      object-fit: contain;
     }
     h3:hover {
       color: gold;
@@ -43,9 +28,8 @@
     transform: rotate(90deg);
     position: absolute;
     h3 {
-      font-size: 7rem;
+      font-size: 8rem;
       font-weight: bolder;
-      letter-spacing: -2px;
       cursor: pointer;
       transition: all 300ms linear;
       &:hover{
@@ -55,15 +39,9 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .explore {
     width: 100%;
-  }
-  .our_portfolio {
-    // background-color: red;
-    h3 {
-      font-size: 6rem;
-    }
   }
 }
 
@@ -76,16 +54,20 @@
       align-items: center;
       justify-content: center;
       video {
+        height: 75vh;
         width: 70%;
       }
     }
 
     .our_portfolio {
-      top: 40rem;
-      right: -15rem;
-      // background-color: red;
+      right: 0rem;
+      transform: rotate(0deg);
+      position: absolute;
+      top: 88%;
+      width: 100%;
       h3 {
         font-size: 5rem;
+        text-align: center;
       }
     }
   }
