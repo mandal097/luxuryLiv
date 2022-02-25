@@ -48,14 +48,17 @@ const ValuesComp = () => {
 }
 
 const Container = styled.div`
-width: 100%;
+width: 1100px;
 display: flex;
-/* flex-direction:column; */
 align-items: center;
 justify-content: center;
 position: relative;
 scroll-snap-align: start;
 height: 100vh;
+margin: 0px auto;
+@media(max-width:1100px){
+    width: 100%;
+}
 `
 const Wrapper = styled.div`
 color: white;
@@ -65,12 +68,11 @@ flex-deirection:column;
 align-items: center;
 justify-content: center;
 width: 1100px;
-margin: 0px auto;
-position:relative;
+/* position:relative; */
 
-@media(amx-width:600px;{
+@media(max-width:600px){
     height:100vh;
-})
+}
 `
 const Section = styled.section`
 padding: 25px;
@@ -90,7 +92,7 @@ width: 100%;
 const SideTexts = styled.div`
 text-transform: uppercase;
 font-size: 8rem;
-right: -14rem;
+right: -20rem;
 transform: rotate(90deg);
 position: absolute;
 font-family: 'Raleway', sans-serif;
@@ -111,7 +113,6 @@ h3{
 }
 @media (max-width:938px){
     font-size:3rem ;
-    right:-16rem;
 }
 `
 const Article = styled.div`
