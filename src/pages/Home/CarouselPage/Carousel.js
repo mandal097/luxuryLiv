@@ -51,8 +51,8 @@ const Carousel = () => {
         <MainContainer id='carousel'>
             <Container >
                 <Top>
-                    <TopLeft onClick={goToAgentsPage}> <ArrowLeftOutlined /><h1>AGENTS TO THE LEFT</h1></TopLeft>
-                    <TopRight onClick={goToHotelsPage}> <ArrowRightOutlined /><h1>HOTELS TO THE RIGHT</h1></TopRight>
+                    <TopLeft onClick={goToAgentsPage}> <ArrowLeftOutlined className='icons' /><h1>AGENTS TO THE LEFT</h1></TopLeft>
+                    <TopRight onClick={goToHotelsPage}> <ArrowRightOutlined className='icons' /><h1>HOTELS TO THE RIGHT</h1></TopRight>
                 </Top>
                 <Bottomout>
 
@@ -96,6 +96,11 @@ position: relative;
 @media (max-width: 1000px) {
   width: 95%;
 }
+@media (max-width: 700px) {
+ display:flex;
+ align-items:center;
+ justify-content:center;
+}
 `
 
 const Container = styled.div`
@@ -107,7 +112,6 @@ height:90vh;
 align-items: center;
 justify-content: center;
 scroll-snap-align: start;
-/* height: calc(100vh - 55px); */
 transition: all 1s;
 @media(max-width:1000px){    
    width:97%;
@@ -135,12 +139,15 @@ justify-content: space-evenly;
 cursor: pointer;
 @media (max-width: 700px) {
  font-size:3.4rem ;
+ .icons{
+     font-size:5rem;
+ }
 }
 @media (max-width: 504px) {
- font-size:2.8rem ;
+    font-size:2.8rem ;
 }
 @media (max-width: 400px) {
- font-size:2rem ;
+    font-size:2rem ;
 }
 `
 const TopRight = styled.h1`
@@ -153,7 +160,10 @@ align-items: flex-end;
 justify-content: space-evenly;
 cursor:pointer;
 @media (max-width: 700px) {
- font-size:3.4rem ;
+    font-size:3.4rem ;
+    .icons{
+        font-size:5rem;
+    }
 }
 @media (max-width: 504px) {
  font-size:2.8rem ;
@@ -206,6 +216,7 @@ position:relative;
 @media (max-width: 700px) {
     height:auto;
     border:none;
+    margin-top:2rem;
 }
 }
 @media(max-width:1000px){    
@@ -214,7 +225,7 @@ position:relative;
 @media(max-width:700px){   
     flex-direction:column;
     justify-content:space-evenly; 
-    width:90vw;
+    width:90%;
 }
 `
 const LeftImg = styled.div`

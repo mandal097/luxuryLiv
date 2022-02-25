@@ -23,7 +23,7 @@ const Enquiry = ({ setShowForm, hotel }) => {
         adultsError: '',
         childCountError: '',
         childsAgeError: '',
-        enquiryError: ''
+        // enquiryError: ''
     })
 
     useEffect(() => {
@@ -39,6 +39,7 @@ const Enquiry = ({ setShowForm, hotel }) => {
         e.preventDefault()
         if (validForm()) {
             console.log('okay');
+            console.log(enquiry);
         }
     }
 
@@ -88,12 +89,12 @@ const Enquiry = ({ setShowForm, hotel }) => {
                 ...pre, childsAgeError: "Please give childs ages"
             }))
         }
-        if (enquiry === '') {
-            formIsValid = false;
-            setErrorField(pre => ({
-                ...pre, enquiryError: "If you don't have any request please write No!"
-            }))
-        }
+        // if (enquiry === '') {
+        //     formIsValid = false;
+        //     setErrorField(pre => ({
+        //         ...pre, enquiryError: "If you don't have any request please write No!"
+        //     }))
+        // }
         return formIsValid;
     }
 
@@ -154,9 +155,9 @@ const Enquiry = ({ setShowForm, hotel }) => {
                     <div className=" textarea">
                         <label htmlFor="">Any Other Request :</label>
                         <textarea type="text" name="" id="" onChange={(e) => setEnquiry(e.target.value)}></textarea>
-                           {
+                           {/* {
                             errorField.enquiryError.length > 0 && <span className="required_Field">{errorField.enquiryError}</span>
-                        }
+                        } */}
                     </div>
                     <div className=" button">
                         <input type="submit" value="submit" />
@@ -180,5 +181,10 @@ right:2rem;
 font-size:4rem;
 color:white;
 cursor:pointer;
+@media(max-width:900px){
+    top:0.5rem;
+    right:2rem;
+
+}
 `
 export default Enquiry;

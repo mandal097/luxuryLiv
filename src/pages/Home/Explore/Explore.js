@@ -1,6 +1,7 @@
 import React from 'react'
 import './explore.scss'
-import {  useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+// import {LL_INTRO} from '../../../../public/videos/LL_INTRO.mp4'
 const Explore = () => {
     const navigate = useNavigate()
 
@@ -10,9 +11,14 @@ const Explore = () => {
 
     return (
         <div className="explore" id='explore'>
-            <div>
-                <video src="https://player.vimeo.com/external/434854024.sd.mp4?s=41bc8486f80af1a2c888dd22b3f2e671f03cdadb&profile_id=139&oauth2_token_id=57447761" autoPlay controls></video>
-                <h3 onClick={goToPortfolio}>IN THE MOUNTAINS...</h3>
+            <div className='explore_wrapper'>
+                <video src='./videos/LL_INTRO.mp4' muted autoPlay controls></video>
+                <div className="h3">
+                    <h3 onClick={goToPortfolio}>IN THE MOUNTAINS...</h3>
+                </div>
+            </div>
+            <div className='our_portfolio'>
+                <h3 onClick={goToPortfolio}>OUR PORTFOLIO</h3>
             </div>
         </div>
     )

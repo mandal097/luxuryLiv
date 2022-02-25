@@ -1,6 +1,5 @@
 .explore {
   margin: 0px auto;
-  // height: calc(100vh - 55px);
   height: 100vh;
   width: 1100px;
   display: flex;
@@ -8,30 +7,50 @@
   justify-content: center;
   scroll-snap-align: start;
   position: relative;
-  div {
-    height: 85vh;
-    width: 100%;
+  .explore_wrapper {
+    height: 65vh;
+    width: 50%;
     position: relative;
     video {
       width: 100%;
       height: 100%;
       background-size: cover;
+      object-fit: cover;
     }
 
-    h3 {
+    .h3 {
       position: absolute;
       text-align: center;
       bottom: 40%;
-      right: 17rem;
       text-transform: uppercase;
-      font-size: 7rem;
       cursor: pointer;
       color: white;
       font-weight: 400;
-      // font-family: "Courier New", Courier, monospace;
+      width: 100%;
+      h3 {
+        font-size: 3.5rem;
+      }
     }
     h3:hover {
       color: gold;
+    }
+  }
+  .our_portfolio {
+    text-transform: uppercase;
+    top: 25rem;
+    right: -18rem;
+    font-weight: bold;
+    transform: rotate(90deg);
+    position: absolute;
+    h3 {
+      font-size: 7rem;
+      font-weight: bolder;
+      letter-spacing: -2px;
+      cursor: pointer;
+      transition: all 300ms linear;
+      &:hover{
+        color: goldenrod;
+      }
     }
   }
 }
@@ -39,24 +58,34 @@
 @media (max-width: 1000px) {
   .explore {
     width: 100%;
-    div {
-      .h3 {
-        position: absolute;
-        top: 0;
-        // right: 100rem;
-      }
+  }
+  .our_portfolio {
+    // background-color: red;
+    h3 {
+      font-size: 6rem;
     }
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .explore {
     width: 100%;
-    div {
-      .h3 {
-        position: absolute;
-        top: 0;
-        // right: 100rem;
+    .explore_wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      video {
+        width: 70%;
+      }
+    }
+
+    .our_portfolio {
+      top: 40rem;
+      right: -15rem;
+      // background-color: red;
+      h3 {
+        font-size: 5rem;
       }
     }
   }
