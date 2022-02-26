@@ -33,7 +33,15 @@ const HotelsDescModal = ({ ShowModal, places }) => {
         const img1 = document.getElementById('img1').src
         const img2 = document.getElementById('img2').src
         const img3 = document.getElementById('img3').src
+        const img4 = document.getElementById('img4').src
+        const img5 = document.getElementById('img5').src
         switch (oImage) {
+            case img5:
+                setOImage(img4)
+                break;
+            case img4:
+                setOImage(img3)
+                break;
             case img3:
                 setOImage(img2)
                 break;
@@ -48,12 +56,20 @@ const HotelsDescModal = ({ ShowModal, places }) => {
         const img1 = document.getElementById('img1').src
         const img2 = document.getElementById('img2').src
         const img3 = document.getElementById('img3').src
+        const img4 = document.getElementById('img4').src
+        const img5 = document.getElementById('img5').src
         switch (oImage) {
             case img1:
                 setOImage(img2)
                 break;
             case img2:
                 setOImage(img3)
+                break;
+            case img3:
+                setOImage(img4)
+                break;
+            case img4:
+                setOImage(img5)
                 break;
             default:
                 setOImage(img3)
@@ -73,9 +89,9 @@ const HotelsDescModal = ({ ShowModal, places }) => {
         doc.text(20, 30, hotel.carouseltxt1)
         doc.text(20, 40, hotel.carouseltxt2)
         // {
-            oImage
-            ? doc.addImage(oImage, 'JPEG', 20, 50, 170, 110) 
-            : doc.addImage(img1, 'JPEG', 20, 50, 170, 110) 
+        oImage
+            ? doc.addImage(oImage, 'JPEG', 20, 50, 170, 110)
+            : doc.addImage(img1, 'JPEG', 20, 50, 170, 110)
         // }
 
         doc.save("luxury_living.pdf")
@@ -90,13 +106,18 @@ const HotelsDescModal = ({ ShowModal, places }) => {
                         className='slider'
                         naturalSlideWidth={500}
                         naturalSlideHeight={325}
-                        totalSlides={3}
+                        totalSlides={5}
                         dragEnabled={false}
+                        isPlaying={true}
+                        interval={3000}
+
                     >
                         <Slider className='slider_div'>
                             <Slide className='img' index={0}> <ImgLeft src={hotel.img1} id='img1' /></Slide>
                             <Slide className='img' index={1}> <ImgLeft src={hotel.img2} id='img2' /></Slide>
                             <Slide className='img' index={2}> <ImgLeft src={hotel.img3} id='img3' /></Slide>
+                            <Slide className='img' index={3}> <ImgLeft src={hotel.img4} id='img4' /></Slide>
+                            <Slide className='img' index={4}> <ImgLeft src={hotel.img5} id='img5' /></Slide>
                         </Slider>
                         <ButtonBack className='leftImgBtn' onClick={leftImageHandler}><LeftOutlined /></ButtonBack>
                         <ButtonNext className='rightImgBtn' onClick={rightImageHandler}><RightOutlined /></ButtonNext>
@@ -116,6 +137,8 @@ const HotelsDescModal = ({ ShowModal, places }) => {
                             naturalSlideHeight={325}
                             totalSlides={2}
                             dragEnabled={false}
+                            isPlaying={true}
+                            interval={3000}
                         >
                             <Slider className='slider_div'>
                                 <Slide className='slider_content' index={0}> <Carouselxt>{hotel.carouseltxt1}</Carouselxt></Slide>
@@ -133,7 +156,10 @@ const HotelsDescModal = ({ ShowModal, places }) => {
                         <RightFooterSpan onClick={download} >download</RightFooterSpan>
                     </RightFooter>
                 </Right>
-                <Cancel onClick={ShowModal}><CloseOutlined /></Cancel>
+                <Cancel onClick={()=>{
+                    ShowModal()
+                    setHotel(null)
+                }}><CloseOutlined /></Cancel>
             </Wrapper>
             {
                 showForm && <Enquiry setShowForm={setShowForm} hotel={places} />
@@ -161,7 +187,7 @@ z-index:10000000000;
 `
 const Wrapper = styled.div`
 width:90vw;
-height:80vh;
+height:85vh;
 position:relative;
 background-color:white;
 color:black;

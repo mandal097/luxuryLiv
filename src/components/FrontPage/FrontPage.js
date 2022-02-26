@@ -23,10 +23,12 @@ const FrontPage = ({ title, para }) => {
             {
                 IsOpen && <Navbar />
             }
-            <Fade bottom>
-                <H>{title}</H>
-                <P>{para}</P>
-            </Fade>
+            <Wrapper>
+                <Fade bottom>
+                    <H>{title}</H>
+                    <P>{para}</P>
+                </Fade>
+            </Wrapper>
             <HamDIv onClick={showNavbar} ><Ham /></HamDIv>
         </Main>
     )
@@ -38,18 +40,27 @@ height:100vh;
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content:center;
+justify-content:flex-end;
 scroll-snap-align: start;
 position:relative;
 @media (max-width:600px){
     width: 100%;
 }
 `
+const Wrapper = styled.div`
+height:86vh;
+width:100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content:space-evenly;
+scroll-snap-align: start;
+`
 const H = styled.h1`
 font-size: 10rem;
 font-weight: 100;
 font-family: 'Shoreline';
-margin-bottom:8rem;
+/* margin-bottom:4rem; */
 @media (max-width:1000px){
     font-size: 9rem;
     text-align:center;
@@ -72,6 +83,7 @@ word-spacing: 5px;
 line-height: 1.5;
 width: 60%;
 margin: 0px auto;
+margin-top:4rem;
 @media (max-width:900px){
    font-size: 2rem;
    width: 80%;

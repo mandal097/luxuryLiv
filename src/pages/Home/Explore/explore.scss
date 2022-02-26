@@ -8,12 +8,12 @@
   scroll-snap-align: start;
   position: relative;
   .explore_wrapper {
-    height: 68vh;
-    width: 70%;
+    height: 65vh;
+    width: 60%;
     video {
       width: 100%;
       height: 100%;
-      background-size: cover;
+      // background-size: cover;
       object-fit: contain;
     }
     h3:hover {
@@ -23,16 +23,17 @@
   .our_portfolio {
     text-transform: uppercase;
     top: 25rem;
-    right: -18rem;
+    right: -18.5rem;
     font-weight: bold;
     transform: rotate(90deg);
     position: absolute;
     h3 {
-      font-size: 8rem;
+      font-size: 8.5rem;
       font-weight: bolder;
+      font-family: "Raleway", sans-serif;
       cursor: pointer;
       transition: all 300ms linear;
-      &:hover{
+      &:hover {
         color: goldenrod;
       }
     }
@@ -54,8 +55,7 @@
       align-items: center;
       justify-content: center;
       video {
-        height: 75vh;
-        width: 70%;
+        width: 90%;
       }
     }
 

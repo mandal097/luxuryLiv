@@ -20,6 +20,9 @@ const LoginPage = () => {
     const [count, setCount] = useState(0)
     const [login, SetLogin] = useState(false)
     const [IsOpen, setIsOpen] = useState(false)
+
+    const [activeSlides, setActiveSlides] = useState(true)
+
     // url for you tube video
     const url = 'https://youtu.be/cr2Rrl3vz9I'
 
@@ -28,15 +31,20 @@ const LoginPage = () => {
     const image = images[count].img
 
     const left = () => {
+        setActiveSlides(false)
         count > 0 ? setCount(count - 1) : setCount(length - 1)
     }
     const right = () => {
+        setActiveSlides(false)
         count < length - 1 ? setCount(count + 1) : setCount(0)
     }
-    // setTimeout(() => {
-    //     count < length - 1 ? setCount(count + 1) : setCount(0)
-    //     count < length - 1 ? setCount(count + 1) : setCount(0)
-    // }, 3000);
+
+    if (activeSlides) {
+        setTimeout(() => {
+            count < length - 1 ? setCount(count + 1) : setCount(0)
+            count < length - 1 ? setCount(count + 1) : setCount(0)
+        }, 3000);
+    }
 
 
 

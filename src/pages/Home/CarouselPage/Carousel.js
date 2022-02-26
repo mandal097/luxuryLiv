@@ -11,6 +11,10 @@ import { fetchApi } from '../../../axios'
 const Carousel = () => {
 
     const [feedbackApi, setFeedbackApi] = useState([])
+    const [activeSlides, setActiveSlides] = useState(true)
+
+    const [count, setCount] = useState(0)
+    const length = feedbackApi.length
 
     useEffect(() => {
         const fetchFeedback = async () => {
@@ -24,17 +28,24 @@ const Carousel = () => {
             }
         }
         fetchFeedback()
-    }, [])
-    const [count, setCount] = useState(0)
-    const length = feedbackApi.length
-
+    }, [count])
+    
     const OrgFeedback = feedbackApi[count]
-
+    
+    if (activeSlides) {
+        setTimeout(() => {
+            count < length - 1 ? setCount(count + 1) : setCount(0)
+        }, 3000);
+    } else {
+        console.log('inactive slides');
+    }
     const handleLeft = () => {
+        setActiveSlides(false)
         count > 0 ? setCount(count - 1) : setCount(length - 1)
     }
 
     const handleRight = () => {
+        setActiveSlides(false)
         count < length - 1 ? setCount(count + 1) : setCount(0)
     }
 
@@ -104,7 +115,7 @@ position: relative;
 `
 
 const Container = styled.div`
-width: 1000px;
+width: 900px;
 height:100%;
 color: white;
 margin: 0 auto;
@@ -158,6 +169,7 @@ display: flex;
 flex-direction:column;
 align-items: flex-end;
 justify-content: space-evenly;
+text-align:right;
 cursor:pointer;
 @media (max-width: 700px) {
     font-size:3.4rem ;
@@ -278,11 +290,11 @@ align-items:center;
 }
 `
 const FeedbackText = styled.p`
-font-size:1.8rem;
+font-size:1.6rem;
 color:white;
 text-align:justify;
 @media(max-width:450px){
-    font-size:1.5rem;
+    font-size:1.3rem;
 }
 `
 

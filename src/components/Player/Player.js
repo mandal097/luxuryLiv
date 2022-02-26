@@ -37,6 +37,13 @@ display:flex;
 justify-content:center;
 align-items:center;
 position:relative;
+}
+@media(max-width:700px){
+    background-color:black;
+}
+@media(max-width:700px){
+    background-color:black;
+}
 `
 const CancelDIv = styled.div`
 position:absolute;
@@ -44,5 +51,17 @@ font-size:5rem;
 color:white;
 top:4rem;
 right:15rem;
+@media(max-width:900px){
+    right:5rem;
+}
+@media(max-width:600px){
+    right:1rem;
+}
+@media(max-width:500px){
+    top:10rem;
+}
+@media(max-width:400px){
+    top:15rem;
+}
 `
 export default Player

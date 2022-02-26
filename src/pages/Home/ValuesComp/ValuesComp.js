@@ -5,18 +5,31 @@ import {
     LeftOutlined,
     RightOutlined
 } from '@ant-design/icons'
+import { useEffect } from 'react';
 const ValuesComp = () => {
     const [count, setCount] = useState(0)
+    const [activeSlides, setActiveSlides] = useState(true)
     const length = data.length
     const items = data[count]
 
     const handleLeft = () => {
+        setActiveSlides(false)
         count > 0 ? setCount(count - 1) : setCount(length - 1)
     }
 
     const handleRight = () => {
+        setActiveSlides(false)
         count < length - 1 ? setCount(count + 1) : setCount(0)
     }
+    useEffect(() => {
+        if (activeSlides) {
+            setTimeout(() => {
+                count < length - 1 ? setCount(count + 1) : setCount(0)
+            }, 3000);
+        } else {
+            console.log('slides inactive');
+        }
+    }, [length, count, activeSlides])
     return (
         <Container>
             <Wrapper>
