@@ -28,7 +28,7 @@ const Carousel = () => {
             }
         }
         fetchFeedback()
-    }, [count])
+    }, [])
     
     const OrgFeedback = feedbackApi[count]
     

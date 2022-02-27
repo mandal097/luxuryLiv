@@ -442,16 +442,15 @@ function Port() {
                     </div>
                 </div>
             </div>
+            {/* ----------------------------------------------------------------- */}
             <div className="port-container last">
                 <div className="port-card" data-aos="fade-right">
                     <div className="port-imgBx">
-                        <img src="images/Anantara.png" alt="img" />
+                        <img src="images/patina.jfif" alt="img" />
                     </div>
                     <div className="port-content">
                         {/* <h2>Anantara Hotels & Resorts</h2> */}
                         <div class="upper">
-
-
                             <select onChange={demo} className="dropdown">
                                 <option disabled selected >select your destination</option>
                                 <option>Anantara Kihavah, Maldives</option>
@@ -464,13 +463,11 @@ function Port() {
 
                 <div className="port-card" data-aos="fade-up">
                     <div className="port-imgBx">
-                        <img src="/images/shantiMaurice.png" alt="img" />
+                        <img src="/images/rocco_forte.png" alt="img" />
                     </div>
                     <div className="port-content">
                         {/* <h2>Post Card Hotels</h2> */}
                         <div class="upper">
-
-
                             <select onChange={demo} className="dropdown">
                                 <option disabled selected >select your destination</option>
                                 <option>The Postcard Moira, Goa</option>
@@ -488,17 +485,71 @@ function Port() {
 
                 <div className="port-card" data-aos="fade-left">
                     <div className="port-imgBx">
-                        <img src="/images/pallazoVersace.jpg" alt="img" />
+                        <img src="/images/intercontinental.png" alt="img" />
                     </div>
                     <div className="port-content">
                         {/* <h2>Palazzo Versace</h2> */}
                         <div class="upper">
-
-
                             <select onChange={demo} className="dropdown">
                                 <option disabled selected >select your destination</option>
                                 <option>Palazzo Versace, Dubai</option>
                                 <option>Palazzo Versace, Dubai</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="port-container last">
+                <div className="port-card" data-aos="fade-right">
+                    <div className="port-imgBx">
+                        <img src="images/patina.jfif" alt="img" />
+                    </div>
+                    <div className="port-content">
+                        {/* <h2>Anantara Hotels & Resorts</h2> */}
+                        <div class="upper">
+                            <select onChange={demo} className="dropdown">
+                                <option disabled selected >select your destination</option>
+                                {/* <option>Anantara Kihavah, Maldives</option>
+                                <option>Anantara Siam, Bangkok</option>
+                                <option>Anantara Lawana, Koh Samui</option> */}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="port-card" data-aos="fade-up">
+                    <div className="port-imgBx">
+                        <img src="/images/rocco_forte.png" alt="img" />
+                    </div>
+                    <div className="port-content">
+                        {/* <h2>Post Card Hotels</h2> */}
+                        <div class="upper">
+                            <select onChange={demo} className="dropdown">
+                                <option disabled selected >select your destination</option>
+                                {/* <option>The Postcard Moira, Goa</option>
+                                <option>The Postcard Velha, Goa</option>
+                                <option>The Postcard Cuelim, Goa</option>
+                                <option>The Postcard Hideaway, Netravali, Goa</option>
+                                <option>The Postcard Gir Wildlife Sanctuary</option>
+                                <option>The Postcard Mandalay Hall, Kochi</option>
+                                <option>The Postcard Dewa, Thimphu, Bhutan</option>
+                                <option>The Postcard Galle, Sri Lanka</option> */}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="port-card" data-aos="fade-left">
+                    <div className="port-imgBx">
+                        <img src="/images/intercontinental.png" alt="img" />
+                    </div>
+                    <div className="port-content">
+                        {/* <h2>Palazzo Versace</h2> */}
+                        <div class="upper">
+                            <select onChange={demo} className="dropdown">
+                                <option disabled selected >select your destination</option>
+                                {/* <option>Palazzo Versace, Dubai</option>
+                                <option>Palazzo Versace, Dubai</option> */}
                             </select>
                         </div>
                     </div>
