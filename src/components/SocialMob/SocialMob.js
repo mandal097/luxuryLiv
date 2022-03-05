@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { FaWhatsapp, FaFacebookF } from 'react-icons/fa';
 import { AiOutlineInstagram } from 'react-icons/ai';
-const Social = () => {
+const SocialMob = () => {
     return (
         <Socialhandles>
             <FaWhatsapp className="icons" />
@@ -13,27 +13,22 @@ const Social = () => {
 }
 
 const Socialhandles = styled.div`
-height: 130px;
-width: 60px;
-position: fixed;
-left: 30px;
-bottom:10px;
-display: flex;
-flex-direction: column;
+height: 13rem;
+width: 15rem;
+position: absolute;
+bottom:-3rem;
 align-items: center;
 justify-content: space-evenly;
+display:none;
 .icons{
     font-size: 25px;
 }
 @media (max-width:600px){
-    position: fixed;
-    left:-15px;
-    top: 45%;
-    display:none;
+    display: flex;
     .icons{
-        font-size: 17px;
+        font-size: 18px;
     }
 
 }
 `
-export default Social
+export default SocialMob

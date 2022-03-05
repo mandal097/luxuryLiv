@@ -42,6 +42,7 @@ const Enquiry = ({ setShowForm, hotel }) => {
         if (validForm()) {
             try {
                 toast.success('Enquiry Submitted Successfully');
+                console.log(enquiry);
             } catch (error) {
                 toast.error('Something went wrong')
             }
@@ -117,7 +118,7 @@ const Enquiry = ({ setShowForm, hotel }) => {
                     <form className="form" onSubmit={submit}>
                         <div className="inputDiv">
                             <label htmlFor="">Hotel Name :</label>
-                            <input type="text" name="" id="" value={hotelName} />
+                            <input type="text" name="" id="" value={hotelName} onChange={(e) => setHotelName(hotel)} />
                             {
                                 errorField.hotelNameError.length > 0 && <span className="required_Field">{errorField.hotelNameError}</span>
                             }

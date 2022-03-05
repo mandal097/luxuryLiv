@@ -11,18 +11,12 @@ const HotelsDescModal = ({ ShowModal, places }) => {
 
     const [hotel, setHotel] = useState([])
     const [showForm, setShowForm] = useState()
-    // const [img1, setImg1] = useState()
-    // const [img2, setImg2] = useState()
-    // const [img3, setImg3] = useState()
 
     const [oImage, setOImage] = useState()
 
     useEffect(() => {
         const org_hotel = data.filter(i => i.hotelname === places)
         setHotel(org_hotel[0])
-        // setImg1(hotel.img1)
-        // setImg2(hotel.img2)
-        // setImg3(hotel.img3)
     }, [places, hotel])
 
     const gotoEnquiry = () => {
@@ -113,7 +107,7 @@ const HotelsDescModal = ({ ShowModal, places }) => {
 
                     >
                         <Slider className='slider_div'>
-                            <Slide className='img' index={0}> <ImgLeft src={hotel.img1} id='img1' /></Slide>
+                            <Slide className='img' index={1}> <ImgLeft src={hotel.img1} id='img1' /></Slide>
                             <Slide className='img' index={1}> <ImgLeft src={hotel.img2} id='img2' /></Slide>
                             <Slide className='img' index={2}> <ImgLeft src={hotel.img3} id='img3' /></Slide>
                             <Slide className='img' index={3}> <ImgLeft src={hotel.img4} id='img4' /></Slide>
@@ -156,9 +150,10 @@ const HotelsDescModal = ({ ShowModal, places }) => {
                         <RightFooterSpan onClick={download} >download</RightFooterSpan>
                     </RightFooter>
                 </Right>
-                <Cancel onClick={()=>{
+                <Cancel onClick={() => {
                     ShowModal()
-                    setHotel(null)
+                    // setHotel("")
+                    document.location.reload()
                 }}><CloseOutlined /></Cancel>
             </Wrapper>
             {
@@ -181,19 +176,19 @@ display:flex;
 align-items:center;
 justify-content:center;
 z-index:10000000000;
-@media (max-width:700px){
+@media (max-width:900px){
     height:auto;
 }
 `
 const Wrapper = styled.div`
-width:90vw;
+width:80vw;
 height:85vh;
 position:relative;
 background-color:white;
 color:black;
 
 display:flex;
-@media (max-width:700px){
+@media (max-width:900px){
     width:100%;
     /* height:100vh; */
     height:auto;
@@ -203,11 +198,11 @@ display:flex;
 `
 const Left = styled.div`
 width:45vw;
-/* height:90%; */
+/* height:90vh; */
 position:relative;
-/* overflow:hidden; */
+overflow:hidden;
 .slider{
-    height:100%;
+    /* height:100%; */
     position:relative;
     .leftImgBtn{
         position:absolute;
@@ -232,39 +227,89 @@ position:relative;
     }
     .slider_div{
         height:100%;
+        /* border:2px solid red; */
         .img{
-            height:100vh;
+            /* display:flex;
+            align-items:center;
+            justify-content:center; */
+            height:85vh;
+            /* border:2px solid blue; */
         }
     }
 }
-@media (max-width:700px){
-    width:100vw;
+@media (max-width:900px){
+    width:100%;
     height:50vh;
     .slider{
         height:100%;
         .slider_div{
             height:100%;
             .img{
-                height:100%;
+                height:50vh;
             }
         }
     }
 }
 @media (max-width:400px){
-    width:100vw;
+    width:100%;
     height:auto;
 }
 `
 const ImgLeft = styled.img`
 width:100%;
 height:100%;
-object-fit:cover;
 transition:all 400ms linear;
+object-fit:cover;
+/* object-fit:none; */
 z-index:-111;
+padding:1%;
 &:hover{
     transform:scale(1.1);
 }
-@media(max-width:700px){
+@media (min-width:800px) and (max-width:900px){
+    padding:0%;
+    margin-top:-13%;
+    padding-bottom:17%;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+@media (min-width:700px) and (max-width:800px){
+    padding:0%;
+    margin-top:-7%;
+    padding-bottom:20%;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+@media only screen and (max-width:700px){
+    padding:0%;
+    padding-top:-5%;
+    padding-bottom:21%;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+@media (min-width:500px) and (max-width:600px){
+    padding:0%;
+    padding-top:-10%;
+    margin-top:-10%;
+    padding-bottom:0%;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+@media(max-width:500px){
+    padding:0;
+    /* padding:4% 5% 0% 5%; */
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+@media(max-width:400px){
+    padding:0;
+    width:100%;
+    height:100%;
     object-fit:cover;
 }
 `
@@ -277,7 +322,7 @@ flex-direction:column;
 align-items:center;
 justify-content:center;
 padding: 0 1rem;
-@media (max-width:700px){
+@media (max-width:900px){
    width:100%;
    height:50vh;
 }
@@ -333,7 +378,7 @@ color:black;
     display:flex;
     flex-direction:column;
     justify-content:center;
-    width:90%;
+    width:80%;
     height:90%;
     outline:none;
     border:none;
@@ -364,8 +409,8 @@ color:black;
     background:transparent;
 
 }
-@media (max-width:700px){
-    width:90vw;
+@media (max-width:900px){
+    width:80vw;
     .leftBtn{
         left:0rem;
     }
@@ -383,7 +428,7 @@ font-size:2.6rem;
 color:black;
 padding:5rem;
 text-align:center;
-@media(max-width:700px){
+@media(max-width:900px){
     margin-top:-1rem;
     font-size:2rem;
     width:100%;

@@ -139,20 +139,28 @@ justify-content: space-between;
     margin-top:2rem;
 }
 `
-const TopLeft = styled.h1`
+const TopLeft = styled.div`
 width: 20%;
 height:90%;
-font-size: 6rem;
+font-size: 1.4rem;
 display: flex;
 flex-direction:column;
 align-items: flex-start;
 justify-content: space-evenly;
 cursor: pointer;
+color: goldenrod;
+transition:all 600ms linear;
+&:hover{
+    color:white
+}
+.icons{
+    font-size:6rem;
+}
 @media (max-width: 700px) {
- font-size:3.4rem ;
- .icons{
-     font-size:5rem;
- }
+    font-size:3.4rem ;
+    .icons{
+        font-size:5rem;
+    }
 }
 @media (max-width: 504px) {
     font-size:2.8rem ;
@@ -161,16 +169,24 @@ cursor: pointer;
     font-size:2rem ;
 }
 `
-const TopRight = styled.h1`
+const TopRight = styled.div`
 width: 20%;
 height:90%;
-font-size: 6rem;
+font-size: 1.4rem;
 display: flex;
 flex-direction:column;
 align-items: flex-end;
 justify-content: space-evenly;
 text-align:right;
 cursor:pointer;
+color: goldenrod;
+transition:all 600ms linear;
+.icons{
+    font-size:6rem;
+}
+&:hover{
+    color:white;
+}
 @media (max-width: 700px) {
     font-size:3.4rem ;
     .icons{

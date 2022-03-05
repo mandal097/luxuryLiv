@@ -3,14 +3,14 @@ import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 export const HomeBtn = () => {
-    const [display, setDisplay] = useState(false)
+    const [display, setDisplay] = useState("false")
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
             if (window.scrollY > 70) {
-                setDisplay(true)
+                setDisplay("true")
             } else {
-                setDisplay(false)
+                setDisplay("false")
             }
             return () => {
                 window.removeEventListener("scroll")
@@ -31,7 +31,7 @@ export const HomeBtn = () => {
 const Button = styled.div`
 position:absolute;;
 height:5rem;
-top: ${props => props.d ? "-4rem" : '4rem'};
+top: ${props => props.d === "true" ? "-4rem" : '4rem'};
 left:12rem;
 align-items:center;
 font-weight:bold;

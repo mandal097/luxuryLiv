@@ -5,31 +5,31 @@ import {
     LeftOutlined,
     RightOutlined
 } from '@ant-design/icons'
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 const ValuesComp = () => {
     const [count, setCount] = useState(0)
-    const [activeSlides, setActiveSlides] = useState(true)
+    // const [activeSlides, setActiveSlides] = useState(true)
     const length = data.length
     const items = data[count]
 
     const handleLeft = () => {
-        setActiveSlides(false)
+        // setActiveSlides(false)
         count > 0 ? setCount(count - 1) : setCount(length - 1)
     }
 
     const handleRight = () => {
-        setActiveSlides(false)
+        // setActiveSlides(false)
         count < length - 1 ? setCount(count + 1) : setCount(0)
     }
-    useEffect(() => {
-        if (activeSlides) {
-            setTimeout(() => {
-                count < length - 1 ? setCount(count + 1) : setCount(0)
-            }, 3000);
-        } else {
-            console.log('slides inactive');
-        }
-    }, [length, count, activeSlides])
+    // useEffect(() => {
+    //     if (activeSlides) {
+    //         setTimeout(() => {
+    //             count < length - 1 ? setCount(count + 1) : setCount(0)
+    //         }, 3000);
+    //     } else {
+    //         console.log('slides inactive');
+    //     }
+    // }, [length, count, activeSlides])
     return (
         <Container>
             <Wrapper>
@@ -81,10 +81,13 @@ flex-deirection:column;
 align-items: center;
 justify-content: center;
 width: 1100px;
-/* position:relative; */
-
-@media(max-width:600px){
+position:relative;
+@media(max-width:900px){
     height:100vh;
+    align-items: flex-start;
+}
+@media(max-width:800px){
+    align-items:center;
 }
 `
 const Section = styled.section`
@@ -95,6 +98,7 @@ flex-direction:column;
 align-items: center;
 justify-content: center;
 width: 100%;
+/* border:1px solid red; */
 
 @media (max-width: 600px) {
     height:85vh;
@@ -109,14 +113,20 @@ right: -20rem;
 transform: rotate(90deg);
 position: absolute;
 font-family: 'Raleway', sans-serif;
-
 h3{
     font-weight: bolder;
     font-size:8rem;
+    color: goldenrod;
+    cursor:pointer;
+    transition:all 300ms linear;
+    &:hover{
+        color:white;
+    }
+
 }
-@media (max-width:600px){
+@media (max-width:900px){
    transform:rotate(0deg);
-   bottom:0;
+   bottom:2rem;
    left:0;
    width: 100%;
    text-align:center;
@@ -135,12 +145,12 @@ justify-content:space-evenly;
 height: 90%;
 margin:0 auto;
 width:80%;
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     width: 100%;
-    height:100%;
+    height:80%;
     flex-direction: column;
-  justify-content: center;
-  margin-left:0rem;
+  justify-content: flex-start;
+  margin-top:-5rem;
 }
 
 `
@@ -160,7 +170,7 @@ position:relative;
     margin: 0 auto;
     height:100%;
 }
-@media(max-width:600px){
+@media(max-width:900px){
     /* margin-bottom:5rem; */
     height:50%;
 } 
@@ -194,11 +204,12 @@ border-bottom:0px ;
     height:8rem;
     width:15rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     left:40%;
     top:-9rem;
     height: 8rem;
     width: 15rem;
+    display:none;
 }
 @media (max-width: 450px) {
     left:35%;
@@ -218,11 +229,13 @@ border-top:0px ;
     left:23%;
     height:8rem;
     width:15rem;
+    display:none;
 }
 @media (max-width: 600px) {
     left:40%;
     bottom:-9rem;
     height: 8rem;
+    display:none;
     width: 15rem;
 }
 @media (max-width: 450px) {
@@ -239,7 +252,7 @@ flex-direction: column;
 align-items: center;
 
 justify-content:center;
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   width: 100%;
   height:60%;
   margin: 0 auto;
@@ -283,23 +296,23 @@ display:flex;
 align-items:center;
 bottom:5rem;
 justify-content:space-between;
-@media(max-width:600px){
+@media(max-width:900px){
     position:absolute;
-    bottom:8rem;
+    bottom:12rem;
     width:20%;
 } 
 @media(max-width:400px){
     position:absolute;
-    bottom:6rem;
+    bottom:10rem;
 } 
 `
 const IconLeft = styled.div`
 font-size:3rem;
-cursor:pointer onClick={handleLeft} ;
+cursor:pointer ;
 `
 const IconRight = styled.div`
 font-size:3rem;
-cursor:pointer onClick={handleLeft} ;
+cursor:pointer ;
 `
 
 export default ValuesComp

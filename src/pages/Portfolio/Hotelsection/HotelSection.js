@@ -33,7 +33,7 @@ function Port() {
         setPlaces(e.target.value)
         setHotel(Ohotel)
         setIsOpen1(true)
-        localStorage.setItem('hotelName', places)
+        // localStorage.setItem('hotelName', places)
         // navigate(`${places}}`)
         // console.log(e.target.value);
         // console.log(places);
@@ -53,7 +53,7 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>AMAN Resorts</h2> */}
-                        <div class="upper">
+                        <div className="upper">
 
                             <select onChange={demo} className="dropdown">
                                 <option disabled selected >select your destination</option>
@@ -100,7 +100,7 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>SONEVA Resorts</h2> */}
-                        <div class="upper">
+                        <div className="upper">
 
                             <select onChange={demo} className="dropdown">
                                 <option disabled selected >select your destination</option>
@@ -119,7 +119,7 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>Cheval Blanc</h2> */}
-                        <div class="upper">
+                        <div className="upper">
 
 
                             <select onChange={demo} className="dropdown">
@@ -140,7 +140,7 @@ function Port() {
                     <div className="port-content">
                         <div className="fourth">
                             {/* <h2>Ritz Carlton Resorts</h2> */}
-                            <div class="upper">
+                            <div className="upper">
 
                                 <select onChange={demo} className="dropdown">
                                     <option disabled selected >select your destination</option>
@@ -160,14 +160,14 @@ function Port() {
                     <div className="port-content">
                         <div className="fifth">
                             {/* <h2>Badrutts Palace</h2> */}
-                            <div class="upper">
+                            <div className="upper">
 
 
                                 <select onChange={demo} className="dropdown">
 
                                     <option disabled selected >select your destination</option>
                                     <option>St. Moritz, Switzerland</option>
-                                    <option>St. Moritz, Switzerland</option>
+                                    {/* <option>St. Moritz, Switzerland</option> */}
                                 </select>
                             </div>
                         </div>
@@ -180,7 +180,7 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>Six Senses Resorts</h2> */}
-                        <div class="upper">
+                        <div className="upper">
 
 
                             <select onChange={demo} className="dropdown">
@@ -211,7 +211,7 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>One & Only Hotels & Resorts</h2> */}
-                        <div class="upper">
+                        <div className="upper">
 
 
                             <select onChange={demo} className="dropdown">
@@ -230,7 +230,7 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>St. Regis</h2> */}
-                        <div class="upper">
+                        <div className="upper">
 
 
                             <select onChange={demo} className="dropdown">
@@ -248,7 +248,7 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>Four Seasons Hotels & Resorts</h2> */}
-                        <div class="upper">
+                        <div className="upper">
 
 
                             <select onChange={demo} className="dropdown">
@@ -268,7 +268,7 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>The Nautilus</h2> */}
-                        <div class="upper">
+                        <div className="upper">
 
 
                             <select onChange={demo} className="dropdown">
@@ -286,7 +286,7 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>Rosewood Hotels & Resorts</h2> */}
-                        <div class="upper">
+                        <div className="upper">
 
 
                             <select onChange={demo} className="dropdown">
@@ -305,7 +305,7 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>Waldorf Astoria</h2> */}
-                        <div class="upper">
+                        <div className="upper">
 
 
                             <select onChange={demo} className="dropdown">
@@ -324,7 +324,7 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>Kempinski Hotels & Resorts</h2> */}
-                        <div class="upper">
+                        <div className="upper">
 
 
                             <select onChange={demo} className="dropdown">
@@ -345,7 +345,7 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>Banyan Tree Hotels Resorts & Spas</h2> */}
-                        <div class="upper">
+                        <div className="upper">
 
 
                             <select onChange={demo} className="dropdown">
@@ -366,7 +366,7 @@ function Port() {
                     <div className="port-content">
                         <div className="fifteenth">
                             {/* <h2>Resplendent Ceylon</h2> */}
-                            <div class="upper">
+                            <div className="upper">
 
 
                                 <select onChange={demo} className="dropdown">
@@ -387,7 +387,7 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>Anantara Hotels & Resorts</h2> */}
-                        <div class="upper">
+                        <div className="upper">
 
 
                             <select onChange={demo} className="dropdown">
@@ -406,7 +406,7 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>Post Card Hotels</h2> */}
-                        <div class="upper">
+                        <div className="upper">
 
 
                             <select onChange={demo} className="dropdown">
@@ -430,13 +430,13 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>Palazzo Versace</h2> */}
-                        <div class="upper">
+                        <div className="upper">
 
 
                             <select onChange={demo} className="dropdown">
                                 <option disabled selected >select your destination</option>
                                 <option>Palazzo Versace, Dubai</option>
-                                <option>Palazzo Versace, Dubai</option>
+                                {/* <option>Palazzo Versace, Dubai</option> */}
                             </select>
                         </div>
                     </div>
@@ -450,7 +450,7 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>Anantara Hotels & Resorts</h2> */}
-                        <div class="upper">
+                        <div className="upper">
                             <select onChange={demo} className="dropdown">
                                 <option disabled selected >select your destination</option>
                                 <option>Anantara Kihavah, Maldives</option>
@@ -467,7 +467,7 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>Post Card Hotels</h2> */}
-                        <div class="upper">
+                        <div className="upper">
                             <select onChange={demo} className="dropdown">
                                 <option disabled selected >select your destination</option>
                                 <option>The Postcard Moira, Goa</option>
@@ -489,11 +489,11 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>Palazzo Versace</h2> */}
-                        <div class="upper">
+                        <div className="upper">
                             <select onChange={demo} className="dropdown">
                                 <option disabled selected >select your destination</option>
                                 <option>Palazzo Versace, Dubai</option>
-                                <option>Palazzo Versace, Dubai</option>
+                                {/* <option>Palazzo Versace, Dubai</option> */}
                             </select>
                         </div>
                     </div>
@@ -506,7 +506,7 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>Anantara Hotels & Resorts</h2> */}
-                        <div class="upper">
+                        <div className="upper">
                             <select onChange={demo} className="dropdown">
                                 <option disabled selected >select your destination</option>
                                 {/* <option>Anantara Kihavah, Maldives</option>
@@ -523,7 +523,7 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>Post Card Hotels</h2> */}
-                        <div class="upper">
+                        <div className="upper">
                             <select onChange={demo} className="dropdown">
                                 <option disabled selected >select your destination</option>
                                 {/* <option>The Postcard Moira, Goa</option>
@@ -545,7 +545,7 @@ function Port() {
                     </div>
                     <div className="port-content">
                         {/* <h2>Palazzo Versace</h2> */}
-                        <div class="upper">
+                        <div className="upper">
                             <select onChange={demo} className="dropdown">
                                 <option disabled selected >select your destination</option>
                                 {/* <option>Palazzo Versace, Dubai</option>

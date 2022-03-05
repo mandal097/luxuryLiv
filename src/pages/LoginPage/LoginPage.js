@@ -12,6 +12,7 @@ import {
 import Login from '../../components/LoginPopUp/Login'
 import Navbar from '../../components/Navbar/Navbar'
 import HomeBtn from '../../components/HomeBtn/HomeBtn'
+import { useEffect } from 'react'
 
 const LoginPage = () => {
     // const navigate = useNavigate()
@@ -39,13 +40,16 @@ const LoginPage = () => {
         count < length - 1 ? setCount(count + 1) : setCount(0)
     }
 
-    if (activeSlides) {
-        setTimeout(() => {
-            count < length - 1 ? setCount(count + 1) : setCount(0)
-            count < length - 1 ? setCount(count + 1) : setCount(0)
-        }, 3000);
-    }
+    useEffect(() => {
 
+        if (activeSlides) {
+            setTimeout(() => {
+                count < length - 1 ? setCount(count + 1) : setCount(0)
+                count < length - 1 ? setCount(count + 1) : setCount(0)
+            }, 3000);
+        }
+
+    }, [activeSlides, count, length])
 
 
     const showPlayer = () => {

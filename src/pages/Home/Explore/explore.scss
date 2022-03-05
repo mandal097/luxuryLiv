@@ -17,7 +17,7 @@
       object-fit: contain;
     }
     h3:hover {
-      color: gold;
+      color: white;
     }
   }
   .our_portfolio {
@@ -32,9 +32,10 @@
       font-weight: bolder;
       font-family: "Raleway", sans-serif;
       cursor: pointer;
+      color: goldenrod;
       transition: all 300ms linear;
       &:hover {
-        color: goldenrod;
+        color: white;
       }
     }
   }

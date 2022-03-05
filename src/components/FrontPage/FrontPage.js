@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { Fade } from 'react-reveal'
 import Ham from '../../components/Hamburger/Ham'
 import Navbar from '../Navbar/Navbar'
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const FrontPage = ({ title, para }) => {
     const [IsOpen, setIsOpen] = useState(false)
@@ -18,16 +19,19 @@ const FrontPage = ({ title, para }) => {
                 setIsOpen(false)
         }
     }
+
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
+
     return (
         <Main>
             {
                 IsOpen && <Navbar />
             }
             <Wrapper>
-                <Fade bottom>
-                    <H>{title}</H>
-                    <P>{para}</P>
-                </Fade>
+                <H  data-aos="fade-up">{title}</H>
+                <P  data-aos="fade-up">{para}</P>
             </Wrapper>
             <HamDIv onClick={showNavbar} ><Ham /></HamDIv>
         </Main>

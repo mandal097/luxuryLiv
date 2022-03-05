@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-import Social from '../Social/Social'
+import SocialMob from '../SocialMob/SocialMob'
 import Navbar from '../Navbar/Navbar'
 import Ham from '../Hamburger/Ham'
 import HomeBtn from '../HomeBtn/HomeBtn'
@@ -43,7 +43,7 @@ const Contact = () => {
                 </Right>
                 <Vertical />
             </Wrapper>
-            <Social/>
+            <SocialMob/>
         </Container>
     )
 }

@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import SocialMob from '../../components/SocialMob/SocialMob'
 const Contactus = () => {
     return (
         <Container>
             <Wrapper>
                 <Left>
-                    <H3>COME...VISIT US SOMETIMES! </H3>
+                    <H3>COME...VISIT US SOMETIMES!  </H3>
                     <Img src='./images/gmap.png' />
                     <Span>LX MARKETING PVT. LTD.</Span>
                     <P>K No. - 846/2, first floor, <br /> Opposite Metro pillar No. -115 <br />Ghitorni, New Delhi , India</P>
@@ -19,6 +20,7 @@ const Contactus = () => {
                 </Right>
                 <Vertical />
             </Wrapper>
+            <SocialMob/>
         </Container>
     )
 }
@@ -37,6 +39,9 @@ const Container = styled.div`
         color:white;
         text-decoration:none;
     }
+    @media(max-width:540px){
+        justify-content: flex-start;
+}
 `
 
 const Wrapper = styled.div`
@@ -51,8 +56,9 @@ position:relative;
 }
 @media(max-width:540px){
     flex-direction:column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height:90vh;
+    padding-top:2rem;
 }
 `
 const Left = styled.div`
