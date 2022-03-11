@@ -107,7 +107,7 @@ const HotelsDescModal = ({ ShowModal, places }) => {
 
                     >
                         <Slider className='slider_div'>
-                            <Slide className='img' index={1}> <ImgLeft src={hotel.img1} id='img1' /></Slide>
+                            <Slide className='img' index={0}> <ImgLeft src={hotel.img1} id='img1' /></Slide>
                             <Slide className='img' index={1}> <ImgLeft src={hotel.img2} id='img2' /></Slide>
                             <Slide className='img' index={2}> <ImgLeft src={hotel.img3} id='img3' /></Slide>
                             <Slide className='img' index={3}> <ImgLeft src={hotel.img4} id='img4' /></Slide>
@@ -199,10 +199,9 @@ display:flex;
 const Left = styled.div`
 width:45vw;
 /* height:90vh; */
-position:relative;
 overflow:hidden;
+position:relative;
 .slider{
-    /* height:100%; */
     position:relative;
     .leftImgBtn{
         position:absolute;
@@ -336,7 +335,7 @@ justify-content:flex-start;
 border-bottom:2px solid black;
 `
 const RightHeaderH = styled.h3`
-font-size:2.6rem;
+font-size:2.5rem;
 font-family: 'Baloo', sans-serif;
 font-family: cursive;
 font-weight:400;

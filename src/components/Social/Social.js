@@ -22,6 +22,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-evenly;
+cursor:pointer;
 .icons{
     font-size: 25px;
 }

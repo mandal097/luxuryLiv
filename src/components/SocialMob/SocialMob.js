@@ -20,6 +20,7 @@ bottom:-3rem;
 align-items: center;
 justify-content: space-evenly;
 display:none;
+cursor:pointer;
 .icons{
     font-size: 25px;
 }

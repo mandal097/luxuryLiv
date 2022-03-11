@@ -124,7 +124,7 @@ top:10rem;
 right:49%;
 width:2px;
 height:50vh;
-background-color:grey;
+background-color:goldenrod;
 @media(max-width:540px){
    display:none;
 }

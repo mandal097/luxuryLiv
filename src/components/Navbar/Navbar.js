@@ -7,6 +7,7 @@ const Navbar = () => {
             <Nav><NavLink to='/' className='navlink'>home</NavLink> </Nav>
             <Nav><NavLink to='/portfolio' className='navlink'>View our Hotel's Portfolio</NavLink> </Nav>
             <Nav><NavLink to='/agents' className='navlink'>Sign up / Login for Agent Partners</NavLink> </Nav>
+            {/* <Nav><NavLink to='#' className='navlink'>Sign up / Login for Agent Partners</NavLink> </Nav> */}
             <Nav><NavLink to='#' className='navlink'>Collaborative Info for Hotel Partners</NavLink> </Nav>
             <Nav><NavLink to='/feedback' className='navlink'>Say Nice – Not So Nice Things About Us!</NavLink> </Nav>
             <Nav><NavLink to='/contactus' className='navlink'>Contact Us</NavLink> </Nav>
