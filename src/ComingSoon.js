@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import Ham from '../../components/Hamburger/Ham'
-import Navbar from '../../components/Navbar/Navbar'
-import HomeBtn from '../../components/HomeBtn/HomeBtn'
+import Ham from './components/Hamburger/Ham'
+import Navbar from './components/Navbar/Navbar'
+import HomeBtn from './components/HomeBtn/HomeBtn'
 
-const LoginPage = () => {
+const ComingSoon = () => {
 
     const [IsOpen, setIsOpen] = useState(false)
 
@@ -31,7 +31,7 @@ const LoginPage = () => {
                 <Header>
                     <Span onClick={showNavbar}><Ham /></Span>
                 </Header>
-                <ComingSoon>Coming soon.....</ComingSoon>
+                <ComingSoonTxt>Coming soon.....</ComingSoonTxt>
             </Wrapper>
         </Container>
     )
@@ -91,7 +91,7 @@ color: goldenrod;
 }
 `
 
-const ComingSoon = styled.h1`
+const ComingSoonTxt = styled.h1`
 font-size:7rem;
 color:white;
 font-family:'Shoreline';
@@ -100,4 +100,4 @@ animation:comingSoonTxt 1000ms ease infinite alternate-reverse;
 `
 
 
-export default LoginPage
+export default ComingSoon

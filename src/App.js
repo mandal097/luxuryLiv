@@ -14,6 +14,7 @@ import AboutUs from './pages/AboutUs/AboutUs'
 // import HotelsDescModal from './components/HotelDescription/HotelsDescModal'
 // import Enquiry from './pages/Enquiry/Enquiry'
 import styled from 'styled-components'
+import ComingSoon from './ComingSoon'
 const App = () => {
   // const [display,setDisplay] = useState(false)
   // // const navigate = useNavigate()
@@ -54,6 +55,7 @@ const App = () => {
             <Route path='aboutus' element={<AboutUs />} />
             <Route path='agents' element={<LoginPage />} />
             <Route path='agents/testimonies' element={<Testimonies />} />
+            <Route path='*' element={<ComingSoon />} />
           </Route>
         </Routes>
       </Router>

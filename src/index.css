@@ -102,19 +102,35 @@ code {
   0% {
     font-size: 1.8rem;
     visibility: hidden;
-  } 
+  }
+
   50% {
     visibility: hidden;
   }
+
   75% {
     visibility: visible;
     clip-path: circle(0% at 50% 50%);
   }
+
   100% {
     opacity: 1;
     font-size: 1.8rem;
     visibility: visible;
     clip-path: circle(80% at 50% 50%);
+  }
+}
+
+@keyframes AboutUsLine {
+  0% {
+   opacity: 0;
+  }
+  50% {
+   opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 

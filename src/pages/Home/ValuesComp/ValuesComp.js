@@ -69,6 +69,7 @@ position: relative;
 scroll-snap-align: start;
 height: 100vh;
 margin: 0px auto;
+/* border:1px solid red; */
 @media(max-width:1100px){
     width: 100%;
 }
@@ -82,6 +83,7 @@ align-items: center;
 justify-content: center;
 width: 1100px;
 position:relative;
+/* border:1px solid red; */
 @media(max-width:900px){
     height:100vh;
     align-items: flex-start;
@@ -109,10 +111,11 @@ width: 100%;
 const SideTexts = styled.div`
 text-transform: uppercase;
 font-size: 8rem;
-right: -20rem;
+right: -24.3rem;
 transform: rotate(90deg);
 position: absolute;
 font-family: 'Raleway', sans-serif;
+font-weight:50;
 h3{
     font-weight: bolder;
     font-size:8rem;
@@ -141,10 +144,11 @@ h3{
 const Article = styled.div`
 display: flex;
 align-items: center;
-justify-content:space-evenly;
+justify-content:space-between;
 height: 90%;
 margin:0 auto;
 width:80%;
+/* border:1px solid red; */
 @media (max-width: 800px) {
     width: 100%;
     height:80%;
@@ -160,9 +164,9 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content:center;
-width: 40%;
+width: 45%;
 height:90%;
-
+/* border:1px solid red; */
 position:relative;
 @media (max-width: 600px) {
     justify-content: center;
@@ -183,6 +187,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 position:relative;
+/* border:1px solid red; */
 img{
     width: 100%;
     height: 100%;
@@ -193,7 +198,7 @@ img{
 const SemiCircleUp = styled.div`
 position: absolute;
 top:-10.9rem;
-left:17%;
+left:20%;
 height: 10.5rem;
 width: 22rem;
 border-radius: 250px 250px 0 0;
@@ -219,7 +224,7 @@ border-bottom:0px ;
 const SemiCircleDown = styled.div`
 position: absolute;
 bottom:-10.9rem;
-left:17%;
+left:20%;
 height: 10.5rem;
 width: 22rem;
 border-radius:0 0  250px 250px ;
@@ -245,13 +250,13 @@ border-top:0px ;
 
 
 const SectionRightt = styled.div`
-width: 40%;
+width: 47%;
 height:90%;
 display: flex;
 flex-direction: column;
 align-items: center;
-
 justify-content:center;
+/* border:1px solid red; */
 @media (max-width: 800px) {
   width: 100%;
   height:60%;

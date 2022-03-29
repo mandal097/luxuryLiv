@@ -5,10 +5,10 @@ import Ham from '../../components/Hamburger/Ham'
 import HomeBtn from '../../components/HomeBtn/HomeBtn'
 import {
     CarouselProvider, Slider, Slide,
-    //  ButtonBack, ButtonNext 
+    ButtonBack, ButtonNext
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-// import { CloseOutlined, LeftOutlined, RightOutlined } from '@ant-design/icons'
+import { LeftOutlined, RightOutlined } from '@ant-design/icons'
 const AboutUs = () => {
     const [IsOpen, setIsOpen] = useState(false)
     const showNavbar = () => {
@@ -38,7 +38,7 @@ const AboutUs = () => {
                         <ContentLeftImg className='img' src='https://images.unsplash.com/photo-1644982647711-9129d2ed7ceb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MTV8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60' />
                     </ContentLeft>
                     <ContentRight className='show'>
-                        <Line></Line>
+                        <Line ></Line>
                         <ContentRightText className='fadeInText'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis architecto a, ea, ratione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officatione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officiis ut laboriosam temporibus nisi tempora est ullam non, aut labore ea aliquid odio esse facere molestiae.</ContentRightText>
                         <ContentCr></ContentCr>
                     </ContentRight>
@@ -64,16 +64,16 @@ const AboutUs = () => {
                     </ContentRight>
                 </Content>
             </Wrapper>
+
+
             <Sliders>
-                {/* <SliderWrapper> */}
-                {/* </SliderWrapper> */}
                 <CarouselProvider
                     className='slider'
                     naturalSlideWidth={500}
                     naturalSlideHeight={325}
-                    totalSlides={3}
+                    totalSlides={2}
                     // dragEnabled={false}
-                    isPlaying={true}
+                    // isPlaying={true}
                     interval={2500}
 
                 >
@@ -81,43 +81,57 @@ const AboutUs = () => {
                     >
                         <Slide className='slides' index={0}>
                             <ContentSLiders>
-                                <ContentLeft className='leftImg sliderImg'>
-                                    <ContentLeftImg className='img' src='https://www.gannett-cdn.com/media/2017/06/30/USATODAY/USATODAY/636344142221336028-A01REAR13-8P-X-10P.jpg?width=2560' />
-                                </ContentLeft>
-                                <ContentRight className='show'>
-                                    <SliderLine></SliderLine>
-                                    <ContentRightText >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis architecto a, ea, ratione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officatione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officiis ut laboriosam temporibus nisi tempora est ullam non, aut labore ea aliquid odio esse facere molestiae.</ContentRightText>
-                                    <ContentCr></ContentCr>
-                                </ContentRight>
+                                <TeamMembersDiv>
+                                    <TeamMembersImg>
+                                        <img src="https://www.gannett-cdn.com/media/2017/06/30/USATODAY/USATODAY/636344142221336028-A01REAR13-8P-X-10P.jpg?width=2560" alt="allen" />
+                                    </TeamMembersImg>
+                                    <TeamMembersName>Allen Max</TeamMembersName>
+                                    <TeamMembersRole>Front Developer</TeamMembersRole>
+                                </TeamMembersDiv>
+                                <TeamMembersDiv>
+                                    <TeamMembersImg>
+                                        <img src="https://images.unsplash.com/photo-1580518337843-f959e992563b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YWN0b3JzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="allen" />
+                                    </TeamMembersImg>
+                                    <TeamMembersName>Tom</TeamMembersName>
+                                    <TeamMembersRole>Front Developer</TeamMembersRole>
+                                </TeamMembersDiv>
+                                <TeamMembersDiv>
+                                    <TeamMembersImg>
+                                        <img src='https://images.unsplash.com/photo-1587715362716-f55bde292cd7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGFjdG9yc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60' alt="allen" />
+                                    </TeamMembersImg>
+                                    <TeamMembersName>George</TeamMembersName>
+                                    <TeamMembersRole>Full Stack Developer</TeamMembersRole>
+                                </TeamMembersDiv>
                             </ContentSLiders>
                         </Slide>
                         <Slide className='slides' index={1}>
                             <ContentSLiders>
-                                <ContentLeft className='leftImg sliderImg'>
-                                    <ContentLeftImg className='img' src='https://images.unsplash.com/photo-1644982647869-e1337f992828?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxzZWFyY2h8OHx8cHJvZmlsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60' />
-                                </ContentLeft>
-                                <ContentRight className='show'>
-                                    <SliderLine></SliderLine>
-                                    <ContentRightText>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis architecto a, ea, ratione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officatione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officiis ut laboriosam temporibus nisi tempora est ullam non, aut labore ea aliquid odio esse facere molestiae.</ContentRightText>
-                                    <ContentCr></ContentCr>
-                                </ContentRight>
-                            </ContentSLiders>
-                        </Slide>
-                        <Slide className='slides' index={2}>
-                            <ContentSLiders>
-                                <ContentLeft className='leftImg sliderImg'>
-                                    <ContentLeftImg className='img' src='https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60' />
-                                </ContentLeft>
-                                <ContentRight className='show'>
-                                    <SliderLine></SliderLine>
-                                    <ContentRightText>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis architecto a, ea, ratione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officatione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officiis ut laboriosam temporibus nisi tempora est ullam non, aut labore ea aliquid odio esse facere molestiae.</ContentRightText>
-                                    <ContentCr></ContentCr>
-                                </ContentRight>
+                                <TeamMembersDiv>
+                                    <TeamMembersImg>
+                                        <img src="https://images.unsplash.com/photo-1578472577660-6f4a47a6660d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGFjdG9yc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="allen" />
+                                    </TeamMembersImg>
+                                    <TeamMembersName>Ryan</TeamMembersName>
+                                    <TeamMembersRole>AWS Solution Architect</TeamMembersRole>
+                                </TeamMembersDiv>
+                                <TeamMembersDiv>
+                                    <TeamMembersImg>
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dXNlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="allen" />
+                                    </TeamMembersImg>
+                                    <TeamMembersName>Christin</TeamMembersName>
+                                    <TeamMembersRole>Backend Developer</TeamMembersRole>
+                                </TeamMembersDiv>
+                                <TeamMembersDiv>
+                                    <TeamMembersImg>
+                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8dXNlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="allen" />
+                                    </TeamMembersImg>
+                                    <TeamMembersName>Anil</TeamMembersName>
+                                    <TeamMembersRole>Video Editor</TeamMembersRole>
+                                </TeamMembersDiv>
                             </ContentSLiders>
                         </Slide>
                     </Slider>
-                    {/* <ButtonBack className='leftImgBtn' ><LeftOutlined /></ButtonBack>
-                    <ButtonNext className='rightImgBtn'><RightOutlined /></ButtonNext> */}
+                    <ButtonBack className='leftImgBtn' ><LeftOutlined /></ButtonBack>
+                    <ButtonNext className='rightImgBtn'><RightOutlined /></ButtonNext>
                 </CarouselProvider>
             </Sliders>
         </Container>
@@ -172,9 +186,15 @@ display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:center;
-/* position:relative; */
-margin
-border:1px solid red;
+position:relative;
+&::after{
+    content:'';
+    position:absolute;
+    width:50%;
+    height:0.1rem;
+    background-color:#fff;
+    bottom:-10rem;
+}
 @media(max-width:1100px){
     width:95%;
 }
@@ -190,7 +210,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 margin-top:9rem;
-transition:all 500ms linear;
+transition:all 1000ms linear;
 
 &:hover{
     justify-content:space-between;
@@ -200,13 +220,12 @@ transition:all 500ms linear;
         width:73%;
     }
     .fadeInText{
-        animation:fadeInText 1000ms ease 1 ;
+        animation:fadeInText 1600ms ease 1 ;
     }
     .leftImg{
         border-right-color:black;
     border-bottom-color:black;
-    /* border-left-color:white;
-    border-top-color:white; */
+    z-index:1;
     }
 }
 @media(max-width:650px){
@@ -247,11 +266,13 @@ position:relative;
 const Line = styled.div`
 position:absolute;
 top:4rem;
-left:-2rem;
+left:-3rem;
 width:2px;
 height:11rem;
 background-color:white;
 z-index:3;
+opacity:1;
+animation:AboutUsLine 2000ms ease ;
 @media(max-width:650px){
     display:none;
 }
@@ -319,9 +340,9 @@ z-index:-11;
 
 const Sliders = styled.div`
 width:90%;
-height:40vh;
-margin-top:9rem;
-/* overflow:hidden; */
+height:60vh;
+margin-top:15rem;
+margin-bottom:5rem;
 .slider{
     position:relative;
     height:100%;
@@ -356,18 +377,24 @@ margin-top:9rem;
             align-items:center;
             justify-content:center;
         }
+
     }
     @media(max-width:650px){
-        height:auto;
+        height:120vh;
+        .slider_div{
+            height:120vh;
+            .slides{
+                height:120vh;
+            }
+        }
     }
 `
 const ContentSLiders = styled.div`
 width:100%;
-height:25vh;
+height:40rem;
 display:flex;
 align-items:center;
-justify-content:center;
-margin-top:5rem;
+justify-content:space-evenly;
 transition:all 700ms linear;
     .show{
         display:flex;
@@ -380,19 +407,47 @@ transition:all 700ms linear;
 }
 @media(max-width:650px){
     flex-direction:column;
-    height:auto;
+    height:120vh;
 }
 `
 
-const SliderLine = styled.div`
-position:absolute;
-top:4rem;
-left:1.4rem;
-width:2px;
-height:11rem;
-background-color:white;
-@media(max-width:650px){
-    display:none;
+const TeamMembersDiv = styled.div`
+width:30rem;
+height:30rem;
+display:flex;
+flex-direction:column;
+align-items:center;
+`
+
+const TeamMembersImg = styled.div`
+width:23rem;
+height:23rem;
+border:3px solid white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+img{
+    width:20rem;
+    height:20rem;
+    border-radius:50%;
+    object-fit:cover;
 }
 `
+
+const TeamMembersName = styled.span`
+font-size:2rem;
+color:white;
+font-weight:400;
+margin:0.5rem 0;
+`
+
+const TeamMembersRole = styled.span`
+font-size:1.3rem;
+color:white;
+font-weight:400;
+letter-spacing:1px;
+`
+
+
 export default AboutUs

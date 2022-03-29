@@ -9,12 +9,12 @@
   position: relative;
   .explore_wrapper {
     height: 65vh;
-    width: 60%;
+    width:76%;
     video {
       width: 100%;
       height: 100%;
       // background-size: cover;
-      object-fit: contain;
+      object-fit: cover;
     }
     h3:hover {
       color: white;
@@ -23,8 +23,8 @@
   .our_portfolio {
     text-transform: uppercase;
     // top: 25rem;
-    right: -18.5rem;
-    font-weight: bold;
+    font-weight:50;
+    right: -23rem;
     transform: rotate(90deg);
     position: absolute;
     h3 {
