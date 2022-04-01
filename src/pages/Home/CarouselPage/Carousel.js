@@ -46,7 +46,7 @@ const Carousel = () => {
     ]
 
     // const [feedbackApi, setFeedbackApi] = useState([])
-    const [activeSlides, setActiveSlides] = useState(true);
+    // const [activeSlides, setActiveSlides] = useState(true);
 
     const [count, setCount] = useState(0)
     const length = feedbackApi.length
@@ -61,12 +61,12 @@ const Carousel = () => {
     //     }, 3000);
     // }
     const handleLeft = () => {
-        setActiveSlides(false)
+        // setActiveSlides(false)
         count > 0 ? setCount(count - 1) : setCount(length - 1)
     }
 
     const handleRight = () => {
-        setActiveSlides(false)
+        // setActiveSlides(false)
         count < length - 1 ? setCount(count + 1) : setCount(0)
     }
 
@@ -110,7 +110,7 @@ const Carousel = () => {
                                                     key={i.id}
                                                     onClick={() => {
                                                         setCount(index);
-                                                        setActiveSlides(false)
+                                                        // setActiveSlides(false)
                                                     }}
                                                 ></Selectors>
                                             ))
@@ -348,6 +348,7 @@ const SelectorDiv = styled.div`
 height:auto;
 display:flex;
 align-items:center;
+position:relative;
 `
 const Selectors = styled.div`
 height:1.3rem;

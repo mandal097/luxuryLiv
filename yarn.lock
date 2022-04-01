@@ -1160,6 +1160,11 @@
   "resolved" "https://registry.npmjs.org/@ctrl/tinycolor/-/tinycolor-3.4.0.tgz"
   "version" "3.4.0"
 
+"@emailjs/browser@^3.5.0":
+  "integrity" "sha512-VDpyaF2Xkt21/gRaV5TgZ8+CSsMy3+UTJo7K3/NL63gfBQIzrVQiK1U7Jw4PqpFDps9a1Gj7q8gfJ7thxUIRcw=="
+  "resolved" "https://registry.npmjs.org/@emailjs/browser/-/browser-3.5.0.tgz"
+  "version" "3.5.0"
+
 "@emotion/is-prop-valid@^0.8.8":
   "integrity" "sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA=="
   "resolved" "https://registry.npmjs.org/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz"
@@ -5335,11 +5340,6 @@
   dependencies:
     "loader-utils" "^2.0.0"
     "schema-utils" "^3.0.0"
-
-"file-saver@^2.0.5":
-  "integrity" "sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA=="
-  "resolved" "https://registry.npmjs.org/file-saver/-/file-saver-2.0.5.tgz"
-  "version" "2.0.5"
 
 "file-type@^10.9.0":
   "integrity" "sha512-uzk64HRpUZyTGZtVuvrjP0FYxzQrBf4rojot6J65YMEbwBLB0CWm0CLojVpwpmFmxcE/lkvYICgfcGozbBq6rw=="

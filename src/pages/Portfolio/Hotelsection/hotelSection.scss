@@ -16,13 +16,12 @@
   padding: 20px 15px;
   display: flex;
   flex-direction: column;
-  // transition:all 1s ease-in-out;
+  transition:all 700ms ease;
   border-radius: 10px;
 }
 
 .port-container .port-card:hover {
   height: 405px;
-  transition: all 1s ease;
 }
 
 .port-container .port-card .port-imgBx {
@@ -69,7 +68,7 @@ width: 100%;
   opacity: 1;
   margin-top: -10px;
   transition-delay: 0.3s;
-  transition: all 1s ease;
+  // transition: all 1s ease;
 }
 .upper {
   display: flex;

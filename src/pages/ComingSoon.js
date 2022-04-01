@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import Ham from './components/Hamburger/Ham'
-import Navbar from './components/Navbar/Navbar'
-import HomeBtn from './components/HomeBtn/HomeBtn'
+import Ham from '../components/Hamburger/Ham'
+import Navbar from '../components/Navbar/Navbar'
+import HomeBtn from '../components/HomeBtn/HomeBtn'
 
 const ComingSoon = () => {
 

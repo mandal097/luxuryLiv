@@ -40,8 +40,8 @@ const AboutUs = () => {
                     <ContentRight className='show'>
                         <Line ></Line>
                         <ContentRightText className='fadeInText'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis architecto a, ea, ratione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officatione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officiis ut laboriosam temporibus nisi tempora est ullam non, aut labore ea aliquid odio esse facere molestiae.</ContentRightText>
-                        <ContentCr></ContentCr>
                     </ContentRight>
+                    <ContentCr className='contentCr'></ContentCr>
                 </Content>
                 <Content>
                     <ContentLeft className='leftImg'>
@@ -50,8 +50,8 @@ const AboutUs = () => {
                     <ContentRight className='show'>
                         <Line></Line>
                         <ContentRightText className='fadeInText'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis architecto a, ea, ratione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officatione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officiis ut laboriosam temporibus nisi tempora est ullam non, aut labore ea aliquid odio esse facere molestiae.</ContentRightText>
-                        <ContentCr></ContentCr>
                     </ContentRight>
+                    <ContentCr className='contentCr'></ContentCr>
                 </Content>
                 <Content>
                     <ContentLeft className='leftImg'>
@@ -60,8 +60,8 @@ const AboutUs = () => {
                     <ContentRight className='show'>
                         <Line></Line>
                         <ContentRightText className='fadeInText'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis architecto a, ea, ratione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officatione reiciendis quibusdam id ad facere temporibus pariatur quam vero  fugit officiis ut laboriosam temporibus nisi tempora est ullam non, aut labore ea aliquid odio esse facere molestiae.</ContentRightText>
-                        <ContentCr></ContentCr>
                     </ContentRight>
+                    <ContentCr className='contentCr'></ContentCr>
                 </Content>
             </Wrapper>
 
@@ -159,7 +159,7 @@ margin-right:auto;
 align-items:center;
 justify-content:flex-end;
 height:6rem;
-z-index:11;
+z-index:12;
 @media(max-width:700px){
     right:8rem;
 }
@@ -201,31 +201,31 @@ position:relative;
 `
 const Content = styled.div`
 width:20rem;
-/* width:100%; */
 height:25vh;
 display:flex;
 align-items:center;
 justify-content:center;
 display:flex;
 align-items:center;
-justify-content:center;
 margin-top:9rem;
-transition:all 1000ms linear;
-
+transition:width 1000ms linear;
+justify-content:space-between;
 &:hover{
-    justify-content:space-between;
     width:100%;
     .show{
         display:flex;
-        width:73%;
     }
     .fadeInText{
         animation:fadeInText 1600ms ease 1 ;
     }
     .leftImg{
         border-right-color:black;
-    border-bottom-color:black;
-    z-index:1;
+        border-bottom-color:black;
+        z-index:1;
+    }
+    .contentCr{
+        right:0%;
+        visibility:visible;
     }
 }
 @media(max-width:650px){
@@ -239,17 +239,12 @@ height:20rem;
 display:flex;
 align-items:center;
 justify-content:center;
-z-index:2;
+z-index:9;
 border:3px solid white;
 border-radius:50%;
 transform:rotate(-45deg);
-transition:all 200ms linear;
+transition:all 1500ms linear;
 position:relative;
-&:hover{
-    .img{
-        animation:about 500ms ease-in-out 1;
-    }
-}
 }
 
 .semi_circle{
@@ -279,17 +274,18 @@ animation:AboutUsLine 2000ms ease ;
 `
 
 const ContentLeftImg = styled.img`
-width:16rem;
-height:16rem;
+width:18rem;
+height:18rem;
 border-radius:50%;
 object-fit:cover;
 transform:rotate(45deg);
 transition:all 300ms linear;
+z-index:2;
 }
 `
 const ContentRight = styled.div`
 width:0;
-width:70%;
+width:73%;
 height:20rem;
 padding:5px;
 position:relative;
@@ -298,7 +294,6 @@ display:flex;
 align-items:center;
 justify-content:center;
 display:none;
-transition:all 400ms linear;
 @media(max-width:650px){
     border:none;
     width:95%;
@@ -324,7 +319,7 @@ color:white;
 
 const ContentCr = styled.div`
 position:absolute;
-right:-1rem;
+right:40.4%;
 width:20rem;
 height:20rem;
 border-radius:50%;
@@ -332,7 +327,9 @@ border:3px solid white;
 border-left-color:black;
 border-top-color:black;
 transform:rotate(-45deg);
-z-index:-11;
+/* z-index:11; */
+visibility:hidden;
+transition:all 1000ms linear;
 @media(max-width:650px){
     display:none;
 }
@@ -432,6 +429,10 @@ img{
     height:20rem;
     border-radius:50%;
     object-fit:cover;
+    transition:all 500ms linear;
+    &:hover{
+        transform:scale(1.05);
+    }
 }
 `
 

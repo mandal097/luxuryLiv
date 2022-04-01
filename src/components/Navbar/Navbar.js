@@ -34,7 +34,6 @@ animation:navbar 500ms;
 opacity:1;
 background-color:teal;
 padding:0 10rem;
-z-index:10;
 display:flex;
 flex-direction:column;
 align-items:flex-start;
