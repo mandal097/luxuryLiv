@@ -123,7 +123,7 @@ const Enquiry = ({ setShowForm, hotel }) => {
                                 errorField.hotelNameError.length > 0 && <span className="required_Field">{errorField.hotelNameError}</span>
                             }
                         </div>
-                        <div className="input_div">
+                        <div className="input_div hide_m">
                             <div className="inputdivs">
                                 <label htmlFor="">Check In Date :</label>
                                 <input type="date" name="" id="" onChange={(e) => setCheckInDate(e.target.value)} />
@@ -139,7 +139,7 @@ const Enquiry = ({ setShowForm, hotel }) => {
                                 }
                             </div>
                         </div>
-                        <div className="input_div">
+                        <div className="input_div hide_m">
                             <div className="inputdivs">
                                 <label htmlFor="">Adults :</label>
                                 <input type="number" name="" id="" onChange={(e) => setAdults(e.target.value)} />
@@ -155,6 +155,44 @@ const Enquiry = ({ setShowForm, hotel }) => {
                                 }
                             </div>
                         </div>
+
+
+                        <div className='hide_desk'>
+                            <div className="inputDiv">
+                                <label htmlFor="">Check In Date :</label>
+                                <input type="date" name="" id="" onChange={(e) => setCheckInDate(e.target.value)} />
+                                {
+                                    errorField.checkInDateError.length > 0 && <span className="required_Field">{errorField.checkInDateError}</span>
+                                }
+                            </div>
+                            <div className="inputDiv">
+                                <label htmlFor="">Nights :</label>
+                                <input type="number" name="" id="" onChange={(e) => setNights(e.target.value)} />
+                                {
+                                    errorField.nightsError.length > 0 && <span className="required_Field">{errorField.nightsError}</span>
+                                }
+                            </div>
+                            <div className="inputDiv">
+                                <label htmlFor="">Adults :</label>
+                                <input type="number" name="" id="" onChange={(e) => setAdults(e.target.value)} />
+                                {
+                                    errorField.adultsError.length > 0 && <span className="required_Field">{errorField.adultsError}</span>
+                                }
+                            </div>
+                            <div className="inputDiv">
+                                <label htmlFor="">Children :</label>
+                                <input type="number" name="" id="" onChange={(e) => setChildCount(e.target.value)} />
+                                {
+                                    errorField.childCountError.length > 0 && <span className="required_Field">{errorField.childCountError}</span>
+                                }
+                            </div>
+                        </div>
+
+
+
+
+
+
                         <div className="inputDiv">
                             <label htmlFor="">Each child's age :</label>
                             <input type="text" name="" id="" placeholder='  03 yrs / 05 yrs / 11 yrs...' onChange={(e) => setChildsAge(e.target.value)} />
@@ -168,6 +206,7 @@ const Enquiry = ({ setShowForm, hotel }) => {
                             {/* {
                             errorField.enquiryError.length > 0 && <span className="required_Field">{errorField.enquiryError}</span>
                         } */}
+
                         </div>
                         <div className=" button">
                             <input type="submit" value="submit" />

@@ -32,8 +32,7 @@ export const HomeBtn = () => {
 const Button = styled.div`
 position:fixed;;
 height:5rem;
-/* top: ${props => props.d === "true" ? "-4rem" : '4rem'}; */
-top:4rem;
+top:1.9rem;
 left:12rem;
 align-items:center;
 font-weight:bold;
@@ -42,9 +41,9 @@ color:goldenrod;
 z-index:1;
 transition:all 200ms linear;
 span{
-    /* font-size:2rem; */
+    font-size:3.5rem;
     text-transform:uppercase;
-    font-size: ${props => props.d === "true" ? "2rem" : '2.5rem'};
+    /* font-size: ${props => props.d === "true" ? "2rem" : '2.5rem'}; */
     .navlink{
         color:goldenrod;
         text-decoration:none;
@@ -52,9 +51,8 @@ span{
 }
 @media(max-width:600px){
     left:8rem;
-    top:5rem;
     span{
-        font-size:2.5rem;
+        font-size:4.5rem;
     }
 }
 @media(max-width:400px){

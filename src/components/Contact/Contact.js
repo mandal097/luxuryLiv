@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import SocialMob from '../SocialMob/SocialMob'
 import Navbar from '../Navbar/Navbar'
@@ -20,13 +20,13 @@ const Contact = () => {
     }
     return (
         <Container>
-            <HomeBtn/>
+            <HomeBtn />
             {
                 IsOpen && <Navbar />
             }
             <Header>
-                    <Spann onClick={showNavbar}><Ham /></Spann>
-                </Header>
+                <Spann onClick={showNavbar}><Ham /></Spann>
+            </Header>
             <Wrapper>
                 <Left>
                     <H3>COME...VISIT US SOMETIMES! </H3>
@@ -43,10 +43,39 @@ const Contact = () => {
                 </Right>
                 <Vertical />
             </Wrapper>
-            <SocialMob/>
+            <SocialMob />
         </Container>
     )
 }
+
+
+const Header = styled.div`
+    display:flex;
+    top:3rem;
+    right:14rem;
+    position:absolute;
+    margin-right:auto;
+    align-items:center;
+    justify-content:flex-end;
+    height:6rem;
+    z-index:11;
+    @media(max-width:700px){
+        right:8rem;
+    }
+    @media(max-width:400px){
+        right:4rem;
+    }
+    `
+const Spann = styled.div`
+    font-size: 20px;
+    font-weight: bold;
+    color: goldenrod;
+    cursor:pointer;
+    a{
+    text-decoration: none;  
+    color: goldenrod; 
+    }
+    `
 
 
 const Container = styled.div`
@@ -64,7 +93,6 @@ const Container = styled.div`
     }
 `
 
-
 const Wrapper = styled.div`
 width:1000px;
 height:75vh;
@@ -77,47 +105,21 @@ position:relative;
 }
 @media(max-width:540px){
     flex-direction:column;
-    /* height:auto; */
+    justify-content: space-evenly;
+    height:85vh;
+    /* padding-top:2rem; */
 }
 `
-
-const Header = styled.div`
-display:flex;
-top:3rem;
-right:14rem;
-position:absolute;
-margin-right:auto;
-align-items:center;
-justify-content:flex-end;
-height:6rem;
-z-index:11;
-@media(max-width:700px){
-    right:8rem;
-}
-@media(max-width:400px){
-    right:4rem;
-}
-`
-const Spann = styled.div`
-font-size: 20px;
-font-weight: bold;
-color: goldenrod;
-cursor:pointer;
-a{
-text-decoration: none;  
-color: goldenrod; 
-}
-`
-
 const Left = styled.div`
 width:50%;
 height:70%;
 display: flex;
 flex-direction:column;
 align-items: center;
-justify-content: space-between;
+justify-content: space-evenly;
 @media(max-width:540px){
     width:90%;
+    height:45%;
 }
 `
 const H3 = styled.h3`
@@ -132,8 +134,8 @@ line-height:2;
 `
 
 const Img = styled.img`
-width:15rem;
-height:15rem;
+width:12rem;
+height:12rem;
 object-fit:cover;
 `
 
@@ -161,9 +163,10 @@ height:70%;
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: space-between;
+justify-content: space-evenly;
 @media(max-width:540px){
     width:90%;
+    height:40%;
 }
 `
 const Vertical = styled.div`
@@ -174,7 +177,10 @@ width:2px;
 height:50vh;
 background-color:goldenrod;
 @media(max-width:540px){
-   display:none;
+    height:1.5px;
+    width: 60%;
+    left:20%;
+    top:50%;
 }
 `
 

@@ -102,8 +102,8 @@ const HotelsDescModal = ({ ShowModal, places }) => {
                         naturalSlideHeight={325}
                         totalSlides={5}
                         dragEnabled={false}
-                        isPlaying={true}
-                        interval={3000}
+                        // isPlaying={true}
+                        // interval={3000}
 
                     >
                         <Slider className='slider_div'>

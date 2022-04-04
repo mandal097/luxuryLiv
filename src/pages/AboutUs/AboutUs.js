@@ -200,11 +200,11 @@ position:relative;
 }
 `
 const Content = styled.div`
-width:20rem;
-height:25vh;
-display:flex;
-align-items:center;
-justify-content:center;
+    width:20rem;
+    height:25vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 display:flex;
 align-items:center;
 margin-top:9rem;
@@ -404,7 +404,7 @@ transition:all 700ms linear;
 }
 @media(max-width:650px){
     flex-direction:column;
-    height:120vh;
+    height:125vh;
 }
 `
 

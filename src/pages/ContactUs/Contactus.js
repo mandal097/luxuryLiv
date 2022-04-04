@@ -39,9 +39,6 @@ const Container = styled.div`
         color:white;
         text-decoration:none;
     }
-    @media(max-width:540px){
-        justify-content: flex-start;
-}
 `
 
 const Wrapper = styled.div`
@@ -57,8 +54,8 @@ position:relative;
 @media(max-width:540px){
     flex-direction:column;
     justify-content: space-evenly;
-    height:90vh;
-    padding-top:2rem;
+    height:85vh;
+    /* padding-top:2rem; */
 }
 `
 const Left = styled.div`
@@ -67,9 +64,10 @@ height:70%;
 display: flex;
 flex-direction:column;
 align-items: center;
-justify-content: space-between;
+justify-content: space-evenly;
 @media(max-width:540px){
     width:90%;
+    height:45%;
 }
 `
 const H3 = styled.h3`
@@ -84,8 +82,8 @@ line-height:2;
 `
 
 const Img = styled.img`
-width:15rem;
-height:15rem;
+width:12rem;
+height:12rem;
 object-fit:cover;
 `
 
@@ -113,9 +111,10 @@ height:70%;
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: space-between;
+justify-content: space-evenly;
 @media(max-width:540px){
     width:90%;
+    height:40%;
 }
 `
 const Vertical = styled.div`
@@ -126,7 +125,10 @@ width:2px;
 height:50vh;
 background-color:goldenrod;
 @media(max-width:540px){
-   display:none;
+    height:1.5px;
+    width: 60%;
+    left:20%;
+    top:50%;
 }
 `
 

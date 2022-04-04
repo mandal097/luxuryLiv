@@ -16,7 +16,7 @@ const Socialhandles = styled.div`
 height: 13rem;
 width: 15rem;
 position: absolute;
-bottom:-3rem;
+bottom:0rem;
 align-items: center;
 justify-content: space-evenly;
 display:none;
