@@ -1,14 +1,35 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick';
 import {
     LeftOutlined,
-    RightOutlined,
-    // ArrowLeftOutlined,
-    // ArrowRightOutlined
+    RightOutlined
 } from '@ant-design/icons'
-// import { FaQuoteLeft } from 'react-icons/fa';
-// import { fetchApi } from '../../../axios'
+
+function SampleNextArrow(props) {
+    const { onClick } = props;
+    return (
+        <RightOutlined
+            className='carouselControls caRight'
+            style={{ color: 'goldenrod', fontSize: '3rem', right: '8rem' }}
+            onClick={onClick} />
+            );
+        }
+        
+        function SamplePrevArrow(props) {
+            const { onClick } = props;
+            return (
+                <LeftOutlined
+                className='carouselControls caLeft'
+                style={{ color: 'goldenrod', fontSize: '3rem' }}
+            onClick={onClick} />
+
+    );
+}
+
 const Carousel = () => {
 
     // const feedbacks = [
@@ -45,31 +66,6 @@ const Carousel = () => {
         },
     ]
 
-    // const [feedbackApi, setFeedbackApi] = useState([])
-    // const [activeSlides, setActiveSlides] = useState(true);
-
-    const [count, setCount] = useState(0)
-    const length = feedbackApi.length
-
-
-
-    const OrgFeedback = feedbackApi[count]
-
-    // if (activeSlides) {
-    //     setTimeout(() => {
-    //         count < length - 1 ? setCount(count + 1) : setCount(0)
-    //     }, 3000);
-    // }
-    const handleLeft = () => {
-        // setActiveSlides(false)
-        count > 0 ? setCount(count - 1) : setCount(length - 1)
-    }
-
-    const handleRight = () => {
-        // setActiveSlides(false)
-        count < length - 1 ? setCount(count + 1) : setCount(0)
-    }
-
     const navigate = useNavigate()
 
     const goToAgentsPage = () => {
@@ -80,59 +76,17 @@ const Carousel = () => {
 
     }
 
-
-    // handling touch events
-    document.addEventListener('touchstart', handleTouchStart, false);
-    document.addEventListener('touchmove', handleTouchMove, false);
-
-    var xDown = null;
-    var yDown = null;
-
-    function getTouches(evt) {
-        return evt.touches ||             // browser API
-            evt.originalEvent.touches; // jQuery
+    let settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        swipeToSlide: true,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />
     }
-
-    function handleTouchStart(evt) {
-        const firstTouch = getTouches(evt)[0];
-        xDown = firstTouch.clientX;
-        yDown = firstTouch.clientY;
-    };
-
-    function handleTouchMove(evt) {
-        if (!xDown || !yDown) {
-            return;
-        }
-
-        var xUp = evt.touches[0].clientX;
-        var yUp = evt.touches[0].clientY;
-
-        var xDiff = xDown - xUp;
-        var yDiff = yDown - yUp;
-
-        if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
-            if (xDiff > 0) {
-                /* left swipe */
-                handleLeft()
-            } else {
-                /* right swipe */
-                handleRight()
-            }
-        }
-        // else {
-        //     if (yDiff > 0) {
-        //         /* up swipe */
-        //     } else {
-        //         /* down swipe */
-        //     }
-        // }
-        // /* reset values */
-        // xDown = null;
-        // yDown = null;
-    };
-
-
-
 
     return (
         <MainContainer id='carousel'>
@@ -141,7 +95,7 @@ const Carousel = () => {
                     <AgentsH className='agents'>Agents</AgentsH>
                     <ToLeft className='totheleft'>to the left</ToLeft>
                 </Agents>
-                <Middle>
+                <Middle {...settings}>
                     {
                         feedbackApi.map(i => (
                             <Bottom key={i.id}>
@@ -150,32 +104,22 @@ const Carousel = () => {
                                     <>
                                         <TestimoniesParaDiv>
                                             <UpperLine></UpperLine>
-                                            <Testimonies>{OrgFeedback.feedbacktxt}</Testimonies>
+                                            <Testimonies>{i.feedbacktxt}</Testimonies>
                                             <LowerLine></LowerLine>
                                         </TestimoniesParaDiv>
                                         <TestimonialsInfoDiv>
-                                            <TestimonialsName>{OrgFeedback.name}</TestimonialsName>
-                                            <TestimonialsStatus>{OrgFeedback.status}</TestimonialsStatus>
+                                            <TestimonialsName>{i.name}</TestimonialsName>
+                                            <TestimonialsStatus>{i.status}</TestimonialsStatus>
                                         </TestimonialsInfoDiv>
                                     </>
                                     <SelectorDiv>
                                         {
                                             feedbackApi.map((i, index) => (
-                                                <Selectors id='selectors'
-                                                    key={i.id}
-                                                    onClick={() => {
-                                                        setCount(index);
-                                                        // setActiveSlides(false)
-                                                    }}
-                                                ></Selectors>
+                                                <Selectors></Selectors>
                                             ))
                                         }
                                     </SelectorDiv>
                                 </BottomWrapper>
-                                <Controls>
-                                    <ControlsLeft onClick={handleLeft}><LeftOutlined /></ControlsLeft>
-                                    <ControlsRight onClick={handleRight}  ><RightOutlined /></ControlsRight>
-                                </Controls>
                             </Bottom>
                         ))
                     }
@@ -226,9 +170,8 @@ position:relative;
    width:97%;
 }
 @media(max-width:750px){
-    width:95%;
+    width:100%;
     height:95%;
-    /* align-items:flex-end; */
     align-items:center;
 }
 `
@@ -272,6 +215,7 @@ align-items:flex-end;
 @media(max-width:750px){
     position:absolute;
     right:2.5%;
+    display:none;
 }
 `
 
@@ -308,37 +252,68 @@ const ToRight = styled(ToLeft)`
 
 `
 
-const Middle = styled.div`
-height: 90%;
+// const Middle = styled.div` 
+const Middle = styled(Slider)`
+height: 70vh;
 width:52%;
-overflow:hidden;
 margin:0 auto;
 border: 0.5px solid #fff;
 display: flex;
 align-items:center;
 position:relative;
+ul li button{
+    margin:0;
+    &:before{
+        font-size:12px;
+        color:white;
+        position:absolute;
+        display:none;
+        top:-5rem;
+    }
+}
+li.slick-active button::before{
+    color:white;
+}
+.slick-list{
+    /* overflow:hidden; */
+}
+button{
+    z-index:1;
+}
 .cover{
     height:100%;
     width:100%;
     object-fit: cover;
 }
-@media(max-width:850px){
+@media(max-width:750px){
     width:100%;
     height:80%;
     border:none;
+    /* overflow:hidden; */
+    ul li button{
+    &:before{
+        font-size:10px;
+        color:white;
+        position:absolute;
+    }
+}
 }
 `
 const Bottom = styled.div`
-height: 100%;
+height: 60vh;
 min-width:100%;
 display: flex;
 justify-content:space-around;
 align-items:center;
 position:relative;
+/* border:1px solid red; */
 .cover{
     height:100%;
     width:100%;
     object-fit: cover;
+}
+@media(max-width:400px){
+    height:100%;
 }
 `
 
@@ -351,7 +326,7 @@ align-items:center;
 justify-content:space-evenly;
 padding:0  5rem;
 @media (max-width:900px){
-    width:90%;
+    width:100%;
 }
 `
 
@@ -377,6 +352,7 @@ position:relative;
 padding:1rem;
 @media(max-width:700px){
     padding:0.3rem 0;
+    height:auto;
 }
 `
 const UpperLine = styled.div`
@@ -409,8 +385,8 @@ const Testimonies = styled.p`
 color:white;
 font-size:1.6rem;
 text-align:center;
-@media(max-width:800px){
-    font-size:1.4rem;
+@media(max-width:750px){
+    font-size:1.8rem;
 }
 `
 const TestimonialsInfoDiv = styled.div`
@@ -440,6 +416,9 @@ height:auto;
 display:flex;
 align-items:center;
 position:relative;
+/* @media(max-width:750px){
+    display:none;
+} */
 `
 const Selectors = styled.div`
 height:1.3rem;
@@ -456,37 +435,5 @@ transition:all 300ms linear;
     border:1px solid white;
 }
 `
-
-const Controls = styled.div`
-width:97%;
-top:40%;
-height:7rem;
-position:absolute;
-display:flex;
-justify-content:space-between;
-align-items:center;
-@media(max-width:840px){
-    width:100%;
-}
-`
-const ControlsLeft = styled.div`
-font-size:2.4rem;
-color:goldenrod;
-cursor:pointer;
-transition:all 300ms linear;
-&:hover{
-    color:white;
-}
-`
-const ControlsRight = styled.div`
-font-size:2.4rem;
-color:goldenrod;
-cursor:pointer;
-transition:all 300ms linear;
-&:hover{
-    color:white;
-}
-`
-
 
 export default Carousel

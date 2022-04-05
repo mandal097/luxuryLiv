@@ -69,6 +69,7 @@ code {
     height: 100vh;
   }
 }
+
 @keyframes navbarMob {
   0% {
     opacity: 0.7;
@@ -154,5 +155,34 @@ code {
 
   100% {
     color: goldenrod;
+  }
+}
+
+.valuesController {
+  position: absolute;
+  top: 90%;
+  font-size: 3rem;
+  color: goldenrod;
+}
+
+.cLeft {
+  left: 45%;
+}
+
+.cRight {
+  right: 45%;
+}
+
+@media(max-width:800px) {
+  .valuesController {
+    top: 50%;
+  }
+
+  .cLeft {
+    left: 1%;
+  }
+
+  .cRight {
+    right: 1%;
   }
 }

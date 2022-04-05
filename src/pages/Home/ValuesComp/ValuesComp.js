@@ -1,107 +1,127 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { data } from './data'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick';
 import {
     LeftOutlined,
     RightOutlined
 } from '@ant-design/icons'
-// import { useEffect } from 'react';
+
+function SampleNextArrow(props) {
+    const { onClick } = props;
+    return (
+        <RightOutlined
+            className='valuesController cRight'
+            onClick={onClick} />
+    );
+}
+
+function SamplePrevArrow(props) {
+    const { onClick } = props;
+    return (
+        <LeftOutlined
+            className='valuesController cLeft'
+            onClick={onClick} />
+
+    );
+}
+
 const ValuesComp = () => {
-    const [count, setCount] = useState(0)
-    // const [activeSlides, setActiveSlides] = useState(true)
-    const length = data.length
-    const items = data[count]
 
-    const handleLeft = () => {
-        // setActiveSlides(false)
-        count > 0 ? setCount(count - 1) : setCount(length - 1)
+    const data = [
+        {
+            id: 1,
+            img: '/images/devil.png',
+            title: "INTEGRITY",
+            content: "Why is this one the first? Well, lets just say that there aint no joy in doing business without it. If we dont deliver our promises to you, then you dont deliver your promises to your client, then he gets upset with you and then you get upset with us. You see where we are going with this...right?"
+        },
+        {
+            id: 2,
+            img: '/images/bells.png',
+            title: "PROMPTNESS",
+            content: "When you send an email at 3 am & a follow up to the same at 9 am, you surely are in need of urgent assistance. We get that. Thats why our turn around time to anything that you require from us is less than 4 hours. Except when we are watching Game of Thrones! That show is addictive!"
+        },
+        {
+            id: 3,
+            img: '/images/split.png',
+            title: "FLEXIBILE",
+            content: "None of our team members can do a full split. And It's not like we didnt try! But what we do do is listen to you patiently, understand what your client wants & then devise a possible solution that actually works! And if that requires us to twist some arms or break some... well..lets just say we get it DONE. Period."
+        },
+        {
+            id: 4,
+            img: '/images/doors.png',
+            title: "SELECTIVENESS",
+            content: "Just like our Hotel partners, we also like to handpick our Travel Agent Partners. 'Cos we only work with a limited number of agents, We answer their calls, give them both our ears to listen & never lose our calm. Ofcourse, this goes out the window as soon as we get back home to our respective spouses but isn't that how GOD intended it?"
+        },
+        {
+            id: 5,
+            img: '/images/armw.png',
+            title: "MAXIMUM EFFORT!",
+            content: "You don't build credibility overnight. And that comes with Positivty, Passion, Perseverance & a few other big words. We always give our 100%, unless we give 80%. But whats 20% really?"
+        },
+        {
+            id: 6,
+            img: '/images/phone.png',
+            title: "OLD SCHOOLISH",
+            content: "Water water everywhere, not a drop to drink.. Info Info everywhere, but what to do with it? Internet has so much of information that its impossible to put it in the right context. But not with us. We are old school. When you need an info from us, just pick up the phone & call...or come over & get a few beers along while you are at it!"
+        },
+        {
+            id: 7,
+            img: '/images/party.png',
+            title: "FUN",
+            content: "Fun is what we have from 9 am till 6 pm - when we work! Other times its usally Beers & Conversations that keep our spirits high! But can we tell you a secret? Sometimes the two get mixed up! :P...Shhh......"
+        },
+
+        {
+            id: 8,
+            img: '/images/awes.png',
+            title: "AWESOMETASTIC",
+            content: "Now how cool is that word? Does it not deserve its own block! Thats why it stays. Also, we coined this term. So, 'yey' to us & 'boo hoo' to those who still like to use Awesome & Fantastic in a sentence. Move on guys!"
+        },
+
+
+    ]
+
+
+    let settings = {
+        dots: true,
+        // infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        swipeToSlide: true,
+        nextArrow: <SampleNextArrow  className='deno'/>,
+        prevArrow: <SamplePrevArrow />
     }
-
-    const handleRight = () => {
-        // setActiveSlides(false)
-        count < length - 1 ? setCount(count + 1) : setCount(0)
-    }
-    // useEffect(() => {
-    //     if (activeSlides) {
-    //         setTimeout(() => {
-    //             count < length - 1 ? setCount(count + 1) : setCount(0)
-    //         }, 3000);
-    //     } else {
-    //         console.log('slides inactive');
-    //     }
-    // }, [length, count, activeSlides])
-
-    // handling touch events
-    document.addEventListener('touchstart', handleTouchStart, false);
-    document.addEventListener('touchmove', handleTouchMove, false);
-
-    var xDown = null;
-    var yDown = null;
-
-    function getTouches(evt) {
-        return evt.touches ||             // browser API
-            evt.originalEvent.touches; // jQuery
-    }
-
-    function handleTouchStart(evt) {
-        const firstTouch = getTouches(evt)[0];
-        xDown = firstTouch.clientX;
-        yDown = firstTouch.clientY;
-    };
-
-    function handleTouchMove(evt) {
-        if (!xDown || !yDown) {
-            return;
-        }
-
-        var xUp = evt.touches[0].clientX;
-        var yUp = evt.touches[0].clientY;
-
-        var xDiff = xDown - xUp;
-        var yDiff = yDown - yUp;
-
-        if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
-            if (xDiff > 0) {
-                /* left swipe */
-                handleLeft()
-            } else {
-                /* right swipe */
-                handleRight()
-            }
-        } 
-        // else {
-        //     if (yDiff > 0) {
-        //         /* up swipe */
-        //     } else {
-        //         /* down swipe */
-        //     }
-        // }
-        // /* reset values */
-        // xDown = null;
-        // yDown = null;
-    };
-
     return (
         <Container>
             <Wrapper>
-                <Section>
-                    <Article>
-                        <SectionLeft>
-                            <ImgContainer>
-                                <img src={items.img} alt="" />
-                                <SemiCircleUp></SemiCircleUp>
-                                <SemiCircleDown></SemiCircleDown>
-                            </ImgContainer>
-                        </SectionLeft>
-                        <SectionRightt>
-                            <H>{items.title}</H>
-                            <P>{items.content}</P>
-                        </SectionRightt>
-                    </Article>
-                    <Icons>
+                <Section {...settings}>
+                    {
+                        data.map((d) => (
+                            <div key={d.id} item>
+                                <Article >
+                                    <SectionLeft>
+                                        <ImgContainer>
+                                            <img src={d.img} alt="" />
+                                            <SemiCircleUp></SemiCircleUp>
+                                            <SemiCircleDown></SemiCircleDown>
+                                        </ImgContainer>
+                                    </SectionLeft>
+                                    <SectionRightt>
+                                        <H>{d.title}</H>
+                                        <P>{d.content}</P>
+                                    </SectionRightt>
+                                </Article>
+                            </div>
+                        ))
+                    }
+                    {/* <Icons>
                         <IconLeft onClick={handleLeft} ><LeftOutlined /></IconLeft>
                         <IconRight onClick={handleRight} ><RightOutlined /></IconRight>
-                    </Icons>
+                    </Icons> */}
                 </Section>
             </Wrapper>
             <SideTexts>
@@ -127,14 +147,19 @@ margin: 0px auto;
 `
 const Wrapper = styled.div`
 color: white;
-height: 95vh;
+height: 100vh;
 display: flex;
 flex-deirection:column;
 align-items: center;
 justify-content: center;
-width: 1100px;
+width: 95%;
 position:relative;
 /* border:1px solid red; */
+overflow:hidden;
+@media(max-width:1100px){
+    height:100vh;
+    width:95%;
+}
 @media(max-width:900px){
     height:100vh;
     align-items: flex-start;
@@ -143,18 +168,36 @@ position:relative;
     align-items:center;
 }
 `
-const Section = styled.section`
+/* const Section = styled.section` */
+const Section = styled(Slider)`
 padding: 25px;
 height: 80vh;
-display: flex;
-flex-direction:column;
-align-items: center;
-justify-content: center;
 width: 100%;
+overflow:hidden;
 /* border:1px solid red; */
+ul li button{
+    margin:0;
+    &:before{
+        font-size:12px;
+        color:white;
+        position:absolute;
+        display:none;
+        top:-5rem;
+    }
+}
+li.slick-active button::before{
+    color:white;
+}
+.slick-list{
+    overflow:visible;
+}
+button{
+    z-index:1;
+}
 
 @media (max-width: 600px) {
     height:85vh;
+    width:90%;
     flex-direction: column;
     justify-content: center;
 }
@@ -194,18 +237,27 @@ h3{
 `
 const Article = styled.div`
 display: flex;
+flex-direction:row;
 align-items: center;
-justify-content:space-between;
-height: 90%;
-margin:0 auto;
-width:80%;
+justify-content:space-evenly;
+height:70vh;
+width:100%;
+/* margin-right:2rem; */
 /* border:1px solid red; */
+overflow:hidden;
 @media (max-width: 800px) {
-    width: 100%;
-    height:80%;
+    width: 90%;
+    height:70vh;
+    margin:0 auto;
     flex-direction: column;
   justify-content: center;
   margin-top:-5rem;
+}
+@media (max-width: 650px) {
+    width: 80%;
+}
+@media (max-width: 350px) {
+    width: 70%;
 }
 
 `
@@ -215,14 +267,14 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content:center;
-width: 45%;
+width: 40%;
 height:90%;
 /* border:1px solid red; */
 position:relative;
 @media (max-width: 600px) {
     justify-content: center;
     width: 100%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     height:100%;
 }
 @media(max-width:900px){
@@ -301,13 +353,12 @@ border-top:0px ;
 
 
 const SectionRightt = styled.div`
-width: 47%;
+width: 35%;
 height:90%;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content:center;
-/* border:1px solid red; */
 @media (max-width: 800px) {
   width: 100%;
   height:60%;
@@ -335,40 +386,37 @@ text-align: justify;
 line-height: 1.5;
 letter-spacing: .4px;
 font-size: 1.8rem;
-/* @media (max-width: 600px) {
-  font-size: 2rem;
-} */
 @media (max-width: 600px) {
   font-size: 1.6rem;
 }
 `
-const Icons = styled.div`
-width:10%;
-margin:0 auto;
-height:5rem;
-display:flex;
-align-items:center;
-bottom:5rem;
-justify-content:space-between;
-@media(max-width:900px){
-    position:absolute;
-    bottom:14rem;
-    width:20%;
-} 
-@media(max-width:400px){
-    position:absolute;
-    bottom:15rem;
-    width:30% ;
-} 
-`
-const IconLeft = styled.div`
-font-size:3rem;
-cursor:pointer ;
-`
-const IconRight = styled.div`
-font-size:3rem;
-cursor:pointer ;
-`
+// const Icons = styled.div`
+// width:10%;
+// margin:0 auto;
+// height:5rem;
+// display:flex;
+// align-items:center;
+// bottom:5rem;
+// justify-content:space-between;
+// @media(max-width:900px){
+//     position:absolute;
+//     bottom:14rem;
+//     width:20%;
+// } 
+// @media(max-width:400px){
+//     position:absolute;
+//     bottom:15rem;
+//     width:30% ;
+// } 
+// `
+// const IconLeft = styled.div`
+// font-size:3rem;
+// cursor:pointer ;
+// `
+// const IconRight = styled.div`
+// font-size:3rem;
+// cursor:pointer ;
+// `
 
 export default ValuesComp
 
