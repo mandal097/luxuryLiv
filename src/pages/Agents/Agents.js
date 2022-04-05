@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Ham from '../../components/Hamburger/Ham'
 import Navbar from '../../components/Navbar/Navbar'
 import HomeBtn from '../../components/HomeBtn/HomeBtn'
 
-const LoginPage = () => {
+const Agents = () => {
 
     const [IsOpen, setIsOpen] = useState(false)
+    useEffect(() => {
+        document.title = 'Luxury Living - Agents'
+    })
 
     const showNavbar = () => {
         switch (IsOpen) {
@@ -100,4 +103,4 @@ animation:comingSoonTxt 1000ms ease infinite alternate-reverse;
 `
 
 
-export default LoginPage
+export default Agents

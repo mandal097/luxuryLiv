@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import ValuesComp from './ValuesComp/ValuesComp'
 import Social from '../../components/Social/Social';
@@ -10,17 +10,19 @@ import Contactus from '../ContactUs/Contactus';
 import HomeBtn from '../../components/HomeBtn/HomeBtn';
 
 const Home = () => {
-  
+  useEffect(() => {
+    document.title = 'Luxury Living'
+  })
   return (
     <>
       <Container>
         <Section>
-          <HomeBtn/>
+          <HomeBtn />
           <FrontPage title="Luxury Living" para="Our top game is to make it easy for our Travel Partners to book 'High End Hotels Worldwide'. Our medium game is to do this with finnese, subtelty & without much hangups. Our low  game is to do 30 push-ups in one go." />
           <ValuesComp />
           <Explore />
           <Carousel />
-          <Contactus/>
+          <Contactus />
         </Section>
         <Social />
       </Container>

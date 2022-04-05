@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 import styled from 'styled-components'
 import Navbar from '../../components/Navbar/Navbar'
 import Ham from '../../components/Hamburger/Ham'
@@ -16,6 +16,9 @@ const Feedback = () => {
     const [phone, setPhone] = useState('')
     const [feedbackMessage, setFeedbackMessage] = useState('')
 
+    useEffect(() => {
+        document.title = 'Luxury Living - Feedback'
+    })
 
     const [errorField, setErrorField] = useState({
         nameError: '',
@@ -38,8 +41,8 @@ const Feedback = () => {
         if (validForm()) {
             emailjs.sendForm('service_273fiq9', 'template_31k9kmj', e.target,
                 'GwXreEVRE-9IpIAsX')
-            // emailjs.sendForm('service_lisndc6', 'template_dxtvufe', e.target,
-            //     'ZNJnYLB_TkQDJECii')
+                // emailjs.sendForm('service_lisndc6', 'template_dxtvufe', e.target,
+                //     'ZNJnYLB_TkQDJECii')
                 .then((result) => {
                     console.log(result.text);
                 }, (error) => {

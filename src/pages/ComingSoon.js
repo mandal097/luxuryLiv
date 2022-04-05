@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 import styled from 'styled-components'
 import Ham from '../components/Hamburger/Ham'
 import Navbar from '../components/Navbar/Navbar'
 import HomeBtn from '../components/HomeBtn/HomeBtn'
 
 const ComingSoon = () => {
+    useEffect(() => {
+        document.title = 'Luxury Living - Coming Soon'
+    })
 
     const [IsOpen, setIsOpen] = useState(false)
 

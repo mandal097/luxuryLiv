@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 import styled from 'styled-components'
 import SocialMob from '../SocialMob/SocialMob'
 import Navbar from '../Navbar/Navbar'
@@ -18,6 +18,9 @@ const Contact = () => {
                 setIsOpen(false)
         }
     }
+    useEffect(() => {
+        document.title = 'Luxury Living - Contact Us'
+    })
     return (
         <Container>
             <HomeBtn />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Navbar from '../../components/Navbar/Navbar'
 import Ham from '../../components/Hamburger/Ham'
@@ -23,6 +23,11 @@ const AboutUs = () => {
                 setIsOpen(false)
         }
     }
+
+    useEffect(() => {
+        document.title = 'Luxury Living - About Us'
+    })
+
     return (
         <Container>
             <HomeBtn />

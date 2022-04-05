@@ -1,4 +1,4 @@
-import React from 'react'
+import React  from 'react'
 import './portfolio.scss'
 import HotelSection from './Hotelsection/HotelSection'
 import Firstpage from './Firstpage/Firstpage'

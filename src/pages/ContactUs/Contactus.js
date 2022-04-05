@@ -1,7 +1,8 @@
-import React from 'react'
+import React  from 'react'
 import styled from 'styled-components'
 import SocialMob from '../../components/SocialMob/SocialMob'
 const Contactus = () => {
+
     return (
         <Container>
             <Wrapper>
@@ -20,7 +21,7 @@ const Contactus = () => {
                 </Right>
                 <Vertical />
             </Wrapper>
-            <SocialMob/>
+            <SocialMob />
         </Container>
     )
 }

@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './frontpage.scss'
 import FrontPage from '../../../components/FrontPage/FrontPage'
 const Firstpage = () => {
+    useEffect(() => {
+        document.title = 'Luxury Living - Portfolio'
+    })
     return (
         <div>
             <div className="FrontPagewrapper">

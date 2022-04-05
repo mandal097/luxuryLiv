@@ -11,6 +11,7 @@ const Hotels = () => {
 
     useEffect(() => {
         Aos.init({ duration: 1500 })
+            document.title = 'Luxury Living - Hotels'
     })
     const showNavbar = () => {
         switch (IsOpen) {
