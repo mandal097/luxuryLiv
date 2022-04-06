@@ -217,7 +217,7 @@ button{
     justify-content: center;
     ul li button{
     &:before{
-        top:-20rem;
+        top:-21rem;
         right:10rem;
     }
 }
@@ -260,7 +260,7 @@ h3{
 }
 @media (max-width:400px){
     font-size:3rem ;
-    bottom:9rem;
+    bottom:13rem;
 }
 `
 const Article = styled.div`

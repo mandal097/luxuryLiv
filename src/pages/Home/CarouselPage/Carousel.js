@@ -36,31 +36,31 @@ const Carousel = () => {
     const feedbackApi = [
         {
             id: 1,
-            feedbacktxt: 'ntium inventore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae ntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptattis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatibus eius voluptatum! Dolore,',
+            feedbacktxt: 'lntium inventore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae ntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentiiis neea beatae ntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentiiis neea beatae ntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptattis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatibus eius voluptatum! Dolore,',
             name: 'Claudine Trilio',
             status: 'Director of Sales & Marketing | RayaVadee & Tamarind Village'
         },
         {
             id: 2,
-            feedbacktxt: 'ntium inventore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae ntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptattis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatibus eius voluptatum! Dolore,',
+            feedbacktxt: 'akmntium inventore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae ntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptattis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatibus eius voluptatum! Dolore,',
             name: 'Demo Name second',
             status: 'Director of Sales & Marketing | RayaVadee & Tamarind Village demo Second'
         },
         {
             id: 3,
-            feedbacktxt: 'ntium inventore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae ntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptattis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatibus eius voluptatum! Dolore,',
-            name: 'Claudine Trilio Demo Name 3rd',
+            feedbacktxt: 'akmntium inventore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae ntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptattis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatibus eius voluptatum! Dolore,',
+            name: 'Claudine Trilio Demo3rd',
             status: 'Director of Sales & Marketing | RayaVadee & Tamarind Village Demo 3rd'
         },
         {
             id: 4,
-            feedbacktxt: 'ntium inventore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae ntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptattis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatibus eius voluptatum! Dolore,',
+            feedbacktxt: 'akmntium inventore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae ntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptattis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatibus eius voluptatum! Dolore,',
             name: 'Claudine Trilio 4th',
             status: 'Director of Sales & Marketing | RayaVadee & Tamarind Village 4th'
         },
         {
             id: 5,
-            feedbacktxt: 'ntium inventore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae ntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptattis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatibus eius voluptatum! Dolore,',
+            feedbacktxt: 'akmntium inventore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae ntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptattis laudantium expedita aperiam sequi fuga asperiores veniam voluptatntore praesentium impedit consequuntur hic tempore fugiat possimus perferendis doloremque enim officiis neea beatae tis laudantium expedita aperiam sequi fuga asperiores veniam voluptatibus eius voluptatum! Dolore,',
             name: 'Claudine Trilio 5th',
             status: 'Director of Sales & Marketing | RayaVadee & Tamarind Village 5th'
         },
@@ -202,7 +202,7 @@ button{
     height:80vh;
     ul li button{
     &:before{
-        top:-1rem;
+        top:-2rem;
     }
 }
 }
@@ -217,7 +217,7 @@ position:relative;
 /* border:1px solid red; */
 
 @media(max-width:400px){
-    height:87vh;
+    height:65vh;
 }
 `
 
@@ -264,7 +264,9 @@ position:relative;
     width:100%;
     font-size:5rem;
     height:auto ;
-    margin-top:2rem;
+    margin-top:-1rem;
+    margin-bottom:2rem;
+    padding-bottom:1rem;
     &::after{
         left:0;
         width:100%;
@@ -280,16 +282,38 @@ display:flex;
 align-items:center;
 justify:center;
 position:relative;
-padding:1rem;
-/* border:1px solid red; */
+padding:1.5rem 1rem;
+overflow-y:scroll;
+
 @media(max-width:700px){
     padding:0.3rem 0;
     height:auto;
 }
+@media(min-width:700px){
+    &::-webkit-scrollbar {
+  width: 7px;
+} 
+
+/* Track */
+&::-webkit-scrollbar-track {
+    background:lightgray;
+}
+
+/* Handle */
+&::-webkit-scrollbar-thumb {
+    background: grey;
+}
+
+/* Handle on hover */
+&::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+}
 @media(max-width:400px){
-    padding:0.3rem 0rem;
-    margin-top:1rem;
-    height:74%;
+    padding:1rem ;
+    align-items:flex-start;
+    justify:flex-start;
+    max-height:35vh;
 }
 `
 
@@ -298,11 +322,13 @@ const Testimonies = styled.p`
 color:white;
 font-size:1.6rem;
 text-align:justify;
+/* padding:3rem 1rem; */
 @media(max-width:750px){
     font-size:2rem;
 }
 @media(max-width:400px){
     font-size:2rem;
+    /* padding-top:10rem; */
 }
 `
 const TestimonialsInfoDiv = styled.div`
@@ -326,7 +352,9 @@ width:30% ;
 left:35%;
 }
 @media(max-width:400px){
-    height:auto;
+    height:15vh;
+    margin-top:5rem;
+    padding-top:4rem;
     &::after{
         left:0;
         width:100%;
@@ -340,15 +368,17 @@ color:white;
 font-weight:500;
 text-align:center;
 @media(max-width:400px){
-    font-size:2.4rem;
+    font-size:3.8rem;
+    margin-top:2rem;
 }
 `
 const TestimonialsStatus = styled.p`
 font-size:1.3rem;
-color:grey;
+color:rgba(255, 255, 255, 0.541);
 text-align:center;
 @media(max-width:400px){
-    font-size:1.5rem;
+    font-size:2.4rem;
+    margin-top:1rem;
 }
 `
 

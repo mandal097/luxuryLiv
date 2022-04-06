@@ -1,13 +1,22 @@
-import React from 'react'
+import React  from 'react'
 import './explore.scss'
 import { useNavigate } from 'react-router-dom'
 // import { LinkOutlined } from '@ant-design/icons'
+// import Aos from "aos";
+// import "aos/dist/aos.css";
 const Explore = () => {
+
+    // const [blinks, setBlinks] = useState(200)
+
     const navigate = useNavigate()
 
     const goToPortfolio = () => {
         navigate('portfolio')
     }
+
+    // useEffect(() => {
+    //     Aos.init({ duration: 2000 });
+    // }, []);
 
     return (
         <div className="explore" id='explore'>
@@ -19,9 +28,15 @@ const Explore = () => {
                     {/* <LinkOutlined /> */}
                 </h3>
                 <div>
-                <h3 onClick={goToPortfolio} className='mob'> VIEW PORTFOLIo
-                 {/* <LinkOutlined className='icon' />  */}
-                 </h3>
+                    <h3 onClick={goToPortfolio} className='mob'> VIEW PORTFOLIo
+                        {/* <LinkOutlined className='icon' />  */}
+                    </h3>
+                    {/* <div className="blink_left" data-aos="flip-left"
+                    // style={{ transform:`translateX(-${blinks}px)`}}
+                    ></div>
+                    <div className="blink_right" 
+                    // style={{ transform:`translateX(${blinks}px)`}}
+                    ></div> */}
                 </div>
             </div>
         </div>

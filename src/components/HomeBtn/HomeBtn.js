@@ -10,10 +10,10 @@ export const HomeBtn = () => {
         window.addEventListener("scroll", () => {
             if (window.scrollY > 40) {
                 setDisplay("true")
+                // console.log('scrollde');
             } else {
                 setDisplay("false")
             }
-            console.log('scrollde');
             return () => {
                 window.removeEventListener("scroll")
             }
