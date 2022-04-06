@@ -189,9 +189,9 @@ color:black;
 
 display:flex;
 @media (max-width:900px){
-    width:100%;
+    width:95%;
     /* height:100vh; */
-    height:auto;
+    height:90vh;
     border:none;
     flex-direction:column;
 }
@@ -469,5 +469,8 @@ right:2rem;
 font-size:4rem;
 color:black;
 cursor:pointer;
+@media(max-width:540px){
+    top:1rem;
+}
 `
 export default HotelsDescModal

@@ -24,7 +24,7 @@ align-items:center;
 justify-content:center;
 background-color:teal;
 z-index:10;
-position:absolute;
+position:fixed;
 top:0;
 right:0;
 left:0;

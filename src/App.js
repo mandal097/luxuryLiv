@@ -11,6 +11,7 @@ import AboutUs from './pages/AboutUs/AboutUs'
 import styled from 'styled-components'
 import ComingSoon from './pages/ComingSoon'
 import Agents from './pages/Agents/Agents'
+
 const App = () => {
 
 

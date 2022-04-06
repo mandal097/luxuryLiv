@@ -158,8 +158,30 @@ code {
   }
 }
 
+
+/* animation  for explore bkinkx */
+@keyframes blinks {
+  0% {opacity: 0.1; height: 0;}
+  100% {opacity: 1;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .valuesController {
   position: absolute;
+  display: none;
   top: 90%;
   font-size: 3rem;
   color: goldenrod;
@@ -173,6 +195,14 @@ code {
   right: 45%;
 }
 
+.caRight {
+  right: 0.3rem;
+}
+
+.caLeft {
+  left: 0.3rem;
+}
+
 @media(max-width:800px) {
   .valuesController {
     top: 50%;
@@ -184,5 +214,16 @@ code {
 
   .cRight {
     right: 1%;
+  }
+}
+
+@media(max-width:400px) {
+  .valuesController {
+    top: 50%;
+    display: none;
+  }
+
+  .carouselControls {
+    top: 4%;
   }
 }

@@ -5,7 +5,7 @@ import Navbar from '../Navbar/Navbar'
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const FrontPage = ({ title, para }) => {
+const FrontPage = ({ title, para, paraS, paraT }) => {
     const [IsOpen, setIsOpen] = useState(false)
     const showNavbar = () => {
         switch (IsOpen) {
@@ -30,8 +30,10 @@ const FrontPage = ({ title, para }) => {
                 IsOpen && <Navbar />
             }
             <Wrapper>
-                <H  data-aos="fade-up">{title}</H>
-                <P  data-aos="fade-up">{para}</P>
+                <H data-aos="fade-up">{title}</H>
+                <P data-aos="fade-up">{para}</P>
+                <P data-aos="fade-up">{paraS}</P>
+                <P data-aos="fade-up">{paraT}</P>
             </Wrapper>
             <HamDIv onClick={showNavbar} ><Ham /></HamDIv>
         </Main>
@@ -45,23 +47,27 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content:center;
-/* justify-content:flex-end; */
 scroll-snap-align: start;
 position:relative;
 @media (max-width:600px){
     width: 100%;
 }
+@media(max-width:450px){   
+   justify-content:flex-end;
+}
 `
 const Wrapper = styled.div`
-height:80vh;
+height:85vh;
 width:100%;
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content:space-evenly;
+justify-content:center;
 margin-top:6rem;
+/* border:1px solid red; */
 @media(max-width:700px){
-    height:75vh;
+    height:85vh;
+    /* margin-top:28rem; */
 }
 `
 const H = styled.h1`
@@ -69,14 +75,19 @@ font-size: 10rem;
 font-weight: 100;
 font-family: 'Shoreline';
 text-align:center;
+margin-bottom:7rem;
 @media (max-width:1000px){
     font-size: 10rem;
 }
 @media (max-width:900px){
     font-size: 8rem;
 }
+@media (max-width:600px){
+    margin-botton:2rem;
+   font-size: 6rem;
+}
 @media (max-width:500px){
-    margin-top:2rem;
+    margin-bottom:13rem;
    font-size: 6rem;
 }
 @media (max-width:400px){
@@ -84,19 +95,20 @@ text-align:center;
 }
 `
 const P = styled.p`
-text-align: center;
+/* text-align: justify; */
 font-size: 2.5rem;
 letter-spacing: 1px;
 word-spacing: 5px;
 line-height: 1.5;
 width: 60%;
 margin: 0px auto;
+text-align:center;
 @media (max-width:900px){
    font-size: 2rem;
    width: 80%;
 }
 @media (max-width:600px){
-   font-size: 2.6rem;
+   font-size: 2.2rem;
    margin-top:1rem;
    width: 80%;
    line-height:1.4;
@@ -104,9 +116,9 @@ margin: 0px auto;
 `
 
 const HamDIv = styled.div`
-position:absolute;
+position:fixed;
 top:3rem;
-right:14rem;
+right:13rem;
 font-size:4rem;
 color:white;
 z-index:100;

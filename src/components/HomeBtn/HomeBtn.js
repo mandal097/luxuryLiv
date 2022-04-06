@@ -13,6 +13,7 @@ export const HomeBtn = () => {
             } else {
                 setDisplay("false")
             }
+            console.log('scrollde');
             return () => {
                 window.removeEventListener("scroll")
             }
@@ -33,7 +34,7 @@ const Button = styled.div`
 position:fixed;;
 height:5rem;
 top:1.9rem;
-left:12rem;
+left:13rem;
 align-items:center;
 font-weight:bold;
 justify-content:center;
@@ -56,7 +57,8 @@ span{
     }
 }
 @media(max-width:400px){
-    left:6rem;
+    top:1.5rem;
+    left:3rem;
 }
 `
 

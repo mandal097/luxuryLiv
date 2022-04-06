@@ -18,7 +18,10 @@ const Home = () => {
       <Container>
         <Section>
           <HomeBtn />
-          <FrontPage title="Luxury Living" para="Our top game is to make it easy for our Travel Partners to book 'High End Hotels Worldwide'. Our medium game is to do this with finnese, subtelty & without much hangups. Our low  game is to do 30 push-ups in one go." />
+          <FrontPage title="Luxury Living" para="Our top game is to make it easy for our Travel Partners to book 'High End Hotels Worldwide'.." 
+          paraS=' Our medium game is to do this with finnese, subtelty & without much hangups'
+          paraT=' Our low  game is to do 30 push-ups in one go.'
+          />
           <ValuesComp />
           <Explore />
           <Carousel />

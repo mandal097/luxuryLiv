@@ -234,7 +234,7 @@ margin-top:6rem;
 
 const Header = styled.div`
 display:flex;
-top:3rem;
+top:0rem;
 right:14rem;
 position:absolute;
 margin-right:auto;
@@ -246,7 +246,7 @@ z-index:11;
     right:8rem;
 }
 @media(max-width:400px){
-    right:4rem;
+    right:2rem;
 }
 `
 const Span = styled.div`
