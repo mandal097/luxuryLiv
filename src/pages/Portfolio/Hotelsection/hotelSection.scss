@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  z-index: 1;
   // padding-top: 150px;
 }
 
@@ -41,7 +42,7 @@ width: 100%;
 }
 
 .port-container .port-card .port-content {
-  position: relative;
+  // position: relative;
   margin-top: -140px;
   padding: 10px 0;
   text-align: center;

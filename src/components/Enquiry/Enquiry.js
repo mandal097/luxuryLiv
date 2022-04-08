@@ -45,7 +45,7 @@ const Enquiry = ({ setShowForm, hotel }) => {
             console.log(errorField);
         }
         setTimeout(() => {
-            return e.target.reset()            
+            return e.target.reset()
         }, 2000);
     }
 
@@ -107,11 +107,11 @@ const Enquiry = ({ setShowForm, hotel }) => {
 
     return (
         <div className='enquiry_container'>
-            <ToastContainer  style={{ fontSize: '1.8rem' }} />
+            <ToastContainer style={{ fontSize: '1.8rem' }} />
             <div className="enquiry_wrapper">
                 <div className="cancel" onClick={cancel}><CloseOutlined /></div>
                 <form action="" onSubmit={submit}>
-                    <div className="header">
+                    <div className="header_enquiry">
                         <p>INPUT DETAILS OF YOUR REQUEST HERE ...AND WE'LL GET RIGHT BACK TO YOU!</p>
                     </div>
                     <div className="inputs_div">
@@ -131,28 +131,28 @@ const Enquiry = ({ setShowForm, hotel }) => {
                             <input type="number" name="" id="" onChange={(e) => setAdults(e.target.value)} />
                         </div>
                         <div className="inputs inputs_">
-                        <label htmlFor="">Children :</label>
-                                <input type="number" name="" id="" onChange={(e) => setChildCount(e.target.value)} />
+                            <label htmlFor="">Children :</label>
+                            <input type="number" name="" id="" onChange={(e) => setChildCount(e.target.value)} />
                         </div>
                         <div className="inputs">
-                        <label htmlFor="">Each child's age :</label>
+                            <label htmlFor="">Each child's age :</label>
                             <input type="text" name="" id="" placeholder='  03 yrs / 05 yrs / 11 yrs...' onChange={(e) => setChildsAge(e.target.value)} />
                         </div>
                         <div className="textArea">
-                        <label htmlFor="">Any Other Request :</label>
+                            <label htmlFor="">Any Other Request :</label>
                             <textarea type="text" name="" id="" onChange={(e) => setEnquiry(e.target.value)}></textarea>
                         </div>
                         <div className="button">
                             <input type="submit" value="submit" className='button_' />
                         </div>
                     </div>
-                    <div className="contactDiv">
-                        <h2>Need It Now?</h2>
-                        <h2>Call</h2>
-                        <span>9810802363</span>
-                        <span>9810800907</span>
-                    </div>
                 </form>
+                <div className="contactDiv">
+                    <h2>Need It Now?</h2>
+                    <h2>Call</h2>
+                    <span>9810802363</span>
+                    <span>9810800907</span>
+                </div>
             </div>
         </div>
     )

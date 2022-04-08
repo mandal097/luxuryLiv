@@ -1,0 +1,144 @@
+.testimonial {
+  width: 100%;
+  min-height: 95vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  position: relative;
+  .testimaonials_card {
+    width: 420px;
+    height: 70vh;
+    border: 1px solid white;
+    border-radius: 1rem;
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 300ms linear;
+    &:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: 0 5px 10px rgba(255, 255, 255, 0.185);
+    }
+    .testimonials_card_para_div {
+      width: 100%;
+      height: 75%;
+      padding: 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      p {
+        font-size: 1.6rem;
+        text-align: justify;
+      }
+    }
+    .info {
+      width: 100%;
+      height: auto;
+      padding: 0 1rem;
+      .name {
+        font-size: 2.6rem;
+        text-align: center;
+        text-transform: capitalize;
+        position: relative;
+        &::after {
+          position: absolute;
+          content: "";
+          width: 70%;
+          left: 15%;
+          height: 1px;
+          background-color: goldenrod;
+          bottom: 0rem;
+        }
+      }
+      .profession {
+        font-size: 1.6rem;
+        text-align: center;
+        text-transform: capitalize;
+        color: gray;
+      }
+    }
+  }
+  .lode_more_testiomonials {
+    width: 100%;
+    height: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    display: grid;
+    place-items: center;
+    button {
+      width: 25%;
+      height: 4rem;
+      background-color: transparent;
+      border: 1.5px solid white;
+      color: white;
+      font-size: 2rem;
+      border-radius: 6rem;
+      text-transform: uppercase;
+    }
+  }
+  .side_text {
+    position: absolute;
+    transform: rotate(90deg);
+    right: -37.5%;
+    top: 34%;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 92%;
+      height: 2.5px;
+      background-color: white;
+      left: 4%;
+      bottom: 0.7rem;
+      box-shadow: 1px 2px 10px white;
+      animation: blinks 3.5s ease-in infinite alternate;
+    }
+    h3 {
+      font-size: 8rem;
+          text-transform: uppercase;
+      color: goldenrod;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .testimonial {
+    .testimaonials_card {
+      width: 95%;
+      height: auto;
+      .testimonials_card_para_div {
+        p {
+          font-size: 2.1rem;
+        }
+      }
+      .info {
+        .name {
+          font-size: 4rem;
+        }
+        .profession {
+          font-size: 2.3rem;
+        }
+      }
+    }
+    .lode_more_testiomonials {
+      button {
+        width: 50%;
+        height: 5rem;
+        font-size: 2.3rem;
+      }
+    }
+    .side_text {
+      position: static;
+      transform: rotate(0deg);
+      width: 100%;
+      h3 {
+        font-size: 5rem;
+        text-align: center;
+        margin-top: 2rem;
+      }
+    }
+  }
+}

@@ -4,9 +4,8 @@ import styled from 'styled-components'
 import { data } from '../../hotelDescModaldata/index.js'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import Enquiry from '../Enquiry/Enquiry'
 import jsPDF from 'jspdf'
-
+import Enquiry from  '../../components/Enquiry/Enquiry'
 const HotelsDescModal = ({ ShowModal, places }) => {
 
     const [hotel, setHotel] = useState([])
@@ -157,6 +156,7 @@ const HotelsDescModal = ({ ShowModal, places }) => {
                 }}><CloseOutlined /></Cancel>
             </Wrapper>
             {
+              
                 showForm && <Enquiry setShowForm={setShowForm} hotel={places} />
             }
         </Container>
@@ -261,7 +261,7 @@ transition:all 400ms linear;
 object-fit:cover;
 /* object-fit:none; */
 z-index:-111;
-padding:1%;
+/* padding:1%; */
 &:hover{
     transform:scale(1.1);
 }

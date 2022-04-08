@@ -1,0 +1,24 @@
+import React, { useEffect } from 'react'
+import Header from '../../components/Header/Header'
+import './style.scss'
+import { useNavigate } from 'react-router-dom'
+import Social from '../../components/Social/Social'
+const Agents = () => {
+    const navigate = useNavigate()
+    const back = () => {
+        navigate(-1)
+    }
+    useEffect(() => {
+        document.title = 'Luxury Living - Agents'
+    })
+    return (
+        <div className='agents'>
+            <Header />
+            <h1>coming soon</h1>
+            <button onClick={back}>back</button>
+            <Social />
+        </div>
+    )
+}
+
+export default Agents

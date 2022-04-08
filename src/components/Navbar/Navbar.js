@@ -1,17 +1,90 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { span, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 const Navbar = () => {
+    const navigate = useNavigate()
     return (
         <Container>
-            <Nav><NavLink to='/' className='navlink'>home</NavLink> </Nav>
-            <Nav><NavLink to='/portfolio' className='navlink'>View our Hotel's Portfolio</NavLink> </Nav>
-            <Nav><NavLink to='/comingsoon' className='navlink'>Sign up / Login for Agent Partners</NavLink> </Nav>
-            {/* <Nav><NavLink to='#' className='navlink'>Sign up / Login for Agent Partners</NavLink> </Nav> */}
-            <Nav><NavLink to='/comingSoon' className='navlink'>Collaborative Info for Hotel Partners</NavLink> </Nav>
-            <Nav><NavLink to='/feedback' className='navlink'>Say Nice – Not So Nice Things About Us!</NavLink> </Nav>
-            <Nav><NavLink to='/contactus' className='navlink'>Contact Us</NavLink> </Nav>
-            <Nav><NavLink to='/aboutus' className='navlink'>About Us</NavLink> </Nav>
+            <Nav
+                onClick={() => {
+                    navigate('/')
+                    window.scroll({
+                        top: 0,
+                        behavior: 'auto'
+                    })
+                }}
+            ><span className='span'>home</span> </Nav>
+
+            <Nav
+                onClick={() => {
+                    navigate('/luxury-living-portfolio')
+                    window.scroll({
+                        top: 0,
+                        behavior: 'auto'
+                    })
+                }}
+            ><span className='span'>View our Hotel's Portfolio</span> </Nav>
+
+            <Nav
+                onClick={() => {
+                    navigate('/sign-up-agents')
+                    window.scroll({
+                        top: 0,
+                        behavior: 'auto'
+                    })
+                }}
+            ><span className='span'>Sign up / Login for Agent Partners</span> </Nav>
+
+            <Nav
+                onClick={() => {
+                    navigate('/luxury-living-clients-preferce')
+                    window.scroll({
+                        top: 0,
+                        behavior: 'auto'
+                    })
+                }}
+            ><span className='span'>FILL CLIENT'S PREFERENCE FORM</span> </Nav>
+
+            <Nav
+                onClick={() => {
+                    navigate('/hotel-partners')
+                    window.scroll({
+                        top: 0,
+                        behavior: 'auto'
+                    })
+                }}
+
+            ><span className='span'>Collaborative Info for Hotel Partners</span> </Nav>
+
+            <Nav
+                onClick={() => {
+                    navigate('/feedback')
+                    window.scroll({
+                        top: 0,
+                        behavior: 'auto'
+                    })
+                }}
+            ><span className='span'>Say Nice – Not So Nice Things About Us!</span> </Nav>
+
+            <Nav
+                onClick={() => {
+                    navigate('/contactus')
+                    window.scroll({
+                        top: 0,
+                        behavior: 'auto'
+                    })
+                }}
+            ><span className='span'>Contact Us</span> </Nav>
+            
+            <Nav
+               onClick={() => {
+                navigate('/aboutus')
+                window.scroll({
+                    top: 0,
+                    behavior: 'auto'
+                })
+            }}
+            ><span  className='span'>About Us</span> </Nav>
         </Container>
     )
 }
@@ -23,7 +96,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 background-color:teal;
-z-index:10;
+z-index:12;
 position:fixed;
 top:0;
 right:0;
@@ -42,7 +115,7 @@ justify-content:space-evenly;
     height:75vh;
     animation:navbarMob 500ms;
 }
-.navlink{
+.span{
     text-decoration:none;
     color:white;
     transition:all 200ms;
@@ -61,6 +134,7 @@ font-weight:bolder;
 text-transform:uppercase;
 line-height:1;
 transition:all 200ms;
+cursor:pointer;
 &:hover{
     transform:perspective(90px)  rotateX(-5deg);
 }

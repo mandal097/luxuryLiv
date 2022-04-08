@@ -1,45 +1,34 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Home from './pages/Home/Home'
+import Home from './pages/home/Home'
+import Feedback from './pages/FeedbackForm/FeedbackForm'
+import ContactUs from './pages/Contactus/ContactUs'
+import Agents from './pages/SignUpAgents/Agents'
+import HotelPatners from './pages/HotelPartners/HotelPartners'
 import Portfolio from './pages/Portfolio/Portfolio'
-import Hotels from './pages/Hotels/Hotels'
-import Register from './pages/Regitration/Register'
-import Testimonies from './pages/Testimonies/Testimonies'
-import Feedback from './pages/Feedback/Feedback'
-import Contact from './components/Contact/Contact'
+import HotelDesc from './pages/HotelsDesc/HotelDesc'
 import AboutUs from './pages/AboutUs/AboutUs'
-import styled from 'styled-components'
-import ComingSoon from './pages/ComingSoon'
-import Agents from './pages/Agents/Agents'
-
+import ClientsForm from './pages/ClientsPreferForm/ClientsForm'
 const App = () => {
-
-
   return (
-    <Container className='app'>
+    <div>
       <Router>
         <Routes>
-          <Route path='/' >
+          <Route path='/'>
             <Route index element={<Home />} />
-            <Route path='/portfolio' element={<Portfolio />}>
-            </Route>
-            <Route path='hotels' element={<Hotels />} />
             <Route path='feedback' element={<Feedback />} />
-            <Route path='registration' element={<Register />} />
-            <Route path='contactus' element={<Contact />} />
+            <Route path='contactus' element={<ContactUs />} />
+            <Route path='sign-up-agents' element={<Agents />} />
+            <Route path='hotel-partners' element={<HotelPatners />} />
             <Route path='aboutus' element={<AboutUs />} />
-            <Route path='agents' element={<Agents />} />
-            <Route path='agents/testimonies' element={<Testimonies />} />
-            <Route path='*' element={<ComingSoon />} />
+            <Route path='luxury-living-clients-preferce' element={<ClientsForm />} />
+            <Route path='luxury-living-portfolio' element={<Portfolio />} />
+            <Route path='luxury-living-portfolio/:id' element={<HotelDesc />} />
           </Route>
         </Routes>
       </Router>
-    </Container>
+    </div>
   )
 }
-const Container = styled.div`
-position:relative;
-`
-
 
 export default App

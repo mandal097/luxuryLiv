@@ -1,0 +1,82 @@
+.values_card {
+    width: 320px;
+    height: 75vh;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 01rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    transition: all 300ms linear;
+    &:hover{
+      transform: translateY(-0.5rem);
+      box-shadow: 0 5px 10px rgba(255, 255, 255, 0.185);
+    }
+    .values_card_image_div {
+        width: 14rem;
+        height: 14rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // border: 1px solid red;
+        img{
+            width: 200%;
+            height: 200%;
+            object-fit: contain;
+        }
+        .two{
+            width: 150%;
+            height: 150%;
+        }
+        .six{
+            width: 100%;
+            height: 100%;
+        }
+        .eight{
+            width: 90%;
+            height: 90%;
+        }
+    }
+    .values_para_div {
+        width: 100%;
+        height: 50vh;
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .values_{
+            font-size: 2.4rem;
+        }
+        p {
+            font-size: 1.6rem;
+            text-align: justify;
+            margin-top: 2rem;
+        }
+  }
+}
+
+@media screen and (max-width: 480px) {
+    .values_card {
+    width: 95%;
+    height: auto;
+    .values_card_image_div {
+        height: 20rem;
+        width: 20rem;
+    }
+    .values_para_div {
+        height: auto;
+        min-height: 40vh;
+        margin-top: 5rem;
+        p {
+            font-size: 2.4rem;
+        }
+        .values_{
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+    }
+}
+}
