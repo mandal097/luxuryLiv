@@ -1,22 +1,21 @@
-import React  from 'react'
+import React from 'react'
 import './explore.scss'
 import { useNavigate } from 'react-router-dom'
 // import { LinkOutlined } from '@ant-design/icons'
 // import Aos from "aos";
-// import "aos/dist/aos.css";
+import "aos/dist/aos.css";
 const Explore = () => {
 
-    // const [blinks, setBlinks] = useState(200)
 
     const navigate = useNavigate()
 
     const goToPortfolio = () => {
-        navigate('portfolio')
+        navigate('/luxury-living-portfolio')
+        window.scroll({
+            top: 0,
+            behavior: 'smooth'
+        })
     }
-
-    // useEffect(() => {
-    //     Aos.init({ duration: 2000 });
-    // }, []);
 
     return (
         <div className="explore" id='explore'>
@@ -28,7 +27,7 @@ const Explore = () => {
                     {/* <LinkOutlined /> */}
                 </h3>
                 <div>
-                    <h3 onClick={goToPortfolio} className='mob'> VIEW PORTFOLIO </h3>
+                    <h3 onClick={goToPortfolio} className='mob' > VIEW PORTFOLIO </h3>
                 </div>
             </div>
         </div>

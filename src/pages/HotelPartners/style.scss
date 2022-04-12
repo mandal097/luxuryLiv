@@ -11,6 +11,8 @@
       font-size: 8rem;
       font-family: "Shoreline";
       color: goldenrod;
+      margin-top: 5rem;
+      text-align: center;
       animation: comingsoon 3000ms ease infinite alternate-reverse;
   }
     button {
@@ -34,7 +36,7 @@
   
   @keyframes comingsoon {
       0% {
-          text-shadow: 0 2px 10px white;
+          text-shadow: 0 2px 30px  rgb(87, 62, 1) ;
     }
   }
   

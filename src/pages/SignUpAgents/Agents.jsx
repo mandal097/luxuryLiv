@@ -14,6 +14,7 @@ const Agents = () => {
     return (
         <div className='agents'>
             <Header />
+            <img src="https://cdn-icons-png.flaticon.com/128/1256/1256019.png?ga=GA1.2.257983829.1629111004" alt="" />
             <h1>coming soon</h1>
             <button onClick={back}>back</button>
             <Social />

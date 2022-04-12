@@ -18,6 +18,7 @@ const ContactUs = () => {
                     <Span>LX MARKETING PVT. LTD.</Span>
                     <P>K No. - 846/2, first floor, <br /> Opposite Metro pillar No. -115 <br />Ghitorni, New Delhi , India</P>
                 </Left>
+                <Line></Line>
                 <Right>
                     <H3>IN A HURRY TO CONTACT?</H3>
                     <Img src='./images/cphone.png' />
@@ -48,6 +49,9 @@ const Container = styled.div`
         color:white;
         text-decoration:none;
     }
+    @media screen and (max-width:480px){
+        height:auto;
+    }
 `
 
 const Wrapper = styled.div`
@@ -57,13 +61,15 @@ display: flex;
 align-items: center;
 justify-content: center;
 position:relative;
+/* border:1px solid red; */
 @media(max-width:1000px){
     width:95%;
 }
 @media(max-width:540px){
     flex-direction:column;
     justify-content: space-evenly;
-    height:85vh;
+    height:90vh;
+    padding-bottom:5rem;
 }
 `
 const Left = styled.div`
@@ -76,6 +82,8 @@ justify-content: space-evenly;
 @media(max-width:540px){
     width:90%;
     height:40%;
+    margin-top:2rem;
+    padding-bottom:3rem;
 }
 `
 const H3 = styled.h3`
@@ -143,6 +151,7 @@ div{
 @media(max-width:540px){
     width:90%;
     height:35%;
+    margin-top:4rem;
 }
 `
 const Vertical = styled.div`
@@ -157,6 +166,16 @@ background-color:goldenrod;
     width: 60%;
     left:20%;
     top:50%;
+    display:none;
+}
+`
+const Line=  styled.div`
+width:80%;
+height:1px;
+background-color:goldenrod;
+display:none;
+@media(max-width:540px){
+    display:block;
 }
 `
 

@@ -1,30 +1,52 @@
-// import React,{useState,useEffect} from 'react'
-// import Header from '../../components/Header/Header'
+import React, { useState, useEffect } from 'react'
 import './style.scss'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
-// import { useLocation } from 'react-router-dom'
+import jsPDF from 'jspdf'
+import { data } from '../../hotelDescModaldata'
+import { useLocation, useNavigate } from 'react-router-dom'
 import {
   LeftOutlined,
-  RightOutlined
+  RightOutlined,
+  ArrowLeftOutlined
 } from '@ant-design/icons'
+import Enquiry from '../../components/Enquiry/Enquiry';
+import ShareModal from '../../components/ShareComponent/ShareModal';
 const HotelDesc = () => {
-  // const location = useLocation()
-  // const id = location.pathname.split('/')[2]
-  // console.log(id);
+  // hooks ------------------------------------
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [showForm, setShowForm] = useState(false);
+  const [showShare, SetShowShare] = useState(false);
+  const [autoPlay, setAutoPlay] = useState(true)
 
-  // useEffect(()=>{
-  //   const idd = localStorage.getItem('')
-  //   console.log(idd);
-  // })
+  // getting id from url of the site-------------------------
+  const id = location.pathname.split('/')[3]
+  const hotel = data[id - 1]
 
+  const back = () => {
+    navigate(-1)
+  }
 
+  // changing title of the site on component mounted=------------
+  useEffect(() => {
+    document.title = `Luxury Living - ${hotel.hotelname} `
+    window.scroll({
+      top: 0,
+      behavior: 'smooth'
+    })
+    setTimeout(() => {
+      setAutoPlay(false)
+    }, 9000);
+  })
+
+  // function for duynamic arrow or hiding the arrows of slick , looking for better way to hide buttons
   function SampleNextArrow(props) {
     const { onClick } = props;
     return (
       <RightOutlined
-        style={{ color: 'goldenrod', fontSize: '3rem', right: '8rem', bottom: '10rem', }}
+        style={{ color: 'goldenrod', fontSize: '3rem', display: 'none' }}
         onClick={onClick} />
     );
   }
@@ -33,74 +55,138 @@ const HotelDesc = () => {
     const { onClick } = props;
     return (
       <LeftOutlined
-        style={{ color: 'goldenrod', fontSize: '3rem', }}
+        style={{ color: 'goldenrod', fontSize: '3rem', display: 'none' }}
         onClick={onClick} />
 
     );
   }
-
+  // ------------------------------------------------
+  const [activeSlide, setActiveSlide] = useState(0)
 
   let settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 200,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: autoPlay,
+    autoplaySpeed: 3000,
     swipeToSlide: true,
     nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
+    prevArrow: <SamplePrevArrow />,
   }
+
+  // -----------------------------------------
+  let settingsImg = {
+    dots: true,
+    infinite: true,
+    speed: 200,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: autoPlay,
+    autoplaySpeed: 4000,
+    swipeToSlide: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    afterChange: current => setActiveSlide(current)
+  }
+  // -----------------------------------------------!!
+  // downloadin pdf --------------------------
+  const download = () => {
+    var doc = new jsPDF("p", "mm", "a4");
+    doc.setFontSize(19);
+    doc.text(20, 10, hotel.hotelname)
+    doc.setFontSize(12);
+    doc.addFont('helvetica', 'normal')
+    doc.text(20, 20, hotel.about)
+    doc.text(20, 30, hotel.carouseltxt1)
+    doc.text(20, 40, hotel.carouseltxt2)
+    switch (activeSlide) {
+      case 0:
+        doc.addImage(hotel.img1, 'JPEG', 20, 50, 170, 110)
+        break;
+      case 1:
+        doc.addImage(hotel.img2, 'JPEG', 20, 50, 170, 110)
+        break;
+      case 2:
+        doc.addImage(hotel.img3, 'JPEG', 20, 50, 170, 110)
+        break;
+      case 3:
+        doc.addImage(hotel.img4, 'JPEG', 20, 50, 170, 110)
+        break;
+      case 4:
+        doc.addImage(hotel.img5, 'JPEG', 20, 50, 170, 110)
+        break;
+      default:
+        doc.addImage(hotel.img1, 'JPEG', 20, 50, 170, 110)
+    }
+
+    doc.save("luxury_living.pdf")
+
+  }
+
+
 
   return (
     <div className='hotel_desc'>
-      {/* <Header /> */}
+      {/* back bautton */}
+      <div className="back_btn" onClick={back}><ArrowLeftOutlined className='back_icon' /></div>
+      {/* showing Enquiruy form */}
+      {
+        showForm && <Enquiry setShowForm={setShowForm} hotel={hotel.hotelname} />
+      }
+      {
+        showShare && <ShareModal SetShowShare={SetShowShare} hotel={hotel} />
+      }
       <div className="hotel_desc_wrapper">
         <div className="hotels_details">
           <div className="hotel_desc_left hotel_desc_">
             <div className="hotel_name">
-              <h2>htoel name shoul be here left</h2>
+              <h2>{hotel.hotelname}</h2>
             </div>
-            <div className="hotel_desc_img">
+            <Slider {...settingsImg} className="hotel_desc_img">
               <div className="img">
-                <img src="https://images.unsplash.com/photo-1631470769624-2c5bdf78a3a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGhvdGVsJTIwaWltYWdlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+                <img src={hotel.img1} alt="" />
               </div>
               <div className="img">
-                <img src="https://images.unsplash.com/photo-1631470769624-2c5bdf78a3a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGhvdGVsJTIwaWltYWdlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+                <img src={hotel.img2} alt="" />
               </div>
               <div className="img">
-                <img src="https://images.unsplash.com/photo-1631470769624-2c5bdf78a3a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGhvdGVsJTIwaWltYWdlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+                <img src={hotel.img3} alt="" />
               </div>
               <div className="img">
-                <img src="https://images.unsplash.com/photo-1631470769624-2c5bdf78a3a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGhvdGVsJTIwaWltYWdlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+                <img src={hotel.img4} alt="" />
               </div>
               <div className="img">
-                <img src="https://images.unsplash.com/photo-1631470769624-2c5bdf78a3a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGhvdGVsJTIwaWltYWdlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+                <img src={hotel.img5} alt="" />
               </div>
-            </div>
+            </Slider>
           </div>
           <div className="hotel_desc_right hotel_desc_">
             <div className="hotel_name">
-              <h2>htoel name shoul be here</h2>
+              <h2>{hotel.hotelname}</h2>
             </div>
             <div className="about_hotel">
-              <p>hte du lkahdjgnadj adhgoad  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim tempora facilis aliquam nostrum suscipit itaque non saepe vero laborum aspernatur.</p>
+              <p>{hotel.about}</p>
             </div>
             <Slider {...settings} className="hotels_desc_sliders">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae!</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repudiandae!</p>
+              <p>{hotel.carouseltxt1}</p>
+              <p>{hotel.carouseltxt2}</p>
             </Slider>
           </div>
         </div>
         {/* actions btn */}
         <div className="actions_btn_div">
-          <div className="actions_btn">
+          <div className="actions_btn" onClick={() => setShowForm(true)}>
             <span>Enquire</span>
           </div>
-          <div className="actions_btn">
+          <div className="actions_btn"
+            onClick={() => {
+              SetShowShare(true)
+            }}>
             <span>share</span>
           </div>
-          <div className="actions_btn">
+          <div className="actions_btn" onClick={download}>
             <span>download</span>
           </div>
         </div>

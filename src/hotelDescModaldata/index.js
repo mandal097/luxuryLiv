@@ -421,7 +421,7 @@ export const data = [
     // soneva resorts
 
     {
-        id: 32,
+        id: 33,
         resort: 'soneva resorts',
         hotelname: 'Soneva Fushi, Maldives',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -434,7 +434,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 33,
+        id: 34,
         resort: 'soneva resorts',
         hotelname: 'Soneva Jani, Maldives',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -447,7 +447,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 34,
+        id: 35,
         resort: 'soneva resorts',
         hotelname: 'Soneva In Aqua, Maldives',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -460,7 +460,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 35,
+        id: 36,
         resort: 'soneva resorts',
         hotelname: 'Soneva Kiri, Thailand',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -477,21 +477,21 @@ export const data = [
     // cheval blanc
 
     {
-        id: 36,
-        resort: 'cheval blanc ',
+        id: 37,
+        resort: 'cheval blanc',
         hotelname: 'Cheval Blanc Randheli, Maldives',
-        img1: 'hotelsimg/chevalBlankModal1.jpeg',
-        img2: 'hotelsimg/chevalBlankModal2.jpeg',
-        img3: 'hotelsimg/chevalBlankModal3.jpeg',
-        img4: 'hotelsimg/chevalBlankModal4.jpeg',
-        img5: 'hotelsimg/chevalBlankModal5.jpeg',
+        img1: '/hotelsimg/chevalBlankModal1.jpeg',
+        img2: '/hotelsimg/chevalBlankModal2.jpeg',
+        img3: '/hotelsimg/chevalBlankModal3.jpeg',
+        img4: '/hotelsimg/chevalBlankModal4.jpeg',
+        img5: '/hotelsimg/chevalBlankModal5.jpeg',
         about: 'this is dummy text this should be changed after Cheval Blanc Randheli, Maldives',
         carouseltxt1: 'this is carouseltxt for div 1 rouseltxt for div 1rouseltxt for div 1',
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 37,
-        resort: 'cheval blanc ',
+        id: 38,
+        resort: 'cheval blanc',
         hotelname: 'Cheval Blanc, Courchevel',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
         img2: 'https://media.istockphoto.com/photos/entering-hotel-room-picture-id512882668?b=1&k=20&m=512882668&s=170667a&w=0&h=kNT_80jpErymHZCCCRMVbRJSR8wMOy8UQ-WAbi6EsLY=',
@@ -503,8 +503,8 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 38,
-        resort: 'cheval blanc ',
+        id: 39,
+        resort: 'cheval blanc',
         hotelname: 'Cheval Blanc, Paris',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
         img2: 'https://media.istockphoto.com/photos/entering-hotel-room-picture-id512882668?b=1&k=20&m=512882668&s=170667a&w=0&h=kNT_80jpErymHZCCCRMVbRJSR8wMOy8UQ-WAbi6EsLY=',
@@ -520,8 +520,8 @@ export const data = [
     // Ritz Carlton Resorts
 
     {
-        id: 39,
-        resort: 'Ritz Carlton Resorts ',
+        id: 40,
+        resort: 'Ritz Carlton Resorts',
         hotelname: 'Ritz Carlton, Maldives',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
         img2: 'https://media.istockphoto.com/photos/entering-hotel-room-picture-id512882668?b=1&k=20&m=512882668&s=170667a&w=0&h=kNT_80jpErymHZCCCRMVbRJSR8wMOy8UQ-WAbi6EsLY=',
@@ -533,8 +533,8 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 40,
-        resort: 'Ritz Carlton Resorts ',
+        id: 41,
+        resort: 'Ritz Carlton Resorts',
         hotelname: 'Ritz Carlton Phulay Bay, Krabi',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
         img2: 'https://media.istockphoto.com/photos/entering-hotel-room-picture-id512882668?b=1&k=20&m=512882668&s=170667a&w=0&h=kNT_80jpErymHZCCCRMVbRJSR8wMOy8UQ-WAbi6EsLY=',
@@ -546,7 +546,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 41,
+        id: 42,
         resort: 'Ritz Carlton Resorts',
         hotelname: 'Ritz Carlton Mandapa, Bali',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -562,15 +562,14 @@ export const data = [
     // Badrutts Palace
 
     {
-        id: 42,
+        id: 43,
         resort: 'Badrutts Palace',
         hotelname: 'St. Moritz, Switzerland',
-        // img1: '',
-        img1: 'hotelsimg/badruttsPalaceModal1.jpeg',
-        img2: 'hotelsimg/badruttsPalaceModal2.jpeg',
-        img3: 'hotelsimg/badruttsPalaceModal3.jpeg',
-        img4: 'hotelsimg/badruttsPalaceModal4.jpeg',
-        img5: 'hotelsimg/badruttsPalaceModal5.jpeg',
+        img1: '/hotelsimg/badruttsPalaceModal1.jpeg',
+        img2: '/hotelsimg/badruttsPalaceModal2.jpeg',
+        img3: '/hotelsimg/badruttsPalaceModal3.jpeg',
+        img4: '/hotelsimg/badruttsPalaceModal4.jpeg',
+        img5: '/hotelsimg/badruttsPalaceModal5.jpeg',
         about: 'this is dummy text this should be changed after St. Moritz, Switzerland',
         carouseltxt1: 'this is carouseltxt for div 1 rouseltxt for div 1rouseltxt for div 1',
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
@@ -578,7 +577,7 @@ export const data = [
     // Six Senses Resorts
 
     {
-        id: 43,
+        id: 44,
         resort: 'Six Senses Resorts',
         hotelname: 'Six Senses Fort Barwara, Rajasthan, India',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -591,7 +590,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 44,
+        id: 45,
         resort: 'Six Senses Resorts',
         hotelname: 'Six Senses Zighy Bay, Oman',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -604,7 +603,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 45,
+        id: 46,
         resort: 'Six Senses Resorts',
         hotelname: 'Six Senses Laamu, Maldives',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -617,7 +616,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 46,
+        id: 47,
         resort: 'Six Senses Resorts',
         hotelname: 'Six Senses, Koh Samui',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -630,7 +629,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 47,
+        id: 48,
         resort: 'Six Senses Resorts',
         hotelname: 'Six Senses Yao Noi, Phuket',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -643,7 +642,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 48,
+        id: 49,
         resort: 'Six Senses Resorts',
         hotelname: 'Six Senses, Bhutan',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -656,7 +655,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 49,
+        id: 50,
         resort: 'Six Senses Resorts',
         hotelname: 'Six Senses Residences, Courchevel',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -669,7 +668,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 50,
+        id: 51,
         resort: 'Six Senses Resorts',
         hotelname: 'Six Senses Krabey Island, Cambodia',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -682,7 +681,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 51,
+        id: 52,
         resort: 'Six Senses Resorts',
         hotelname: 'Six Senses Uluwatu, Bali',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -695,7 +694,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 52,
+        id: 53,
         resort: 'Six Senses Resorts',
         hotelname: 'Six Senses Con Dao, Vietnam',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -708,7 +707,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 53,
+        id: 54,
         resort: 'Six Senses Resorts',
         hotelname: 'Six Senses Ninh Van Bay, Vietnam',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -721,7 +720,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 54,
+        id: 55,
         resort: 'Six Senses Resorts',
         hotelname: 'Six Senses Douro Valley, Portugal',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -734,7 +733,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 55,
+        id: 56,
         resort: 'Six Senses Resorts',
         hotelname: 'Six Senses Zil Pasyon, Seychelles',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -750,7 +749,7 @@ export const data = [
 
     // One & Only Hotels & Resorts
     {
-        id: 55,
+        id: 57,
         resort: 'One & Only Hotels & Resorts',
         hotelname: 'One & Only Reethi Rah, Maldives',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -763,7 +762,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 56,
+        id: 58,
         resort: 'One & Only Hotels & Resorts',
         hotelname: 'One & Only Portonovi, Montenegro',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -776,7 +775,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 57,
+        id: 59,
         resort: 'One & Only Hotels & Resorts',
         hotelname: 'One & Only, Mauritus',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -791,7 +790,7 @@ export const data = [
 
     // St. Regis
     {
-        id: 57,
+        id: 60,
         resort: 'St. Regis',
         hotelname: 'St. Regis, Maldives',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -804,7 +803,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 58,
+        id: 61,
         resort: 'St. Regis',
         hotelname: 'St. Regis, Langkawi',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -820,7 +819,7 @@ export const data = [
     // Four Seasons Hotels & Resorts
 
     {
-        id: 59,
+        id: 62,
         resort: 'Four Seasons Hotels & Resorts',
         hotelname: 'Four Seasons, Koh Samui',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -833,7 +832,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 60,
+        id: 63,
         resort: 'Four Seasons Hotels & Resorts',
         hotelname: 'Four Seasons, Bangkok',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -846,7 +845,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 61,
+        id: 64,
         resort: 'Four Seasons Hotels & Resorts',
         hotelname: 'Four Seasons, Seychelles',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -862,7 +861,7 @@ export const data = [
     // The Nautilus
 
     {
-        id: 62,
+        id: 65,
         resort: 'The Nautilus',
         hotelname: 'Maldives',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -877,7 +876,7 @@ export const data = [
     // Rosewood Hotels & Resorts
 
     {
-        id: 63,
+        id: 66,
         resort: 'Rosewood Hotels & Resorts',
         hotelname: 'Rosewood, Phuket',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -890,7 +889,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 64,
+        id: 67,
         resort: 'Rosewood Hotels & Resorts',
         hotelname: 'Rosewood, London',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -903,7 +902,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 65,
+        id: 68,
         resort: 'Rosewood Hotels & Resorts',
         hotelname: 'Rosewood, Paris',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -918,7 +917,7 @@ export const data = [
 
     // Waldorf Astoria
     {
-        id: 66,
+        id: 69,
         resort: 'Waldorf Astoria',
         hotelname: 'Waldorf, Maldives',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -931,7 +930,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 67,
+        id: 70,
         resort: 'Waldorf Astoria',
         hotelname: 'Waldorf, Bangkok',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -946,7 +945,7 @@ export const data = [
     // Kempinski Hotels & Resorts
 
     {
-        id: 68,
+        id: 71,
         resort: 'Kempinski Hotels & Resorts',
         hotelname: 'Siam Kempinski, Bangkok',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -959,7 +958,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 69,
+        id: 72,
         resort: 'Kempinski Hotels & Resorts',
         hotelname: 'Ciragan Palace Kempinski, Istanbul',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -972,7 +971,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 70,
+        id: 73,
         resort: 'Kempinski Hotels & Resorts',
         hotelname: 'Palais Hansen Kempinski, Vienna',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -985,7 +984,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 71,
+        id: 74,
         resort: 'Kempinski Hotels & Resorts',
         hotelname: 'The Apurva Kempinski, Nusa Dua, Bali',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -998,7 +997,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 72,
+        id: 75,
         resort: 'Kempinski Hotels & Resorts',
         hotelname: 'The Capitol Kempinski, Singapore',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -1014,7 +1013,7 @@ export const data = [
     // Banyan Tree Hotels Resorts & Spas
 
     {
-        id: 73,
+        id: 76,
         resort: 'Banyan Tree Hotels Resorts & Spas',
         hotelname: 'Banyan Tree, Phuket',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -1027,7 +1026,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 74,
+        id: 77,
         resort: 'Banyan Tree Hotels Resorts & Spas',
         hotelname: 'Banyan Tree, Koh Samui',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -1043,7 +1042,7 @@ export const data = [
     // Resplendent Ceylon
 
     {
-        id: 75,
+        id: 78,
         resort: 'Resplendent Ceylon',
         hotelname: 'Wild Coast Yala, Sri Lanka',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -1057,7 +1056,7 @@ export const data = [
     },
 
     {
-        id: 76,
+        id: 79,
         resort: 'Resplendent Ceylon',
         hotelname: 'Cape Weligama, Sri Lanka',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -1070,7 +1069,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 77,
+        id: 80,
         resort: 'Resplendent Ceylon',
         hotelname: 'Ceylon Tea Trails, Sri Lanka',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -1086,8 +1085,8 @@ export const data = [
     // Anantara Hotels & Resorts
 
     {
-        id: 78,
-        resort: 'Resplendent Ceylon',
+        id: 81,
+        resort: 'Anantara Hotels & Resorts',
         hotelname: 'Anantara Kihavah, Maldives',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
         img2: 'https://media.istockphoto.com/photos/entering-hotel-room-picture-id512882668?b=1&k=20&m=512882668&s=170667a&w=0&h=kNT_80jpErymHZCCCRMVbRJSR8wMOy8UQ-WAbi6EsLY=',
@@ -1100,8 +1099,8 @@ export const data = [
     },
 
     {
-        id: 79,
-        resort: 'Resplendent Ceylon',
+        id: 82,
+        resort: 'Anantara Hotels & Resorts',
         hotelname: 'Anantara Siam, Bangkok',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
         img2: 'https://media.istockphoto.com/photos/entering-hotel-room-picture-id512882668?b=1&k=20&m=512882668&s=170667a&w=0&h=kNT_80jpErymHZCCCRMVbRJSR8wMOy8UQ-WAbi6EsLY=',
@@ -1113,8 +1112,8 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 80,
-        resort: 'Resplendent Ceylon',
+        id: 83,
+        resort: 'Anantara Hotels & Resorts',
         hotelname: 'Anantara Lawana, Koh Samui',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
         img2: 'https://media.istockphoto.com/photos/entering-hotel-room-picture-id512882668?b=1&k=20&m=512882668&s=170667a&w=0&h=kNT_80jpErymHZCCCRMVbRJSR8wMOy8UQ-WAbi6EsLY=',
@@ -1128,7 +1127,7 @@ export const data = [
 
     // Post Card Hotels
     {
-        id: 81,
+        id: 84,
         resort: 'Post Card Hotels',
         hotelname: 'The Postcard Moira, Goa',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -1141,7 +1140,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 82,
+        id: 85,
         resort: 'Post Card Hotels',
         hotelname: 'The Postcard Velha, Goa',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -1154,7 +1153,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 83,
+        id: 86,
         resort: 'Post Card Hotels',
         hotelname: 'The Postcard Cuelim, Goa',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -1167,7 +1166,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 84,
+        id: 87,
         resort: 'Post Card Hotels',
         hotelname: 'The Postcard Hideaway, Netravali, Goa',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -1180,7 +1179,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 85,
+        id: 88,
         resort: 'Post Card Hotels',
         hotelname: 'The Postcard Gir Wildlife Sanctuary',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -1193,7 +1192,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 86,
+        id: 89,
         resort: 'Post Card Hotels',
         hotelname: 'The Postcard Mandalay Hall, Kochi',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -1206,7 +1205,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 87,
+        id: 90,
         resort: 'Post Card Hotels',
         hotelname: 'The Postcard Dewa, Thimphu, Bhutan',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -1219,7 +1218,7 @@ export const data = [
         carouseltxt2: 'this is carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2',
     },
     {
-        id: 88,
+        id: 91,
         resort: 'Post Card Hotels',
         hotelname: 'The Postcard Galle, Sri Lanka',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',
@@ -1234,7 +1233,7 @@ export const data = [
 
     // Palazzo Versace
     {
-        id: 88,
+        id: 92,
         resort: 'Palazzo Versace',
         hotelname: 'Palazzo Versace, Dubai',
         img1: 'https://media.istockphoto.com/photos/interior-of-reception-co-sharing-office-cafe-area-lot-in-day-time-picture-id1299604046?b=1&k=20&m=1299604046&s=170667a&w=0&h=UxdfbCYho-T0Ed4n40OF2VTnCmkVKIqkiZosVeaEDxI=',

@@ -26,7 +26,7 @@ cursor:pointer;
 }
 @media (max-width:600px){
     display: flex;
-    bottom:-1rem;
+    bottom:-3rem;
     .icons{
         font-size: 18px;
     }

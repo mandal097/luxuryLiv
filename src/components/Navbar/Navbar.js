@@ -3,55 +3,46 @@ import { span, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 const Navbar = () => {
     const navigate = useNavigate()
+    const toTop = () => {
+        window.scroll({
+            top: 0,
+            behavior: 'auto'
+        })
+    }
     return (
         <Container>
             <Nav
                 onClick={() => {
                     navigate('/')
-                    window.scroll({
-                        top: 0,
-                        behavior: 'auto'
-                    })
+                    toTop()
                 }}
             ><span className='span'>home</span> </Nav>
 
             <Nav
                 onClick={() => {
                     navigate('/luxury-living-portfolio')
-                    window.scroll({
-                        top: 0,
-                        behavior: 'auto'
-                    })
+                    toTop()
                 }}
             ><span className='span'>View our Hotel's Portfolio</span> </Nav>
 
             <Nav
                 onClick={() => {
                     navigate('/sign-up-agents')
-                    window.scroll({
-                        top: 0,
-                        behavior: 'auto'
-                    })
+                    toTop()
                 }}
             ><span className='span'>Sign up / Login for Agent Partners</span> </Nav>
 
             <Nav
                 onClick={() => {
                     navigate('/luxury-living-clients-preferce')
-                    window.scroll({
-                        top: 0,
-                        behavior: 'auto'
-                    })
+                    toTop()
                 }}
             ><span className='span'>FILL CLIENT'S PREFERENCE FORM</span> </Nav>
 
             <Nav
                 onClick={() => {
                     navigate('/hotel-partners')
-                    window.scroll({
-                        top: 0,
-                        behavior: 'auto'
-                    })
+                    toTop()
                 }}
 
             ><span className='span'>Collaborative Info for Hotel Partners</span> </Nav>
@@ -59,32 +50,23 @@ const Navbar = () => {
             <Nav
                 onClick={() => {
                     navigate('/feedback')
-                    window.scroll({
-                        top: 0,
-                        behavior: 'auto'
-                    })
+                    toTop()
                 }}
             ><span className='span'>Say Nice – Not So Nice Things About Us!</span> </Nav>
 
             <Nav
                 onClick={() => {
                     navigate('/contactus')
-                    window.scroll({
-                        top: 0,
-                        behavior: 'auto'
-                    })
+                    toTop()
                 }}
             ><span className='span'>Contact Us</span> </Nav>
-            
+
             <Nav
-               onClick={() => {
-                navigate('/aboutus')
-                window.scroll({
-                    top: 0,
-                    behavior: 'auto'
-                })
-            }}
-            ><span  className='span'>About Us</span> </Nav>
+                onClick={() => {
+                    navigate('/aboutus')
+                    toTop()
+                }}
+            ><span className='span'>About Us</span> </Nav>
         </Container>
     )
 }

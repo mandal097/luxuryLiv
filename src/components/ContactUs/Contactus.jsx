@@ -12,6 +12,7 @@ const Contactus = () => {
                     <Span>LX MARKETING PVT. LTD.</Span>
                     <P>K No. - 846/2, first floor, <br /> Opposite Metro pillar No. -115 <br />Ghitorni, New Delhi , India</P>
                 </Left>
+                <Line></Line>
                 <Right>
                     <H3>IN A HURRY TO CONTACT?</H3>
                     <Img src='./images/cphone.png' />
@@ -23,7 +24,7 @@ const Contactus = () => {
                 </Right>
                 <Vertical />
             </Wrapper>
-            <SocialMob />
+                    <SocialMob />
         </Container>
     )
 }
@@ -37,11 +38,14 @@ const Container = styled.div`
     height: 100vh;
     width: 100%;    
     position:relative;
-    /* z-index:-1; */
-    /* border:1px solid red; */
     .nav{
         color:white;
         text-decoration:none;
+    }
+    @media screen and (max-width:480px){
+        height:auto;
+        margin-top:7rem;
+        margin-bottom:4rem;
     }
 `
 
@@ -52,13 +56,15 @@ display: flex;
 align-items: center;
 justify-content: center;
 position:relative;
+/* border:1px solid red; */
 @media(max-width:1000px){
     width:95%;
 }
 @media(max-width:540px){
     flex-direction:column;
     justify-content: space-evenly;
-    height:85vh;
+    height:90vh;
+    padding-bottom:5rem;
 }
 `
 const Left = styled.div`
@@ -152,7 +158,16 @@ background-color:goldenrod;
     width: 60%;
     left:20%;
     top:50%;
+    display:none;
 }
 `
-
+const Line = styled.div`
+width:80%;
+height:1px;
+background-color:goldenrod;
+display:none;
+@media(max-width:540px){
+    display:block;
+}
+`
 export default Contactus

@@ -25,6 +25,7 @@ export const valuesdata = [
     },
     {
         id: 4,
+        // img: 'https://cdn-icons-png.flaticon.com/128/1256/1256284.png?ga=GA1.2.257983829.1629111004',
         img: '/images/doors.png',
         title: "SELECTIVENESS",
         classes: 'four',

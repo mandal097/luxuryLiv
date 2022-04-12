@@ -103,7 +103,7 @@ const Feedback = () => {
         <Container>
             <Header />
             <Wrapper>
-                <ToastContainer style={{ fontSize: '2rem' }} />
+                <ToastContainer style={{ fontSize: '2rem'  }} />
                 <Form onSubmit={submit} encType='multipart/form-data' method='post'>
                     <FormTopText>
                         {/* <TextDivLeft>

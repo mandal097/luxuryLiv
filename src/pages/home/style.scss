@@ -25,6 +25,7 @@
         .heading {
           font-family: "Shoreline";
           font-size: 9.5rem;
+          text-align: center;
         }
         .home_page_para {
           font-size: 2.5rem;
@@ -53,10 +54,11 @@
         display: grid;
         place-items: center;
         button {
-          width: 25%;
+          width: 28%;
           height: 4rem;
           background-color: transparent;
-          border: 1.5px solid white;
+          // border: 1.5px solid white;
+          border: 1.5px solid goldenrod;
           color: white;
           font-size: 2rem;
           border-radius: 6rem;
@@ -143,14 +145,13 @@
   .home_page {
     .home_page_wrapper {
       width: 95%;
-      // border: 1px solid red;
       //   landing page
       .home_landing_page {
         .home_landing_page_wrapper {
           width: 100%;
           height: 60%;
           .heading {
-            font-size: 6.5rem;
+            font-size: 6rem;
             height: 4rem;
           }
         }
