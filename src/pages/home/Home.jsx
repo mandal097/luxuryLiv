@@ -37,6 +37,8 @@ const Home = () => {
             }
         }
         getValues()
+
+        document.title = 'Luxury Living'
     }, [count, values])
     return (
         <div className='home_page'>

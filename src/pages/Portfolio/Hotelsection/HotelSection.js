@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import './hotelSection.scss';
 import Aos from "aos";
 import "aos/dist/aos.css";
-
 import { CaretDownOutlined } from '@ant-design/icons'
 import Dropdown from "../../../components/PortfolioDropdown/Dropdown";
 
@@ -11,7 +10,8 @@ function Port() {
     const [destination, setDestination] = useState('')
     useEffect(() => {
         Aos.init({ duration: 2000 });
-    }, []);
+        document.title='Luxury Living - Portofolio'
+    });
 
     const ShowModal = () => {
         switch (isOpen) {
@@ -27,12 +27,9 @@ function Port() {
     }
     return (
         <div className="port">
-
-
             <div className="port-container">
                 {
                     isOpen &&
-                    // <HotelsDescModal ShowModal={ShowModal} places={places} oohotel={hotel} />
                     <Dropdown ShowModal={ShowModal} destination={destination} />
                 }
                 <div className="port-card" data-aos="fade-right">

@@ -10,7 +10,7 @@ const Agents = () => {
     }
     useEffect(() => {
         document.title = 'Luxury Living - Agents'
-    })
+    },[])
     return (
         <div className='agents'>
             <Header />

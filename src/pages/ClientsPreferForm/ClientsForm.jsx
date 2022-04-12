@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Header from '../../components/Header/Header'
 import Social from '../../components/Social/Social'
 import './style.scss'
@@ -6,6 +6,9 @@ const ClientsForm = () => {
     const submit = (e) => {
         e.preventDefault()
     }
+    useEffect(()=>{
+document.title ='Luxury Living - Preference Form'
+    },[])
     return (
         <div className='clients_form'>
             <Header />

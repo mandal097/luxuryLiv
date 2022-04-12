@@ -10,7 +10,7 @@ const HotelPatners = () => {
     }
     useEffect(() => {
         document.title = 'Luxury Living - Hotel Partners'
-    })
+    },[])
     return (
         <div className='hotel_partners'>
             <Header />
