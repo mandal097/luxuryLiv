@@ -20,18 +20,28 @@ import Testimaonialscard from '../TestimoniesCard/TestimonyCard';
 function SampleNextArrow(props) {
   const { onClick } = props;
   return (
-    <RightOutlined
-      style={{ color: 'goldenrod', fontSize: '3rem', display: 'none' }}
-      onClick={onClick} />
+    <div
+      style={{
+        color: 'goldenrod', fontSize: '3rem', display: 'non', position: 'absolute',
+        top: '100%', right: '40rem',
+        // top: '80%', right: '20rem'
+      }}
+      >
+      <RightOutlined onClick={onClick} />
+    </div>
   );
 }
 
 function SamplePrevArrow(props) {
   const { onClick } = props;
   return (
-    <LeftOutlined
-      style={{ color: 'goldenrod', fontSize: '3rem', display: 'none' }}
-      onClick={onClick} />
+    <div
+      style={{
+        color: 'goldenrod', fontSize: '3rem', display: 'non', position: 'absolute',
+        top: '100%', left: '40rem'
+        // top: '80%', left: '20rem'
+      }}
+    >  <LeftOutlined onClick={onClick} /></div>
 
   );
 }
@@ -66,13 +76,14 @@ const Testimonials = () => {
   let settings = {
     dots: true,
     infinite: true,
-    speed: 200,
+    speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: 0,
     lazyload: true,
-    autoplaySpeed: 3000,
+    autoplay: true,
+    autoplaySpeed: 2000,
     swipeToSlide: true,
     focusOnSelect: true,
     nextArrow: <SampleNextArrow />,
@@ -110,7 +121,10 @@ const Testimonials = () => {
         {
           testimonies.map((t, idx) => (
             <div className={idx === index ? 'slides activeSlides' : "slides"}  >
-              <Testimaonialscard key={t.id} testimony={t} />
+              <Testimaonialscard key={t.id} testimony={t}
+               border={idx === index ? '1' : '0'} 
+              //  color={idx === index ? 'var(--border-golden)' : 'white'} 
+               />
             </div>
           ))
         }

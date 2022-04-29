@@ -14,27 +14,32 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: flex-end;
       margin-top: 8rem;
       .home_landing_page_wrapper {
-        height: 80%;
+        height: 90%;
         width: 75%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
         padding-top: 1rem;
         .heading {
           font-family: "Shoreline";
           font-size: 9.5rem;
           text-align: center;
         }
-        .home_page_para {
-          font-size: 2.5rem;
-          letter-spacing: 2px;
-          text-align: center;
-          margin-top: 3rem;
-          line-height: 3.5rem;
+        .para_div {
+          margin-top: 8rem;
+        // border: 1px solid red;
+          .home_page_para {
+            font-size: 2rem;
+            letter-spacing: 2px;
+            text-align: center;
+            // margin-top: 3rem;
+            // line-height: 2.5rem;
+            font-weight: 300;
+          }
         }
       }
     }
@@ -100,14 +105,12 @@
   }
 }
 
-
-
 @media screen and (max-width: 1300px) {
   .home_page {
     .home_page_wrapper {
-     width: 90%;
+      width: 90%;
       .home_landing_page {
-        .home_landing_page_wrapper {          
+        .home_landing_page_wrapper {
           .heading {
             font-size: 8.5rem;
           }
@@ -116,19 +119,19 @@
       //   values-pages
       .values_page {
         justify-content: center;
-        .load_more_button{
+        .load_more_button {
           button {
             width: 50%;
             height: 5rem;
             font-size: 2.3rem;
           }
         }
-        .side_text{
+        .side_text {
           position: static;
           transform: rotate(0deg);
           margin-top: 2rem;
           width: 100%;
-          h3{
+          h3 {
             font-size: 5rem;
             text-align: center;
           }
@@ -137,12 +140,6 @@
     }
   }
 }
-
-
-
-
-
-
 
 @media screen and (max-width: 480px) {
   .home_page {
@@ -162,19 +159,19 @@
       //   values-pages
       .values_page {
         justify-content: center;
-        .load_more_button{
+        .load_more_button {
           button {
             width: 50%;
             height: 5rem;
             font-size: 2.3rem;
           }
         }
-        .side_text{
+        .side_text {
           position: static;
           transform: rotate(0deg);
           margin-top: 2rem;
           width: 100%;
-          h3{
+          h3 {
             font-size: 5rem;
             text-align: center;
           }

@@ -22,7 +22,8 @@ const AboutUs = () => {
         const { onClick } = props;
         return (
             <RightOutlined
-                style={{ color: 'goldenrod', fontSize: '3rem', display: 'none' }}
+                style={{ color: 'goldenrod', fontSize: '3rem', display: 'none' , position:'absolute' ,
+            top:'50%' ,right:'1rem'}}
                 onClick={onClick} />
         );
     }
@@ -31,7 +32,8 @@ const AboutUs = () => {
         const { onClick } = props;
         return (
             <LeftOutlined
-                style={{ color: 'goldenrod', fontSize: '3rem', display: 'none' }}
+                style={{ color: 'goldenrod', fontSize: '3rem', display: 'none' , position:'absolute' ,
+                top:'50%' ,left:'1rem' }}
                 onClick={onClick} />
 
         );
@@ -43,6 +45,7 @@ const AboutUs = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: false,
+        // centerMode:true,
         swipeToSlide: true,
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />
@@ -82,6 +85,10 @@ const AboutUs = () => {
                     </ContentRight>
                     <ContentCr className='contentCr'></ContentCr>
                 </Content>
+
+
+
+
                 <Slider {...settings} className="team_members">
                     <div>
                         <div className="slider_container">
@@ -151,6 +158,8 @@ const AboutUs = () => {
                         </div>
                     </div>
                 </Slider>
+
+                
             </Wrapper>
             <Social />
         </Container>

@@ -40,7 +40,7 @@ const Home = () => {
         getValues()
 
         document.title = 'Luxury Living'
-    }, [ values])
+    }, [values])
     return (
         <div className='home_page'>
             <Header />
@@ -49,12 +49,12 @@ const Home = () => {
                 <div className="home_landing_page">
                     <div className="home_landing_page_wrapper">
                         <h1 className="heading">luxury living</h1>
-                        <p className="home_page_para">
-                            Our top game is to make it easy for our Travel Partners to book 'High End Hotels Worldwide'..
-                            <br /> Our medium game is to do this with finnese, subtelty & without much hangups
-                            <br />
-                            Our low  game is to do 30 push-ups in one go.'
-                        </p>
+                        <div className="para_div">
+                            <p className="home_page_para">
+                                Our top game is to make it easy for our Travel Partners to book 'Luxury Hotels'  Worldwide</p>
+                            <p className="home_page_para">Our medium game is to do this with finnese, subtelty & without much hangup</p>
+                            <p className="home_page_para">Our bottom  game is to do 30 push-ups in one go.'</p>
+                        </div>
                     </div>
                 </div>
                 {/* for second page of the home page  */}
@@ -82,7 +82,7 @@ const Home = () => {
             </div>
             <Social />
             <Scroll />
-        </div>
+        </div >
     )
 }
 
