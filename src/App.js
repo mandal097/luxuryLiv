@@ -9,6 +9,8 @@ import Portfolio from './pages/Portfolio/Portfolio'
 import HotelDesc from './pages/HotelsDesc/HotelDesc'
 import AboutUs from './pages/AboutUs/AboutUs'
 import ClientsForm from './pages/ClientsPreferForm/ClientsForm'
+import HotelsCollabs from './pages/HotelCollabs/HotelsCollabs'
+import Offers from './pages/Offers/Offers'
 const App = () => {
   return (
     <div>
@@ -21,6 +23,8 @@ const App = () => {
             <Route path='sign-up-agents' element={<Agents />} />
             <Route path='hotel-partners' element={<HotelPatners />} />
             <Route path='aboutus' element={<AboutUs />} />
+            <Route path='hotel-collabs' element={<HotelsCollabs />} />
+            <Route path='offers' element={<Offers />} />
             <Route path='luxury-living-clients-preferce' element={<ClientsForm />} />
             <Route path='luxury-living-portfolio' element={<Portfolio />} />
             <Route path='luxury-living-portfolio/:hotelname/:id' element={<HotelDesc />} />

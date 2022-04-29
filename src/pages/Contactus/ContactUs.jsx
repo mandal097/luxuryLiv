@@ -41,7 +41,6 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: calc(100vh - 8rem);
     width: 100%;
     position:relative;
@@ -55,13 +54,14 @@ const Container = styled.div`
 `
 
 const Wrapper = styled.div`
-width:100%;
+width:80%;
 height:75vh;
 display: flex;
 align-items: center;
 justify-content: center;
 position:relative;
 /* border:1px solid red; */
+margin-top:10rem;
 @media(max-width:1000px){
     width:95%;
 }
@@ -160,7 +160,7 @@ top:10rem;
 right:49%;
 width:2px;
 height:50vh;
-background-color:goldenrod;
+background-color:var(--border-golden);
 @media(max-width:540px){
     height:1.5px;
     width: 60%;

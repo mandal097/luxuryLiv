@@ -20,35 +20,42 @@
     border-radius: 10px;
 }
 
-.btn11{
+.btn:hover span {
+    background-color: gold;
+}
+
+.btn11 {
     transform: translateY(-15px);
     width: 25px;
     left: 15px;
 }
 
-.btn22{
+.btn22 {
     transform: translateY(15px);
     width: 15px;
     left: 15px;
 }
 
 
-.btn3{
+.btn3 {
     width: 40px;
     transform: translateX(14rem);
     transition: 200ms;
     display: none;
 }
-.btn1{
+
+.btn1 {
     width: 40px;
     transform: rotate(45deg);
     transition: 200ms;
 }
-.btn2{
-   width: 40px;
-   transform: rotate(-45deg);
-   transition: 200ms
+
+.btn2 {
+    width: 40px;
+    transform: rotate(-45deg);
+    transition: 200ms
 }
-.btn33{
+
+.btn33 {
     width: 40px;
 }

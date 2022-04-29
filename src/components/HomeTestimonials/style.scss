@@ -1,90 +1,49 @@
 .testimonial {
   width: 100%;
-  min-height: 95vh;
   height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  margin: 0rem auto;
   position: relative;
-  .testimaonials_card {
-    width: 420px;
-    height: 70vh;
-    border: 1px solid goldenrod;
-    border-radius: 1rem;
-    margin-top: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    transition: all 300ms linear;
-    &:hover {
-      transform: translateY(-0.5rem);
-      // box-shadow: -2px -2px 6px rgb(87, 62, 1)  ,2px 2px 6px rgb(87, 62, 1) ;
-    }
-    .testimonials_card_para_div {
-      width: 100%;
-      height: 75%;
-      padding: 1rem 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      p {
-        font-size: 1.6rem;
-        text-align: justify;
-      }
-    }
-    .info {
-      width: 100%;
-      height: auto;
-      padding: 0 1rem;
-      .name {
-        font-size: 2.6rem;
-        text-align: center;
-        text-transform: capitalize;
-        position: relative;
-        &::after {
-          position: absolute;
-          content: "";
-          width: 70%;
-          left: 15%;
-          height: 1px;
-          background-color: goldenrod;
-          bottom: 0rem;
-        }
-      }
-      .profession {
-        font-size: 1.6rem;
-        text-align: center;
-        text-transform: capitalize;
-        color: gray;
-      }
-    }
+  padding: 5rem 0;
+  // border: 1px solid red;
+  
+  .slides {
+    transform: scale(0.75);
+    transition: transform 600ms linear;
+    background-color: black;
+    padding: 2rem 0;
   }
-  .lode_more_testiomonials {
-    width: 100%;
-    height: 5rem;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-    display: grid;
-    place-items: center;
-    button {
-      width: 25%;
-      height: 4rem;
-      background-color: transparent;
-      border: 1.5px solid goldenrod;
+  .activeSlides {
+    transform: scale(1);
+    transition: transform 600ms linear;
+  }
+  div {
+    z-index: 2;
+    ul li button {
+      margin-top: 10rem;
+      &:before {
+        font-size: 12px;
+        color: white;
+        position: absolute;
+        box-shadow: 0px 0px 1px white;
+        border-radius: 50%;
+        top: 10rem;
+      }
+    }
+    li.slick-active button::before {
       color: white;
-      font-size: 2rem;
-      border-radius: 6rem;
-      text-transform: uppercase;
+    }
+    .slick-list {
+      overflow: hidden;
+    }
+    button {
+      z-index: 1;
     }
   }
   .side_text {
     position: absolute;
     transform: rotate(90deg);
     right: -37.5%;
-    top: 34%;
+    top: 41%;
     &::before {
       position: absolute;
       content: "";
@@ -98,47 +57,47 @@
     }
     h3 {
       font-size: 8rem;
-          text-transform: uppercase;
+      text-transform: uppercase;
       color: goldenrod;
+    }
+  }
+}
+
+@media screen and (max-width: 1082px) {
+  .testimonial {
+    .slider {
+      width: 100%;
+      div {
+        width: 99%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .testimonial {
+    .slider {
+      width: 100%;
+      div {
+        width: 99%;
+        margin: 0 auto;
+      }
+    }
+    .side_text {
+      position: static;
+      transform: rotate(0deg);
+      margin-top: 5rem;
+      width: 100%;
+      h3 {
+        font-size: 5rem;
+        text-align: center;
+      }
     }
   }
 }
 
 @media screen and (max-width: 480px) {
   .testimonial {
-    .testimaonials_card {
-      width: 95%;
-      height: auto;
-      .testimonials_card_para_div {
-        p {
-          font-size: 2.1rem;
-        }
-      }
-      .info {
-        .name {
-          font-size: 4rem;
-        }
-        .profession {
-          font-size: 2.3rem;
-        }
-      }
-    }
-    .lode_more_testiomonials {
-      button {
-        width: 50%;
-        height: 5rem;
-        font-size: 2.3rem;
-      }
-    }
-    .side_text {
-      position: static;
-      transform: rotate(0deg);
-      width: 100%;
-      h3 {
-        font-size: 5rem;
-        text-align: center;
-        margin-top: 2rem;
-      }
-    }
+    width: 90%;
   }
 }

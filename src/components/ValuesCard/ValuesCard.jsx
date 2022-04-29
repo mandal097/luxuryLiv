@@ -7,7 +7,7 @@ const ValuesCard = ({ val }) => {
     Aos.init({ duration: 2000 });
   }, []);
   return (
-    <div className='values_card' data-aos={val.aos}>
+    <div className='values_card' data-aos={val.as}>
       <div className="values_card_image_div">
         <img src={val.img} alt="values" className={val.classes} />
       </div>

@@ -65,14 +65,6 @@ export const valuesdata = [
         content: "Now how cool is that word? Does it not deserve its own block! Thats why it stays. Also, we coined this term. So, 'yey' to us & 'boo hoo' to those who still like to use Awesome & Fantastic in a sentence. Move on guys!",
         aos:'fade-up'
     },
-    {
-        id: 9,
-        img: '/images/awes.png',
-        title: "AWESOMETASTIC",
-        classes: 'eight',
-        content: "Now how cool is that word? Does it not deserve its own block! Thats why it stays. Also, we coined this term. So, 'yey' to us & 'boo hoo' to those who still like to use Awesome & Fantastic in a sentence. Move on guys!",
-        aos:'fade-up-left'
-    },
 
 
 ]

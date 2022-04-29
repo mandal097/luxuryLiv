@@ -160,8 +160,6 @@ const AboutUs = () => {
 const Container = styled.div`
 height:100vh;
 width:100%;
-overflow-y:scroll;
-overflow-x:hidden;
 position:relative;
 display:flex;
 flex-direction:column;

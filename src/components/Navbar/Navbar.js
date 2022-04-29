@@ -1,5 +1,5 @@
 import React from 'react'
-import { span, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 const Navbar = () => {
     const navigate = useNavigate()
@@ -67,6 +67,23 @@ const Navbar = () => {
                     toTop()
                 }}
             ><span className='span'>About Us</span> </Nav>
+
+            <Nav
+                onClick={() => {
+                    navigate('/hotel-collabs')
+                    toTop()
+                }}
+            ><span className='span hide'>New Hotel Collaborations
+                </span> </Nav>
+
+            <Nav
+                onClick={() => {
+                    navigate('/offers')
+                    toTop()
+                }}
+            ><span className='span hide'>Irresistible Offers
+                </span> </Nav>
+
         </Container>
     )
 }
@@ -74,9 +91,6 @@ const Navbar = () => {
 const Container = styled.div`
 height:100vh;
 width:100%;
-display:flex;
-align-items:center;
-justify-content:center;
 background-color:teal;
 z-index:12;
 position:fixed;
@@ -91,26 +105,34 @@ background-color:teal;
 padding:0 10rem;
 display:flex;
 flex-direction:column;
-align-items:flex-start;
+/* align-items:flex-start; */
 justify-content:space-evenly;
 @media(max-width:700px){
-    height:75vh;
+    height:85vh;
     animation:navbarMob 500ms;
+}
+.hide{
+    display:none;
+    @media (max-width:480px){
+  display:block;
+}
 }
 .span{
     text-decoration:none;
     color:white;
     transition:all 200ms;
+    margin-top:2rem;
     &:hover{
         color:black;
     }
 @media (max-width:700px){
     align-items:center;
 }
+
 `
 
 const Nav = styled.span`
-font-size:4.3rem;
+font-size:3.8rem;
 color:white;
 font-weight:bolder;
 text-transform:uppercase;
