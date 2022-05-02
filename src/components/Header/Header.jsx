@@ -31,14 +31,28 @@ const Header = () => {
       <div className="header_wrapper">
 
         <div className="ham_div" onClick={showNavbar}> <Ham /></div>
+
         <div className="navs" onClick={(e) => {
           navigate('/hotel-collabs');
           toTop()
-        }}>New Hotel Collaborations</div>
-        <div className="navs" onClick={(e) => {
+        }}>
+          <div className="img">
+            <img src="images/navHotel.png" alt="" />
+          </div>
+          <span className="link"> New Hotel Collaborations </span>
+        </div>
+
+
+        <div className="navs right_navs" onClick={(e) => {
           navigate('/offers');
           toTop()
-        }} > Irresistible Offers</div>
+        }} >
+          <div className="img">
+            <img src="images/navOffersbg.png" alt="" />
+          </div>
+          <span className="link">Irresistible Offers </span>
+        </div>
+
         {
           IsOpen && <Navbar />
         }

@@ -68,7 +68,7 @@ const Navbar = () => {
                 }}
             ><span className='span'>About Us</span> </Nav>
 
-            <Nav
+            {/* <Nav
                 onClick={() => {
                     navigate('/hotel-collabs')
                     toTop()
@@ -82,7 +82,7 @@ const Navbar = () => {
                     toTop()
                 }}
             ><span className='span hide'>Irresistible Offers
-                </span> </Nav>
+                </span> </Nav> */}
 
         </Container>
     )
@@ -138,6 +138,7 @@ font-weight:bolder;
 text-transform:uppercase;
 line-height:1;
 transition:all 200ms;
+margin-left:5rem;
 cursor:pointer;
 &:hover{
     transform:perspective(90px)  rotateX(-5deg);
