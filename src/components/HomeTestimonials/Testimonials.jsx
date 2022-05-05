@@ -18,15 +18,16 @@ import Testimaonialscard from '../TestimoniesCard/TestimonyCard';
 
 
 function SampleNextArrow(props) {
+
   const { onClick } = props;
   return (
-    <div
+    <div className='hide'
       style={{
         color: 'goldenrod', fontSize: '3rem', display: 'non', position: 'absolute',
         top: '100%', right: '40rem',
         // top: '80%', right: '20rem'
       }}
-      >
+    >
       <RightOutlined onClick={onClick} />
     </div>
   );
@@ -35,7 +36,7 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
   const { onClick } = props;
   return (
-    <div
+    <div className='hide'
       style={{
         color: 'goldenrod', fontSize: '3rem', display: 'non', position: 'absolute',
         top: '100%', left: '40rem'
@@ -50,27 +51,12 @@ function SamplePrevArrow(props) {
 
 const Testimonials = () => {
   const [testimonies, setTestimonies] = useState([])
-  // const [testimonyCount, setTestimonyCount] = useState(2)
-  // const [showMoreBtn, setShowMoreBtn] = useState(true)
-  // const [load, setLoad] = useState(false)
   useEffect(() => {
     const getValues = () => {
       setTestimonies(testimonialsdata)
-      // if (testimonyCount === testimonies.length) {
-      //   setShowMoreBtn(false)
-      // }
     }
     getValues()
   })
-  // function for increasing count of testimonies on click event
-  // const handleCount = () => {
-  //   setLoad(true)
-  //   setTimeout(() => {
-  //     testimonyCount >= 2 && setTestimonyCount(testimonyCount + 2);
-  //     setLoad(false)
-  //   }, 1200);
-  // }
-
   const [index, setIndex] = useState(0)
 
   let settings = {
@@ -82,7 +68,7 @@ const Testimonials = () => {
     centerMode: true,
     centerPadding: 0,
     lazyload: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
     swipeToSlide: true,
     focusOnSelect: true,
@@ -103,28 +89,14 @@ const Testimonials = () => {
   }
   return (
     <div className='testimonial'>
-
-
-
-      {/* {
-        testimonies.slice(0, testimonyCount).map((testimony) => (
-          <Testimaonialscard key={testimony.id} testimony={testimony} />
-        ))
-      }
-      {
-        showMoreBtn &&
-        <div className="lode_more_testiomonials">
-          <button onClick={handleCount}>{load ? <Spin indicator={antIcon} /> : 'load more'}</button>
-        </div>
-      } */}
       <Slider {...settings} className='slider'>
         {
           testimonies.map((t, idx) => (
-            <div className={idx === index ? 'slides activeSlides' : "slides"}  >
-              <Testimaonialscard key={t.id} testimony={t}
-               border={idx === index ? '1' : '0'} 
+            <div key={t.id} className={idx === index ? 'slides activeSlides' : "slides"}  >
+              <Testimaonialscard testimony={t}
+                border={idx === index ? '1' : '0'}
               //  color={idx === index ? 'var(--border-golden)' : 'white'} 
-               />
+              />
             </div>
           ))
         }

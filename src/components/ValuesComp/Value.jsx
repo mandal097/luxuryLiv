@@ -12,7 +12,7 @@ import {
 function SampleNextArrow(props) {
     const { onClick } = props;
     return (
-        <div
+        <div className='hide'
             style={{
                 color: 'goldenrod', fontSize: '3rem', display: 'non', position: 'absolute',
                 top: '100%', right: '40rem',
@@ -27,7 +27,7 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
     const { onClick } = props;
     return (
-        <div
+        <div className='hide'
             style={{
                 color: 'goldenrod', fontSize: '3rem', display: 'non', position: 'absolute',
                 top: '100%', left: '40rem'
@@ -55,7 +55,7 @@ const Value = ({ values }) => {
         centerMode: true,
         centerPadding: 0,
         lazyload: true,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 2000,
         swipeToSlide: true,
         focusOnSelect: true,
@@ -83,8 +83,8 @@ const Value = ({ values }) => {
 
                 {
                     values.map((v, idx) => (
-                        <div className={idx === index ? 'slides activeSlides' : "slides"}  >
-                            <ValuesCard key={v.id} val={v} item='true'
+                        <div key={v.id}   className={idx === index ? 'slides activeSlides' : "slides"}  >
+                            <ValuesCard val={v} item='true'
                                 border={idx === index ? '1' : '0'}
                             //  color={idx === index ? 'var(--border-golden)' : 'whiet'} 
                             />

@@ -5,8 +5,8 @@
   .clients_form_wrapper {
     width: 70%;
     height: auto;
-    border: 1px solid goldenrod;
-    margin: 0 auto;;
+    border: 1px solid var(--border-golden);
+    margin: 0 auto;
     padding: 3rem 2rem;
     margin-top: 9rem;
     .form_head {
@@ -32,7 +32,7 @@
     form {
       width: 100%;
       height: auto;
-      .required_indication{
+      .required_indication {
         width: 100%;
         height: 5rem;
         border: 1px solid red;
@@ -40,13 +40,13 @@
         align-items: center;
         border-radius: 1rem;
         padding: 0 2rem;
-        p{
+        p {
           font-size: 1.8rem;
           text-transform: capitalize;
           margin-left: 1.5rem;
         }
-        span{
-          font-size:5rem;
+        span {
+          font-size: 5rem;
           height: 5rem;
           color: red;
         }
@@ -132,29 +132,29 @@
           }
         }
       }
-      .submit_btn{
-          width: 100%;
-          height: 4rem;
-          margin-top: 3rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          input{
-              width: 25%;
-              height: 100%;
-              background:rgb(141, 104, 9);
-              text-transform: capitalize;
-              border: none;
-              font-size: 2rem;
-              color: white;
-              font-weight: 400;
-              letter-spacing: 2px;
-              border-radius: 0.3rem;
-              transition: all 100ms linear;
-              &:hover{
-                  background: goldenrod;
-              }
+      .submit_btn {
+        width: 100%;
+        height: 4rem;
+        margin-top: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        input {
+          width: 25%;
+          height: 100%;
+          background: rgb(141, 104, 9);
+          text-transform: capitalize;
+          border: none;
+          font-size: 2rem;
+          color: white;
+          font-weight: 400;
+          letter-spacing: 2px;
+          border-radius: 0.3rem;
+          transition: all 100ms linear;
+          &:hover {
+            background: goldenrod;
           }
+        }
       }
     }
   }
@@ -164,20 +164,20 @@
   .clients_form {
     .clients_form_wrapper {
       width: 95%;
-      margin-top: 2rem;
+      margin-top: 10rem;
       form {
         margin-top: 2rem;
         .input_divs {
-            // min-height: 15rem;
-            padding: 2rem 2rem;
-            height: auto;
+          // min-height: 15rem;
+          padding: 2rem 2rem;
+          height: auto;
           label {
             font-size: 2rem;
           }
-          .input_div{
+          .input_div {
             input[type="text"]::placeholder {
-                font-size: 2rem;
-              }
+              font-size: 2rem;
+            }
           }
         }
       }

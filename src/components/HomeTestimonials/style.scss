@@ -2,15 +2,15 @@
   width: 100%;
   height: auto;
   margin: 0rem auto;
+  padding: 1rem 0;
   position: relative;
-  padding: 5rem 0;
   // border: 1px solid red;
-  
+
   .slides {
     transform: scale(0.5);
     transition: transform 600ms linear;
     background-color: black;
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
   .activeSlides {
     transform: scale(1);
@@ -62,12 +62,19 @@
       color: goldenrod;
     }
   }
+  .leftArrow {
+    left: 40rem;
+  }
+  .rightArrow {
+    right: 40rem;
+  }
 }
 
 @media screen and (max-width: 1082px) {
   .testimonial {
     .slider {
-      width: 100%;
+      width: 60%;
+      margin: 0 auto;
       div {
         width: 99%;
         margin: 0 auto;
@@ -78,9 +85,9 @@
 @media screen and (max-width: 900px) {
   .testimonial {
     .slider {
-      width: 100%;
+      width: 80%;
       div {
-        width: 99%;
+        width: 100%;
         margin: 0 auto;
       }
     }
@@ -99,6 +106,14 @@
 
 @media screen and (max-width: 480px) {
   .testimonial {
-    width: 90%;
+    width: 100%;
+    div {
+      ul li button {
+        display: block;
+      }
+    }
+  }
+  .hide {
+    display: none;
   }
 }

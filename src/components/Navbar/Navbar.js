@@ -34,7 +34,7 @@ const Navbar = () => {
 
             <Nav
                 onClick={() => {
-                    navigate('/luxury-living-clients-preferce')
+                    navigate('/luxury-living-clients-preference')
                     toTop()
                 }}
             ><span className='span'>FILL CLIENT'S PREFERENCE FORM</span> </Nav>
@@ -102,7 +102,7 @@ transition:all 500ms;
 animation:navbar 500ms;
 opacity:1;
 background-color:teal;
-padding:0 10rem;
+padding-top:1rem;
 display:flex;
 flex-direction:column;
 /* align-items:flex-start; */
@@ -110,6 +110,7 @@ justify-content:space-evenly;
 @media(max-width:700px){
     height:85vh;
     animation:navbarMob 500ms;
+    padding-top:4rem;
 }
 .hide{
     display:none;
@@ -138,13 +139,14 @@ font-weight:bolder;
 text-transform:uppercase;
 line-height:1;
 transition:all 200ms;
-margin-left:5rem;
+margin-left:14rem;
 cursor:pointer;
 &:hover{
     transform:perspective(90px)  rotateX(-5deg);
 }
 @media (max-width:700px){
     font-size:3.2rem;
+    margin-left:5rem;
 }
 @media (max-width:600px){
     font-size:2.7rem;

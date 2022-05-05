@@ -25,7 +25,7 @@ const App = () => {
             <Route path='aboutus' element={<AboutUs />} />
             <Route path='hotel-collabs' element={<HotelsCollabs />} />
             <Route path='offers' element={<Offers />} />
-            <Route path='luxury-living-clients-preferce' element={<ClientsForm />} />
+            <Route path='luxury-living-clients-preference' element={<ClientsForm />} />
             <Route path='luxury-living-portfolio' element={<Portfolio />} />
             <Route path='luxury-living-portfolio/:hotelname/:id' element={<HotelDesc />} />
           </Route>

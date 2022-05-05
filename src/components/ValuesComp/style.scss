@@ -52,5 +52,13 @@
 @media screen and (max-width:480px) {
     .values_container{
         width: 90%;
+      div{
+        ul li button{
+          display: block;
+        }
+      }
+    }
+    .hide{
+      display: none;
     }
 }

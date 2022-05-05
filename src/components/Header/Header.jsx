@@ -3,6 +3,7 @@ import './style.scss'
 import Navbar from '../../components/Navbar/Navbar'
 import Ham from '../../components/Hamburger/Ham';
 import { useNavigate } from 'react-router-dom'
+import { GiftOutlined } from '@ant-design/icons'
 
 const Header = () => {
   const navigate = useNavigate()
@@ -12,6 +13,7 @@ const Header = () => {
       behavior: 'auto'
     })
   }
+
   const [IsOpen, setIsOpen] = useState(false)
   const showNavbar = () => {
     switch (IsOpen) {
@@ -31,26 +33,28 @@ const Header = () => {
       <div className="header_wrapper">
 
         <div className="ham_div" onClick={showNavbar}> <Ham /></div>
+        <div className="navs_right">
 
-        <div className="navs" onClick={(e) => {
-          navigate('/hotel-collabs');
-          toTop()
-        }}>
-          <div className="img">
-            <img src="images/navHotel.png" alt="" />
+          <div className="navs" onClick={(e) => {
+            navigate('/hotel-collabs');
+            toTop()
+          }}>
+            <div className="img"  >
+              <img src="images/question1.png" alt="" />
+            </div>
+
+            <div className="link"><span   data-text=' New&nbsp;Hotel Collaborations' className="links"> New&nbsp;Hotel&nbsp;Collaborations</span> </div>
           </div>
-          <span className="link"> New Hotel Collaborations </span>
-        </div>
 
-
-        <div className="navs right_navs" onClick={(e) => {
-          navigate('/offers');
-          toTop()
-        }} >
-          <div className="img">
-            <img src="images/navOffersbg.png" alt="" />
+          <div className="navs " onClick={(e) => {
+            navigate('/offers');
+            toTop()
+          }} >
+            <div className="img">
+              <GiftOutlined className='icon' />
+            </div>
+            <div className="link"><span data-text='Irresistible Offers' className="links">Irresistible&nbsp;Offers </span> </div>
           </div>
-          <span className="link">Irresistible Offers </span>
         </div>
 
         {

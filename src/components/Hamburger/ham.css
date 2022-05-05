@@ -15,14 +15,14 @@
     position: absolute;
     /* width: 40px; */
     height: 3px;
-    background-color: goldenrod;
+    background-color:rgb(218, 165, 32);
     transition: 1s;
     border-radius: 10px;
 }
 
-.btn:hover span {
+/* .btn:hover span {
     background-color: gold;
-}
+} */
 
 .btn11 {
     transform: translateY(-15px);
@@ -58,4 +58,10 @@
 
 .btn33 {
     width: 40px;
+}
+
+@media screen and (max-width:480px){
+    .btn{
+        height: 8rem;
+    }
 }
