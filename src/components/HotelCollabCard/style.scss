@@ -2,99 +2,143 @@
   width: 90%;
   height: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin: 3rem 0;
+  margin: 7rem 0;
   // border: 1px solid white;
   border: 1px solid var(--border-white);
   border-radius: 0.5rem;
   overflow: hidden;
-  .new_hotel_card_left {
-    width: 48%;
-    height: auto;
-    .hotel_desc_img {
-      width: 100%;
-      padding: 0;
-      ul li button {
-        margin: 0;
-        &:before {
-          font-size: 12px;
+  .hotel_card_top {
+    width: 100%;
+    height: 50vh;
+    border-bottom: 1px solid var(--border-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .new_hotel_card_left {
+      width: 48%;
+      height: auto;
+      .hotel_desc_img {
+        width: 100%;
+        padding: 0;
+        ul li button {
+          margin: 0;
+          &:before {
+            font-size: 12px;
+            color: white;
+            position: absolute;
+            box-shadow: 0px 0px 1px white;
+            border-radius: 50%;
+            top: -4rem;
+          }
+        }
+        li.slick-active button::before {
           color: white;
-          position: absolute;
-          box-shadow: 0px 0px 1px white;
-          border-radius: 50%;
-          top: -4rem;
+        }
+        .slick-list {
+          overflow: hidden;
+        }
+        button {
+          z-index: 1;
+        }
+        .img {
+          width: 98%;
+          height: 49.5vh;
+          img {
+            height: 101%;
+            width: 100%;
+            object-fit: cover;
+          }
         }
       }
-      li.slick-active button::before {
-        color: white;
-      }
-      .slick-list {
-        overflow: hidden;
-      }
-      button {
-        z-index: 1;
-      }
-      .img {
-        width: 98%;
-        height: 50vh;
+    }
+    .new_hotel_card_right {
+      width: 52%;
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      .logo {
+        //   margin-top: 2rem;
+        width: 8rem;
+        height: 8rem;
         img {
-          height: 101%;
           width: 100%;
-          object-fit: cover;
+          height: 100%;
+          object-fit: contain;
         }
+      }
+      .name {
+        font-size: 2rem;
+        padding-bottom: 0.2rem;
+        border-bottom: 1px solid white;
+      }
+      .info {
+        font-size: 1.5rem;
+        text-align: justify;
+        padding: 0 2rem;
       }
     }
   }
-  .new_hotel_card_right {
-    width: 52%;
-    height: 50vh;
+  .actions_btn_div {
+    width: 95%;
+    height: auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    .logo {
-      //   margin-top: 2rem;
-      width: 8rem;
-      height: 8rem;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
+    justify-content: space-between;
+    margin: 1rem;
+    .actions_btn {
+      width: 24%;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border-white);
+      cursor: pointer;
+      border-radius: 1rem;
+      transition: all 300ms linear;
+      span {
+        font-size: 1.8rem;
+        text-transform: capitalize;
+        transition: all 300ms linear;
       }
-    }
-    .name {
-      font-size: 2rem;
-      padding-bottom: 0.2rem;
-      border-bottom: 1px solid white;
-    }
-    .info {
-      font-size: 1.5rem;
-      text-align: justify;
-      padding: 0 2rem;
+      &:hover {
+        span {
+          color: goldenrod;
+        }
+        transform: translatey(-0.3rem);
+        border: 1px solid var(--border-golden);
+      }
     }
   }
 }
 
 @media screen and (max-width: 480px) {
   .new_hotel_card {
-    flex-direction: column;
     width: 100%;
-    .new_hotel_card_left,
-    .new_hotel_card_right {
-      width: 100%;
+    height: auto;
+    .hotel_card_top {
       height: auto;
-      .logo {
-        margin: 1rem 0;
+      flex-direction: column;
+      width: 100%;
+      .new_hotel_card_left,
+      .new_hotel_card_right {
+        width: 100%;
+        height: auto;
+        .logo {
+          margin: 1rem 0;
+        }
+        .name {
+          margin-bottom: 2rem;
+        }
       }
-      .name {
-        margin-bottom: 2rem;
-      }
-    }
-    .new_hotel_card_left {
-      .hotel_desc_img {
-        .img {
+      .new_hotel_card_left {
+        .hotel_desc_img {
+          .img {
             height: 30vh;
+          }
         }
       }
     }

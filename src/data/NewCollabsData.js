@@ -1,7 +1,7 @@
 export const newHotels = [
     {
         id: 1,
-        h_name: ' hotel 1',
+        hotelname: ' hotel 1',
         info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur illo dolore ab! Nemo esse reprehenderit dolorum aut, laborum fugit exercitationem inventore, quibusdam maxime delectus mdaequibusdam maxime delectus mdaequibusdam maxime delectus mdae recusandae quis nihil. Qui quas, necessitatibus repellendus dolorum totam quae',
         logo: 'Anantara.png',
         img1: 'https://images.unsplash.com/photo-1617859047452-8510bcf207fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmVzb3J0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
@@ -12,7 +12,7 @@ export const newHotels = [
     },
     {
         id: 2,
-        h_name: ' hotel 2',
+        hotelname: ' hotel 2',
         info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur illo dolore ab! Nemo esse reprehenderit dolorum aut, laborum fugit exercitationem inventore, quibusdam maxime delectus mdaequibusdam maxime delectus mdaequibusdam maxime delectus mdae recusandae quis nihil. Qui quas, necessitatibus repellendus dolorum totam quae',
         logo: 'BanyanTreeLogo.png',
         img1: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cmVzb3J0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
@@ -23,7 +23,7 @@ export const newHotels = [
     },
     {
         id: 3,
-        h_name: ' hotel 3',
+        hotelname: ' hotel 3',
         info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur illo dolore ab! Nemo esse reprehenderit dolorum aut, laborum fugit exercitationem inventore, quibusdam maxime delectus mdaequibusdam maxime delectus mdaequibusdam maxime delectus mdae recusandae quis nihil. Qui quas, necessitatibus repellendus dolorum totam quae',
         logo: 'Six-Senses.png',
         img1: 'https://media.istockphoto.com/photos/outdoor-pool-in-an-egyptian-hotel-sharm-el-sheikh-picture-id1143961789?b=1&k=20&m=1143961789&s=170667a&w=0&h=TbqATlpr8h-nMuLnLuf1yNlZtfXQ8pY6ibJV7WvUZ78=',
@@ -34,7 +34,7 @@ export const newHotels = [
     },
     {
         id: 4,
-        h_name: ' hotel 4',
+        hotelname: ' hotel 4',
         info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur illo dolore ab! Nemo esse reprehenderit dolorum aut, laborum fugit exercitationem inventore, quibusdam maxime delectus mdaequibusdam maxime delectus mdaequibusdam maxime delectus mdae recusandae quis nihil. Qui quas, necessitatibus repellendus dolorum totam quae',
         logo: 'Anantara.png',
         img1: 'https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aG90ZWxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',

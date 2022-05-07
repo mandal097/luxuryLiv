@@ -3,6 +3,9 @@ import './style.scss';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
+import jsPDF from 'jspdf'
+import Enquiry from '../../components/Enquiry/Enquiry';
+import ShareModal from '../ShareComponent/ShareModal';
 import {
     LeftOutlined,
     RightOutlined,
@@ -45,6 +48,10 @@ const HotelsCards = ({ d }) => {
     const mediaMatch = window.matchMedia('(max-width: 480px)');
     const [matches, setMatches] = useState(mediaMatch.matches);
 
+    const [showForm, setShowForm] = useState(false);
+    const [showShare, SetShowShare] = useState(false);
+    const [activeSlide, setActiveSlide] = useState(0)
+
     useEffect(() => {
         Aos.init({ duration: 2000 });
         const handler = e => setMatches(e.matches);
@@ -63,36 +70,89 @@ const HotelsCards = ({ d }) => {
         swipeToSlide: true,
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
+        afterChange: current => setActiveSlide(current)
+    }
+
+
+    // downloadin pdf --------------------------
+    const download = () => {
+        var doc = new jsPDF("p", "mm", "a4");
+        doc.setFontSize(19);
+        doc.text(20, 10, d.hotelname)
+        doc.setFontSize(12);
+        doc.addFont('helvetica', 'normal')
+        switch (activeSlide) {
+          case 0:
+            doc.addImage(d.img1, 'JPEG', 20, 50, 170, 110)
+            break;
+          case 1:
+            doc.addImage(d.img2, 'JPEG', 20, 50, 170, 110)
+            break;
+          case 2:
+            doc.addImage(d.img3, 'JPEG', 20, 50, 170, 110)
+            break;
+          default:
+            doc.addImage(d.img1, 'JPEG', 20, 50, 170, 110)
+        }
+
+        doc.save("luxury_living.pdf")
+
     }
 
     return (
-        <div className='new_hotel_card'
-            data-aos={`fade-${d.aos}`}
-            style={{
-                flexDirection: matches ? 'column' : `${d.f}`
-            }}
-        >
-            <div className="new_hotel_card_left">
-                <Slider {...settings} className="hotel_desc_img">
-                    <div className="img" >
-                        <img src={d.img1} alt="" />
+        <>
+            {
+                showForm && <Enquiry setShowForm={setShowForm} hotel={d.hotelname}/>
+            }
+            {
+                showShare && <ShareModal SetShowShare={SetShowShare} hotel={d}/>
+            }
+            <div className='new_hotel_card'
+                data-aos={`fade-${d.aos}`}
+            >
+                <div className="hotel_card_top"
+                    style={{
+                        flexDirection: matches ? 'column' : `${d.f}`
+                    }}
+                >
+                    <div className="new_hotel_card_left">
+                        <Slider {...settings} className="hotel_desc_img">
+                            <div className="img" >
+                                <img src={d.img1} alt="" />
+                            </div>
+                            <div className="img" >
+                                <img src={d.img2} alt="" />
+                            </div>
+                            <div className="img" >
+                                <img src={d.img3} alt="" />
+                            </div>
+                        </Slider>
                     </div>
-                    <div className="img" >
-                        <img src={d.img2} alt="" />
+                    <div className="new_hotel_card_right">
+                        <div className="logo">
+                            <img src={`images/${d.logo}`} alt="" />
+                        </div>
+                        <h3 className="name">Hotel Name Should Be {d.h_name}</h3>
+                        <p className="info"> {d.hotelname} - {d.info} </p>
                     </div>
-                    <div className="img" >
-                        <img src={d.img3} alt="" />
-                    </div>
-                </Slider>
-            </div>
-            <div className="new_hotel_card_right">
-                <div className="logo">
-                    <img src={`images/${d.logo}`} alt="" />
                 </div>
-                <h3 className="name">Hotel Name Should Be {d.h_name}</h3>
-                <p className="info"> {d.h_name} - {d.info} </p>
+                {/* actions btn */}
+                <div className="actions_btn_div">
+                    <div className="actions_btn" onClick={() => setShowForm(true)}>
+                        <span>Enquire</span>
+                    </div>
+                    <div className="actions_btn"
+                        onClick={() => {
+                            SetShowShare(true)
+                        }}>
+                        <span>share</span>
+                    </div>
+                    <div className="actions_btn" onClick={download}>
+                        <span>download</span>
+                    </div>
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 
