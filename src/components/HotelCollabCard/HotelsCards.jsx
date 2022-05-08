@@ -4,8 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import jsPDF from 'jspdf'
-import Enquiry from '../../components/Enquiry/Enquiry';
 import ShareModal from '../ShareComponent/ShareModal';
+import { useNavigate } from 'react-router-dom'
 import {
     LeftOutlined,
     RightOutlined,
@@ -48,12 +48,13 @@ const HotelsCards = ({ d }) => {
     const mediaMatch = window.matchMedia('(max-width: 480px)');
     const [matches, setMatches] = useState(mediaMatch.matches);
 
-    const [showForm, setShowForm] = useState(false);
+    const navigate = useNavigate();
+    // const [showForm, setShowForm] = useState(false);
     const [showShare, SetShowShare] = useState(false);
     const [activeSlide, setActiveSlide] = useState(0)
 
     useEffect(() => {
-        Aos.init({ duration: 2000 });
+        Aos.init({ duration: 1000});
         const handler = e => setMatches(e.matches);
         mediaMatch.addListener(handler);
         return () => mediaMatch.removeListener(handler);
@@ -82,17 +83,17 @@ const HotelsCards = ({ d }) => {
         doc.setFontSize(12);
         doc.addFont('helvetica', 'normal')
         switch (activeSlide) {
-          case 0:
-            doc.addImage(d.img1, 'JPEG', 20, 50, 170, 110)
-            break;
-          case 1:
-            doc.addImage(d.img2, 'JPEG', 20, 50, 170, 110)
-            break;
-          case 2:
-            doc.addImage(d.img3, 'JPEG', 20, 50, 170, 110)
-            break;
-          default:
-            doc.addImage(d.img1, 'JPEG', 20, 50, 170, 110)
+            case 0:
+                doc.addImage(d.img1, 'JPEG', 20, 50, 170, 110)
+                break;
+            case 1:
+                doc.addImage(d.img2, 'JPEG', 20, 50, 170, 110)
+                break;
+            case 2:
+                doc.addImage(d.img3, 'JPEG', 20, 50, 170, 110)
+                break;
+            default:
+                doc.addImage(d.img1, 'JPEG', 20, 50, 170, 110)
         }
 
         doc.save("luxury_living.pdf")
@@ -101,11 +102,11 @@ const HotelsCards = ({ d }) => {
 
     return (
         <>
+            {/* {
+                showForm && <Enquiry setShowForm={setShowForm} hotel={d.hotelname} />
+            } */}
             {
-                showForm && <Enquiry setShowForm={setShowForm} hotel={d.hotelname}/>
-            }
-            {
-                showShare && <ShareModal SetShowShare={SetShowShare} hotel={d}/>
+                showShare && <ShareModal SetShowShare={SetShowShare} hotel={d} />
             }
             <div className='new_hotel_card'
                 data-aos={`fade-${d.aos}`}
@@ -132,13 +133,13 @@ const HotelsCards = ({ d }) => {
                         <div className="logo">
                             <img src={`images/${d.logo}`} alt="" />
                         </div>
-                        <h3 className="name">Hotel Name Should Be {d.h_name}</h3>
+                        <h3 className="name">Hotel Name Should Be {d.hotelname}</h3>
                         <p className="info"> {d.hotelname} - {d.info} </p>
                     </div>
                 </div>
                 {/* actions btn */}
                 <div className="actions_btn_div">
-                    <div className="actions_btn" onClick={() => setShowForm(true)}>
+                    <div className="actions_btn" onClick={() => navigate(`/enquire/${d.id}`)}>
                         <span>Enquire</span>
                     </div>
                     <div className="actions_btn"

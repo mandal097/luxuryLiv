@@ -19,16 +19,16 @@ const Explore = () => {
 
     return (
         <div className="explore" id='explore'>
-            <div className='explore_wrapper'>
-                <video src='./videos/LL_INTRO.mp4' muted autoPlay controls></video>
-            </div>
             <div className='our_portfolio'>
-                <h3 onClick={goToPortfolio} className='desk'>PORTFOLIO
-                    {/* <LinkOutlined /> */}
-                </h3>
                 <div>
                     <h3 onClick={goToPortfolio} className='mob' > VIEW PORTFOLIO </h3>
                 </div>
+                <h3 onClick={goToPortfolio} className='desk'>PORTFOLIO
+                    {/* <LinkOutlined /> */}
+                </h3>
+            </div>
+            <div className='explore_wrapper'>
+                <video src='./videos/LL_INTRO.mp4' muted autoPlay controls></video>
             </div>
         </div>
     )

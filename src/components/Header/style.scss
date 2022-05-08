@@ -100,16 +100,18 @@
     left: 0;
     .header_wrapper {
       height: 100%;
-      width: 95%;
+      width: 100%;
       flex-direction: row;
       .ham_div {
-        height: 4rem;
+        height: 8rem;
+        width: 8rem;
       }
       .navs_right {
-        width: 25%;
+        width: 30%;
         height: 100%;
         flex-direction: row;
         justify-content: space-between;
+        margin-right: 2rem;
         .navs {
           .img {
             img {

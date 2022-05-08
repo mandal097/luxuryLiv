@@ -56,7 +56,7 @@ const Testimonials = () => {
       setTestimonies(testimonialsdata)
     }
     getValues()
-  })
+  }, [testimonies])
   const [index, setIndex] = useState(0)
 
   let settings = {
@@ -89,21 +89,20 @@ const Testimonials = () => {
   }
   return (
     <div className='testimonial'>
+      <div className="side_text">
+        <h3>testimonials</h3>
+      </div>
       <Slider {...settings} className='slider'>
         {
-          testimonies.map((t, idx) => (
-            <div key={t.id} className={idx === index ? 'slides activeSlides' : "slides"}  >
-              <Testimaonialscard testimony={t}
+          testimonies.map((testimony, idx) => (
+            <div key={testimony.id} className={idx === index ? 'slides activeSlides' : "slides"} >
+              <Testimaonialscard testimony={testimony} item='true'
                 border={idx === index ? '1' : '0'}
-              //  color={idx === index ? 'var(--border-golden)' : 'white'} 
               />
             </div>
           ))
         }
       </Slider>
-      <div className="side_text">
-        <h3>testimonials</h3>
-      </div>
     </div>
   )
 }

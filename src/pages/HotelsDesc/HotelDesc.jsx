@@ -11,13 +11,13 @@ import {
   RightOutlined,
   ArrowLeftOutlined
 } from '@ant-design/icons'
-import Enquiry from '../../components/Enquiry/Enquiry';
+// import Enquiry from '../../components/Enquiry/Enquiry';
 import ShareModal from '../../components/ShareComponent/ShareModal';
 const HotelDesc = () => {
   // hooks ------------------------------------
   const navigate = useNavigate();
   const location = useLocation();
-  const [showForm, setShowForm] = useState(false);
+  // const [showForm, setShowForm] = useState(false);
   const [showShare, SetShowShare] = useState(false);
   const [autoPlay, setAutoPlay] = useState(true)
 
@@ -39,7 +39,7 @@ const HotelDesc = () => {
     setTimeout(() => {
       setAutoPlay(false)
     }, 9000);
-  })
+  }, [hotel, autoPlay])
 
   // function for duynamic arrow or hiding the arrows of slick , looking for better way to hide buttons
   function SampleNextArrow(props) {
@@ -132,9 +132,9 @@ const HotelDesc = () => {
       {/* back bautton */}
       <div className="back_btn" onClick={back}><ArrowLeftOutlined className='back_icon' /></div>
       {/* showing Enquiruy form */}
-      {
+      {/* {
         showForm && <Enquiry setShowForm={setShowForm} hotel={hotel.hotelname} />
-      }
+      } */}
       {
         showShare && <ShareModal SetShowShare={SetShowShare} hotel={hotel} />
       }
@@ -167,7 +167,25 @@ const HotelDesc = () => {
               <h2>{hotel.hotelname}</h2>
             </div>
             <div className="about_hotel">
-              <p>{hotel.about}</p>
+              {/* <p>{hotel.point1}</p> */}
+              <ul>
+                <li>
+                  <div className="bullet_points"></div>
+                  Style :<div className="content"> {hotel.style}</div>
+                </li>
+                <li>
+                  <div className="bullet_points"></div>
+                  Location :<div className="content"> {hotel.location}</div>
+                </li>
+                <li>
+                  <div className="bullet_points"></div>
+                  Best Part :<div className="content">{hotel.best_part}</div>
+                </li>
+                <li>
+                  <div className="bullet_points"></div>
+                  Accomdation :<div className="content"> {hotel.accomodation}</div>
+                </li>
+              </ul>
             </div>
             <Slider {...settings} className="hotels_desc_sliders">
               <p>{hotel.carouseltxt1}</p>
@@ -177,7 +195,7 @@ const HotelDesc = () => {
         </div>
         {/* actions btn */}
         <div className="actions_btn_div">
-          <div className="actions_btn" onClick={() => setShowForm(true)}>
+          <div className="actions_btn" onClick={() =>navigate(`/enquire/${hotel.id}`)}>
             <span>Enquire</span>
           </div>
           <div className="actions_btn"

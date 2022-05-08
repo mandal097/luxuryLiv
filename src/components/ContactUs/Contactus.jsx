@@ -7,7 +7,7 @@ const Contactus = () => {
         <Container>
             <Wrapper>
                 <Left>
-                    <H3>COME...VISIT US SOMETIMES!  </H3>
+                    <H3>COME...VISIT US SOMETIME!  </H3>
                     <Img src='./images/gmap.png' />
                     <Span>LX MARKETING PVT. LTD.</Span>
                     <P>K No. - 846/2, first floor, <br /> Opposite Metro pillar No. -115 <br />Ghitorni, New Delhi , India</P>
@@ -17,14 +17,14 @@ const Contactus = () => {
                     <H3>IN A HURRY TO CONTACT?</H3>
                     <Img src='./images/cphone.png' />
                     <div>
-                        <Span>+91 971983158</Span>
+                        <Span>+91 9711983158</Span>
                         <Span>+91 9899699991</Span>
                     </div>
-                    <Email>gaurav.v@luxuryliving.in <br /> shilesh.v@luxuryliving.in</Email>
+                    <Email>gaurav.s@luxuryliving.in <br /> a@luxuryliving.in</Email>
                 </Right>
                 <Vertical />
             </Wrapper>
-                    <SocialMob />
+            <SocialMob />
         </Container>
     )
 }

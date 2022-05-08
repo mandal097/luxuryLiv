@@ -1,13 +1,15 @@
 import React from 'react'
 import './style.scss'
 const Testimaonialscard = ({ testimony, border }) => {
+
     return (
         <div className="testimaonials_card" data-aos={testimony.ao} style={{
             border: `${border}px solid var(--border-golden)`
-            // border: `1px solid ${color}`
         }}>
-            <div className="testimonials_card_para_div">
-                <p>{testimony.feedbacktxt}</p>
+            <div className={`testimonials_card_para_div`}>
+                {
+                    testimony.feedbacktxt.split('\n').map(str => <p className={`${testimony.class}`}>{str}</p>)
+                }
             </div>
             <div className="info">
                 <h3 className="name">{testimony.name}</h3>

@@ -103,7 +103,7 @@ const Feedback = () => {
         <Container>
             <Header />
             <Wrapper>
-                <ToastContainer style={{ fontSize: '2rem'  }} />
+                <Toaster style={{ fontSize: '2rem'}} />
                 <Form onSubmit={submit} encType='multipart/form-data' method='post'>
                     <FormTopText>
                         {/* <TextDivLeft>
@@ -175,6 +175,12 @@ const Feedback = () => {
     )
 }
 
+const Toaster = styled(ToastContainer)`
+    @media(max-width:500px){
+        top:10rem;
+    }
+`
+
 const Container = styled.div`
  height:100vh;
 width:100%;
@@ -202,6 +208,9 @@ align-items:center;
 justify-content:center;
 z-index:1;
 margin-top:5rem;
+/* .toast{
+    top:10rem;
+} */
 @media(max-width:900px){    
     height:auto;
     margin-top:9rem;
@@ -215,9 +224,11 @@ height:100%;
 background-color:black;
 color:white;
 padding:1rem;
+/* border:1px solid red; */
 @media(max-width:900px){    
    height:auto;
    width:95%;
+   margin-top:6rem;
 }
 `
 const FormTop = styled.div`

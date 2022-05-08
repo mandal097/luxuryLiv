@@ -16,31 +16,15 @@ import Value from '../../components/ValuesComp/Value'
 
 const Home = () => {
     const [values, setValues] = useState([])
-    // const [load, setLoad] = useState(false)
-    // const [count, setCount] = useState(3)
-    // const [showMoreBtn, setShowMoreBtn] = useState(true)
-    // const handleCount = () => {
-
-    //     setLoad(true)
-    //     setTimeout(() => {
-    //         count >= 3 && setCount(count + 3);
-    //         setLoad(false)
-    //     }, 1200);
-    // }
-
 
 
     useEffect(() => {
         const getValues = () => {
             setValues(valuesdata)
-            // if (count === values.length) {
-            //     setShowMoreBtn(false)
-            // }
         }
         getValues()
-
         document.title = 'Luxury Living'
-    }, [values])
+    }, [])
     return (
         <div className='home_page'>
             <Header />
@@ -59,21 +43,10 @@ const Home = () => {
                 </div>
                 {/* for second page of the home page  */}
                 <div className="values_page">
-                    {/* {
-                        values.slice(0, count).map((val) => (
-                            <ValuesCard key={val.id} val={val} item='true' />
-                        ))
-                    }
-                    {
-                        showMoreBtn &&
-                        <div className="load_more_button">
-                            <button onClick={handleCount}>{load ? <Spin indicator={antIcon} /> : 'load more'}</button>
-                        </div>
-                    } */}
-                    <Value values={values} />
                     <div className="side_text">
                         <h3>our values</h3>
                     </div>
+                    <Value values={values} />
                 </div>
                 {/* for portfolio page video */}
                 <Explore />

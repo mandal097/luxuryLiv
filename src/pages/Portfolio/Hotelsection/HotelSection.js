@@ -10,7 +10,6 @@ function Port() {
     const [destination, setDestination] = useState('')
     useEffect(() => {
         Aos.init({ duration: 2000 });
-        document.title='Luxury Living - Portofolio'
     });
 
     const ShowModal = () => {
@@ -30,7 +29,7 @@ function Port() {
             <div className="port-container">
                 {
                     isOpen &&
-                    <Dropdown ShowModal={ShowModal} destination={destination} />
+                    <Dropdown ShowModal={ShowModal} destination={destination}  />
                 }
                 <div className="port-card" data-aos="fade-right">
                     <div className="port-imgBx">

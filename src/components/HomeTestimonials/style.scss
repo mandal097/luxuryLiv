@@ -49,7 +49,7 @@
       position: absolute;
       content: "";
       width: 92%;
-      height: 2.5px;
+      height: 1px;
       background-color: white;
       left: 4%;
       bottom: 0.7rem;
@@ -94,7 +94,7 @@
     .side_text {
       position: static;
       transform: rotate(0deg);
-      margin-top: 5rem;
+      // margin-top: 5rem;
       width: 100%;
       h3 {
         font-size: 5rem;
@@ -107,13 +107,17 @@
 @media screen and (max-width: 480px) {
   .testimonial {
     width: 100%;
+    // border: 1px solid red;
+    .slider {
+      width: 95%;
+    }
     div {
       ul li button {
-        display: block;
+        display: inline-block;
       }
     }
-  }
-  .hide {
-    display: none;
+    .side_text{
+      margin: 5rem 0;
+    }
   }
 }

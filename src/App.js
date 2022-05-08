@@ -11,6 +11,7 @@ import AboutUs from './pages/AboutUs/AboutUs'
 import ClientsForm from './pages/ClientsPreferForm/ClientsForm'
 import HotelsCollabs from './pages/HotelCollabs/HotelsCollabs'
 import Offers from './pages/Offers/Offers'
+import Enquiry from './components/Enquiry/Enquiry'
 const App = () => {
   return (
     <div>
@@ -28,6 +29,7 @@ const App = () => {
             <Route path='luxury-living-clients-preference' element={<ClientsForm />} />
             <Route path='luxury-living-portfolio' element={<Portfolio />} />
             <Route path='luxury-living-portfolio/:hotelname/:id' element={<HotelDesc />} />
+            <Route path='enquire/:id' element={<Enquiry />} />
           </Route>
         </Routes>
       </Router>

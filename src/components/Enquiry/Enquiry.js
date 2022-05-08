@@ -3,7 +3,8 @@ import './enquiry.scss'
 import { CloseOutlined } from '@ant-design/icons'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
-const Enquiry = ({ setShowForm, hotel }) => {
+import { useNavigate } from 'react-router-dom'
+const Enquiry = () => {
     const [hotelName, setHotelName] = useState('')
     const [checkInDate, setCheckInDate] = useState('')
     const [nights, setNights] = useState('')
@@ -11,6 +12,12 @@ const Enquiry = ({ setShowForm, hotel }) => {
     const [childCount, setChildCount] = useState('')
     const [childsAge, setChildsAge] = useState('')
     const [enquiry, setEnquiry] = useState('')
+
+    const navigate = useNavigate()
+    // const location = useLocation()
+
+    // const id = location.pathname.split('/')[3]
+    // const hotel = data[id - 1]
 
     const [errorField, setErrorField] = useState({
         hotelNameError: '',
@@ -23,13 +30,9 @@ const Enquiry = ({ setShowForm, hotel }) => {
     })
 
     useEffect(() => {
-        setHotelName(hotel)
-    }, [hotel])
-
-
-    const cancel = () => {
-        setShowForm(false)
-    }
+        document.title = 'Luxury Living - Enquire'
+        // setHotelName(hotel)
+    },[])
 
     const submit = async (e) => {
         e.preventDefault()
@@ -109,7 +112,7 @@ const Enquiry = ({ setShowForm, hotel }) => {
         <div className='enquiry_container'>
             <ToastContainer style={{ fontSize: '1.8rem' }} />
             <div className="enquiry_wrapper">
-                <div className="cancel" onClick={cancel}><CloseOutlined /></div>
+                <div className="cancel" onClick={() => navigate(-1)}><CloseOutlined /></div>
                 <form action="" onSubmit={submit}>
                     <div className="header_enquiry">
                         <p>INPUT DETAILS OF YOUR REQUEST HERE ...AND WE'LL GET RIGHT BACK TO YOU!</p>
@@ -117,7 +120,7 @@ const Enquiry = ({ setShowForm, hotel }) => {
                     <div className="inputs_div">
                         <div className="inputs">
                             <label htmlFor="">Hotel Name :</label>
-                            <input type="text" name="" id="" value={hotelName} onChange={(e) => setHotelName(hotel)} />
+                            <input type="text" name="" id="" onChange={(e) => setHotelName(e.target.value)} />
                         </div>
                         <div className="inputs inputs_">  <label htmlFor="">Check In Date :</label>
                             <input type="date" name="" id="" onChange={(e) => setCheckInDate(e.target.value)} />

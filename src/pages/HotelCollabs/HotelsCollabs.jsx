@@ -15,7 +15,7 @@ const HotelsCollabs = () => {
 
     useEffect(() => {
         document.title = 'Luxury Living - Hotels collabs'
-    })
+    },[])
     return (
         <div className='hotels_collabs'>
             <Header />

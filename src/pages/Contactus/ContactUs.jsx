@@ -13,7 +13,7 @@ const ContactUs = () => {
             <Header />
             <Wrapper>
                 <Left>
-                    <H3>COME...VISIT US SOMETIMES!  </H3>
+                    <H3>COME...VISIT US SOMETIME!  </H3>
                     <Img src='./images/gmap.png' />
                     <Span>LX MARKETING PVT. LTD.</Span>
                     <P>K No. - 846/2, first floor, <br /> Opposite Metro pillar No. -115 <br />Ghitorni, New Delhi , India</P>
@@ -23,10 +23,10 @@ const ContactUs = () => {
                     <H3>IN A HURRY TO CONTACT?</H3>
                     <Img src='./images/cphone.png' />
                     <div>
-                        <Span>+91 971983158</Span>
+                        <Span>+91 9711983158</Span>
                         <Span>+91 9899699991</Span>
                     </div>
-                    <Email>gaurav.v@luxuryliving.in <br /> shilesh.v@luxuryliving.in</Email>
+                    <Email>gaurav.s@luxuryliving.in <br /> a@luxuryliving.in</Email>
                 </Right>
                 <Vertical />
             </Wrapper>
@@ -169,7 +169,7 @@ background-color:var(--border-golden);
     display:none;
 }
 `
-const Line=  styled.div`
+const Line = styled.div`
 width:80%;
 height:1px;
 background-color:goldenrod;

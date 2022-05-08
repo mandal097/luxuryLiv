@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './portfolio.scss'
 import HotelSection from './Hotelsection/HotelSection'
 import Header from '../../components/Header/Header'
 import Social from '../../components/Social/Social'
 
 const Portfolio = () => {
+    useEffect(() => {
+        document.title = 'Luxury Living - Portfolio'
+    }, []);
     return (
         <div className="portfolio" >
             <Header />
