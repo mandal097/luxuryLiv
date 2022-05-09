@@ -5,11 +5,9 @@ import './style.scss'
 import Explore from '../../components/Explore/Explore'
 import Testimonials from '../../components/HomeTestimonials/Testimonials'
 import Social from '../../components/Social/Social'
-import Scroll from '../../components/ScrollToTop/Scroll'
+import Scroll from '../../utils/ScrollToTop/Scroll'
 import Contactus from '../../components/ContactUs/Contactus'
 import { valuesdata } from '../../data/valuesdata'
-// import { Spin } from 'antd';
-// import { LoadingOutlined } from '@ant-design/icons';
 import Value from '../../components/ValuesComp/Value'
 
 // const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;

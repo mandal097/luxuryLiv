@@ -9,7 +9,8 @@ const ValuesCard = ({ val , border }) => {
   return (
     <div className='values_card' data-aos={val.as}  
     style={{
-      border:`${border}px solid var(--border-golden)`
+      border:`${border}px solid goldenrod`
+      // border:`${border}px solid var(--border-golden)`
       // border:`${color}px solid gold`
     }}
     

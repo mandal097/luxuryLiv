@@ -30,18 +30,26 @@
     right: -30.5%;
     transform: rotate(90deg);
     position: absolute;
-    // position: relative;
-    // overflow: hidden;
     &::before {
       position: absolute;
       content: "";
       width: 92%;
-      height:1px;
+      height: 1px;
       background-color: white;
       left: 4%;
       bottom: 0.7rem;
       box-shadow: 1px 2px 10px white;
       animation: blinks 2s ease-in infinite alternate;
+    }
+    .click {
+      position: absolute;
+      top: 40%;
+      left: -6rem;
+      font-size: 1.1rem;
+      text-align: center;
+      transform: rotate(-60deg);
+      letter-spacing: 1.5px;
+      animation: click 2s ease alternate infinite;
     }
     h3 {
       width: 100%;
@@ -63,14 +71,32 @@
   }
 }
 
-@media (max-width: 1100px) {
-  .explore {
-    width: 100%;
+// keyframes
+@keyframes click {
+  0% {
+    transform: translateX(0.6rem) rotate(-90deg);
+  }
+  100% {
+    transform: translateX(0rem) rotate(-90deg);
+  }
+}
+@keyframes click_mob {
+  0% {
+    transform: translateY(-0.6rem) rotate(0deg) scale(0.5);
+    opacity: 0.2;
+  }
+  75% {
+    transform:rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0.5rem) rotate(0deg);
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .explore {
+    width: 100%;
     .our_portfolio {
       right: 0rem;
       transform: rotate(0deg);
@@ -80,31 +106,36 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      &::before {
+        width: 56%;
+        left: 22%;
+        bottom: 0.7rem;
+      }
+      h3 {
+        text-align: center;
+      }
       .desk {
         display: none;
+      }
+      .click{
+        width: 100%;
+        left: 0%;
+        font-size: 1.6rem;
+        transform: rotate(0deg);  
+        animation: click_mob 2s ease-in infinite alternate;
+        .arrow_down{
+          font-size: 3rem;
+        }
       }
       div {
         width: fit-content;
         position: relative;
-        // overflow: hidden;
-        // &::before {
-        //   position: absolute;
-        //   content: "";
-        //   width: 92%;
-        //   height: 2.5px;
-        //   background-color: white;
-        //   left: 4%;
-        //   bottom: 0.7rem;
-        //   box-shadow: 1px 2px 10px white;
-        //   animation: blinks 10s ease-in infinite alternate-reverse;
-        // }
       }
       .mob {
         display: flex;
         font-size: 5rem;
         text-align: center;
         align-self: center;
-        padding-bottom: 0.5rem;
       }
       .icon {
         font-size: 3rem;
@@ -118,20 +149,18 @@
   .explore {
     width: 100%;
     height: 80vh;
-    margin-bottom: 10rem;
-    margin-top: 7rem;
+    margin-top: 14rem;
     .explore_wrapper {
       height: 45vh;
       display: flex;
       align-items: center;
       justify-content: center;
       video {
-        width: 100%;
+        width: 93%;
         object-fit: contain;
       }
     }
-    .mob{
-
+    .mob {
       margin-top: 13rem;
     }
   }

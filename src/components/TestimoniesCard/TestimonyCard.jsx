@@ -4,7 +4,8 @@ const Testimaonialscard = ({ testimony, border }) => {
 
     return (
         <div className="testimaonials_card" data-aos={testimony.ao} style={{
-            border: `${border}px solid var(--border-golden)`
+            border: `${border}px solid goldenrod`
+            // border: `${border}px solid var(--border-golden)`
         }}>
             <div className={`testimonials_card_para_div`}>
                 {

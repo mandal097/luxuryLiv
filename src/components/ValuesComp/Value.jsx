@@ -12,13 +12,7 @@ import {
 function SampleNextArrow(props) {
     const { onClick } = props;
     return (
-        <div className='hide'
-            style={{
-                color: 'goldenrod', fontSize: '3rem', display: 'non', position: 'absolute',
-                top: '100%', right: '40rem',
-                // top: '80%', right: '20rem'
-            }}
-            >
+        <div className='right_cont' >
             <RightOutlined onClick={onClick} />
         </div>
     );
@@ -27,13 +21,7 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
     const { onClick } = props;
     return (
-        <div className='hide'
-            style={{
-                color: 'goldenrod', fontSize: '3rem', display: 'non', position: 'absolute',
-                top: '100%', left: '40rem'
-                // top: '80%', left: '20rem'
-            }}
-        >
+        <div className='left_cont' >
 
             <LeftOutlined onClick={onClick} />
         </div>
@@ -83,7 +71,7 @@ const Value = ({ values }) => {
 
                 {
                     values.map((v, idx) => (
-                        <div key={v.id}   className={idx === index ? 'slides activeSlides' : "slides"}  >
+                        <div key={v.id} className={idx === index ? 'slides activeSlides' : "slides"}  >
                             <ValuesCard val={v} item='true'
                                 border={idx === index ? '1' : '0'}
                             //  color={idx === index ? 'var(--border-golden)' : 'whiet'} 

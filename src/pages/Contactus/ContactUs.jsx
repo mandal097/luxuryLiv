@@ -20,7 +20,7 @@ const ContactUs = () => {
                 </Left>
                 <Line></Line>
                 <Right>
-                    <H3>IN A HURRY TO CONTACT?</H3>
+                    <H3>IN A HURRY TO CONNECT?</H3>
                     <Img src='./images/cphone.png' />
                     <div>
                         <Span>+91 9711983158</Span>

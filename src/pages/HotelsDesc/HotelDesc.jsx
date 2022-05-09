@@ -11,7 +11,6 @@ import {
   RightOutlined,
   ArrowLeftOutlined
 } from '@ant-design/icons'
-// import Enquiry from '../../components/Enquiry/Enquiry';
 import ShareModal from '../../components/ShareComponent/ShareModal';
 const HotelDesc = () => {
   // hooks ------------------------------------
@@ -24,6 +23,7 @@ const HotelDesc = () => {
   // getting id from url of the site-------------------------
   const id = location.pathname.split('/')[3]
   const hotel = data[id - 1]
+  console.log(hotel);
 
   const back = () => {
     navigate(-1)
@@ -98,24 +98,27 @@ const HotelDesc = () => {
     doc.text(20, 10, hotel.hotelname)
     doc.setFontSize(12);
     doc.addFont('helvetica', 'normal')
-    doc.text(20, 20, hotel.about)
-    doc.text(20, 30, hotel.carouseltxt1)
-    doc.text(20, 40, hotel.carouseltxt2)
+    doc.text(20, 20, hotel.style)
+    doc.text(20, 30, hotel.location)
+    doc.text(20, 40, hotel.best_part)
+    doc.text(20, 50, hotel.accomodation)
+    doc.text(20, 60, hotel.carouseltxt1)
+    doc.text(20, 70, hotel.carouseltxt2)
     switch (activeSlide) {
       case 0:
-        doc.addImage(hotel.img1, 'JPEG', 20, 50, 170, 110)
+        doc.addImage(hotel.img1, 'JPEG', 20, 80, 170, 110)
         break;
       case 1:
-        doc.addImage(hotel.img2, 'JPEG', 20, 50, 170, 110)
+        doc.addImage(hotel.img2, 'JPEG', 20, 80, 170, 110)
         break;
       case 2:
-        doc.addImage(hotel.img3, 'JPEG', 20, 50, 170, 110)
+        doc.addImage(hotel.img3, 'JPEG', 20, 80, 170, 110)
         break;
       case 3:
-        doc.addImage(hotel.img4, 'JPEG', 20, 50, 170, 110)
+        doc.addImage(hotel.img4, 'JPEG', 20, 80, 170, 110)
         break;
       case 4:
-        doc.addImage(hotel.img5, 'JPEG', 20, 50, 170, 110)
+        doc.addImage(hotel.img5, 'JPEG', 20, 80, 170, 110)
         break;
       default:
         doc.addImage(hotel.img1, 'JPEG', 20, 50, 170, 110)

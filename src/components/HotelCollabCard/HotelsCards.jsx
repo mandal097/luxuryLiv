@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import jsPDF from 'jspdf'
-import ShareModal from '../ShareComponent/ShareModal';
+import ShareModal from '../../components/ShareComponent/ShareModal';
 import { useNavigate } from 'react-router-dom'
 import {
     LeftOutlined,
@@ -43,7 +43,7 @@ function SamplePrevArrow(props) {
     );
 }
 
-const HotelsCards = ({ d }) => {
+const HotelsCards =({ d }) => {
 
     const mediaMatch = window.matchMedia('(max-width: 480px)');
     const [matches, setMatches] = useState(mediaMatch.matches);

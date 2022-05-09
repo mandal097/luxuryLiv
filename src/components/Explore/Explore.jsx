@@ -21,11 +21,10 @@ const Explore = () => {
         <div className="explore" id='explore'>
             <div className='our_portfolio'>
                 <div>
-                    <h3 onClick={goToPortfolio} className='mob' > VIEW PORTFOLIO </h3>
+                    <h3 onClick={goToPortfolio} className='mob'> PORTFOLIO </h3>
+                    <h6 className='click'>click to view <br /><span className='arrow_down'>&darr;</span></h6>
                 </div>
-                <h3 onClick={goToPortfolio} className='desk'>PORTFOLIO
-                    {/* <LinkOutlined /> */}
-                </h3>
+                <h3 onClick={goToPortfolio} className='desk'>PORTFOLIO </h3>
             </div>
             <div className='explore_wrapper'>
                 <video src='./videos/LL_INTRO.mp4' muted autoPlay controls></video>

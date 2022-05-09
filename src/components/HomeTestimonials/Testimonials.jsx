@@ -21,28 +21,14 @@ function SampleNextArrow(props) {
 
   const { onClick } = props;
   return (
-    <div className='hide'
-      style={{
-        color: 'goldenrod', fontSize: '3rem', display: 'non', position: 'absolute',
-        top: '100%', right: '40rem',
-        // top: '80%', right: '20rem'
-      }}
-    >
-      <RightOutlined onClick={onClick} />
-    </div>
+    <div className='right_cont_'> <div className="right">  <RightOutlined onClick={onClick} /></div></div>
   );
 }
 
 function SamplePrevArrow(props) {
   const { onClick } = props;
   return (
-    <div className='hide'
-      style={{
-        color: 'goldenrod', fontSize: '3rem', display: 'non', position: 'absolute',
-        top: '100%', left: '40rem'
-        // top: '80%', left: '20rem'
-      }}
-    >  <LeftOutlined onClick={onClick} /></div>
+    <div className='left_cont_'><div className="left">  <LeftOutlined onClick={onClick} /></div></div>
 
   );
 }
