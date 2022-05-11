@@ -5,7 +5,7 @@ import Ham from '../../components/Hamburger/Ham';
 import { useNavigate } from 'react-router-dom'
 import { GiftOutlined } from '@ant-design/icons'
 
-const Header = () => {
+const Header = ({ display }) => {
   const navigate = useNavigate()
   const toTop = () => {
     window.scroll({
@@ -33,7 +33,9 @@ const Header = () => {
       <div className="header_wrapper">
 
         <div className="ham_div" onClick={showNavbar}> <Ham /></div>
-        <div className="navs_right">
+        <div className="navs_right" style={{
+          display:`${display}`
+        }}>
 
           <div className="navs" onClick={(e) => {
             navigate('/hotel-collabs');
@@ -43,7 +45,7 @@ const Header = () => {
               <img src="images/question1.png" alt="" />
             </div>
 
-            <div className="link"><span   data-text=' New&nbsp;Hotel Collaborations' className="links"> New&nbsp;Hotel&nbsp;Collaborations</span> </div>
+            <div className="link"><span data-text=' New&nbsp;Hotel Collaborations' className="links"> New&nbsp;Hotel&nbsp;Collaborations</span> </div>
           </div>
 
           <div className="navs " onClick={(e) => {

@@ -23,7 +23,6 @@ const HotelDesc = () => {
   // getting id from url of the site-------------------------
   const id = location.pathname.split('/')[3]
   const hotel = data[id - 1]
-  console.log(hotel);
 
   const back = () => {
     navigate(-1)

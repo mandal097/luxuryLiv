@@ -1,25 +1,24 @@
-import React, { useEffect, useState, Suspense } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../../components/Header/Header'
 import './style.scss'
 import Social from '../../components/Social/Social'
 import { newHotels } from '../../data/NewCollabsData'
-import Loading from '../../utils/Loading/Loading';
+// import Loading from '../../utils/Loading/Loading';
+import HotelsCards from '../../components/HotelCollabCard/HotelsCards'
 
-const HotelsCards = React.lazy(() => import('../../components/HotelCollabCard/HotelsCards'))
+// const HotelsCards = React.lazy(() => import('../../components/HotelCollabCard/HotelsCards'))
 
 const HotelsCollabs = () => {
 
     const [data, setData] = useState([])
-    useEffect(() => {
-        setData(newHotels)
-    }, [])
-
 
     useEffect(() => {
         document.title = 'Luxury Living - Hotels collabs'
+        setData(newHotels)
     }, [])
+
     return (
-        <Suspense fallback={<Loading />}>
+        // <Suspense fallback={<Loading />}>
             <div className='hotels_collabs'>
                 <Header />
                 <div className="hotels_collabs_wrapper">
@@ -34,7 +33,7 @@ const HotelsCollabs = () => {
                 </div>
                 <Social />
             </div>
-        </Suspense>
+        // </Suspense>
     )
 }
 
