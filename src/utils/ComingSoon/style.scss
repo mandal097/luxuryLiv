@@ -1,13 +1,12 @@
-.hotel_partners {
+.coming_soon {
     width: 100%;
     height: calc(100vh - 8rem);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 1;
     margin-top: 8rem;
-    h2 {
+    h1 {
       color: white;
       font-size: 8rem;
       font-family: "Shoreline";
@@ -15,7 +14,7 @@
       margin-top: 5rem;
       text-align: center;
       animation: comingsoon 3000ms ease infinite alternate-reverse;
-  }
+    }
     button {
       background-color: transparent;
       width: 20rem;
@@ -29,20 +28,20 @@
       letter-spacing: 3px;
       margin-top: 9rem;
       transition: width 300ms linear;
-      &:hover{
-          width: 21rem;
+      &:hover {
+        width: 21rem;
       }
     }
   }
   
   @keyframes comingsoon {
-      0% {
-          text-shadow: 0 2px 30px  rgb(87, 62, 1) ;
+    0% {
+      text-shadow: 0 2px 30px rgb(87, 62, 1);
     }
   }
   
   @media screen and (max-width: 480px) {
-    .hotel_partners {
+    .coming_soon {
       height: 90vh;
     }
   }

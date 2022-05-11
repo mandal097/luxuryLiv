@@ -110,7 +110,7 @@ justify-content:space-evenly;
 @media(max-width:700px){
     height:85vh;
     animation:navbarMob 500ms;
-    padding-top:4rem;
+    padding-top:2rem;
 }
 .hide{
     display:none;
@@ -139,14 +139,17 @@ font-weight:bolder;
 text-transform:uppercase;
 line-height:1;
 transition:all 200ms;
-margin-left:14rem;
+/* margin-left:14rem; */
+margin:0 auto;
+width:80%;
 cursor:pointer;
 &:hover{
     transform:perspective(90px)  rotateX(-5deg);
 }
 @media (max-width:700px){
+    width:70%;
     font-size:3.2rem;
-    margin-left:5rem;
+    line-height:3rem;
 }
 @media (max-width:600px){
     font-size:2.7rem;
