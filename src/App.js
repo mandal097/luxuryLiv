@@ -18,7 +18,7 @@ const App = () => {
     <div>
       <Router>
         <Routes>
-          <Route path='/'>
+          <Route path='/*'>
             <Route index element={<Home />} />
             <Route path='feedback' element={<Feedback />} />
             <Route path='contactus' element={<ContactUs />} />

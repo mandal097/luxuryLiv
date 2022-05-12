@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import Header from '../../components/Header/Header'
 import './style.scss'
 import Social from '../../components/Social/Social'
-import { newHotels } from '../../data/NewCollabsData'
-// import Loading from '../../utils/Loading/Loading';
-import HotelsCards from '../../components/HotelCollabCard/HotelsCards'
+import { newHotels } from '../../data/newCollabsData'
+import Loading from '../../utils/Loading/Loading';
+// import HotelsCards from '../../components/HotelCollabCard/HotelsCards'
 
-// const HotelsCards = React.lazy(() => import('../../components/HotelCollabCard/HotelsCards'))
+const HotelsCards = React.lazy(() => import('../../components/HotelCollabCard/HotelsCards'))
 
 const HotelsCollabs = () => {
 
@@ -18,7 +18,7 @@ const HotelsCollabs = () => {
     }, [])
 
     return (
-        // <Suspense fallback={<Loading />}>
+        <Suspense fallback={<Loading />}>
             <div className='hotels_collabs'>
                 <Header />
                 <div className="hotels_collabs_wrapper">
@@ -33,7 +33,7 @@ const HotelsCollabs = () => {
                 </div>
                 <Social />
             </div>
-        // </Suspense>
+        </Suspense>
     )
 }
 

@@ -43,22 +43,21 @@ function SamplePrevArrow(props) {
     );
 }
 
-const HotelsCards =({ d }) => {
+const HotelsCards = ({ d }) => {
 
     const mediaMatch = window.matchMedia('(max-width: 480px)');
     const [matches, setMatches] = useState(mediaMatch.matches);
 
     const navigate = useNavigate();
-    // const [showForm, setShowForm] = useState(false);
     const [showShare, SetShowShare] = useState(false);
     const [activeSlide, setActiveSlide] = useState(0)
 
     useEffect(() => {
-        Aos.init({ duration: 1000});
+        Aos.init({ duration: 1000 });
         const handler = e => setMatches(e.matches);
         mediaMatch.addListener(handler);
         return () => mediaMatch.removeListener(handler);
-    });
+    }, [mediaMatch]);
 
     let settings = {
         dots: true,

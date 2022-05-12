@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.scss'
-const Testimaonialscard = ({ testimony, border }) => {
 
+const Testimaonialscard = ({ testimony, border }) => {
     return (
         <div className="testimaonials_card" data-aos={testimony.ao} style={{
             border: `${border}px solid goldenrod`

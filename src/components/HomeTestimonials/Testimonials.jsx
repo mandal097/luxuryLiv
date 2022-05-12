@@ -42,7 +42,7 @@ const Testimonials = () => {
       setTestimonies(testimonialsdata)
     }
     getValues()
-  }, [testimonies])
+  }, [])
   const [index, setIndex] = useState(0)
 
   let settings = {
