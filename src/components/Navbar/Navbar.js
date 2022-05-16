@@ -67,23 +67,6 @@ const Navbar = () => {
                     toTop()
                 }}
             ><span className='span'>About Us</span> </Nav>
-
-            {/* <Nav
-                onClick={() => {
-                    navigate('/hotel-collabs')
-                    toTop()
-                }}
-            ><span className='span hide'>New Hotel Collaborations
-                </span> </Nav>
-
-            <Nav
-                onClick={() => {
-                    navigate('/offers')
-                    toTop()
-                }}
-            ><span className='span hide'>Irresistible Offers
-                </span> </Nav> */}
-
         </Container>
     )
 }

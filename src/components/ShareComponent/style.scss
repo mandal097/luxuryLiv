@@ -13,7 +13,7 @@
   z-index: 10;
   animation: fade 1000ms ease forwards 1;
   .share_modal_wrapper {
-    width: 40rem;
+    width: 35rem;
     height: auto;
     background-color: white;
     border-radius: 1rem;
@@ -21,7 +21,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     overflow: hidden;
     .top_header {
       width: 100%;
@@ -43,6 +43,7 @@
       align-items: center;
       justify-content: space-evenly;
       flex-wrap: wrap;
+      margin:0 auto;
       margin-bottom: 1rem;
       .share_platform_ {
         width: 9rem;

@@ -9,6 +9,7 @@
     align-items: center;
     margin-left: auto;
     z-index: 100;
+    cursor: pointer;
 }
 
 .btn span {

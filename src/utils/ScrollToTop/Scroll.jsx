@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { UpOutlined } from '@ant-design/icons'
 const Scroll = () => {
     const [show, setShow] = useState(false)
+    const is_mounted = useRef(true)
+
     const scrollWindow = () => {
         window.scroll({
             top: 0,
@@ -13,16 +15,19 @@ const Scroll = () => {
         window.addEventListener("scroll", () => {
             if (window.scrollY > 400) {
                 setShow(true)
-                // console.log('scrollde');
-            } else {
+            }
+            else {
                 setShow(false)
             }
             return () => {
                 window.removeEventListener("scroll")
             }
         })
+        return () => {
+            is_mounted.current = false;
+        }
 
-    }, [])
+    }, [show])
     return (
         <>
             {

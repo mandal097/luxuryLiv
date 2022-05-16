@@ -17,7 +17,7 @@ import {
 } from 'react-share'
 import { CopyOutlined } from '@ant-design/icons'
 import copy from 'copy-to-clipboard';
-const ShareModal = ({ SetShowShare , hotel}) => {
+const ShareModal = ({ SetShowShare, hotel }) => {
 
     const [url, setUrl] = useState('')
     useEffect(() => {
@@ -34,7 +34,7 @@ const ShareModal = ({ SetShowShare , hotel}) => {
 
     return (
         <div className='share_modal'>
-            <ToastContainer style={{fontSize:'2rem'}}/>
+            <ToastContainer style={{ fontSize: '2rem' }} />
             <div className="share_modal_wrapper">
                 <div className="top_header"> <h3>Share link Via</h3></div>
                 <div className="container">
@@ -104,7 +104,7 @@ const ShareModal = ({ SetShowShare , hotel}) => {
 
 
                     <div className="url_div">
-                        <input type='text' value={url} onChange={()=>setUrl(url)} className="left_input" id='MyBox'>
+                        <input type='text' value={url} onChange={() => setUrl(url)} className="left_input" id='MyBox'>
                         </input>
                         <div className="right">
                             <CopyOutlined className='copy_icon' onClick={copyUrl}

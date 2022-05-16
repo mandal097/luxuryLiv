@@ -14,32 +14,34 @@ const Dropdown = ({ ShowModal, destination }) => {
     }, [destination])
 
     return (
-        <div className='dropdown'>
-            <div className="dropdown_wrapper">
-                <div className="top">
-                    <h3>choose your destination</h3>
-                </div>
-                <div className="hotels_names_div">
-                    {
-                        hotelsName.map((hotels, index) => (
-                            <div div className="hotels_names_selector"
-                                key={hotels.id}
-                                onClick={() => {
-                                    setTimeout(() => {
-                                        navigate(`/luxury-living-portfolio/${hotels.hotelname}/${hotels.id}`)
-                                    }, 100);
-                                }}>
-                                <div className="radio_btn"></div>
-                                <div className="hotels_names_">
-                                    <span>{hotels.hotelname}</span>
+        <>
+            <div className='dropdown'>
+                <div className="dropdown_wrapper">
+                    <div className="top">
+                        <h3>choose your destination</h3>
+                    </div>
+                    <div className="hotels_names_div">
+                        {
+                            hotelsName.map((hotels, index) => (
+                                <div div className="hotels_names_selector"
+                                    key={hotels.id}
+                                    onClick={() => {
+                                        setTimeout(() => {
+                                            navigate(`/luxury-living-portfolio/${hotels.hotelname}/${hotels.id}`)
+                                        }, 100);
+                                    }}>
+                                    <div className="radio_btn"></div>
+                                    <div className="hotels_names_">
+                                        <span>{hotels.hotelname}</span>
+                                    </div>
                                 </div>
-                            </div>
-                        ))
-                    }
+                            ))
+                        }
+                    </div>
+                    <div className="cancel_btn" onClick={ShowModal}><CloseOutlined className='icon' /></div>
                 </div>
-                <div className="cancel_btn" onClick={ShowModal}><CloseOutlined className='icon' /></div>
-            </div>
-        </div >
+            </div >
+        </>
     )
 }
 
