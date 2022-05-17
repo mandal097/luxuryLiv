@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './style.scss'
 import { testimonialsdata } from '../../data/testimonialsdata'
-// import { Spin } from 'antd';
-// import { LoadingOutlined } from '@ant-design/icons';
 import "aos/dist/aos.css";
 import {
   LeftOutlined,
@@ -12,10 +10,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import Testimaonialscard from '../TestimoniesCard/TestimonyCard';
-
-
-// const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
-
 
 function SampleNextArrow(props) {
 

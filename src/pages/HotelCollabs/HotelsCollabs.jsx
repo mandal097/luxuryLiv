@@ -4,7 +4,6 @@ import './style.scss'
 import Social from '../../components/Social/Social'
 import { newHotels } from '../../data/newCollabsData'
 import Loading from '../../utils/Loading/Loading';
-// import HotelsCards from '../../components/HotelCollabCard/HotelsCards'
 
 const HotelsCards = React.lazy(() => import('../../components/HotelCollabCard/HotelsCards'))
 
