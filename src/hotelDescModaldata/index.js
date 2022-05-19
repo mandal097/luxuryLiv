@@ -3,6 +3,7 @@ export const data = [
     {
         id: 1,
         resort: 'aman resorts',
+        destination: 'india',
         hotelname: 'Amanbagh, Rajasthan, India',
         style: 'Style',
         location: 'Location',
@@ -19,6 +20,7 @@ export const data = [
     {
         id: 2,
         resort: 'aman resorts',
+        destination: 'india',
         hotelname: 'Aman-I-Khas, Rajasthan, India',
         style: 'Style',
         location: 'Location',
@@ -35,7 +37,8 @@ export const data = [
     {
         id: 3,
         resort: 'aman resorts',
-        hotelname: 'Amanpuri, Phuket, Thailand',
+        destination: 'thailand',
+        hotelname: 'Amanpuri, Phuket, thailand',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -51,7 +54,8 @@ export const data = [
     {
         id: 4,
         resort: 'aman resorts',
-        hotelname: 'Amangalla, Galla, Sri Lanka',
+        destination: 'sri lanka',
+        hotelname: 'Amangalla, Galla, sri lanka',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -67,7 +71,8 @@ export const data = [
     {
         id: 5,
         resort: 'aman resorts',
-        hotelname: 'Amanwella, Tangalle, Sri Lanka',
+        destination: 'sri lanka',
+        hotelname: 'Amanwella, Tangalle, sri lanka',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -83,6 +88,7 @@ export const data = [
     {
         id: 6,
         resort: 'aman resorts',
+        destination: 'Kingdom Of Bhutan',
         hotelname: 'Amankora, Kingdom Of Bhutan',
         style: 'Style',
         location: 'Location',
@@ -99,6 +105,7 @@ export const data = [
     {
         id: 7,
         resort: 'aman resorts',
+        destination: 'france',
         hotelname: 'Aman Le Melezin, Courchevel',
         style: 'Style',
         location: 'Location',
@@ -115,6 +122,7 @@ export const data = [
     {
         id: 8,
         resort: 'aman resorts',
+        destination: 'Italy',
         hotelname: 'Aman Venice, Italy',
         style: 'Style',
         location: 'Location',
@@ -131,6 +139,7 @@ export const data = [
     {
         id: 9,
         resort: 'aman resorts',
+        destination: 'Turkey',
         hotelname: 'Amanruya, Bodrum, Turkey',
         style: 'Style',
         location: 'Location',
@@ -147,6 +156,7 @@ export const data = [
     {
         id: 10,
         resort: 'aman resorts',
+        destination: 'Philippines',
         hotelname: 'Amanpulo, Pamalican Island, Philippines',
         style: 'Style',
         location: 'Location',
@@ -163,6 +173,7 @@ export const data = [
     {
         id: 11,
         resort: 'aman resorts',
+        destination: 'USA',
         hotelname: 'Amangiri, Utah, USA',
         style: 'Style',
         location: 'Location',
@@ -179,6 +190,7 @@ export const data = [
     {
         id: 12,
         resort: 'aman resorts',
+        destination: 'USA',
         hotelname: 'Amangani, Wyoming, USA',
         style: 'Style',
         location: 'Location',
@@ -195,7 +207,8 @@ export const data = [
     {
         id: 13,
         resort: 'aman resorts',
-        hotelname: 'Amandari, Bali, Indonesia',
+        destination: 'indonesia',
+        hotelname: 'Amandari, Bali, indonesia',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -211,7 +224,8 @@ export const data = [
     {
         id: 14,
         resort: 'aman resorts',
-        hotelname: 'Amankila, Bali, Indonesia',
+        destination: 'indonesia',
+        hotelname: 'Amankila, Bali, indonesia',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -227,7 +241,8 @@ export const data = [
     {
         id: 15,
         resort: 'aman resorts',
-        hotelname: 'Amanjiwo, Central Java, Indonesia',
+        destination: 'indonesia',
+        hotelname: 'Amanjiwo, Central Java, indonesia',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -243,7 +258,8 @@ export const data = [
     {
         id: 16,
         resort: 'aman resorts',
-        hotelname: 'Amandari, Bali, Indonesia',
+        destination: 'indonesia',
+        hotelname: 'Amandari, Bali, indonesia',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -259,7 +275,8 @@ export const data = [
     {
         id: 17,
         resort: 'aman resorts',
-        hotelname: 'Amanwana, Moyo Island, Indonesia',
+        destination: 'indonesia',
+        hotelname: 'Amanwana, Moyo Island, indonesia',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -275,7 +292,8 @@ export const data = [
     {
         id: 18,
         resort: 'aman resorts',
-        hotelname: 'Aman Villas At Nusa Dua, Indonesia',
+        destination: 'indonesia',
+        hotelname: 'Aman Villas At Nusa Dua, indonesia',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -291,7 +309,8 @@ export const data = [
     {
         id: 19,
         resort: 'aman resorts',
-        hotelname: 'Amandira, Indonesia',
+        destination: 'indonesia',
+        hotelname: 'Amandira, indonesia',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -307,6 +326,7 @@ export const data = [
     {
         id: 20,
         resort: 'aman resorts',
+        destination: 'Cambodia',
         hotelname: 'Amansara, Siem Reap, Cambodia',
         style: 'Style',
         location: 'Location',
@@ -323,7 +343,8 @@ export const data = [
     {
         id: 21,
         resort: 'aman resorts',
-        hotelname: 'Amantaka, Luang Prabang, Lao PDR',
+        destination: 'Laos',
+        hotelname: 'Amantaka, Luang Prabang, Laos',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -339,6 +360,7 @@ export const data = [
     {
         id: 22,
         resort: 'aman resorts',
+        destination: 'Vietnam',
         hotelname: 'Amanoi, Vinh Hy, Vietnam',
         style: 'Style',
         location: 'Location',
@@ -355,6 +377,7 @@ export const data = [
     {
         id: 23,
         resort: 'aman resorts',
+        destination: 'Turks & Caicos',
         hotelname: 'Amanyara, Providenciales, Turks & Caicos',
         style: 'Style',
         location: 'Location',
@@ -371,6 +394,7 @@ export const data = [
     {
         id: 24,
         resort: 'aman resorts',
+        destination: 'Japan',
         hotelname: 'Aman Kyoto, Japan',
         style: 'Style',
         location: 'Location',
@@ -387,6 +411,7 @@ export const data = [
     {
         id: 25,
         resort: 'aman resorts',
+        destination: 'Japan',
         hotelname: 'Amanemu, Japan',
         style: 'Style',
         location: 'Location',
@@ -403,6 +428,7 @@ export const data = [
     {
         id: 26,
         resort: 'aman resorts',
+        destination: 'Marocco',
         hotelname: 'Amanjena, Marrakech, Marocco',
         style: 'Style',
         location: 'Location',
@@ -419,6 +445,7 @@ export const data = [
     {
         id: 27,
         resort: 'aman resorts',
+        destination: 'Greece',
         hotelname: 'Amanzoe, Porto Heli, Greece',
         style: 'Style',
         location: 'Location',
@@ -435,6 +462,7 @@ export const data = [
     {
         id: 28,
         resort: 'aman resorts',
+        destination: 'Dominican Republic',
         hotelname: 'Amanera, Dominican Republic',
         style: 'Style',
         location: 'Location',
@@ -451,6 +479,7 @@ export const data = [
     {
         id: 29,
         resort: 'aman resorts',
+        destination: 'China',
         hotelname: 'Aman Summer Palace, Beijing, China',
         style: 'Style',
         location: 'Location',
@@ -467,6 +496,7 @@ export const data = [
     {
         id: 30,
         resort: 'aman resorts',
+        destination: 'China',
         hotelname: 'Amanfayun, Hangzhou, China',
         style: 'Style',
         location: 'Location',
@@ -483,6 +513,7 @@ export const data = [
     {
         id: 31,
         resort: 'aman resorts',
+        destination: 'China',
         hotelname: 'Amandayan, Lijiang, China',
         style: 'Style',
         location: 'Location',
@@ -499,6 +530,7 @@ export const data = [
     {
         id: 32,
         resort: 'aman resorts',
+        destination: 'China',
         hotelname: 'Amanyangyun, Shanghai, China',
         style: 'Style',
         location: 'Location',
@@ -519,6 +551,7 @@ export const data = [
     {
         id: 33,
         resort: 'soneva resorts',
+        destination: 'Maldives',
         hotelname: 'Soneva Fushi, Maldives',
         style: 'Style',
         location: 'Location',
@@ -535,6 +568,7 @@ export const data = [
     {
         id: 34,
         resort: 'soneva resorts',
+        destination: 'Maldives',
         hotelname: 'Soneva Jani, Maldives',
         style: 'Style',
         location: 'Location',
@@ -551,6 +585,7 @@ export const data = [
     {
         id: 35,
         resort: 'soneva resorts',
+        destination: 'Maldives',
         hotelname: 'Soneva In Aqua, Maldives',
         style: 'Style',
         location: 'Location',
@@ -567,7 +602,8 @@ export const data = [
     {
         id: 36,
         resort: 'soneva resorts',
-        hotelname: 'Soneva Kiri, Thailand',
+        destination: 'thailand',
+        hotelname: 'Soneva Kiri, thailand',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -587,6 +623,7 @@ export const data = [
     {
         id: 37,
         resort: 'cheval blanc',
+        destination: 'Maldives',
         hotelname: 'Cheval Blanc Randheli, Maldives',
         style: 'Style',
         location: 'Location',
@@ -603,7 +640,8 @@ export const data = [
     {
         id: 38,
         resort: 'cheval blanc',
-        hotelname: 'Cheval Blanc, Courchevel',
+        destination: 'france',
+        hotelname: 'Cheval Blanc, Courchevel ,france',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -619,6 +657,7 @@ export const data = [
     {
         id: 39,
         resort: 'cheval blanc',
+        destination: 'Paris',
         hotelname: 'Cheval Blanc, Paris',
         style: 'Style',
         location: 'Location',
@@ -639,6 +678,7 @@ export const data = [
     {
         id: 40,
         resort: 'Ritz Carlton Resorts',
+        destination: 'Maldives',
         hotelname: 'Ritz Carlton, Maldives',
         style: 'Style',
         location: 'Location',
@@ -655,7 +695,8 @@ export const data = [
     {
         id: 41,
         resort: 'Ritz Carlton Resorts',
-        hotelname: 'Ritz Carlton Phulay Bay, Krabi',
+        destination: 'thailand',
+        hotelname: 'Ritz Carlton Phulay Bay, Krabi , thailand',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -671,7 +712,8 @@ export const data = [
     {
         id: 42,
         resort: 'Ritz Carlton Resorts',
-        hotelname: 'Ritz Carlton Mandapa, Bali',
+        destination: 'indonesia',
+        hotelname: 'Ritz Carlton Mandapa, Bali , indonesia',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -690,6 +732,7 @@ export const data = [
     {
         id: 43,
         resort: 'Badrutts Palace',
+        destination: 'Switzerland',
         hotelname: 'St. Moritz, Switzerland',
         style: 'Style',
         location: 'Location',
@@ -708,6 +751,7 @@ export const data = [
     {
         id: 44,
         resort: 'Six Senses Resorts',
+        destination: 'india',
         hotelname: 'Six Senses Fort Barwara, Rajasthan, India',
         style: 'Style',
         location: 'Location',
@@ -724,6 +768,7 @@ export const data = [
     {
         id: 45,
         resort: 'Six Senses Resorts',
+        destination: 'Oman',
         hotelname: 'Six Senses Zighy Bay, Oman',
         style: 'Style',
         location: 'Location',
@@ -740,6 +785,7 @@ export const data = [
     {
         id: 46,
         resort: 'Six Senses Resorts',
+        destination: 'Maldives',
         hotelname: 'Six Senses Laamu, Maldives',
         style: 'Style',
         location: 'Location',
@@ -756,7 +802,8 @@ export const data = [
     {
         id: 47,
         resort: 'Six Senses Resorts',
-        hotelname: 'Six Senses, Koh Samui',
+        destination: 'thailand',
+        hotelname: 'Six Senses, Koh Samui , thailand',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -772,7 +819,8 @@ export const data = [
     {
         id: 48,
         resort: 'Six Senses Resorts',
-        hotelname: 'Six Senses Yao Noi, Phuket',
+        destination: 'thailand',
+        hotelname: 'Six Senses Yao Noi, Phuket ,thailand',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -788,6 +836,7 @@ export const data = [
     {
         id: 49,
         resort: 'Six Senses Resorts',
+        destination: 'Bhutan',
         hotelname: 'Six Senses, Bhutan',
         style: 'Style',
         location: 'Location',
@@ -804,6 +853,7 @@ export const data = [
     {
         id: 50,
         resort: 'Six Senses Resorts',
+        destination: 'france',
         hotelname: 'Six Senses Residences, Courchevel',
         style: 'Style',
         location: 'Location',
@@ -820,6 +870,7 @@ export const data = [
     {
         id: 51,
         resort: 'Six Senses Resorts',
+        destination: 'Cambodia',
         hotelname: 'Six Senses Krabey Island, Cambodia',
         style: 'Style',
         location: 'Location',
@@ -836,6 +887,7 @@ export const data = [
     {
         id: 52,
         resort: 'Six Senses Resorts',
+        destination: 'indonesia',
         hotelname: 'Six Senses Uluwatu, Bali',
         style: 'Style',
         location: 'Location',
@@ -852,6 +904,7 @@ export const data = [
     {
         id: 53,
         resort: 'Six Senses Resorts',
+        destination: 'Vietnam',
         hotelname: 'Six Senses Con Dao, Vietnam',
         style: 'Style',
         location: 'Location',
@@ -868,6 +921,7 @@ export const data = [
     {
         id: 54,
         resort: 'Six Senses Resorts',
+        destination: 'Vietnam',
         hotelname: 'Six Senses Ninh Van Bay, Vietnam',
         style: 'Style',
         location: 'Location',
@@ -884,6 +938,7 @@ export const data = [
     {
         id: 55,
         resort: 'Six Senses Resorts',
+        destination: 'Portugal',
         hotelname: 'Six Senses Douro Valley, Portugal',
         style: 'Style',
         location: 'Location',
@@ -900,6 +955,7 @@ export const data = [
     {
         id: 56,
         resort: 'Six Senses Resorts',
+        destination: 'Seychelles',
         hotelname: 'Six Senses Zil Pasyon, Seychelles',
         style: 'Style',
         location: 'Location',
@@ -919,6 +975,7 @@ export const data = [
     {
         id: 57,
         resort: 'One & Only Hotels & Resorts',
+        destination: 'Maldives',
         hotelname: 'One & Only Reethi Rah, Maldives',
         style: 'Style',
         location: 'Location',
@@ -935,6 +992,7 @@ export const data = [
     {
         id: 58,
         resort: 'One & Only Hotels & Resorts',
+        destination: 'Montenegro',
         hotelname: 'One & Only Portonovi, Montenegro',
         style: 'Style',
         location: 'Location',
@@ -951,6 +1009,7 @@ export const data = [
     {
         id: 59,
         resort: 'One & Only Hotels & Resorts',
+        destination: 'Mauritus',
         hotelname: 'One & Only, Mauritus',
         style: 'Style',
         location: 'Location',
@@ -969,6 +1028,7 @@ export const data = [
     {
         id: 60,
         resort: 'St. Regis',
+        destination: 'Maldives',
         hotelname: 'St. Regis, Maldives',
         style: 'Style',
         location: 'Location',
@@ -985,7 +1045,8 @@ export const data = [
     {
         id: 61,
         resort: 'St. Regis',
-        hotelname: 'St. Regis, Langkawi',
+        destination: 'thailand',
+        hotelname: 'St. Regis, Bankok, thailand',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -1004,7 +1065,8 @@ export const data = [
     {
         id: 62,
         resort: 'Four Seasons Hotels & Resorts',
-        hotelname: 'Four Seasons, Koh Samui',
+        destination: 'thailand',
+        hotelname: 'Four Seasons, Koh Samui ,thailand',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -1020,7 +1082,8 @@ export const data = [
     {
         id: 63,
         resort: 'Four Seasons Hotels & Resorts',
-        hotelname: 'Four Seasons, Bangkok',
+        destination: 'thailand',
+        hotelname: 'Four Seasons, Bangkok , thailand',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -1036,6 +1099,7 @@ export const data = [
     {
         id: 64,
         resort: 'Four Seasons Hotels & Resorts',
+        destination: 'Seychelles',
         hotelname: 'Four Seasons, Seychelles',
         style: 'Style',
         location: 'Location',
@@ -1055,6 +1119,7 @@ export const data = [
     {
         id: 65,
         resort: 'The Nautilus',
+        destination: 'Maldives',
         hotelname: 'Maldives',
         style: 'Style',
         location: 'Location',
@@ -1073,7 +1138,8 @@ export const data = [
     {
         id: 66,
         resort: 'Rosewood Hotels & Resorts',
-        hotelname: 'Rosewood, Phuket',
+        destination: 'thailand',
+        hotelname: 'Rosewood, Phuket , thailand',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -1089,7 +1155,8 @@ export const data = [
     {
         id: 67,
         resort: 'Rosewood Hotels & Resorts',
-        hotelname: 'Rosewood, London',
+        destination: 'UK',
+        hotelname: 'Rosewood, London, UK',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -1105,6 +1172,7 @@ export const data = [
     {
         id: 68,
         resort: 'Rosewood Hotels & Resorts',
+        destination: 'france',
         hotelname: 'Rosewood, Paris',
         style: 'Style',
         location: 'Location',
@@ -1123,6 +1191,7 @@ export const data = [
     {
         id: 69,
         resort: 'Waldorf Astoria',
+        destination: 'Maldives',
         hotelname: 'Waldorf, Maldives',
         style: 'Style',
         location: 'Location',
@@ -1139,6 +1208,7 @@ export const data = [
     {
         id: 70,
         resort: 'Waldorf Astoria',
+        destination: 'thailand',
         hotelname: 'Waldorf, Bangkok',
         style: 'Style',
         location: 'Location',
@@ -1157,6 +1227,7 @@ export const data = [
     {
         id: 71,
         resort: 'Kempinski Hotels & Resorts',
+        destination: 'thailand',
         hotelname: 'Siam Kempinski, Bangkok',
         style: 'Style',
         location: 'Location',
@@ -1173,6 +1244,7 @@ export const data = [
     {
         id: 72,
         resort: 'Kempinski Hotels & Resorts',
+        destination: 'Istanbul',
         hotelname: 'Ciragan Palace Kempinski, Istanbul',
         style: 'Style',
         location: 'Location',
@@ -1189,6 +1261,7 @@ export const data = [
     {
         id: 73,
         resort: 'Kempinski Hotels & Resorts',
+        destination: 'Vienna',
         hotelname: 'Palais Hansen Kempinski, Vienna',
         style: 'Style',
         location: 'Location',
@@ -1205,6 +1278,7 @@ export const data = [
     {
         id: 74,
         resort: 'Kempinski Hotels & Resorts',
+        destination: 'indonesia',
         hotelname: 'The Apurva Kempinski, Nusa Dua, Bali',
         style: 'Style',
         location: 'Location',
@@ -1221,6 +1295,7 @@ export const data = [
     {
         id: 75,
         resort: 'Kempinski Hotels & Resorts',
+        destination: 'Singapore',
         hotelname: 'The Capitol Kempinski, Singapore',
         style: 'Style',
         location: 'Location',
@@ -1240,6 +1315,7 @@ export const data = [
     {
         id: 76,
         resort: 'Banyan Tree Hotels Resorts & Spas',
+        destination: 'thailand',
         hotelname: 'Banyan Tree, Phuket',
         style: 'Style',
         location: 'Location',
@@ -1256,6 +1332,7 @@ export const data = [
     {
         id: 77,
         resort: 'Banyan Tree Hotels Resorts & Spas',
+        destination: 'thailand',
         hotelname: 'Banyan Tree, Koh Samui',
         style: 'Style',
         location: 'Location',
@@ -1275,7 +1352,8 @@ export const data = [
     {
         id: 78,
         resort: 'Resplendent Ceylon',
-        hotelname: 'Wild Coast Yala, Sri Lanka',
+        destination: 'sri lanka',
+        hotelname: 'Wild Coast Yala, sri lanka',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -1292,7 +1370,8 @@ export const data = [
     {
         id: 79,
         resort: 'Resplendent Ceylon',
-        hotelname: 'Cape Weligama, Sri Lanka',
+        destination: 'sri lanka',
+        hotelname: 'Cape Weligama, sri lanka',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -1308,7 +1387,8 @@ export const data = [
     {
         id: 80,
         resort: 'Resplendent Ceylon',
-        hotelname: 'Ceylon Tea Trails, Sri Lanka',
+        destination: 'sri lanka',
+        hotelname: 'Ceylon Tea Trails, sri lanka',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -1327,6 +1407,7 @@ export const data = [
     {
         id: 81,
         resort: 'Anantara Hotels & Resorts',
+        destination: 'Maldives',
         hotelname: 'Anantara Kihavah, Maldives',
         style: 'Style',
         location: 'Location',
@@ -1344,6 +1425,7 @@ export const data = [
     {
         id: 82,
         resort: 'Anantara Hotels & Resorts',
+        destination: 'thailand',
         hotelname: 'Anantara Siam, Bangkok',
         style: 'Style',
         location: 'Location',
@@ -1360,6 +1442,7 @@ export const data = [
     {
         id: 83,
         resort: 'Anantara Hotels & Resorts',
+        destination: 'thailand',
         hotelname: 'Anantara Lawana, Koh Samui',
         style: 'Style',
         location: 'Location',
@@ -1378,6 +1461,7 @@ export const data = [
     {
         id: 84,
         resort: 'Post Card Hotels',
+        destination: 'india',
         hotelname: 'The Postcard Moira, Goa',
         style: 'Style',
         location: 'Location',
@@ -1394,6 +1478,7 @@ export const data = [
     {
         id: 85,
         resort: 'Post Card Hotels',
+        destination: 'india',
         hotelname: 'The Postcard Velha, Goa',
         style: 'Style',
         location: 'Location',
@@ -1410,6 +1495,7 @@ export const data = [
     {
         id: 86,
         resort: 'Post Card Hotels',
+        destination: 'india',
         hotelname: 'The Postcard Cuelim, Goa',
         style: 'Style',
         location: 'Location',
@@ -1426,6 +1512,7 @@ export const data = [
     {
         id: 87,
         resort: 'Post Card Hotels',
+        destination: 'india',
         hotelname: 'The Postcard Hideaway, Netravali, Goa',
         style: 'Style',
         location: 'Location',
@@ -1442,6 +1529,7 @@ export const data = [
     {
         id: 88,
         resort: 'Post Card Hotels',
+        destination: 'india',
         hotelname: 'The Postcard Gir Wildlife Sanctuary',
         style: 'Style',
         location: 'Location',
@@ -1458,6 +1546,7 @@ export const data = [
     {
         id: 89,
         resort: 'Post Card Hotels',
+        destination: 'india',
         hotelname: 'The Postcard Mandalay Hall, Kochi',
         style: 'Style',
         location: 'Location',
@@ -1474,6 +1563,7 @@ export const data = [
     {
         id: 90,
         resort: 'Post Card Hotels',
+        destination: 'Bhutan',
         hotelname: 'The Postcard Dewa, Thimphu, Bhutan',
         style: 'Style',
         location: 'Location',
@@ -1490,7 +1580,8 @@ export const data = [
     {
         id: 91,
         resort: 'Post Card Hotels',
-        hotelname: 'The Postcard Galle, Sri Lanka',
+        destination: 'sri lanka',
+        hotelname: 'The Postcard Galle, sri lanka',
         style: 'Style',
         location: 'Location',
         best_part: 'Best Part',
@@ -1508,6 +1599,7 @@ export const data = [
     {
         id: 92,
         resort: 'Palazzo Versace',
+        destination: 'UAE',
         hotelname: 'Palazzo Versace, Dubai',
         style: 'Style',
         location: 'Location',

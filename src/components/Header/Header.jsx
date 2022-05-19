@@ -34,14 +34,14 @@ const Header = ({ display }) => {
 
         <div className="ham_div" onClick={showNavbar}> <Ham /></div>
         <div className="navs_right" style={{
-          display:`${display}`
+          display: `${display}`
         }}>
 
           <div className="navs" onClick={(e) => {
             navigate('/hotel-collabs');
             toTop()
           }}>
-            <div className="img"  >
+            <div className="img" >
               <img src="images/question1.png" alt="" />
             </div>
 

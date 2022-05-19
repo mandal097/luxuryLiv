@@ -3,6 +3,7 @@
   // position: relative;
   overflow: hidden;
   .portfolio_landing_page {
+    // border: 1px solid red;
     width: 100%;
     height: 100vh;
     // height: calc(100vh - 8rem);
@@ -20,7 +21,6 @@
       justify-content: space-around;
       padding-top: 5rem;
       // border: 1px solid red;
-      // border: 1px solid red;
       .heading {
         font-family: "Shoreline";
         font-size: 9.5rem;
@@ -34,10 +34,72 @@
       }
     }
   }
+  .search_by {
+    width: 930px;
+    margin: 3rem auto;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .filterBy {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      span {
+        font-size: 1.7rem;
+        text-transform: capitalize;
+      }
+    }
+    .buttons {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .btns {
+        width: 40%;
+        height: 100%;
+        background-color: goldenrod;
+        border-radius: 1rem;
+        color: white;
+        font-size: 1.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: none;
+        &:hover {
+          background-color: rgba(218, 165, 32, 0.87);
+        }
+      }
+    }
+  }
   &::-webkit-scrollbar {
     appearance: none;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .portfolio{
+    .search_by{
+      width: 90%;
+      flex-direction: column;
+      height: auto;
+      padding: 0 2rem;
+      .filterBy{
+        width: 100%;
+      }
+      .buttons{
+        width: 100%;
+        height:4rem ;
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+
 
 @media screen and (max-width: 480px) {
   .portfolio {

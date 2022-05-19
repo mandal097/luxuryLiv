@@ -1,16 +1,25 @@
-import React, { useEffect } from 'react'
-import './portfolio.scss'
-import HotelSection from './Hotelsection/HotelSection'
-import Header from '../../components/Header/Header'
-import Social from '../../components/Social/Social'
+import React, { useEffect } from 'react';
+import './portfolio.scss';
+import HotelSection from './Hotelsection/HotelSection';
+import Header from '../../components/Header/Header';
+import Social from '../../components/Social/Social';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom'
+
 
 const Portfolio = () => {
+    const location = useLocation();
+    const navigate = useNavigate()
+
+    const url = location.pathname.split('/')[1]
+    const url2 = location.pathname.split('/')[2]
+
     useEffect(() => {
         document.title = 'Luxury Living - Portfolio'
     }, []);
+
     return (
         <div className="portfolio" >
-            <Header />
+            <Header display='flex' />
             <div className="portfolio_landing_page">
                 <div className="portfolio_landing_page_wrapper">
                     <h1 className="heading">portfolio</h1>
@@ -19,7 +28,28 @@ const Portfolio = () => {
                     </p>
                 </div>
             </div>
-            <HotelSection />
+            <div className="search_by">
+                <div className="filterBy">
+                    <span>Filter your favourite places By :</span>
+                </div>
+                <div className="buttons">
+                    <button
+                        className="btns"
+                        onClick={() => {
+                            navigate('')
+                        }}
+
+                    >Brands</button>
+                    <button className="btns"
+                        onClick={() => {
+                            navigate('destinations')
+                        }
+                        }
+                    >Destinations</button>
+                </div>
+            </div>
+            {url2 ? <Outlet /> : url ? <HotelSection /> : <Outlet />}
+
             <Social />
         </div>
     )

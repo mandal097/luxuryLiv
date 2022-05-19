@@ -3,15 +3,21 @@ import './style.scss'
 import { data } from '../../hotelDescModaldata/index'
 import { useNavigate } from 'react-router-dom'
 import { CloseOutlined } from '@ant-design/icons'
-const Dropdown = ({ ShowModal, destination }) => {
 
-    const [hotelsName, setHotelNames] = useState([])
+const Dropdown = ({ ShowModal, destination, filterByD }) => {
+
+    const [FilteredHotels, setFilteredHotels] = useState([])
     const navigate = useNavigate()
 
     useEffect(() => {
-        const filteredHotels = data.filter(i => i.resort.replace(/[^a-zA-Z ]/g, "").toLowerCase() === destination.replace(/[^a-zA-Z ]/g, "").toLowerCase())
-        setHotelNames(filteredHotels)
-    }, [destination])
+        // filtered hotels by brands
+        const hotelsByBrands = data.filter(i => i.resort.replace(/[^a-zA-Z ]/g, "").toLowerCase() === destination.replace(/[^a-zA-Z ]/g, "").toLowerCase());
+
+        // filtered hotels by destinations
+        const hotelsByDestinations = data.filter(i => i.destination.replace(/[^a-zA-Z ]/g, "").toLowerCase() === destination.replace(/[^a-zA-Z ]/g, "").toLowerCase());
+
+        filterByD ? setFilteredHotels(hotelsByDestinations) : setFilteredHotels(hotelsByBrands)
+    }, [destination, filterByD])
 
     return (
         <>
@@ -22,7 +28,7 @@ const Dropdown = ({ ShowModal, destination }) => {
                     </div>
                     <div className="hotels_names_div">
                         {
-                            hotelsName.map((hotels, index) => (
+                            FilteredHotels.map((hotels, index) => (
                                 <div div className="hotels_names_selector"
                                     key={hotels.id}
                                     onClick={() => {

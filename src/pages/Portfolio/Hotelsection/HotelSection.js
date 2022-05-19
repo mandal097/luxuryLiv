@@ -28,7 +28,7 @@ function Port() {
         <>
             {
                 isOpen &&
-                <Dropdown ShowModal={ShowModal} destination={destination} />
+                <Dropdown ShowModal={ShowModal} destination={destination}  filterByD={false} />
             }
             <div className="port">
                 <div className="port-container">
