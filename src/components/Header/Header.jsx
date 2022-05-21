@@ -33,9 +33,7 @@ const Header = ({ display }) => {
       <div className="header_wrapper">
 
         <div className="ham_div" onClick={showNavbar}> <Ham /></div>
-        <div className="navs_right" style={{
-          display: `${display}`
-        }}>
+        <div className="navs_right">
 
           <div className="navs" onClick={(e) => {
             navigate('/hotel-collabs');

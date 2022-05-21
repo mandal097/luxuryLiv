@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './style.scss'
-import { data } from '../../hotelDescModaldata/index'
+import { data } from '../../hotelDescModaldata/lxhotels'
 import { useNavigate } from 'react-router-dom'
 import { CloseOutlined } from '@ant-design/icons'
 
@@ -38,7 +38,7 @@ const Dropdown = ({ ShowModal, destination, filterByD }) => {
                                     }}>
                                     <div className="radio_btn"></div>
                                     <div className="hotels_names_">
-                                        <span>{hotels.hotelname}</span>
+                                        <span>{hotels.hotelname} , {hotels.destination}</span>
                                     </div>
                                 </div>
                             ))

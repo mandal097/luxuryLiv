@@ -1,8 +1,8 @@
 // git reset HEAD~1 --soft   
 export const data = [
     {
-        id: 1,
-        resort: 'aman resorts',
+        id: '1',
+        resort: 'aman',
         destination: 'india',
         hotelname: 'Amanbagh, Rajasthan, India',
         style: 'Style',
@@ -18,8 +18,8 @@ export const data = [
         carouseltxt2: 'this is Amanbagh, Rajasthan, India  carouseltxt for div 2arouseltxt for div 2arouseltxt for div 2'
     },
     {
-        id: 2,
-        resort: 'aman resorts',
+        id: '2',
+        resort: 'aman',
         destination: 'india',
         hotelname: 'Aman-I-Khas, Rajasthan, India',
         style: 'Style',
@@ -36,7 +36,7 @@ export const data = [
     },
     {
         id: 3,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'thailand',
         hotelname: 'Amanpuri, Phuket, thailand',
         style: 'Style',
@@ -53,7 +53,7 @@ export const data = [
     },
     {
         id: 4,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'sri lanka',
         hotelname: 'Amangalla, Galla, sri lanka',
         style: 'Style',
@@ -70,7 +70,7 @@ export const data = [
     },
     {
         id: 5,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'sri lanka',
         hotelname: 'Amanwella, Tangalle, sri lanka',
         style: 'Style',
@@ -87,7 +87,7 @@ export const data = [
     },
     {
         id: 6,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'Kingdom Of Bhutan',
         hotelname: 'Amankora, Kingdom Of Bhutan',
         style: 'Style',
@@ -104,7 +104,7 @@ export const data = [
     },
     {
         id: 7,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'france',
         hotelname: 'Aman Le Melezin, Courchevel',
         style: 'Style',
@@ -121,7 +121,7 @@ export const data = [
     },
     {
         id: 8,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'Italy',
         hotelname: 'Aman Venice, Italy',
         style: 'Style',
@@ -138,7 +138,7 @@ export const data = [
     },
     {
         id: 9,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'Turkey',
         hotelname: 'Amanruya, Bodrum, Turkey',
         style: 'Style',
@@ -155,7 +155,7 @@ export const data = [
     },
     {
         id: 10,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'Philippines',
         hotelname: 'Amanpulo, Pamalican Island, Philippines',
         style: 'Style',
@@ -172,7 +172,7 @@ export const data = [
     },
     {
         id: 11,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'USA',
         hotelname: 'Amangiri, Utah, USA',
         style: 'Style',
@@ -189,7 +189,7 @@ export const data = [
     },
     {
         id: 12,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'USA',
         hotelname: 'Amangani, Wyoming, USA',
         style: 'Style',
@@ -206,7 +206,7 @@ export const data = [
     },
     {
         id: 13,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'indonesia',
         hotelname: 'Amandari, Bali, indonesia',
         style: 'Style',
@@ -223,7 +223,7 @@ export const data = [
     },
     {
         id: 14,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'indonesia',
         hotelname: 'Amankila, Bali, indonesia',
         style: 'Style',
@@ -240,7 +240,7 @@ export const data = [
     },
     {
         id: 15,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'indonesia',
         hotelname: 'Amanjiwo, Central Java, indonesia',
         style: 'Style',
@@ -257,7 +257,7 @@ export const data = [
     },
     {
         id: 16,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'indonesia',
         hotelname: 'Amandari, Bali, indonesia',
         style: 'Style',
@@ -274,7 +274,7 @@ export const data = [
     },
     {
         id: 17,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'indonesia',
         hotelname: 'Amanwana, Moyo Island, indonesia',
         style: 'Style',
@@ -291,7 +291,7 @@ export const data = [
     },
     {
         id: 18,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'indonesia',
         hotelname: 'Aman Villas At Nusa Dua, indonesia',
         style: 'Style',
@@ -308,7 +308,7 @@ export const data = [
     },
     {
         id: 19,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'indonesia',
         hotelname: 'Amandira, indonesia',
         style: 'Style',
@@ -325,7 +325,7 @@ export const data = [
     },
     {
         id: 20,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'Cambodia',
         hotelname: 'Amansara, Siem Reap, Cambodia',
         style: 'Style',
@@ -342,7 +342,7 @@ export const data = [
     },
     {
         id: 21,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'Laos',
         hotelname: 'Amantaka, Luang Prabang, Laos',
         style: 'Style',
@@ -359,7 +359,7 @@ export const data = [
     },
     {
         id: 22,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'Vietnam',
         hotelname: 'Amanoi, Vinh Hy, Vietnam',
         style: 'Style',
@@ -376,7 +376,7 @@ export const data = [
     },
     {
         id: 23,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'Turks & Caicos',
         hotelname: 'Amanyara, Providenciales, Turks & Caicos',
         style: 'Style',
@@ -393,7 +393,7 @@ export const data = [
     },
     {
         id: 24,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'Japan',
         hotelname: 'Aman Kyoto, Japan',
         style: 'Style',
@@ -410,7 +410,7 @@ export const data = [
     },
     {
         id: 25,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'Japan',
         hotelname: 'Amanemu, Japan',
         style: 'Style',
@@ -427,7 +427,7 @@ export const data = [
     },
     {
         id: 26,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'Marocco',
         hotelname: 'Amanjena, Marrakech, Marocco',
         style: 'Style',
@@ -444,7 +444,7 @@ export const data = [
     },
     {
         id: 27,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'Greece',
         hotelname: 'Amanzoe, Porto Heli, Greece',
         style: 'Style',
@@ -461,7 +461,7 @@ export const data = [
     },
     {
         id: 28,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'Dominican Republic',
         hotelname: 'Amanera, Dominican Republic',
         style: 'Style',
@@ -478,7 +478,7 @@ export const data = [
     },
     {
         id: 29,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'China',
         hotelname: 'Aman Summer Palace, Beijing, China',
         style: 'Style',
@@ -495,7 +495,7 @@ export const data = [
     },
     {
         id: 30,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'China',
         hotelname: 'Amanfayun, Hangzhou, China',
         style: 'Style',
@@ -512,7 +512,7 @@ export const data = [
     },
     {
         id: 31,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'China',
         hotelname: 'Amandayan, Lijiang, China',
         style: 'Style',
@@ -529,7 +529,7 @@ export const data = [
     },
     {
         id: 32,
-        resort: 'aman resorts',
+        resort: 'aman',
         destination: 'China',
         hotelname: 'Amanyangyun, Shanghai, China',
         style: 'Style',

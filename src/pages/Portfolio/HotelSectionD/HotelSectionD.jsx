@@ -4,7 +4,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { CaretDownOutlined } from '@ant-design/icons'
 import Dropdown from "../../../components/PortfolioDropdown/Dropdown";
-import { data } from '../../../hotelDescModaldata/index'
+import { data } from '../../../hotelDescModaldata/lxhotels'
 
 function HotelSectionD() {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,16 +12,17 @@ function HotelSectionD() {
     const [allDestinations, setAllDestinations] = useState([]);
 
     useEffect(() => {
-        Aos.init({ duration: 1500 });
+        Aos.init({ duration: 2500 });
 
         const destArr = data.map(d => d.destination);
         const uniqueDestArr = [...new Set(destArr)]
+
         setAllDestinations(uniqueDestArr);
     }, []);
 
     const animations = (num) => {
         let direction;
-        let rgtAnimation = [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35, 38, 41]; // for right animations
+        let rgtAnimation = [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35, 38, 41,44,47,50,53,56,59,62,65,68,71,74,77,80,83,86,89,92,95,98]; // for right animations
 
         if (num % 3 === 0) {
             direction = 'fade-right'

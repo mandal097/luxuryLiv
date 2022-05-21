@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import jsPDF from 'jspdf'
-import { data } from '../../hotelDescModaldata'
+import { data } from '../../hotelDescModaldata/lxhotels'
 import { useLocation, useNavigate } from 'react-router-dom'
 import {
   LeftOutlined,
@@ -16,13 +16,13 @@ const HotelDesc = () => {
   // hooks ------------------------------------
   const navigate = useNavigate();
   const location = useLocation();
-  // const [showForm, setShowForm] = useState(false);
   const [showShare, SetShowShare] = useState(false);
-  const [autoPlay, setAutoPlay] = useState(true)
-
+  const [autoPlay, setAutoPlay] = useState(true);
   // getting id from url of the site-------------------------
   const id = location.pathname.split('/')[3]
   const hotel = data[id - 1]
+
+  // console.log(brand.replace(/[&\/\\#^+()$~%.'":*?<>{}!@]/g, '') );
 
   const back = () => {
     navigate(-1)
@@ -38,7 +38,7 @@ const HotelDesc = () => {
     setTimeout(() => {
       setAutoPlay(false)
     }, 9000);
-  }, [hotel, autoPlay])
+  }, [hotel, autoPlay, id])
 
   // function for duynamic arrow or hiding the arrows of slick , looking for better way to hide buttons
   function SampleNextArrow(props) {
@@ -197,7 +197,7 @@ const HotelDesc = () => {
         </div>
         {/* actions btn */}
         <div className="actions_btn_div">
-          <div className="actions_btn" onClick={() =>navigate(`/enquire/${hotel.id}`)}>
+          <div className="actions_btn" onClick={() => navigate(`/enquire/${hotel.id}`)}>
             <span>Enquire</span>
           </div>
           <div className="actions_btn"
