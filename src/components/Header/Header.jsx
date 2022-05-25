@@ -40,7 +40,8 @@ const Header = ({ display }) => {
             toTop()
           }}>
             <div className="img" >
-              <img src="images/question1.png" alt="" />
+              {/* <img src="../../images/question1.png" alt="" /> */}
+              <img src="/images/question1.png" alt="" />
             </div>
 
             <div className="link"><span data-text=' New&nbsp;Hotel Collaborations' className="links"> New&nbsp;Hotel&nbsp;Collaborations</span> </div>

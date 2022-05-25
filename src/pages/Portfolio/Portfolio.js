@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './portfolio.scss';
 import HotelSection from './Hotelsection/HotelSection';
 import Header from '../../components/Header/Header';
@@ -12,6 +12,8 @@ const Portfolio = () => {
 
     const url = location.pathname.split('/')[1]
     const url2 = location.pathname.split('/')[2]
+
+    const [active, setActive] = useState('brands')
 
     useEffect(() => {
         document.title = 'Luxury Living - Portfolio'
@@ -34,15 +36,18 @@ const Portfolio = () => {
                 </div>
                 <div className="buttons">
                     <button
-                        className="btns"
+                        className={active === 'brands' ? 'btns active' : 'btns'}
                         onClick={() => {
-                            navigate('')
+                            navigate('');
+                            setActive('brands')
                         }}
 
                     >Brands</button>
-                    <button className="btns"
+                    <button
+                        className={active === 'destinations' ? 'btns active' : 'btns'}
                         onClick={() => {
                             navigate('destinations')
+                            setActive('destinations');
                         }
                         }
                     >Destinations</button>

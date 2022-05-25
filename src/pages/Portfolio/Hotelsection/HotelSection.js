@@ -12,7 +12,6 @@ function Port() {
 
     useEffect(() => {
         Aos.init({ duration: 3000 });
-
     }, []);
 
 
@@ -66,7 +65,7 @@ function Port() {
                                         <div className="button" onClick={() => {
                                             ShowModal();
                                             setDestination(b.brands.toLowerCase())
-                                            console.log(b.brands.toLowerCase());
+                                            // console.log(b.brands.toLowerCase());
                                         }}>select Your Destination <CaretDownOutlined className='dropdwon_icon' /></div>
                                     </div>
                                 </div>

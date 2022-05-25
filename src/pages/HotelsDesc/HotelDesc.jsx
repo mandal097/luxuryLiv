@@ -148,19 +148,19 @@ const HotelDesc = () => {
             </div>
             <Slider {...settingsImg} className="hotel_desc_img">
               <div className="img">
-                <img src={hotel.img1} alt="" />
+                <img src={`/gallery/${hotel.img1}`} alt="" />
               </div>
               <div className="img">
-                <img src={hotel.img2} alt="" />
+                <img src={`/gallery/${hotel.img2}`} alt="" />
               </div>
               <div className="img">
-                <img src={hotel.img3} alt="" />
+                <img src={`/gallery/${hotel.img3}`} alt="" />
               </div>
               <div className="img">
-                <img src={hotel.img4} alt="" />
+                <img src={`/gallery/${hotel.img4}`} alt="" />
               </div>
               <div className="img">
-                <img src={hotel.img5} alt="" />
+                <img src={`/gallery/${hotel.img5}`} alt="" />
               </div>
             </Slider>
           </div>
