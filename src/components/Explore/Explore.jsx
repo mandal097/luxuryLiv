@@ -22,12 +22,14 @@ const Explore = () => {
             <div className='our_portfolio'>
                 <div>
                     <h3 onClick={goToPortfolio} className='mob'> PORTFOLIO </h3>
-                    <h6 className='click'>click to view <br /><span className='arrow_down'>&darr;</span></h6>
+                    <h6 className='click desktop_c'>click to view <br /><span className='arrow_down'>&darr;</span></h6>
                 </div>
                 <h3 onClick={goToPortfolio} className='desk'>PORTFOLIO </h3>
             </div>
             <div className='explore_wrapper'>
-                <video src='./videos/LL_INTRO.mp4' muted autoPlay controls></video>
+                <video src='https://luxury-living-pictures.s3.amazonaws.com/media/video/portfolio.mp4' muted autoPlay controls></video>
+                {/* <video src='./videos/LL_INTRO.mp4' muted autoPlay controls></video> */}
+                <div className="overlay" onClick={goToPortfolio}>Click To View Portfolio</div>
             </div>
         </div>
     )

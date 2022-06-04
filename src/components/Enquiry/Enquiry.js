@@ -32,7 +32,7 @@ const Enquiry = () => {
     useEffect(() => {
         document.title = 'Luxury Living - Enquire'
         // setHotelName(hotel)
-    },[])
+    }, [])
 
     const submit = async (e) => {
         e.preventDefault()
@@ -115,7 +115,7 @@ const Enquiry = () => {
                 <div className="cancel" onClick={() => navigate(-1)}><CloseOutlined /></div>
                 <form action="" onSubmit={submit}>
                     <div className="header_enquiry">
-                        <p>INPUT DETAILS OF YOUR REQUEST HERE ...AND WE'LL GET RIGHT BACK TO YOU!</p>
+                        <p>INPUT DETAILS OF YOUR REQUEST HERE...  AND WE'LL GET RIGHT BACK TO YOU!</p>
                     </div>
                     <div className="inputs_div">
                         <div className="inputs">
@@ -153,8 +153,8 @@ const Enquiry = () => {
                 <div className="contactDiv">
                     <h2>Need It Now?</h2>
                     <h2>Call</h2>
-                    <span>9810802363</span>
-                    <span>9810800907</span>
+                    <span> <a href="tel:9899699991">+91 9899699991</a></span>
+                    <span><a href="tel:9711983158">+91 9711983158</a></span>
                 </div>
             </div>
         </div>

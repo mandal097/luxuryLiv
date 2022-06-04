@@ -30,9 +30,9 @@
         margin: 0 auto;
         width: 100%;
         height: auto;
-        border-bottom: 2px solid goldenrod;
+        // border-bottom: 2px solid goldenrod;
         p {
-          font-size: 2rem;
+          font-size: 2.8rem;
           padding-top: 2rem;
           text-align: center;
         }
@@ -67,6 +67,11 @@
           width: 48%;
           input {
             width: 58%;
+            &:-webkit-autofill {
+              background: transparent;
+              box-shadow: 0 0 0 1000px black inset !important;
+              -webkit-text-fill-color: white !important;
+            }
           }
           input[type="date"]::-webkit-calendar-picker-indicator {
             cursor: pointer;
@@ -118,7 +123,7 @@
             transition: all 300ms linear;
             &:hover {
               border: 1px solid var(--border-golden);
-              color:goldenrod;
+              color: goldenrod;
             }
           }
         }
@@ -131,7 +136,7 @@
       font-size: 4rem;
       color: goldenrod;
       cursor: pointer;
-      &:hover{
+      &:hover {
         color: rgb(250, 184, 16);
       }
     }
@@ -163,6 +168,14 @@
         font-weight: bolder;
         color: black;
       }
+      span{
+        font-weight: bolder;
+        a{
+          color: black;
+          font-weight: bold;
+          text-decoration:none; 
+      }
+      }
     }
   }
 }
@@ -186,15 +199,18 @@
       overflow-y: scroll;
       padding: 0 2rem;
       width: 90%;
-      height: 85%;
-      animation-duration: 400ms;      
+      height: 90%;
+      animation-duration: 400ms;
       form {
         width: 100%;
         height: auto;
         justify-content: center;
         .header_enquiry {
           padding: 0 3rem;
-          margin-top: 8rem;
+          margin-top: 3rem;
+          p{
+            font-size: 2.3rem;
+          }
         }
         .inputs_div {
           flex-direction: column;
@@ -204,6 +220,9 @@
             height: auto;
             flex-direction: column;
             align-items: flex-start;
+            label{
+              margin-bottom: 0.5rem;
+            }
             input {
               width: 100%;
               height: 4rem;
@@ -221,6 +240,7 @@
             justify-content: space-between;
             label {
               font-size: 1.8rem;
+              margin-bottom: 0.5rem;
             }
             textarea {
               width: 100%;
@@ -232,12 +252,32 @@
         }
       }
       .contactDiv {
-        display: none;
-        transform-origin: 124% -22%;
+        // display: none;trans
+        transform: rotate(0deg);
+        padding: 0;
+        height: auto;
+       width: 100%;
+       position: static;
+      //  margin-top: 1rem; 
+       font-size: 1.7rem;
+       h2:nth-child(1) {
+        font-size: 2rem;
+        color: red;
+        font-weight: bolder;
+      }
+      h2:nth-child(2) {
+        font-size: 2rem;
+        font-weight: bolder;
+        color: black;
+      }
+      span{
+        margin-top: 0.3rem;
+        font-size: 1.9rem;
+      }
       }
       .cancel {
         right: 1rem;
-        top: -1rem;
+        top: 0rem;
       }
     }
   }

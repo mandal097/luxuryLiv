@@ -48,6 +48,7 @@
       align-items: center;
       span {
         font-size: 1.7rem;
+        font-weight: 400;
         text-transform: capitalize;
       }
     }
@@ -60,21 +61,28 @@
       .btns {
         width: 40%;
         height: 100%;
-        background-color: var(--border-golden);
+        // background-color: var(--border-golden);
         border-radius: 1rem;
         color: white;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
         border: none;
-        &:hover {
-          background-color: rgba(218, 165, 32, 0.87);
-        }
+        border: 1px solid white;
+        background: transparent;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 400;
+        // &:hover {
+          // background-color: rgba(218, 165, 32, 0.87);
+        // }
       }
       .active {
-        background-color: goldenrod;
+        background-color: white;
+        color: black;
+        border: 1px solid black;
       }
     }
   }

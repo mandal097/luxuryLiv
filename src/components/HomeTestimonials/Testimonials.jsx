@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './style.scss'
-import { testimonialsdata } from '../../data/testimonialsdata'
+// import { testimonialsdata } from '../../data/testimonialsdata'
 import "aos/dist/aos.css";
+import { useNavigate } from 'react-router-dom'
 import {
   LeftOutlined,
   RightOutlined,
@@ -10,6 +11,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import Testimaonialscard from '../TestimoniesCard/TestimonyCard';
+import axios from 'axios';
+import { appUrl } from '../../config/appUrl'
 
 function SampleNextArrow(props) {
 
@@ -30,10 +33,15 @@ function SamplePrevArrow(props) {
 
 
 const Testimonials = () => {
+  const navigate = useNavigate();
   const [testimonies, setTestimonies] = useState([])
   useEffect(() => {
-    const getValues = () => {
-      setTestimonies(testimonialsdata)
+    const getValues = async () => {
+      const url = appUrl.url;
+      const testimonyData = await axios.get(`${url}/testimonials`)
+      // console.log(testimonyData.data);
+      setTestimonies(testimonyData.data)
+
     }
     getValues()
   }, [])
@@ -83,6 +91,7 @@ const Testimonials = () => {
           ))
         }
       </Slider>
+      <div className="go_to_feedback" onClick={() => navigate('/feedback')}><p>Would you like to say some 'Nice - Not So Nice' things about Us? 😉</p></div>
     </div>
   )
 }

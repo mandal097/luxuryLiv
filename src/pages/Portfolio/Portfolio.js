@@ -32,7 +32,7 @@ const Portfolio = () => {
             </div>
             <div className="search_by">
                 <div className="filterBy">
-                    <span>Filter your favourite places By :</span>
+                    <span>Filter By :</span>
                 </div>
                 <div className="buttons">
                     <button

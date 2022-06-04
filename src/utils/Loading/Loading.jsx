@@ -10,7 +10,10 @@ const Loading = () => {
         alignItems: 'center',
         justifyContent: 'center',
         fontSize: '20rem',
-        fontFamily: 'Shoreline'
+        fontFamily: 'Shoreline',
+        position:'fixed',
+        top:'0',
+        background:'black'
       }}
     ><LoadingOutlined /></div>
   )

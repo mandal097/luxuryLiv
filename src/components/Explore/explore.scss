@@ -14,7 +14,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // border: 1px solid green;
+    position: relative;
+    .overlay{
+      width: 20rem;
+      height: 5rem;
+      position: absolute;
+      bottom: -5rem;
+      left: 4rem;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background-color: rgba(0,0,0,0.4);
+    }
     video {
       width: 90%;
       height: 100%;
@@ -49,6 +62,7 @@
       text-align: center;
       transform: rotate(-60deg);
       letter-spacing: 1.5px;
+      display: none;
       animation: click 2s ease alternate infinite;
     }
     h3 {
@@ -155,9 +169,17 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      .overlay{
+        display: none;
+      }
       video {
         width: 93%;
         object-fit: contain;
+      }
+    }
+    .our_portfolio{
+      .click{
+        display:block;
       }
     }
     .mob {

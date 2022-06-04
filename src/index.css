@@ -64,6 +64,13 @@ code {
 
 /* animations  */
 
+@keyframes autofill {
+  0%,100% {
+      color: #666;
+      background: transparent;
+  }
+}
+
 /* animation for navbar */
 @keyframes navbar {
   from {

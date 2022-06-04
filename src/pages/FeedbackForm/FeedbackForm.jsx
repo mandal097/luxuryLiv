@@ -5,6 +5,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import emailjs from '@emailjs/browser';
 import Header from '../../components/Header/Header';
 import Social from '../../components/Social/Social';
+import axios from 'axios';
+import { appUrl } from '../../config/appUrl'
 
 const Feedback = () => {
 
@@ -30,6 +32,7 @@ const Feedback = () => {
 
     const submit = async (e) => {
         e.preventDefault();
+
         const formData = new FormData();
 
         formData.append("name", name)
@@ -38,16 +41,32 @@ const Feedback = () => {
         formData.append("phone", phone)
         formData.append("feedbackMessage", feedbackMessage)
         if (validForm()) {
-            emailjs.sendForm('service_273fiq9', 'template_31k9kmj', e.target,
-                'GwXreEVRE-9IpIAsX')
-                // emailjs.sendForm('service_lisndc6', 'template_dxtvufe', e.target,
-                //     'ZNJnYLB_TkQDJECii')
-                .then((result) => {
-                    console.log(result.text);
-                }, (error) => {
-                    console.log(error.text);
-                });
             try {
+                const url = appUrl.url;
+                const testimony = {
+                    name,
+                    companyName,
+                    email,
+                    phone,
+                    feedbackMessage
+                }
+                const options = {
+                    url: `${url}/testimonial-create/`,
+                    method: "POST",
+                    headers: {},
+                    data: testimony
+                }
+                await axios(options)
+                // console.log(res);
+                emailjs.sendForm('service_273fiq9', 'template_31k9kmj', e.target,
+                    'GwXreEVRE-9IpIAsX')
+                    // emailjs.sendForm('service_lisndc6', 'template_dxtvufe', e.target,
+                    //     'ZNJnYLB_TkQDJECii')
+                    .then((result) => {
+                        console.log(result.text);
+                    }, (error) => {
+                        console.log(error.text);
+                    });
                 toast.success('Added Successfully');
 
             } catch (error) {
@@ -103,14 +122,14 @@ const Feedback = () => {
         <Container>
             <Header />
             <Wrapper>
-                <Toaster style={{ fontSize: '2rem'}} />
+                <Toaster style={{ fontSize: '2rem' }} />
                 <Form onSubmit={submit} encType='multipart/form-data' method='post'>
                     <FormTopText>
                         {/* <TextDivLeft>
                             <LeftHeading>Luxury Living</LeftHeading>
                         </TextDivLeft> */}
                         {/* <TextDivRight> */}
-                        <RightHeading>TELL HER HOW YOU FEEL <br /> HOW YOU REALLY REALLY FEEL</RightHeading>
+                        <RightHeading>TELL US HOW YOU FEEL <br /> HOW YOU REALLY REALLY FEEL?</RightHeading>
                         {/* </TextDivRight> */}
                     </FormTopText>
                     <FormTop>
@@ -248,25 +267,8 @@ display:flex;
 justify-content:center;
 align-items:center;
 `
-// const TextDivLeft = styled.div`
-// width:30%;
-// display:flex;
-// align-items:center;
-// justify-content:center;
-// `
-// const TextDivRight = styled.div`
-// width:70%;
-// display:flex;
-// align-items:center;
-// justify-content:center;
-// `
-
-// const LeftHeading = styled.span`
-// font-size:1.6rem;
-// text-align:center;
-// `
 const RightHeading = styled.span`
-font-size:3rem;
+font-size:2.8rem;
 text-align:center;
 @media(max-width:900px){    
   font-size:2.5rem;
@@ -324,6 +326,11 @@ border:1px solid white;
  &:focus::placeholder {
    color: transparent;
  }
+ &:-webkit-autofill {
+     background:transparent;
+    -webkit-box-shadow: 0 0 0 1000px black inset !important;
+  -webkit-text-fill-color: white !important;
+}
  @media(max-width:650px){
      &::placeholder {
          color: white;
@@ -370,11 +377,11 @@ margin:0rem auto;
 border:1px solid white;
 background-color:black;
 color:white;
-font-size:3rem;
+font-size:2rem;
 resize:none;
 outline:none;
 text-align:center;
-padding:4rem 0;
+padding:4rem 2rem;
 display:flex;
 align-items:center;
 justify-content:center;

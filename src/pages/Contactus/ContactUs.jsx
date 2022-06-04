@@ -23,10 +23,12 @@ const ContactUs = () => {
                     <H3>IN A HURRY TO CONNECT?</H3>
                     <Img src='./images/cphone.png' />
                     <div>
-                        <Span>+91 9711983158</Span>
-                        <Span>+91 9899699991</Span>
+                        <Span> <a href="tel:9711983158">+91 9711983158</a></Span>
+                        <Span> <a href="tel:9899699991">+91 9899699991</a></Span>
                     </div>
-                    <Email>gaurav.s@luxuryliving.in <br /> a@luxuryliving.in</Email>
+                    <Email>  <a href="mailto:gaurav.s@luxuryliving.in">gaurav.s@luxuryliving.in</a> <br />
+                        <a href="mailto:luxuryliving.in"> a@luxuryliving.in</a>
+                    </Email>
                 </Right>
                 <Vertical />
             </Wrapper>
@@ -109,9 +111,15 @@ object-fit:cover;
 `
 
 const Span = styled.span`
-font-size:1.9rem;
-color:white;
-font-weight:400;
+    font-size:1.9rem;
+a{
+    color:white;
+    font-weight:400;
+    text-decoration:none;
+    &:hover{
+        color:blue;
+    }
+}
 @media(max-width:540px){
     font-size:1.7rem;
 }
@@ -132,6 +140,14 @@ color:white;
 text-align:center;
 margin-top:1rem;
 letter-spacing:1.6px;
+a{
+    color:white;
+    font-weight:400;
+    text-decoration:none;
+    &:hover{
+        color:blue;
+    }   
+}
 @media(max-width:540px){
     font-size:1.8rem;
 }

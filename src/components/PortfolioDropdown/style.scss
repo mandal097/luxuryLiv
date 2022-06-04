@@ -15,7 +15,7 @@
     width: 45%;
     height: 60vh;
     background-color: white;
-    border: 2.5px solid goldenrod;
+    // border: 2.5px solid teal;
     border-radius: 1rem;
     animation: popDd 1000ms ease forwards 1;
     display: flex;
@@ -24,19 +24,22 @@
     justify-content: center;
     position: relative;
     margin-top: 10%;
+    overflow: hidden;
     .top {
-      width: 100%;
+      width: 96%;
       height: 5rem;
-      border-bottom: 2px solid goldenrod;
+      // border-bottom: 2px solid goldenrod;
+      border-bottom: 2px solid teal;
       display: flex;
       align-items: center;
       justify-content: center;
+     margin: 0 auto;
       h3 {
         color: black;
         font-weight: bolder;
         font-size: 2rem;
         text-transform: uppercase;
-        font-family: cursive;
+        // font-family: cursive;
       }
     }
     .hotels_names_div {
@@ -58,16 +61,18 @@
 
       /* Handle */
       &::-webkit-scrollbar-thumb {
-        background: goldenrod;
+        background: teal;
+        // background: goldenrod;
       }
 
       /* Handle on hover */
       &::-webkit-scrollbar-thumb:hover {
-        background: rgb(83, 71, 1);
+        background: rgba(0, 128, 128, 0.678);
       }
       .hotels_names_selector {
-        width: 100%;
+        width: 90%;
         height: 4rem;
+        margin: 0 auto;
         display: flex;
         align-items: center;
         cursor: pointer;
@@ -79,7 +84,8 @@
         .radio_btn {
           width: 1.4rem;
           height: 1.4rem;
-          border: 3.5px solid rgba(218, 165, 32, 0.726);
+          // border: 3.5px solid rgba(218, 165, 32, 0.726);
+          border: 3.5px solid teal;
           border-radius: 50%;
           padding: 0.5rem;
         }
@@ -99,11 +105,13 @@
           }
         }
         &:hover {
-          background-color: goldenrod;
+          // background-color: goldenrod;
+          background-color:teal;
           transform: scale(0.97);
           .radio_btn {
             border: 3px solid white;
-            background-color: darkblue;
+            // background-color: darkblue;
+            background-color: black;
           }
           span {
             color: white;
@@ -121,15 +129,16 @@
       display: grid;
       place-items: center;
       .icon {
-        color: goldenrod;
-        font-size: 3.4rem;
+        // color: goldenrod;
+        color: teal;
+        font-size: 1.8rem;
         cursor: pointer;
       }
-      &:hover {
-        .icon {
-          color: rgb(116, 99, 4);
-        }
-      }
+      // &:hover {
+      //   .icon {
+      //     // color: rgb(116, 99, 4);
+      //   }
+      // }
     }
   }
 }

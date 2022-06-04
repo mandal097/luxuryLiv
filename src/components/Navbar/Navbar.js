@@ -52,7 +52,7 @@ const Navbar = () => {
                     navigate('/feedback')
                     toTop()
                 }}
-            ><span className='span'>Say Nice – Not So Nice Things About Us!</span> </Nav>
+            ><span className='span'>Say 'Nice – Not So Nice' Things About Us!</span> </Nav>
 
             <Nav
                 onClick={() => {
@@ -126,9 +126,10 @@ transition:all 200ms;
 margin:0 auto;
 width:80%;
 cursor:pointer;
-&:hover{
+/* &:hover{
     transform:perspective(90px)  rotateX(-5deg);
-}
+    font-size:3.8rem;
+} */
 @media (max-width:700px){
     width:70%;
     font-size:3.2rem;

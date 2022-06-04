@@ -5,16 +5,16 @@
   position: relative;
   // border: 1px solid red;
   .slides {
-    transform: scale(0.5);
     transition: transform 600ms linear;
     background-color: black;
     padding: 1rem 0;
     height: 50vh;
+    transform: scale(0.5);
   }
   .activeSlides {
-    transform: scale(1);
     transition: transform 600ms linear;
     height: auto;
+    transform: scale(1);
   }
   div {
     z-index: 2;
@@ -67,6 +67,28 @@
   }
   .rightArrow {
     right: 40rem;
+  }
+  .go_to_feedback {
+    width: fit-content;
+    height: 4rem;
+    border: 1px solid white;
+    margin: 0 auto;
+    padding: 0 2rem;
+    margin-top: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    p {
+      font-size: 1.5rem;
+      color: white;
+      text-align: center;
+      cursor: pointer;
+      animation: blinks 1s ease-in infinite alternate;
+      &:hover {
+        color: goldenrod;
+      }
+    }
   }
 }
 
@@ -123,6 +145,13 @@
         width: 84%;
         left: 8%;
         bottom: 0.2rem;
+      }
+    }
+
+    .go_to_feedback {
+      padding: 2.5rem 1rem;
+      p {
+        font-size: 1.6rem;
       }
     }
   }

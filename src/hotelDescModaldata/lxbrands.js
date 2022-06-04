@@ -108,7 +108,7 @@ export const brands = [{
 },
 {
     id: 22,
-    brands: "BVLGRI",
+    brands: "BULGARI",
     brands_img: 'bvlgari.png'
 },
 {

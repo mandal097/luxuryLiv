@@ -38,7 +38,7 @@ const Home = () => {
                         <h1 className="heading">luxury living</h1>
                         <div className="para_div">
                             <p className="home_page_para">
-                                Our top game is to make it easy for our Travel Partners to book 'Luxury Hotels'  Worldwide</p>
+                                Our top game is to make it easy for our Travel Agent Partners to book 'Luxury Hotels'  Worldwide</p>
                             <p className="home_page_para">Our medium game is to do this with finnese, subtelty & without much hangup</p>
                             <p className="home_page_para">Our bottom  game is to do 30 push-ups in one go.'</p>
                         </div>
