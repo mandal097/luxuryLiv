@@ -57,7 +57,7 @@ const Home = () => {
                 <Contactus />
             </div>
             <Social />
-             <Scroll />
+            <Scroll />
         </div >
     )
 }

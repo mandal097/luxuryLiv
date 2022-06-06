@@ -1,11 +1,10 @@
 import React from 'react'
 import './style.scss'
 
-const Testimaonialscard = ({ testimony, border }) => {
+const Testimaonialscard = ({ testimony, border  }) => {
     return (
         <div className="testimaonials_card"  style={{
-            border: `${border}px solid goldenrod`
-            // border: `${border}px solid var(--border-golden)`
+            border:`${border}px solid goldenrod`
         }}>
             <div className={`testimonials_card_para_div`}>
                 {

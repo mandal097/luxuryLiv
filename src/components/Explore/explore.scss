@@ -169,9 +169,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      .overlay{
-        display: none;
-      }
+      // .overlay{
+      //   display: none;
+      // }
       video {
         width: 93%;
         object-fit: contain;
@@ -179,7 +179,7 @@
     }
     .our_portfolio{
       .click{
-        display:block;
+        display:none;
       }
     }
     .mob {

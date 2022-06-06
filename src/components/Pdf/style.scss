@@ -11,6 +11,7 @@
   z-index: 1000;
   overflow-y: scroll;
   .pdf_wrapper_ {
+    height: auto;
     width: 793px;
     margin: 0 auto;
     .pdf_wrapper {
@@ -112,7 +113,7 @@
           }
         }
       }
-      .hotel_tip{
+      .hotel_tip {
         width: 90%;
         border: 1px solid grey;
         border-radius: 1rem;
@@ -130,6 +131,9 @@
         }
       }
     }
+    .pdf_wrapper_mob {
+      display: none;
+    }
     .cancel_ {
       position: absolute;
       top: 2rem;
@@ -143,44 +147,89 @@
       cursor: pointer;
       color: goldenrod;
     }
-    .download_btn{
-        width: 20%;
-        margin: 2rem auto;
-        background-color: transparent;
-        color: white;
-        border: 1px solid grey;
-        padding: 1rem 2rem;
-        margin-left: 40%;
-        cursor: pointer;
-        transition: all 300ms linear;
-        &:hover{
-            border: 1px solid goldenrod;
-            color: goldenrod;
-        }
-
+    .download_btn {
+      width: 20%;
+      margin: 2rem auto;
+      background-color: transparent;
+      color: white;
+      border: 1px solid grey;
+      padding: 1rem 2rem;
+      margin-left: 40%;
+      cursor: pointer;
+      transition: all 300ms linear;
+      &:hover {
+        border: 1px solid goldenrod;
+        color: goldenrod;
+      }
     }
   }
 }
 
-// @media screen and (max-width:800px) {
-//     .pdf{
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         height: 100vh;
-//         .pdf_wrapper_{
-//           width: 96%;
-//         .pdf_wrapper{
-//             width: 96%;
-//             height: auto;
-//             .hotel_images{
-//               flex-direction: column;
-//                 .img_left,.img_right{
-//                     width: 48%;
-//                     margin: 2rem 0;
-//                 }
-//             }
-//         }
-//         }
-//     }
-// }
+@media screen and (max-width: 800px) {
+  .pdf {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    // height: 120vh;
+    // overflow-y: scroll;
+    .pdf_wrapper_ {
+      padding: 5rem 0;
+      width: 380px;
+      height: 100vh;
+      .pdf_wrapper {
+        // position: relative;
+        width: 90%;
+        width: 380px;
+        height: auto;
+        // border: 1px solid red;
+        .hotel_name {
+          width: 90%;
+        }
+        .hotel_images {
+          flex-direction: column;
+          .img_left,
+          .img_right {
+            width: 95%;
+            height: 25vh;
+            margin: 2rem auto;
+            img {
+              object-fit: none;
+            }
+          }
+        }
+      }
+
+      .pdf_wrapper_mob {
+        position: relative;
+        display: flex;
+        width: 90%;
+        width: 793px;
+        height: auto;
+        margin-top: 400rem;
+        // border: 1px solid red;
+        .hotel_name {
+          width: 90%;
+        }
+        .hotel_images {
+          flex-direction: column;
+          .img_left,
+          .img_right {
+            width: 95%;
+            height: 43vh;
+            margin: 2rem auto;
+            img {
+              object-fit: none;
+            }
+          }
+        }
+      }
+      .download_btn {
+        width: 90%;
+        margin: 2rem auto;
+        margin-left: 5%;
+        margin-bottom: 8rem;
+      }
+    }
+  }
+}

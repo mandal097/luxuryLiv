@@ -35,17 +35,29 @@ function SamplePrevArrow(props) {
 const Testimonials = () => {
   const navigate = useNavigate();
   const [testimonies, setTestimonies] = useState([])
+  const [index, setIndex] = useState(0)
+
+  const mediaMatch = window.matchMedia('(max-width: 600px)');
+  const [matches, setMatches] = useState(mediaMatch.matches);
+
+
   useEffect(() => {
     const getValues = async () => {
       const url = appUrl.url;
       const testimonyData = await axios.get(`${url}/testimonials`)
-      // console.log(testimonyData.data);
+      console.log(testimonyData.data);
       setTestimonies(testimonyData.data)
-
     }
     getValues()
+
+
   }, [])
-  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    const handler = e => setMatches(e.matches);
+    mediaMatch.addListener(handler);
+    return () => mediaMatch.removeListener(handler);
+  }, [mediaMatch])
 
   let settings = {
     dots: true,
@@ -67,10 +79,12 @@ const Testimonials = () => {
       {
         breakpoint: 1024,
         settings: {
+          centerMode: false,
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
+          dots: true,
+          beforeChange: (current, next) => setIndex(next),
         }
       }
     ]
@@ -80,17 +94,39 @@ const Testimonials = () => {
       <div className="side_text">
         <h3>testimonials</h3>
       </div>
-      <Slider {...settings} className='slider'>
-        {
-          testimonies.map((testimony, idx) => (
-            <div key={testimony.id} className={idx === index ? 'slides activeSlides' : "slides"} >
-              <Testimaonialscard testimony={testimony} item='true'
-                border={idx === index ? '1' : '0'}
-              />
-            </div>
-          ))
-        }
-      </Slider>
+      {
+        !matches ?
+          <Slider {...settings} className='slider'>
+            {
+              testimonies.map((testimony, idx) => (
+                <div key={testimony.id} className={idx === index ? 'slides activeSlides' : "slides"} >
+
+                  <Testimaonialscard testimony={testimony} item='true'
+                    border={idx === index ? '1' : '0'}
+                  />
+                </div>
+              ))
+            }
+          </Slider> :
+          <Slider {...settings} className='slider'>
+            {
+              testimonies.map((testimony, idx) => (
+                <div key={testimony.id} 
+                className={idx === index ? 'activeSlides slides' : "slides activeSlides"} 
+                // className='slides activeSlides' 
+                >
+
+                  <Testimaonialscard testimony={testimony} item='true'
+                  style={{
+                    margin:'0 1rem'
+                  }}
+                    border={idx === index ? '1' : '1'}
+                  />
+                </div>
+              ))
+            }
+          </Slider>
+      }
       <div className="go_to_feedback" onClick={() => navigate('/feedback')}><p>Would you like to say some 'Nice - Not So Nice' things about Us? 😉</p></div>
     </div>
   )

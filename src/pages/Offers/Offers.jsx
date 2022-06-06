@@ -24,6 +24,7 @@ const Offers = () => {
     const [details, setDetails] = useState(false)
     // const [checked, setChecked] = useState();
     const [filters, setFilters] = useState([]);
+
     // handling filtering side bar
     const handleSidebar = () => {
         switch (transform) {
@@ -68,6 +69,7 @@ const Offers = () => {
         document.title = 'Luxury Living - Offers'
     }, [])
 
+   
     const search = (e) => {
         e.preventDefault();
     }
@@ -143,7 +145,7 @@ const Offers = () => {
                             {/* filters */}
                             <div className="filter_div" style={{ transform: `translateX(${transform}px)` }}>
                                 <h1>sort offers </h1>
-                                <div className="filter_wrapper">
+                                <div className="filter_wrapper" >
                                     {
                                         sliderContent.map((c, ind) => (
                                             <div
