@@ -31,7 +31,7 @@ function HotelSectionD() {
 
 
     useEffect(() => {
-        Aos.init({ duration: 2500 });
+        Aos.init({ duration: 1500 });
         const destArr = hotels.map(d => d.destination);
         const uniqueDestArr = [...new Set(destArr)]
         setAllDestinations(uniqueDestArr);

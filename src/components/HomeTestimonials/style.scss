@@ -11,6 +11,13 @@
     height: 50vh;
     transform: scale(0.5);
   }
+  .slides_mob {
+    transition: transform 600ms linear;
+    background-color: black;
+    padding: 1rem 0;
+    height: auto;
+    transform: scale(1);
+  }
   .activeSlides {
     transition: transform 600ms linear;
     height: auto;

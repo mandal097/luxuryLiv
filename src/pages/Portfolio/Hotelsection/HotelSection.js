@@ -16,7 +16,7 @@ function Port() {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        Aos.init({ duration: 3000 });
+        Aos.init({ duration: 1800 });
         const fetchData = async () => {
             setLoading(true);
             const url = appUrl.url

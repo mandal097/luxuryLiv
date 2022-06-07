@@ -58,6 +58,7 @@ const HotelDesc = () => {
   }, [id])
 
 
+
   // changing title of the site on component mounted=------------
   useEffect(() => {
     document.title = `Luxury Living - ${hotel.name} `

@@ -79,12 +79,13 @@ const Testimonials = () => {
       {
         breakpoint: 1024,
         settings: {
-          centerMode: false,
+          centerMode: true,
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
           dots: true,
           beforeChange: (current, next) => setIndex(next),
+          // afterChange: (current, next) => setIndex(current),
         }
       }
     ]
@@ -108,18 +109,18 @@ const Testimonials = () => {
               ))
             }
           </Slider> :
+
           <Slider {...settings} className='slider'>
             {
               testimonies.map((testimony, idx) => (
-                <div key={testimony.id} 
-                className={idx === index ? 'activeSlides slides' : "slides activeSlides"} 
-                // className='slides activeSlides' 
+                <div key={testimony.id}
+                  className={(idx === testimonies.length - 1) ? 'slides_mob' : idx === index ? 'slides_mob' : " slides"}
+                  // className={idx === index ? 'slides_mob' : " slides"}
+                  // className='slides activeSlides' 
+                  
                 >
 
                   <Testimaonialscard testimony={testimony} item='true'
-                  style={{
-                    margin:'0 1rem'
-                  }}
                     border={idx === index ? '1' : '1'}
                   />
                 </div>

@@ -394,7 +394,13 @@ justify-content:center;
     text-align:center;
     font-weight:100;
     }
-    `
+    @media(max-width:600px){
+        &::placeholder {
+            font-size:2rem;
+            }
+
+    }
+ `
 
 const Submit = styled.button`
     width:100%;
