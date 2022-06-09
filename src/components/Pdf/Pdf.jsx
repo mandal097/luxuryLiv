@@ -29,7 +29,7 @@ const PdfFile = ({
     const mediaMatch = window.matchMedia('(max-width: 500px)');
     const [matches, setMatches] = useState(mediaMatch.matches);
     const [display, setDisplay] = useState(false);
-    const [logoUrl  ,setLogourl] = useState('');
+    const [logoUrl, setLogourl] = useState('');
 
     useEffect(() => {
         const handler = e => setMatches(e.matches);
@@ -39,7 +39,7 @@ const PdfFile = ({
 
     useEffect(() => {
         const getBrand = async () => {
-            const brand = await axios.get(`${appUrl.url}/brand/${hotel.brand_id}/`)
+            const brand = await axios.get(`${appUrl.url}/brand?pk=${hotel.brand_id}&&key=${appUrl.key}`)
             // console.log(brand);
             setLogourl(brand.data.logo_url)
         }
@@ -47,13 +47,12 @@ const PdfFile = ({
     }, [hotel])
 
 
-
     // const inputRef = useRef(null);
-    // const pic1 = hotel.pictures[0].url
-    // const pic2 = hotel.pictures[2].url
+    const pic1 = hotel.pictures[0].url
+    const pic2 = hotel.pictures[2].url
 
-    // const img = [pic1, pic2]
-    const img = ['https://images.unsplash.com/photo-1621272036047-bb0f76bbc1ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dW5zcGFsc2h8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60', 'https://images.unsplash.com/photo-1611500278735-a0275be1cb79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHVuc3BhbHNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60']
+    const img = [pic1, pic2]
+    // const img = ['https://images.unsplash.com/photo-1621272036047-bb0f76bbc1ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dW5zcGFsc2h8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60', 'https://images.unsplash.com/photo-1611500278735-a0275be1cb79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHVuc3BhbHNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60']
 
     // const download = () => {
     //     html2canvas(inputRef.current, {
@@ -81,8 +80,8 @@ const PdfFile = ({
                     <div className="pdf_wrapper" ref={ref} options={options} x={1} y={.5} scale={0.8}>
                         {/* <div className="pdf_wrapper" ref={inputRef} options={options} x={1} y={.5} scale={0.8}> */}
                         <div className="logo">
-                            {/* <img src={logoUrl} alt="" /> */}
-                            <img src="/images/Anantara.png" alt="" />
+                            <img src={logoUrl} alt="" />
+                            {/* <img src="/images/Anantara.png" alt="" /> */}
                         </div>
                         <div className="line"></div>
                         <div className="hotel_name">{hotel.name}</div>
@@ -145,7 +144,7 @@ const PdfFile = ({
                                 setTimeout(() => {
                                     toPdf()
                                     window.scroll({
-                                        top:0,
+                                        top: 0,
                                         behavior: 'auto'
                                     })
                                 }, 200);

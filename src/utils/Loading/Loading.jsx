@@ -11,9 +11,9 @@ const Loading = () => {
         justifyContent: 'center',
         fontSize: '20rem',
         fontFamily: 'Shoreline',
-        position:'fixed',
-        top:'0',
-        background:'black'
+        position: 'fixed',
+        top: '0',
+        background: 'black',
       }}
     ><LoadingOutlined /></div>
   )

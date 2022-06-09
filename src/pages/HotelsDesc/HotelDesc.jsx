@@ -47,8 +47,9 @@ const HotelDesc = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const url = appUrl.url
-      const fetchedHotel = await axios.get(`${url}/hotel/${id}/`)
+      const url = appUrl.url;
+      const key = appUrl.key;
+      const fetchedHotel = await axios.get(`${url}/hotel?pk=${id}&&key=${key}`)
       setHotel(fetchedHotel.data)
       setPics(fetchedHotel.data.pictures)
       setLoading(false);

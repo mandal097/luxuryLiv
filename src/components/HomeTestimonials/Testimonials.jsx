@@ -44,7 +44,8 @@ const Testimonials = () => {
   useEffect(() => {
     const getValues = async () => {
       const url = appUrl.url;
-      const testimonyData = await axios.get(`${url}/testimonials`)
+      const key = appUrl.key;
+      const testimonyData = await axios.get(`${url}/testimonials?key=${key}`)
       console.log(testimonyData.data);
       setTestimonies(testimonyData.data)
     }

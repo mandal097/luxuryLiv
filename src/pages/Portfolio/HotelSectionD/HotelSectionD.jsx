@@ -20,7 +20,8 @@ function HotelSectionD() {
         const fetchData = async () => {
             setLoading(true);
             const url = appUrl.url
-            const fetchedHotels = await axios.get(`${url}/hotels`)
+            const key = appUrl.key;
+            const fetchedHotels = await axios.get(`${url}/hotels?key=${key}`)
             // console.log(fetchedHotels.data);
             setHotels(fetchedHotels.data);
             setLoading(false);

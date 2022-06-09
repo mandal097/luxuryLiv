@@ -19,9 +19,10 @@ function Port() {
         Aos.init({ duration: 1800 });
         const fetchData = async () => {
             setLoading(true);
-            const url = appUrl.url
-            const fetchedData = await axios.get(`${url}/brands`)
-            const fetchedHotels = await axios.get(`${url}/hotels`)
+            const url = appUrl.url;
+            const key = appUrl.key;
+            const fetchedData = await axios.get(`${url}/brands?key=${key}`)
+            const fetchedHotels = await axios.get(`${url}/hotels?key=${key}`)
             setBrands(fetchedData.data);
             setHotels(fetchedHotels.data);
             setLoading(false)

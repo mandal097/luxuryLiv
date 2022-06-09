@@ -43,6 +43,7 @@ const Feedback = () => {
         if (validForm()) {
             try {
                 const url = appUrl.url;
+                const key = appUrl.key;
                 const testimony = {
                     name,
                     companyName,
@@ -51,7 +52,7 @@ const Feedback = () => {
                     feedbackMessage
                 }
                 const options = {
-                    url: `${url}/testimonial-create/`,
+                    url: `${url}/testimonial/create?key=${key}`,
                     method: "POST",
                     headers: {},
                     data: testimony
@@ -411,6 +412,12 @@ const Submit = styled.button`
     font-size:2rem;
     font-weight:400;
     margin-top:2rem;
+    cursor:pointer;
+    transition:all 300ms linear;
+    &:hover{
+        color:goldenrod;
+        border:1px solid goldenrod;
+    }
     `
 
 
