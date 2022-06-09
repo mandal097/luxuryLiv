@@ -129,7 +129,7 @@ const Testimonials = () => {
             }
           </Slider>
       }
-      <div className="go_to_feedback" onClick={() => navigate('/feedback')}><p>Would you like to say some 'Nice - Not So Nice' things about Us? 😉</p></div>
+      <div className="go_to_feedback" onClick={() => navigate('/feedback')}><p>Click here if you'd like to say some 'Nice - Not So Nice' things about Us? 😉</p></div>
     </div>
   )
 }

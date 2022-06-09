@@ -9,6 +9,7 @@ import Scroll from '../../utils/ScrollToTop/Scroll'
 import Contactus from '../../components/ContactUs/Contactus'
 import { valuesdata } from '../../data/valuesdata'
 import Value from '../../components/ValuesComp/Value'
+import Dummy from '../../components/Dummy/Dummy'
 
 // const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
@@ -44,6 +45,10 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+                {/*  */}
+
+                <Dummy />
+
                 {/* for second page of the home page  */}
                 <div className="values_page">
                     <div className="side_text">

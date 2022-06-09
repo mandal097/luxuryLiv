@@ -14,8 +14,6 @@ import Offers from './pages/Offers/Offers'
 import Enquiry from './components/Enquiry/Enquiry'
 import ErrorPage from './pages/NotFound/NotFound'
 import HotelSectionD from './pages/Portfolio/HotelSectionD/HotelSectionD'
-import Dummy from './components/Dummy/Dummy'
-// import Header from './components/Header/Header'
 const App = () => {
   return (
     <div>
@@ -32,7 +30,6 @@ const App = () => {
             <Route path='hotel-collabs' element={<HotelsCollabs />} />
             <Route path='offers' element={<Offers />} />
             <Route path='luxury-living-clients-preference' element={<ClientsForm />} />
-            <Route path='ll-intro' element={<Dummy />} />
 
             <Route path='luxury-living-portfolio/' element={<Portfolio />} >
               <Route path='destinations' element={<HotelSectionD />} />
